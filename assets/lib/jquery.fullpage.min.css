@@ -141,6 +141,7 @@
     top: 17px
 }
 
+
 #fp-nav ul, .fp-slidesNav ul {
     margin: 0;
     padding: 0
@@ -237,3 +238,9 @@
 }
 
 /*# sourceMappingURL=jquery.fullpage.min.css.map */
+
+@media (max-width: 992px) {
+    #top_fixed {
+        display: none !important;
+    }
+}

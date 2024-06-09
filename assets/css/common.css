@@ -30,6 +30,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
 
 @font-face {
@@ -335,7 +349,7 @@ textarea {
     }
 
     .header_wrap {
-        height: 100px;
+        height: 80px;
         margin: 0 auto;
         max-width: 960px;
     }
@@ -506,7 +520,7 @@ textarea {
 
 @media (min-width: 1740px) {
     .header_wrap {
-        max-width: 1720px;
+        max-width: 1820px;
         margin: 0 auto;
         padding: 0;
     }
@@ -723,4 +737,19 @@ textarea {
     .offcanvas-backdrop.show {
         opacity: 0;
     }
+}
+
+/* 좌측 fullpage menu */
+
+#fp-nav {
+  margin-top: -390px !important;
+}
+
+/* accordion */
+.accordion-panel {
+    display: none;
+}
+
+.accordion-panel .active {
+    display: flex;
 }

@@ -226,6 +226,30 @@
     }
 }
 
+
+/* weMadeItSwiper */
+.made_it_list {
+    width: 1200px;
+    justify-content: flex-end;
+    margin: 0px;
+}
+
+.weMadeItSwiper .swiper-slide {
+    width: 300px;
+    overflow: hidden;
+}
+
+/* partnerSwiper */
+
+.section_03 .partner_container .partner_wrap .swiper-slide{
+    width: auto;
+}
+
+.section_03 .partner_container .partner_wrap .swiper-slide img{
+    width: auto;
+}
+
+
 /* serviceIcon01 */
 .serviceIcon01 .swiper-slide {
     background: none;

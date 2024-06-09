@@ -251,11 +251,11 @@
 @keyframes expandWidth {
     from {
         width: 0px;
-        transform: translateX(0px)
     }
     to {
         width: 680px;
-        transform: translateX(-680px)
+        transform: translateX(-680px);
+        right: 680px;
     }
 }
 
