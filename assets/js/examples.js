@@ -70,7 +70,32 @@ $(window)
             // }
           },
         });
+
+
+        let currentIndex = 0;
+        const $slides = $('.content-panel');
+        const slideCount = $slides.length;
+
+        function showNextSlide() {
+            // 현재 슬라이드 숨기기
+            $slides.eq(currentIndex).css('display','none');
+
+            // 인덱스 증가, 슬라이드 개수를 초과하면 다시 0으로 설정
+            currentIndex = (currentIndex + 1) % slideCount;
+
+            // 다음 슬라이드 보이기
+            $slides.eq(currentIndex).css('display', 'flex');
+        }
+
+        // 처음 슬라이드 보이기
+        $slides.eq(currentIndex).css('display', 'flex');
+
+
+        // 2초마다 showNextSlide 함수 호출
+        setInterval(showNextSlide, 4000);
       });
+
+
 
       // listSwiper
       var listSwiper = new Swiper(".listSwiper", {
@@ -239,6 +264,18 @@ $(window)
         },
       });
 
+      // weMadeItSwiper
+      var introducationSwiper = new Swiper(".introducationSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 2000,
+        },
+      });
+
       // section03 partner swiper
       var section03PartnerSwiper = new Swiper(".section03_partnerSwiper", {
         slidesPerView: 6,
@@ -252,6 +289,30 @@ $(window)
 
 
     } else {
+      $(document).ready(function () {
+        let currentIndex = 0;
+        const $slides = $('.content-panel');
+        const slideCount = $slides.length;
+
+        function showNextSlide() {
+            // 현재 슬라이드 숨기기
+            $slides.eq(currentIndex).css('display','none');
+
+            // 인덱스 증가, 슬라이드 개수를 초과하면 다시 0으로 설정
+            currentIndex = (currentIndex + 1) % slideCount;
+
+            // 다음 슬라이드 보이기
+            $slides.eq(currentIndex).css('display', 'flex');
+        }
+
+        // 처음 슬라이드 보이기
+        $slides.eq(currentIndex).css('display', 'flex');
+
+
+        // 2초마다 showNextSlide 함수 호출
+        setInterval(showNextSlide, 1000);
+      });
+
       // 디바이스 크기가 992px 이하일 때
       // weMadeItSwiper
       var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
@@ -342,18 +403,38 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-    $('.accordion-trigger').click(function () {
-        $(this).parent().find('.accordion-panel').slideToggle();
-        $(this).toggleClass('active');
+  $('.accordion-trigger').click(function () {
+      $(this).parent().find('.accordion-panel').slideToggle();
+      $(this).toggleClass('active');
 
-        // Change the image source based on the active state
-        if ($(this).hasClass('active')) {
-            $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-        } else {
-            $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
-        }
-    });
+      // Change the image source based on the active state
+      if ($(this).hasClass('active')) {
+        $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+      } else {
+        $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+      }
+  });
+
+
+      // portfolio 무한 스크롤
+      let itemsToShow = 2;
+      let itemsIncrement = 2;
+      let totalItems = $('.portfolio_wrap').length;
+
+      // 처음 4개의 아이템을 보여줌
+      $('.portfolio_wrap:lt(' + itemsToShow + ')').show();
+
+      // 스크롤 이벤트 핸들러
+      $(window).scroll(function() {
+          if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+              if (itemsToShow < totalItems) {
+                  itemsToShow += itemsIncrement;
+                  $('.portfolio_wrap:lt(' + itemsToShow + ')').show();
+              }
+          }
+      });
 });
+
 
 // sub top fixed
 let topFixed = document.getElementById("top_fixed");

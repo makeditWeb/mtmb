@@ -129,6 +129,20 @@
 }
 
 
+@keyframes fade_top {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
 @keyframes fade_left {
     0% {
         transform: translateX(20px);
@@ -136,7 +150,7 @@
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(200px);
         opacity: 1;
     }
 }
@@ -161,12 +175,20 @@
     animation: fade_left 2s;
 } */
 
+.section_01.active .top_wrap {
+    animation: fade_top 1s;
+}
+
 .section_01.active h1 {
     animation: fade_right 1s;
 }
 
-.section_01.active .main_logo {
+.section_01.active h2 {
     animation: fade_left 2s;
+}
+
+.pc .section_01 .content-panel{
+  animation: fade_top 1s;
 }
 
 @keyframes line_01 {
@@ -254,8 +276,6 @@
     }
     to {
         width: 680px;
-        transform: translateX(-680px);
-        right: 680px;
     }
 }
 
