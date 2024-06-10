@@ -1,0 +1,11 @@
+{
+  "name": "mtmb",
+  "version": "1.0.0",
+  "description": "숨고의뢰로 프로젝트 시작",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
