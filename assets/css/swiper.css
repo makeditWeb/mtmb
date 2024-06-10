@@ -229,15 +229,21 @@
 
 /* weMadeItSwiper */
 .made_it_list {
-    width: 1200px;
+    width: 75%;
     justify-content: flex-end;
     margin: 0px;
 }
 
 .weMadeItSwiper .swiper-slide {
-    width: 300px;
+    width: calc(100% / 4);
+    height: auto;
     overflow: hidden;
 }
+
+.weMadeItSwiper .swiper-slide img {
+  height: auto;
+}
+
 
 /* partnerSwiper */
 

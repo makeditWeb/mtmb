@@ -141,8 +141,6 @@
     }
 }
 
-
-
 @keyframes fade_left {
     0% {
         transform: translateX(20px);
@@ -187,8 +185,22 @@
     animation: fade_left 2s;
 }
 
+
+@keyframes panel_fade_top {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-20%);
+        opacity: 1;
+    }
+}
+
+
 .pc .section_01 .content-panel{
-  animation: fade_top 1s;
+  animation: panel_fade_top 1s;
 }
 
 @keyframes line_01 {
