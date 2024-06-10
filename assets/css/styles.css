@@ -486,6 +486,7 @@
     overflow: hidden;
 
     transform: translateX(calc(-80px - 150px));
+    margin-top: 80px;
 }
 
 .section_02 .consulting_box .left_wrap {
@@ -918,7 +919,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 15px;
-    row-gap: 15px;
+    row-gap: 80px;
 }
 
 .section_03 .all_service_wrap .service_list .service_wrap {
@@ -1087,12 +1088,14 @@
     .section_03 .content_03 {
         margin-top: 80px;
     }
+}
 
-    .section_03 .all_service_wrap .service_list {
+
+@media (max-width: 1600px) {
+      .section_03 .all_service_wrap .service_list {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
 
 @media (max-width: 1300px) {
     .section_03 .all_service_wrap .service_list {
@@ -1171,7 +1174,7 @@
     }
 
     .section_03 .review_container {
-        width: 514px;
+        width: calc(100% - 130px);
 
         margin: 0 auto;
         margin-top: 80px;
@@ -1365,7 +1368,7 @@
 }
 
 .section_04 .content_04 .left_wrap {
-    min-width: fit-content;
+    min-width: 400px;
     width: 400px;
     height: 500px;
 
@@ -1419,6 +1422,7 @@
     font-size: 42px;
     margin-right: 50px;
     letter-spacing: -1px;
+    line-height: 100%;
 }
 
 .section_04 .content_04 .left_wrap .title img {
@@ -1748,6 +1752,7 @@
 }
 
 .section_05 .content_05 .right_wrap {
+    min-width: 400px;
     width: 400px;
     height: 420px;
 
@@ -1843,7 +1848,7 @@
 
 
 .section_05 .content_05 .left_wrap .introduction_list {
-    width: 820px;
+    width: 100%;
 
     display: flex;
     justify-content: flex-end;
@@ -2051,6 +2056,7 @@
 }
 
 .section_06 .content_06 .left_wrap {
+    min-width: 400px;
     width: 400px;
     height: 420px;
 
@@ -2283,6 +2289,7 @@
 }
 
 .section_07 .content_07 .top_wrap .left_wrap {
+    min-width: 400px;
     width: 400px;
     height: 450px;
 
@@ -2412,9 +2419,9 @@
 .section_08 .content_08 .top_wrap::before {
     position: absolute;
     content: '';
-    width: calc(100vw - 80px);
+    width: 100vw;
     height: 1px;
-    right: 0px;
+    left: -200px;
     top: 20px;
     background: #000;
 }
