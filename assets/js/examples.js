@@ -54,6 +54,12 @@ $(window)
             } else {
               $('#lnb .lnb_menu_01 ul li a').css({ 'color': '#000' }); 
             }
+            
+            if(index === 3) {
+              $('#header').css({ 'border-bottom': '1px solid #000' });
+            } else {
+              $('#header').css({ 'border-bottom': 'none' });
+            }
 
             // if (index == "4") {
             //   $("#lnb .line_02").show();
@@ -70,31 +76,25 @@ $(window)
             // }
           },
         });
-
-
-        let currentIndex = 0;
-        const $slides = $('.content-panel');
-        const slideCount = $slides.length;
-
-        function showNextSlide() {
-            // 현재 슬라이드 숨기기
-            $slides.eq(currentIndex).css('display','none');
-
-            // 인덱스 증가, 슬라이드 개수를 초과하면 다시 0으로 설정
-            currentIndex = (currentIndex + 1) % slideCount;
-
-            // 다음 슬라이드 보이기
-            $slides.eq(currentIndex).css('display', 'flex');
-        }
-
-        // 처음 슬라이드 보이기
-        $slides.eq(currentIndex).css('display', 'flex');
-
-
-        // 2초마다 showNextSlide 함수 호출
-        setInterval(showNextSlide, 4000);
       });
 
+
+
+      // listSwiper
+      var listSwiper = new Swiper(".section01_listSwiper", {
+        slidesPerView: 9,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 4000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
 
       // listSwiper
@@ -278,13 +278,17 @@ $(window)
 
       // section03 partner swiper
       var section03PartnerSwiper = new Swiper(".section03_partnerSwiper", {
-        slidesPerView: 6,
-        spaceBetween: 0, // 슬라이드 여백
-        centeredSlides: false, // 슬라이드 중앙정렬
-        loop: true, // 무한반복
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 5000,
         autoplay: {
-          delay: 1000,
+            delay: 1,
         },
+        loop: true,
+        slidesPerView:'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
       });
 
 
