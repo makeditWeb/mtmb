@@ -1,15 +1,20 @@
+const titles = ["제안서", "강의자료", "소개서", "제안문서", "비즈니스 보고서"];
+const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
+
+
 $(window)
   .resize(function () {
+    
     if (window.innerWidth > 992) {
       // 다바이스 크기가 992px 이상일 때
 
       // 풀페이지 옵션
       $(document).ready(function () {
-        $("#fullpage").fullpage({
+       $("#fullpage").fullpage({
           anchors: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
           menu: "#header",
           verticalCentered: true, // 세로 중앙 정렬
-          scrollOverflow: false,
+          scrollOverflow: true,
           sectionsColor: ["#000", "#fff"], // 섹션별 컬러
           navigation: true,
           keyboardScrolling: true,
@@ -20,11 +25,11 @@ $(window)
           loopHorizontal: false, // 반복여부
           controlArrows: false, // 슬라이드 좌우 이동 제어
           passive: false,
+          scrollbars: true,
           onLeave: function (anchorLink, index, direction) {
             var pages = $(".section").length;
             var currentPage = index - 1;
           },
-
           afterLoad: function (anchorLink, index) {
             // console.log(index);
             if (index != "1") {
@@ -42,42 +47,90 @@ $(window)
               // 첫 번째 색션일 경우 상단 로고 색상 흰 색으로 
               $('.menu_line').css({ 'background': '#fff' });
               $('.logo_text').css({ 'color': '#fff' });
+
+              // 좌측 메뉴 노출
+              $('#lnb').css({ 'display': 'none' });
             } else {
               $("#fp-nav").show();
 
               $('.menu_line').css({ 'background': '#000' });
               $('.logo_text').css({ 'color': '#000' });
+
+              // 좌측 메뉴 노출
+              $('#lnb').css({ 'display': 'block' });
             }
 
-            if(index === 2) {
+            if (index === 2) {
               $('#lnb .lnb_menu_01 ul li a').css({ 'color': '#fff' });
             } else {
-              $('#lnb .lnb_menu_01 ul li a').css({ 'color': '#000' }); 
+              $('#lnb .lnb_menu_01 ul li a').css({ 'color': '#000' });
             }
-            
-            if(index === 3) {
+
+            if (index === 3) {
               $('#header').css({ 'border-bottom': '1px solid #000' });
             } else {
               $('#header').css({ 'border-bottom': 'none' });
             }
-
-            // if (index == "4") {
-            //   $("#lnb .line_02").show();
-            //   $("#lnb .lnb_menu_02 ul li").addClass("active");
-            //   $(".header_login li").addClass("active");
-            // } else if (index == "6") {
-            //   $("#lnb .line_02").show();
-            //   $("#lnb .lnb_menu_02 ul li").addClass("active");
-            //   $(".header_login li").addClass("active");
-            // } else {
-            //   $("#lnb .line_02").hide();
-            //   $("#lnb .lnb_menu_02 ul li").removeClass("active");
-            //   $(".header_login li").removeClass("active");
-            // }
           },
         });
+
+
+        let itemsToShow = 8;
+      const itemsIncrement = 8;
+      const portfolioList = $('.portfolio_list');
+      const totalItems = $('.portfolio_wrap').length;
+
+      const sentinel = document.getElementById('sentinel');
+
+      // 처음 4개의 아이템을 표시
+      $('.portfolio_wrap:lt(' + itemsToShow + ')').css('display', 'flex');
+
+      // Intersection Observer 설정
+      const observerOptions = {
+        root: document.querySelector('#infinite-scroll-section .fp-scroller'),
+        rootMargin: '0px',
+        threshold: 1.0
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (itemsToShow < totalItems) {
+
+              setTimeout(()=> {
+                itemsToShow += itemsIncrement;
+                $('.portfolio_wrap:lt(' + itemsToShow + ')').css('display', 'flex');
+                // 높이 재설정
+                $.fn.fullpage.reBuild();
+              }, 1000)
+            }
+          }
+        });
+      }, observerOptions);
+
+      // 마지막 아이템을 감시
+      observer.observe(sentinel);
       });
 
+
+      // listSwiper
+      var section01Swiper = new Swiper(".section01_listSwiper", {
+        direction: 'vertical',
+        centeredSlides: true,
+        slidesPerView: 4,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        on: {
+          activeIndexChange: function () {
+            const realIndex = this.realIndex;
+            $('.content-panel .right-wrap .description_wrap span:first-child').text(titles[realIndex]);
+            $('.content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
+          }
+        }
+      });
 
 
       // listSwiper
@@ -283,38 +336,33 @@ $(window)
         enteredSlides: true,
         speed: 5000,
         autoplay: {
-            delay: 1,
+          delay: 1,
         },
         loop: true,
-        slidesPerView:'auto',
+        slidesPerView: 'auto',
         allowTouchMove: false,
         disableOnInteraction: true
       });
 
 
     } else {
-      $(document).ready(function () {
-        let currentIndex = 0;
-        const $slides = $('.content-panel');
-        const slideCount = $slides.length;
-
-        function showNextSlide() {
-            // 현재 슬라이드 숨기기
-            $slides.eq(currentIndex).css('display','none');
-
-            // 인덱스 증가, 슬라이드 개수를 초과하면 다시 0으로 설정
-            currentIndex = (currentIndex + 1) % slideCount;
-
-            // 다음 슬라이드 보이기
-            $slides.eq(currentIndex).css('display', 'flex');
+      // 디바이스 크기가 992px 이하일 때
+      var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 3000,
+        },
+        on: {
+          activeIndexChange: function () {
+            const realIndex = this.realIndex;
+            $('.section_01 .content-panel .right-wrap .description_wrap span:first-child').text(titles[realIndex]);
+            $('.section_01 .content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
+          }
         }
-
-        // 처음 슬라이드 보이기
-        $slides.eq(currentIndex).css('display', 'flex');
-
-
-        // 2초마다 showNextSlide 함수 호출
-        setInterval(showNextSlide, 1000);
       });
 
       // 디바이스 크기가 992px 이하일 때
@@ -408,35 +456,17 @@ $(document).ready(function () {
   });
 
   $('.accordion-trigger').click(function () {
-      $(this).parent().find('.accordion-panel').slideToggle();
-      $(this).toggleClass('active');
+    $(this).parent().find('.accordion-panel').slideToggle();
+    $(this).toggleClass('active');
 
-      // Change the image source based on the active state
-      if ($(this).hasClass('active')) {
-        $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-      } else {
-        $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
-      }
+    // Change the image source based on the active state
+    if ($(this).hasClass('active')) {
+      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+    } else {
+      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+    }
   });
 
-
-      // portfolio 무한 스크롤
-      let itemsToShow = 2;
-      let itemsIncrement = 2;
-      let totalItems = $('.portfolio_wrap').length;
-
-      // 처음 4개의 아이템을 보여줌
-      $('.portfolio_wrap:lt(' + itemsToShow + ')').show();
-
-      // 스크롤 이벤트 핸들러
-      $(window).scroll(function() {
-          if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
-              if (itemsToShow < totalItems) {
-                  itemsToShow += itemsIncrement;
-                  $('.portfolio_wrap:lt(' + itemsToShow + ')').show();
-              }
-          }
-      });
 });
 
 
@@ -458,3 +488,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+

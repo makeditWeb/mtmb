@@ -20,6 +20,24 @@
     object-fit: cover;
 }
 
+/* 메인색션 01 swiper */
+.section01_listMobileSwiper .swiper {
+    height: 100vh;
+}
+
+.section01_listMobileSwiper .swiper-slide {
+    background: transparent;
+}
+
+.section01_listSwiper .swiper {
+    height: 100vh;
+}
+
+.section01_listSwiper .swiper-slide {
+    background: transparent;
+    width: 100% !important;
+    height: calc((100% - 160px) / 4) !important;
+}
 /* listSwiper */
 .listSwiper .swiper {
     width: 90%;
