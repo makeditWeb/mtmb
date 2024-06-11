@@ -1597,28 +1597,6 @@
   align-self: flex-end;
 }
 
-/* TODO */
-
-.content_04::before {
-  position: absolute;
-  content: "";
-  background: #000;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 565px;
-}
-
-.content_05::before,
-.content_06::before,
-.content_07::before {
-  position: absolute;
-  content: "";
-  background: #000;
-  width: 1px;
-  height: 100%;
-  left: 760px;
-}
 
 /* mobile section_04 */
 
@@ -5623,6 +5601,75 @@ section.container {
 }
 
 /* PC에서 공통적으로 사용하는 스타일들  */
+
+/* PC PPT 색션  */
+.content_04::before {
+  position: absolute;
+  content: "";
+  background: #000;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 565px;
+}
+
+.content_05::before,
+.content_06::before,
+.content_07::before {
+  position: absolute;
+  content: "";
+  background: #000;
+  width: 1px;
+  height: 100%;
+  left: 760px;
+}
+
+@media (max-width: 1600px) {
+  .content_04::before {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 450px;
+  }
+
+  .content_05::before,
+  .content_06::before,
+  .content_07::before {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 1px;
+    height: 100%;
+    left: 650px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .content_04::before {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 300px;
+  }
+
+  .content_05::before,
+  .content_06::before,
+  .content_07::before {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 1px;
+    height: 100%;
+    left: 500px;
+  }
+}
+
 @media (max-width: 992px) {
   .content_04::before,
   .content_05::before,
