@@ -21,4 +21,11 @@ $(document).ready(function () {
     $item.css('animation-delay', `${delay}s`);
   });
 
+    $('.ppt_index_wrap').click(function () {
+        var index = $(this).index();
+        $('.ppt_content').removeClass('active').eq(index).addClass('active');
+        $('.ppt_index_wrap img').attr('src', 'img/main/text/title_arrow.png');
+        $(this).find('img').attr('src', 'img/business/right_arrow_blue.png');
+    });
+
 });
