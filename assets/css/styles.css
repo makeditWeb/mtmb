@@ -796,6 +796,10 @@
   .section_02 .fp-scrollable, .section_02 .fp-scroller {
     overflow: unset;
   }
+  
+  .section_02 .made_it_wrap {
+    height: 300px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -964,6 +968,7 @@
 }
 
 .section_03 .content_03 {
+  position: relative;
   border-left: 1px solid #000;
   /* height: 100vh !important; */
   /* overflow: hidden; */
@@ -975,6 +980,16 @@
     background: #000;
     top: 80px;
     left: 200px; */
+}
+
+.section_03 .content_03::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background: #000;
+    top: 0px;
+    left: -200px;
 }
 
 .section_03 .all_service_wrap {
@@ -1172,11 +1187,25 @@
   .section_03 .all_service_wrap .service_list {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .section_03 .review_wrap{
+    width: 1200px;
+    border-left: none;
+  }
 }
 
 @media (max-width: 1300px) {
   .section_03 .all_service_wrap .service_list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section_03 .review_wrap{
+    width: 850px;
+    border-left: none;
+  }
+
+  .section_03 .all_service_wrap .title_wrap {
+      margin-right: 30px;
   }
 }
 
@@ -2596,10 +2625,8 @@
 
 /* section 08 */
 .section_08 {
-  height: 100vh !important;
-  overflow-y: auto;
-
-
+  /* height: 100vh !important;
+  overflow-y: auto; */
   padding-bottom: 140px;
 }
 
@@ -2745,10 +2772,17 @@
 }
 
 .section_08 .content_08 .portfolio_container {
+  height: 100%;
   margin-top: 100px;
 }
 
 .section_08 .content_08 .portfolio_container .title {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Adjust the value as needed */
+  background-color: white; /* Optional: Ensure it doesn't get hidden by content scrolling underneath */
+  z-index: 1000; /* Optional: Ensure it stays above other content */
+
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -2776,6 +2810,14 @@
   align-items: flex-start;
 
   background: rgba(0, 0, 0, 0.8);
+}
+
+.section_08 .content_08 .portfolio_container{
+  position: relative;
+}
+
+.section_08 .content_08 .portfolio_container .sticky_title {
+  position: absolute;
 }
 
 .section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap > img {
@@ -2823,7 +2865,7 @@
 
   .section_08 .content_08 .top_wrap .about_wrap::before, 
   .section_08 .content_08 .top_wrap .notice_wrap::before{
-    left: 0px;
+    left: -20px;
   }
 
   .section_08 .content_08 .top_wrap .about_wrap .description_wrap .description_01{

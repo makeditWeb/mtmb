@@ -69,11 +69,11 @@ $(window)
               $('#lnb .lnb_menu_01 ul li a').css({ 'color': '#000' });
             }
 
-            if (index === 3) {
-              $('#header').css({ 'border-bottom': '1px solid #000' });
-            } else {
-              $('#header').css({ 'border-bottom': 'none' });
-            }
+            // if (index === 3) {
+            //   $('#header').css({ 'border-bottom': '1px solid #000' });
+            // } else {
+            //   $('#header').css({ 'border-bottom': 'none' });
+            // }
           },
         });
 

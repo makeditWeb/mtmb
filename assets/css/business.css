@@ -1,0 +1,687 @@
+/********************** Business Header Style **********************/
+.sub_wrap .header {
+    background: #fff;
+}
+
+.sub_wrap .header .header_wrap .logo_text {
+    color: #000;
+}
+
+.sub_wrap .header .header_wrap .menu_line {
+    background: #000;
+}
+
+.sub_wrap .header .header_wrap .sub_menu {
+    width: 1200px;
+}
+
+/* 모바일 header style */
+@media (max-width: 992px) {
+    .sub_wrap .header_wrap {
+        height: 80px;
+        border-bottom: none;
+    }
+
+    .header_i {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header>.menu_wrap {
+        border-bottom: 1px solid #000;
+    }
+
+    .header>.menu_wrap .active {
+        position: relative;
+    }
+
+    .header>.menu_wrap .active::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -8px;
+        width: 120%;
+        height: 1px;
+        background-color: #000;
+    }
+}
+
+/********************** Section Style **********************/
+.business_container {
+    /* header height */
+    padding-top: 80px;
+
+    /* footer height */
+    padding-bottom: 150px;
+}
+
+.business_container .content_wrap {
+    width: 80%;
+    margin: 0px auto;
+    padding: 80px 0px;
+}
+
+/********************** Section Common Style **********************/
+/* 공통 스타일 */
+.business_container .content_wrap .title_wrap {
+    width: 100%;
+    padding: 8px 0px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.business_container .content_wrap .title_wrap h2 {
+    font-size: 48px;
+    font-family: GmarketSansBold;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.business_container .content_wrap .title_wrap img {
+    width: 45px;
+    height: 45px;
+}
+
+.business_container .content_wrap .all_service_container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+}
+
+.business_container .content_wrap .all_service_container .title_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.business_container .content_wrap .all_service_container .title_container .description {
+    font-size: 20px;
+    font-family: SUIT-Regular;
+    font-weight: 500;
+
+    margin-top: 30px;
+}
+
+.business_container .content_wrap .all_service_container .title_container .description b {
+    font-family: GmarketSansBold;
+    font-weight: 700;
+}
+
+.business_container .content_wrap .all_service_container .service_list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 15px;
+    row-gap: 80px;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 145px;
+    height: auto;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap img {
+    width: 36px;
+    height: 36px;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap .service_text {
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap .service_text::after {
+    position: absolute;
+    left: 00px;
+    bottom: -4px;
+    content: "";
+
+    width: 120px;
+    height: 1px;
+    background: #888888;
+    border-radius: 8px;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap .service_text:hover::after {
+    background: #000;
+    height: 6px;
+    transition: all 0.5s;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap .service_text:hover span {
+    font-weight: 700;
+}
+
+.business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.business_container .content_wrap .ppt_container>.title_wrap {
+    border-bottom: 1px solid #000;
+}
+
+.business_container .content_wrap .ppt_content_container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 42px;
+}
+
+.business_container .content_wrap .ppt_content_container .ppt_index_container {
+    margin-right: 100px;
+    width: 50%;
+    min-width: max-content;
+}
+
+.business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap {
+    width: 100%;
+    padding: 16px;
+    padding-left: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    border-bottom: 1px solid #000;
+}
+
+.business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap p {
+    font-family: GmarketSansBold;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 50px;
+}
+
+.business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap img {
+    width: 40px;
+    height: 40px;
+}
+
+.business_container .content_wrap .ppt_content_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.business_container .content_wrap .ppt_content_wrap .ppt_content {
+    display: none;
+
+    width: 100%;
+    justify-content: space-between;
+}
+
+.business_container .content_wrap .left_wrap {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20px;
+}
+
+.business_container .content_wrap .left_wrap .title_wrap {
+    font-family: 'SUIT';
+    font-weight: 700;
+    font-size: 35px;
+
+    border-bottom: 1px solid #cecece;
+}
+
+.business_container .content_wrap .left_wrap .strength_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 0px;
+
+    border-bottom: 1px solid #cecece;
+}
+
+.business_container .content_wrap .left_wrap .strength_wrap li {
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.business_container .content_wrap .left_wrap .strength_wrap li span {
+    font-family: 'SUIT';
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.business_container .content_wrap .left_wrap .strength_wrap li img {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 16px;
+}
+
+.business_container .content_wrap .left_wrap .description {
+    margin-top: 32px;
+
+    font-family: 'SUIT';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.business_container .content_wrap .ppt_content_wrap .ppt_content img {
+    width: 520px;
+    object-fit: contain;
+}
+
+.business_container .content_wrap .ppt_content_wrap .ppt_content.active {
+    display: flex;
+}
+
+.business_container .content_wrap .service_step_container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 62px;
+}
+
+.business_container .content_wrap .service_step_container li {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.business_container .content_wrap .service_step_container li p {
+    font-family: SUIT-Regular;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+/* 스탭 이미지 */
+.business_container .content_wrap .service_step_container li:nth-child(odd) img {
+    width: 50px;
+}
+
+/* 화살표 */
+.business_container .content_wrap .service_step_container li:nth-child(even) img {
+    width: 20px;
+}
+
+@media (max-width: 1800px) {
+    .section_03 .content_03 {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .business_container .content_wrap .all_service_container .service_list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .business_container .content_wrap .ppt_content_container .ppt_index_container {
+        width: 30%;
+    }
+
+    .business_container .content_wrap .left_wrap .strength_wrap li {
+        width: 200px
+    }
+
+    .business_container .content_wrap .ppt_content_wrap .ppt_content img {
+        width: 420px;
+    }
+
+    .business_container .content_wrap .service_step_container li:nth-child(odd) img {
+        width: 38px;
+        object-fit: contain;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .business_container .content_wrap .all_service_container .service_list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .business_container .content_wrap .ppt_content_container .ppt_index_container {
+        width: 30%;
+        margin-right: 50px;
+    }
+
+    .business_container .content_wrap .left_wrap .strength_wrap li {
+        width: 180px
+    }
+
+    .business_container .content_wrap .ppt_content_wrap .ppt_content img {
+        width: 320px;
+    }
+
+    .business_container .content_wrap .left_wrap .strength_wrap li span {
+        font-size: 18px;
+    }
+
+    .business_container .content_wrap .left_wrap .strength_wrap {
+        padding: 50px 0px;
+    }
+
+    .business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap p {
+        font-size: 22px;
+    }
+
+    .business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .business_container .content_wrap .service_step_container li:nth-child(odd) img {
+        width: 32px;
+        object-fit: contain;
+    }
+
+    .business_container .content_wrap .service_step_container li:nth-child(even) img {
+        width: 18px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .business_container .content_wrap .all_service_container .service_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .business_container .content_wrap .service_step_container li:nth-child(odd) img {
+        width: 28px;
+        object-fit: contain;
+    }
+
+    .business_container .content_wrap .service_step_container li:nth-child(even) img {
+        width: 16px;
+    }
+}
+
+/* 여기서부터 모바일 */
+@media (max-width: 992px) {
+    .all_service_container {
+        width: calc(100% - 130px);
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .business_container .content_wrap .all_service_container .title_container {
+        margin-bottom: 60px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, calc(100% / 3));
+        grid-template-rows: repeat(6, 1fr);
+        justify-content: center;
+        align-items: center;
+
+
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap {
+        width: auto;
+        padding: 12px 0px;
+        height: 150px;
+    }
+
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap {
+        border-top: 1px solid #000;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap:not(:nth-child(3n + 0)) {
+        border-right: 1px solid #000;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text::after {
+        content: none;
+    }
+
+    .service_step_container_mo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service_step_container_mo .service_step_container {
+        display: flex;
+    }
+
+    .ppt_container {
+        position: relative;
+    }
+
+    .ppt_container::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: calc(100% - 80px);
+        top: auto;
+        bottom: 0px;
+        left: 60px;
+        background: #000;
+        z-index: 1;
+    }
+
+    .ppt_wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ppt_wrap .sub_title {
+        display: grid;
+        grid-template-columns: 50px auto;
+        border-bottom: 1px solid #000;
+
+        padding-top: 50px;
+    }
+
+    .ppt_wrap .sub_title > img {
+        width: 100%;
+        padding-bottom: 20px;
+        align-self: flex-end;
+    }
+
+    .ppt_wrap .sub_title > span {
+        font-family: GmarketSansBold;
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .ppt_content {
+      margin-left: 60px;
+      padding: 16px;
+    }
+
+    .ppt_content > img {
+        width: 100%;
+
+        margin-top: 50px;
+
+    }
+    
+    .business_container .content_wrap .title_wrap{
+        font-family: 'SUIT';
+        font-weight: 700;
+        font-size: 30px;
+
+        border-bottom: 1px solid #cecece;
+    }
+
+
+    .business_container .content_wrap .left_wrap .strength_wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 40px 0px;
+        border-bottom: 1px solid #cecece;
+    }
+
+    .business_container .content_wrap .left_wrap .strength_wrap{
+        padding: 32px 0px;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .section_03 .service_list {
+        width: calc(100% - 32px);
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 18px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap {
+        padding: 20px;
+    }
+
+    .ppt_wrap .sub_title {
+        padding-top: 40px;
+    }
+
+    .ppt_wrap .sub_title > img{
+        width: 28px;
+    }
+    
+    .ppt_wrap .sub_title > span{
+        font-size: 24px;
+    }
+
+    .business_container .content_wrap .left_wrap .title_wrap{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .business_container .content_wrap .title_wrap h2{
+        font-size: 42px;   
+    }
+
+    .business_container .content_wrap .title_wrap img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .business_container .content_wrap .all_service_container .title_container .description{
+        font-size: 18px;
+    }
+
+    .ppt_wrap .sub_title {
+        padding-top: 30px;
+    }
+
+    .ppt_wrap .sub_title > img{
+        width: 30px;
+    }
+
+    .ppt_wrap .sub_title > span{
+        font-size: 20px;
+    }
+
+    
+}
+
+@media (max-width: 400px) {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 14px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 14px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap {
+        padding: 18px;
+    }
+
+
+    .business_container .content_wrap .title_wrap h2{
+        font-size: 38px;   
+    }
+
+    .business_container .content_wrap .title_wrap img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .business_container .content_wrap .all_service_container .title_container .description{
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    .business_container .content_wrap .all_service_container .title_container{
+        margin-bottom: 32px;
+    }
+
+
+    .ppt_wrap .sub_title {
+        padding-top: 20px;
+    }
+
+    .ppt_wrap .sub_title > img{
+        width: 28px;
+    }
+
+    .ppt_wrap .sub_title > span{
+        font-size: 18px;
+    }
+
+    .business_container .content_wrap .left_wrap .title_wrap{
+        font-size: 20px;
+    }
+
+    .business_container .content_wrap .service_step_container:last-child{
+        margin-top: 20px;
+
+    }
+}
+
+@media (max-width: 350px) {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 12px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 12px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap {
+        padding: 12px;
+    }
+
+    .ppt_wrap .sub_title {
+        padding-top: 12px;
+    }
+
+    .ppt_wrap .sub_title > span{
+        font-size: 16px;
+    }
+}

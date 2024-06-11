@@ -312,7 +312,17 @@
   animation-iteration-count: 1;
 }
 
+.business_container .content_wrap .all_service_container .service_list .service_wrap > img {
+  animation: scaleAnimation 2s ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
 
+.business_container .step_wrap > img {
+  animation: scaleAnimation 2s ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
 
 @keyframes fade_in {
     0% {

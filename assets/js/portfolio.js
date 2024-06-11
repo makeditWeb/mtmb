@@ -9,7 +9,7 @@ $(document).ready(function () {
     const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
     $item.css('animation-delay', `${delay}s`);
   });
-
+  
 
       let itemsToShow = 8;
       const itemsIncrement = 8;
@@ -46,5 +46,25 @@ $(document).ready(function () {
 
       // 마지막 아이템을 감시
       observer.observe(sentinel);
+
+
+            var $portfolioContainer = $('.fp-scroller');
+            var $title = $('.title');
+            var lastScrollTop = 0;
+
+            function checkScroll() {
+                var transformMatrix = $portfolioContainer.css('transform').match(/matrix.*\((.+)\)/);
+                var scrollTop = transformMatrix ? parseFloat(transformMatrix[1].split(', ')[5]) : 0;
+
+                if (scrollTop >= 0) {
+                    $title.addClass('scrolled');
+                } else {
+                    $title.removeClass('scrolled');
+                }
+
+                lastScrollTop = scrollTop;
+            }
+
+            // setInterval(checkScroll, 100);
 });
 
