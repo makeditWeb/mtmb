@@ -351,6 +351,7 @@
   .section_01 .sc_wrap .title_wrap .top_wrap {
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .section_01 .sc_wrap .title_wrap .top_wrap .description_wrap {
@@ -369,6 +370,14 @@
     font-family: GmarketSansBold;
     font-size: 35px;
     color: #fff;
+  }
+
+  .section_01 .sc_wrap .content_01::before{
+    content: none;
+  }
+
+  .section_01::after{
+    content: none;
   }
 
   .section_01 .sc_wrap .title_wrap .top_wrap > span {
@@ -937,6 +946,8 @@
 
 .section_03 .content_03 {
   border-left: 1px solid #000;
+  /* height: 100vh !important; */
+  /* overflow: hidden; */
 
   /* content: '';
     position: absolute;

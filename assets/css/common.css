@@ -607,6 +607,10 @@ textarea {
     .footer {
         position: relative;
     }
+
+    .ft_wrap {
+        width: calc(100% - 64px)
+    }
 }
 
 @media (min-width: 992px) {
@@ -813,8 +817,7 @@ textarea {
     display: flex;
 }
 
-
-    .normal-scroll {
-      height: auto;
-      overflow: auto;
-    }
+/* fullpage에서 제공하는 스크롤바 숨김 */
+.iScrollVerticalScrollbar, .iScrollLoneScrollbar {
+    display: none !important;
+}
