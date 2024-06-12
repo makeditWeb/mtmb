@@ -130,6 +130,7 @@
     font-size: 24px;
     letter-spacing: -0.04em;
     padding: 0 100px;
+    font-weight: 600;
   }
 
   .about-bottom_text span{
@@ -200,7 +201,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 80px 25px;
+        padding: 80px 30px 50px;
         border-left: none;
         width: 100%;
         margin: 0;
@@ -208,9 +209,86 @@
 
     .about_container .content_wrap .about_container_wrap .title_container .description{
         font-size: 15px;
+        padding-top: 45px;
+        word-break: keep-all
+    }
+
+    .about_container .content_wrap .about_container_wrap .title_container .description span{
+        font-size: 15px;
     }
 
     .about_container .content_wrap .title_wrap h2{
-        font-size: 32px;
+        font-size: 42px;
+    }
+
+    .about_container .content_wrap .title_wrap img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .about_container .content_wrap .title_wrap {
+        font-family: 'SUIT';
+        font-weight: 700;
+        font-size: 30px;
+        border-bottom: 1px solid #000;
+    }
+
+    .about-bottom_text {
+        font-family: SUIT-Medium;
+        font-size: 15px;
+        letter-spacing: -0.04em;
+        padding: 0;
+    }
+
+    .about_right_flex{
+        padding: 30px 0;
+        width: 84%;
+        margin: 0 auto;
+    }
+
+    .about_right_mobileimg {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        margin-top: -15px;
+    }
+
+    .about_right_mobileimg img{
+        width: 88%;
+    }
+
+    .location_container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 75px 30px 0;
+        border-left: none;
+        flex-direction: column;
+    }
+
+    .location_content_container{
+        width: 100%;
+    }
+
+    .location_content_container img{
+        padding: 50px 0 30px;
+    }
+
+    .location_adress .location_adress_Text{
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    .about_container{
+        padding-bottom: 100px;
+    }
+
+
+    .about-bottom_text span {
+        font-family: SUIT-Regular;
+        padding-right: 12px;
+        font-weight: 300;
     }
 }
