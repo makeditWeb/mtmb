@@ -756,9 +756,8 @@ textarea {
 @media (min-width: 992px) {
 
     .offcanvas-top {
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255);
         border: 0;
-        border-bottom-right-radius: 200px;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
         height: 800px;
         width: 300px;
