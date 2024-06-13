@@ -312,11 +312,6 @@ $(window)
 
 
       } else {
-        if (window.location.hash) {
-          console.log('window.location.hash', window.location.hash)
-          window.history.pushState("", document.title, window.location.pathname + window.location.search);
-        }
-
         $('#lnb').css({ 'display': 'none' });
 
         // 디바이스 크기가 992px 이하일 때
