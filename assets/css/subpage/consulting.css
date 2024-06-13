@@ -84,7 +84,7 @@
 
   border-radius: 0px 100px 100px 0px;
 
-  background: url("../img/section_02/image.png");
+  background: url("../../img/section_02/image.png");
   background-position: center;
   background-size: cover;
 
@@ -130,7 +130,7 @@
 }
 
 .consulting_container .consulting_box .left_wrap>ul li::after {
-  background: url(../img/main/right_arrow.png) no-repeat;
+  background: url(../../img/main/right_arrow.png) no-repeat;
   background-size: 50%;
   background-position-x: center;
   background-position-y: bottom;
@@ -760,7 +760,7 @@
   border: none;
 
   background-color: white;
-  background-image: url('../img/icon/i_search.png');
+  background-image: url('../../img/icon/i_search.png');
   background-position: right;
   background-repeat: no-repeat;
 

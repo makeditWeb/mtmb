@@ -1,6 +1,6 @@
 
-@import url(../lib/swiper-bundle.min.css);
-@import url(../css/swiper.css);
+@import url(../../lib/swiper-bundle.min.css);
+@import url(../swiper.css);
 
 /********************** Business Header Style **********************/
 .sub_wrap .header {
