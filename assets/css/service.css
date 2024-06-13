@@ -1,0 +1,229 @@
+
+
+
+.sub_wrap .header {
+    background: #fff;
+  }
+  
+  .sub_wrap .header .header_wrap .logo_text {
+    color: #000;
+  }
+  
+  .sub_wrap .header .header_wrap .menu_line {
+    background: #000;
+  }
+  
+  .sub_wrap .header .header_wrap .sub_menu {
+    width: 1200px;
+  }
+  
+
+
+.footer{
+    position: relative;
+    left: unset;
+    bottom: unset;
+}
+
+  .service_container{
+    width: 88%;
+    margin: 0 0 0 auto;
+  }
+
+  .service_container .container_wrap{
+    padding: 80px 50px;
+    border-left: 1px solid #000;
+  }
+
+  .service_container .container_wrap .container{
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    padding: 50px 0 0;
+ 
+
+  }
+
+  .servce_notice_inner{
+    display: flex;
+    border-bottom: 1px solid #000;
+    padding-bottom: 70px;
+  }
+
+
+  .service_container .container_wrap .container .title_wrap {
+    width: 100%;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .service_container .container_wrap .container .title_wrap h2 {
+    font-size: 48px;
+    font-family: GmarketSansBold;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  
+  .service_container .container_wrap .container .title_wrap img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .servce_notice_left{
+    width: 30%;
+  }
+
+  .notice_pagination ul{
+    display: flex;
+  }
+
+  .service_container .notice_pagination{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .service_container .notice_pagination  .pagination_arrow li{
+    position: relative;
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+
+  .service_container .notice_pagination  .pagination_arrow li:first-child::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #626262;
+    width: 1px;
+    
+  }
+
+  .service_container .notice_pagination .pagination_number li{
+    font-size: 16px;
+    font-family: 'SUIT', sans-serif;
+    color: #646464;
+  }
+
+  .service_container .notice_pagination .pagination_number li.total_page{
+    font-weight: 300;
+    padding-left: 5px;
+  }
+
+  .service_container .notice_pagination .pagination_number li.now_page{
+    font-weight: 600;
+    padding-right: 5px;
+  }
+
+  .cont_right.notice_wrap{
+    width: 70%;
+  }
+
+  .cont_right.notice_wrap table{
+    width: 100%;
+  }
+
+  .cont_right.notice_wrap table tbody{
+    width: 100%;
+  }
+
+  .cont_right.notice_wrap table tbody tr{
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+
+  .cont_right.notice_wrap table tbody tr:last-child{
+    border-bottom: none;
+  }
+
+  .notice_table{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .notice_table tr td{
+    font-size: 16px;
+    font-family: 'SUIT', sans-serif;
+    color: #646464;
+    font-weight: 400;
+    padding: 0 30px;
+  }
+
+
+  .notice_table tr td:nth-child(1){
+    width: 10%;
+  }
+
+  .notice_table tr td:nth-child(2){
+    width: 70%;
+  }
+
+  .notice_table tr td:nth-child(3){
+    width: 20%;
+    text-align: right;
+  }
+
+  .service_container .input_wrap{
+    display: flex;
+  }
+
+  .service_container .btn_search{
+    background: url(../img/icon/i_search.png) no-repeat;
+    background-size: cover;
+    border: 0;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    right: 0;
+    left: unset;
+}
+
+.select_input_option.input_group.type2 select{
+    background-position: right center;
+    border-bottom: none;
+}
+.select_input_option{
+    width: 30%;
+    padding-right: 10px;
+}
+
+.input_search_wrap{
+    width: 70%;
+}
+
+.input_search_wrap.input_group.type2 input{
+    border-bottom: none;
+}
+
+.qna_input_wrapp{
+    border-bottom: 1px solid #b2b2b2;
+    padding-right: 10px;
+}
+
+.servce_qna_inner .cont_left{
+    width: 30%;
+    height: auto;
+}
+
+.servce_qna_inner .cont_right{
+    width: 70%;
+}
+
+.servce_qna_inner {
+    width: 100%;
+    display: flex;
+}

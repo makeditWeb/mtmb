@@ -18,8 +18,10 @@
     <meta name="Descript-xion" content="">
     <meta name="Description" content="">
 
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
     <link rel="icon" href="" type="image/x-icon" sizes="16x16">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/service.css">
 
     <title></title>
 </head>
@@ -66,10 +68,10 @@
                     <li>
                         <a href="business.html">비즈니스</a>
                     </li>
-                    <li>
+                    <li >
                         <a href="consulting_new.html">견적요청</a>
                     </li>
-                    <li  class="active">
+                    <li class="active">
                         <a href="service_center.html">고객센터</a>
                     </li>
                 </ul>
@@ -82,10 +84,10 @@
                     <li>
                         <a href="business.html">비즈니스</a>
                     </li>
-                    <li>
+                    <li >
                         <a href="consulting_new.html">견적요청</a>
                     </li>
-                    <li  class="active">
+                    <li class="active">
                         <a href="service_center.html">고객센터</a>
                     </li>
                 </ul>
@@ -95,9 +97,10 @@
 
         <!-- e:pc -->
 
-        <section class="sub_cont consulting sc">
-            <div class="sub_cont_top">
-                <div class="container_wrap">
+        <section class="service_container">
+
+            <div class="container_wrap">
+                <div class="service_notice_wrap">
                     <!-- s: (모바일) 공지사항 -->
                     <div class="container mo">
                         <h1>공지사항</h1>
@@ -124,184 +127,225 @@
 
                     <!-- s: (PC) 공지사항 -->
                     <div class="container pc">
-                        <div class="row">
-                            <div class="col-4">
+                        <div class="servce_notice_inner">
+                            <div class="servce_notice_left">
                                 <div class="cont_left">
-                                    <h1 class="cont_title">공지사항</h1>
+                                    <div class='title_wrap'>
+                                        <h2>Notice</h2>
+                                        <img src='img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
+                                    </div>
                                     <div class="cont_bot">
                                         <div class="notice_pagination">
-                                            <ul>
-                                                <li class="prev"><span>◀</span>이전</li>
-                                                <li>2</li>
+                                            <ul class="pagination_arrow">
+                                                <li class="prev">
+                                                    <img src="img/icon/arrow_left.png">
+                                                </li>
+                                                <li class="next"><img src="img/icon/arrow_right.png"></li>
+                                            </ul>
+                                            <ul class="pagination_number">
+                                                <li class="now_page">2</li>
                                                 <li>/</li>
-                                                <li>80</li>
-                                                <li class="next">다음<span>▶</span></li>
+                                                <li class="total_page">80</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-8">
-                                <div class="cont_right notice_wrap">
-                                    <ul>
-                                        <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
-                                        <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
-                                        <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
-                                        <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
-                                        <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- e: (PC) 공지사항 -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="sub_cont_body pb-5">
-
-                <!-- s: (모바일)문의하기 -->
-                <section class="container mo">
-                    <div class="cont_header">
-                        <h1 class="cont_title m-0">문의하기</h1>
-                        <button type="button" class="btn_primary">글쓰기</button>
-                    </div>
-                    <div class="cont_body">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="input_group type2">
-                                    <select name="" id="">
-                                        <option value="">제목 + 내용</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="input_group type2">
-                                    <input type="text" placeholder="검색어를 입력해주세요">
-                                    <button type="button" class="btn_search"></button>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <table class="request_table">
+                            
+                            <div class="cont_right notice_wrap">
+                                <table class="notice_table">
                                     <tbody>
                                         <tr>
-                                            <td class="ta_center" rowspan="2">20</td>
+                                            <td class="ta_center">20</td>
                                             <td>패키지 상품 구성을 변경할 수 있나요?</td>
                                             <td>
-                                                <ul>
-                                                    <li>홍길동</li>
-                                                    <li>2023.04.04</li>
-                                                </ul>
+                                                2023.04.04
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ta_center" rowspan="2">20</td>
+                                            <td class="ta_center">20</td>
                                             <td>패키지 상품 구성을 변경할 수 있나요?</td>
                                             <td>
-                                                <ul>
-                                                    <li>홍길동</li>
-                                                    <li>2023.04.04</li>
-                                                </ul>
+                                                2023.04.04
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ta_center" rowspan="2">20</td>
+                                            <td class="ta_center">20</td>
                                             <td>패키지 상품 구성을 변경할 수 있나요?</td>
                                             <td>
-                                                <ul>
-                                                    <li>홍길동</li>
-                                                    <li>2023.04.04</li>
-                                                </ul>
+                                                2023.04.04
                                             </td>
                                         </tr>
+                                        
                                         <tr>
-                                            <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ta_center" rowspan="2">20</td>
+                                            <td class="ta_center">20</td>
                                             <td>패키지 상품 구성을 변경할 수 있나요?</td>
                                             <td>
-                                                <ul>
-                                                    <li>홍길동</li>
-                                                    <li>2023.04.04</li>
-                                                </ul>
+                                                2023.04.04
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
-                                        </tr>
+                                        
 
 
                                     </tbody>
                                 </table>
-                                <div class="table_pagination">
-                                    <ul>
-                                        <li class="prev"><span>◀</span>이전</li>
-                                        <li>2</li>
-                                        <li>/</li>
-                                        <li>80</li>
-                                        <li class="next">다음<span>▶</span></li>
-                                    </ul>
+                            </div>
+                        </div>
+
+                        <!-- e: (PC) 공지사항 -->
+                    </div>
+                </div>
+
+                <div class="qna_contact_wrap">
+
+                    <!-- s: (모바일)문의하기 -->
+                    <div class="container mo">
+                        <div class="cont_header">
+                            <h1 class="cont_title m-0">문의하기</h1>
+                            <button type="button" class="btn_primary">글쓰기</button>
+                        </div>
+                        <div class="cont_body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="input_group type2">
+                                        <select name="" id="">
+                                            <option value="">제목 + 내용</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="input_group type2">
+                                        <input type="text" placeholder="검색어를 입력해주세요">
+                                        <button type="button" class="btn_search"></button>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <table class="request_table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="ta_center" rowspan="2">20</td>
+                                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
+                                                <td>
+                                                    <ul>
+                                                        <li>홍길동</li>
+                                                        <li>2023.04.04</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                                <td><b>MTM Biz Design</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_center" rowspan="2">20</td>
+                                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
+                                                <td>
+                                                    <ul>
+                                                        <li>홍길동</li>
+                                                        <li>2023.04.04</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                                <td><b>MTM Biz Design</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_center" rowspan="2">20</td>
+                                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
+                                                <td>
+                                                    <ul>
+                                                        <li>홍길동</li>
+                                                        <li>2023.04.04</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                                <td><b>MTM Biz Design</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_center" rowspan="2">20</td>
+                                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
+                                                <td>
+                                                    <ul>
+                                                        <li>홍길동</li>
+                                                        <li>2023.04.04</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                                <td><b>MTM Biz Design</b></td>
+                                            </tr>
+    
+    
+                                        </tbody>
+                                    </table>
+                                    <div class="notice_pagination">
+                                        <ul class="pagination_arrow">
+                                            <li class="prev">
+                                                <img src="img/icon/arrow_left.png">
+                                            </li>
+                                            <li class="next"><img src="img/icon/arrow_right.png"></li>
+                                        </ul>
+                                        <ul class="pagination_number">
+                                            <li class="now_page">2</li>
+                                            <li>/</li>
+                                            <li class="total_page">80</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- e: (모바일)만족도-->
+                    <!-- e: (모바일)만족도-->
+    
+                    <!-- s: (PC)만족도-->
+                    <div class="container pc">
+                        <div class="servce_qna_inner">
 
-                <!-- s: (PC)만족도-->
-                <section class="container pc mt-5 ">
-                    <div class="row">
-                        <div class="col-4">
                             <div class="cont_left">
-                                <h1 class="cont_title type2">문의하기 <button type="button" class="btn_primary">글쓰기</button></h1>
-                                <div class="cont_bot">
-                                    <div class="sc input_wrap">
-                                        <div class="input_group type2">
+                                <div class="qna_left_content">
+                                    <div class='title_wrap'>
+                                        <h2>Q&A</h2>
+                                        <img src='img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
+                                    </div>
+                                    <div class="sc input_wrap qna_input_wrapp">
+                                        <div class="input_group type2 select_input_option">
                                             <select name="" id="">
                                                 <option value="">제목 + 내용</option>
                                             </select>
                                         </div>
-                                        <div class="input_group type2">
-                                            <input type="text" placeholder="검색어를 입력해주세요">
+                                        <div class="input_group type2 input_search_wrap">
+                                            <input type="text" placeholder="">
                                             <button type="button" class="btn_search"></button>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="cont_bot">
+
 
                                     <div class="notice_pagination">
-                                        <ul>
-                                            <li class="prev"><span>◀</span>이전</li>
-                                            <li>2</li>
+                                        <ul class="pagination_arrow">
+                                            <li class="prev">
+                                                <img src="img/icon/arrow_left.png">
+                                            </li>
+                                            <li class="next"><img src="img/icon/arrow_right.png"></li>
+                                        </ul>
+                                        <ul class="pagination_number">
+                                            <li class="now_page">2</li>
                                             <li>/</li>
-                                            <li>80</li>
-                                            <li class="next">다음<span>▶</span></li>
+                                            <li class="total_page">80</li>
                                         </ul>
                                     </div>
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="col-8">
                             <div class="cont_right">
                                 <table class="request_table">
-                                    <thead>
-                                        <tr>
-                                            <th>번호</th>
-                                            <th>제목</th>
-                                            <th>작성자</th>
-                                            <th>작성일</th>
-                                        </tr>
-                                    </thead>
+                                    
                                     <tbody>
                                         <tr>
                                             <td class="ta_center" rowspan="2">20</td>
@@ -311,7 +355,7 @@
                                         </tr>
                                         <tr>
                                             <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
+                                            <td></td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -322,7 +366,7 @@
                                         </tr>
                                         <tr>
                                             <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
+                                            <td></td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -333,7 +377,7 @@
                                         </tr>
                                         <tr>
                                             <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
+                                            <td></td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -344,7 +388,7 @@
                                         </tr>
                                         <tr>
                                             <td>↳ 문의하신 내용에 답변드립니다.</td>
-                                            <td><b>MTM Biz Design</b></td>
+                                            <td></td>
                                             <td></td>
                                         </tr>
 
@@ -354,16 +398,19 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- e: (PC)만족도-->
-
+                    <!-- e: (PC)만족도-->
+    
+    
+                </div>
 
             </div>
+
+            
         </section>
 
         <!-- s: footer -->
         <!-- PC -->
-        <footer class="footer pc">
+        <footer class="footer pc" id='footer'>
             <div class="ft_wrap">
                 <div class="row">
                     <div class="col-2">
@@ -372,13 +419,14 @@
                     <div class="col-4">
                         <p>서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
                             Tel : 02-374-0336 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
+                        <button>
+                            <a href='#'>관리자</a>
+                        </button>
                     </div>
                     <div class="col-4">
-                        <p>사업자번호 : 130-87-09598 통신판매업신고증 : 제 2021-서울마포-1684호
-                            COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
-                    </div>
-                    <div class="col-2">
-                        <p>개인정보보호책임자 : 진동호</p>
+                        <p>사업자번호 : 130-87-09598 통신판매업신고증 : 제 2021-서울마포-1684호<br />
+                            개인정보보호책임자 : 진동호</p>
+                        <p class='copyright'>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
                     </div>
                 </div>
             </div>
