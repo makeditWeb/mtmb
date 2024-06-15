@@ -807,6 +807,21 @@ textarea {
   margin-top: -360px !important;
 }
 
+
+/* Maximum height */
+@media (max-height: 1080px) {
+    #fp-nav {
+        margin-top: -360px !important;
+    }
+}
+
+@media (max-height: 768px) {
+    #fp-nav {
+        margin-top: -280px !important;
+    }
+}
+
+
 /* accordion */
 .accordion-panel {
     display: none;

@@ -1,3 +1,5 @@
+@import url(../animate.css);
+@import url(../swiper.css);
 
 /********************** Business Header Style **********************/
 .sub_wrap .header {
@@ -46,5 +48,41 @@
         width: 120%;
         height: 1px;
         background-color: #000;
+    }
+}
+
+/* footer */
+.footer {
+    position: relative;
+}
+
+/* 우측 고정 리스트 */
+.right-fixed {
+    display: none;
+}
+
+/* 모바일에서만 노출 */
+@media (max-width: 992px) {
+    .right-fixed {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        gap: 10px;
+        
+        right: 20px;
+        bottom: 100px;
+    }
+
+    .right-fixed button {
+        width: 48px;
+        height: 48px;
+
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .right-fixed button img {
+        width: 100%;
     }
 }
