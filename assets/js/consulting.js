@@ -27,65 +27,65 @@ $(document).ready(function () {
   });
 
 
-    // 초기 설정: 첫 번째 단계인 .step_0에 .active 클래스를 추가
-    $('.step_0').addClass('active');
+  // 초기 설정: 첫 번째 단계인 .step_0에 .active 클래스를 추가
+  $('.step_0').addClass('active');
 
-    // 단계 전환 함수
-    function goToStep(currentStep, nextStep) {
-        $(currentStep).removeClass('active');
-        $(nextStep).addClass('active');
+  // 단계 전환 함수
+  function goToStep(currentStep, nextStep) {
+      $(currentStep).removeClass('active');
+      $(nextStep).addClass('active');
 
-        if(currentStep == '.step_0') {
-          $(currentStep).css({'display': 'none'});
-        }
+      if(currentStep == '.step_0') {
+        $(currentStep).css({'display': 'none'});
+      }
 
-        if(currentStep === '.step_01' && nextStep === '.step_0') {
-          $(nextStep).css({'display': 'flex'});
-        }
-    }
+      if(currentStep === '.step_01' && nextStep === '.step_0') {
+        $(nextStep).css({'display': 'flex'});
+      }
+  }
 
-    // .right_wrap span:nth-child(2)를 클릭했을 때 첫 번째 단계에서 두 번째 단계로 이동
-    $('.step_0 .right_wrap span:nth-child(2)').on('click', function() {
-        goToStep('.step_0', '.step_01');
-    });
+  // .right_wrap span:nth-child(2)를 클릭했을 때 첫 번째 단계에서 두 번째 단계로 이동
+  $('.step_0 .right_wrap span:nth-child(2)').on('click', function() {
+      goToStep('.step_0', '.step_01');
+  });
 
-    // 각 단계별 .prev 클릭 이벤트
-    $('.step_01 .step_control_container .prev').on('click', function() {
-        goToStep('.step_01', '.step_0');
-    });
+  // 각 단계별 .prev 클릭 이벤트
+  $('.step_01 .step_control_container .prev').on('click', function() {
+      goToStep('.step_01', '.step_0');
+  });
 
-    $('.step_02 .step_control_container .prev').on('click', function() {
-        goToStep('.step_02', '.step_01');
-    });
+  $('.step_02 .step_control_container .prev').on('click', function() {
+      goToStep('.step_02', '.step_01');
+  });
 
-    $('.step_03 .step_control_container .prev').on('click', function() {
-        goToStep('.step_03', '.step_02');
-    });
+  $('.step_03 .step_control_container .prev').on('click', function() {
+      goToStep('.step_03', '.step_02');
+  });
 
-    $('.step_04 .step_control_container .prev').on('click', function() {
-        goToStep('.step_04', '.step_03');
-    });
+  $('.step_04 .step_control_container .prev').on('click', function() {
+      goToStep('.step_04', '.step_03');
+  });
 
-    $('.step_05 .step_control_container .prev').on('click', function() {
-        goToStep('.step_05', '.step_04');
-    });
+  $('.step_05 .step_control_container .prev').on('click', function() {
+      goToStep('.step_05', '.step_04');
+  });
 
-    // 각 단계별 .next 클릭 이벤트
-    $('.step_01 .step_control_container .next').on('click', function() {
-        goToStep('.step_01', '.step_02');
-    });
+  // 각 단계별 .next 클릭 이벤트
+  $('.step_01 .step_control_container .next').on('click', function() {
+      goToStep('.step_01', '.step_02');
+  });
 
-    $('.step_02 .step_control_container .next').on('click', function() {
-        goToStep('.step_02', '.step_03');
-    });
+  $('.step_02 .step_control_container .next').on('click', function() {
+      goToStep('.step_02', '.step_03');
+  });
 
-    $('.step_03 .step_control_container .next').on('click', function() {
-        goToStep('.step_03', '.step_04');
-    });
+  $('.step_03 .step_control_container .next').on('click', function() {
+      goToStep('.step_03', '.step_04');
+  });
 
-    $('.step_04 .step_control_container .next').on('click', function() {
-        goToStep('.step_04', '.step_05');
-    });
+  $('.step_04 .step_control_container .next').on('click', function() {
+      goToStep('.step_04', '.step_05');
+  });
 
 });
 

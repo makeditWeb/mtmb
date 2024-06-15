@@ -69,6 +69,12 @@ $(window)
               $('#lnb .lnb_menu_01 ul li a').css({ 'color': '#000' });
             }
 
+            if(index === 4) {
+              $('#top-icon-img').attr('src', 'img/icon/i_top_button_white.png');
+            } else {
+              $('#top-icon-img').attr('src', 'img/icon/i_top_button.png');
+            }
+
             // if (index === 3) {
             //   $('#header').css({ 'border-bottom': '1px solid #000' });
             // } else {
@@ -85,10 +91,7 @@ $(window)
           centeredSlides: true,
           slidesPerView: 4,
           loop: true,
-          autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-          },
+          autoplay: false, // 초기에는 autoplay 비활성화
           on: {
             activeIndexChange: function () {
               const realIndex = this.realIndex;
@@ -98,6 +101,22 @@ $(window)
           }
         });
 
+        $('#section_01_list_swiper_up').on('click', function() {
+          section01Swiper.slidePrev();
+        });
+
+        $('#section_01_list_swiper_down').on('click', function() {
+          section01Swiper.slideNext();
+        });
+
+        // 10초 후에 autoplay 시작
+        setTimeout(function() {
+          section01Swiper.params.autoplay = {
+            delay: 2000,
+            disableOnInteraction: false
+          };
+          section01Swiper.autoplay.start();
+        }, 10000); // 10000ms = 10초
 
         // listSwiper
         var listSwiper = new Swiper(".section01_listSwiper", {
@@ -331,6 +350,14 @@ $(window)
               $('.section_01 .content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
             }
           }
+        });
+
+        $('#section_01_list_swiper_left').on('click', function() {
+          section01MobileSwiper.slidePrev();
+        });
+
+        $('#section_01_list_swiper_right').on('click', function() {
+          section01MobileSwiper.slideNext();
         });
 
         // 디바이스 크기가 992px 이하일 때

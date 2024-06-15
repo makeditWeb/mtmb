@@ -29,6 +29,12 @@
     background: transparent;
 }
 
+.section_01 .sc_wrap .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .section01_listSwiper .swiper {
     height: 100vh;
 }
