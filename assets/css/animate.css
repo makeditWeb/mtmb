@@ -17,7 +17,7 @@
         transform: scale(.66);
     }
 
-    15% {
+    18% {
         transform: scale(.85);
     }
 
@@ -129,19 +129,39 @@
 }
 
 
-@keyframes fade_top {
+/* 견적요청 페이지 */
+.content_wrap .consulting_box .left_wrap>ul li:nth-child(1) img {
+    animation: sec7Icon1 infinite 8s;
+}
+.content_wrap .consulting_box .left_wrap>ul li:nth-child(2) img {
+    animation: sec7Icon2 infinite 8s;
+}
+.content_wrap .consulting_box .left_wrap>ul li:nth-child(3) img {
+    animation: sec7Icon3 infinite 8s;
+}
+.content_wrap .consulting_box .left_wrap>ul li:nth-child(4) img {
+    animation: sec7Icon4 infinite 8s;
+}
+.content_wrap .consulting_box .left_wrap>ul li:nth-child(5) img {
+    animation: sec7Icon5 infinite 8s;
+}
+.content_wrap .consulting_box .left_wrap>ul li:nth-child(6) img {
+    animation: sec7Icon6 infinite 8s;
+}
+
+@keyframes value_fade_left {
     0% {
-        transform: translateY(-20px);
+        transform: translateX(-200px);
         opacity: 0;
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes fade_left {
+@keyframes result_fade_left {
     0% {
         transform: translateX(20px);
         opacity: 0;
@@ -153,9 +173,9 @@
     }
 }
 
-@keyframes fade_right {
+@keyframes cost_fade_right {
     0% {
-        transform: translateX(-20px);
+        transform: translateX(200px);
         opacity: 0;
     }
 
@@ -165,24 +185,16 @@
     }
 }
 
-/* .section_01 h1 {
-    animation: fade_right 1s;
-}
-
-.section_01 .main_logo {
-    animation: fade_left 2s;
-} */
-
-.section_01.active .top_wrap {
-    animation: fade_top 1s;
+.section_01.active .top_wrap span{
+    animation: value_fade_left 1s;
 }
 
 .section_01.active h1 {
-    animation: fade_right 1s;
+    animation: cost_fade_right 2s;
 }
 
 .section_01.active h2 {
-    animation: fade_left 2s;
+    animation: result_fade_left 2s;
 }
 
 
@@ -197,7 +209,6 @@
         opacity: 1;
     }
 }
-
 
 .pc .section_01 .content-panel{
   animation: panel_fade_top 1s;
@@ -285,13 +296,15 @@
 @keyframes expandWidth {
     from {
         width: 0px;
+        right: -36px;
     }
     to {
-        width: 800px;
+        width: calc(100vw - 100% - 36px);
+        right: calc(-36px - (100vw - 100% - 36px));
     }
 }
 
-.section_01 .sc_wrap .content_01::before {
+.section_01 h1::after {
     animation: 10s expandWidth 0.5s ease-in-out forwards;
 }
 @keyframes scaleAnimation {

@@ -16,6 +16,18 @@
     width: 80%;
     margin: 0px auto;
     padding: 80px 0px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.business_container .content_wrap::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+    top: 0px;
+    left: 0px;
 }
 
 /********************** Section Common Style **********************/
@@ -143,12 +155,15 @@
     margin-right: 100px;
     width: 50%;
     min-width: max-content;
+
+    z-index: 2;
+    transform: translateX(-40px);
 }
 
 .business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap {
     width: 100%;
     padding: 16px;
-    padding-left: 24px;
+    padding-left: 64px;
 
     display: flex;
     justify-content: space-between;
@@ -156,6 +171,8 @@
 
     border-bottom: 1px solid #000;
     cursor: pointer;
+
+    background: #fff;
 }
 
 .business_container .content_wrap .ppt_content_container .ppt_index_container .ppt_index_wrap p {
@@ -263,7 +280,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .business_container .content_wrap .service_step_container li p {
@@ -274,7 +291,7 @@
 
 /* 스탭 이미지 */
 .business_container .content_wrap .service_step_container li:nth-child(odd) img {
-    width: 50px;
+    width: 44px;
 }
 
 /* 화살표 */
