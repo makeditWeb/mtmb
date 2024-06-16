@@ -61,6 +61,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  padding: 0px;
 }
 
 .section_01 .sc_wrap .title_wrap {
@@ -123,11 +124,11 @@
   position: absolute;
   content: '';
 
-  width: calc(100vw - 100% - 36px);
+  width: calc(100vw - 100% - 36px - 120px);
   background: #343434;
   height: 1px;
   top: 60px;
-  right: calc(-36px - (100vw - 100% - 36px));
+  right: calc(-36px - (100vw - 100% - 36px - 120px));
 }
 
 .section_01 h2 {
@@ -165,13 +166,17 @@
 }
 
 .section_01 .sc_wrap .content_01 {
+  background: #000;
   position: relative;
+  right: 0px;
 
   width: 120px;
   margin: 80px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  
+  border-left: 1px solid #343434;
 }
 
 .section_01 .sc_wrap .content {
@@ -179,7 +184,6 @@
   padding: 20px;
 
   border-top: 1px solid #343434;
-  border-left: 1px solid #343434;
 }
 
 .section_01 .sc_wrap .content:last-child {
@@ -632,7 +636,6 @@
   overflow: hidden;
 
   transform: translateX(calc(-80px - 150px));
-  margin-top: 80px;
 }
 
 .section_02 .consulting_box .left_wrap {
@@ -772,7 +775,6 @@
 
   padding: 50px;
 
-  margin-top: 145px;
   margin-right: 50px;
 
   margin-bottom: 100px;
@@ -945,6 +947,9 @@
 
     transform: none;
   }
+  .section_02 .consulting_box .left_wrap{
+    border-radius: 0px 60px 0px 0px
+  }
 
   .section_02 .consulting_box .left_wrap .section_text {
     width: 60%;
@@ -1047,6 +1052,11 @@
     justify-content: space-between;
   }
 
+
+  .section_02 .consulting_box .left_wrap > ul{
+    margin-bottom: 24px;
+  }
+
   .section_02 .consulting_box .left_wrap ul li {
     height: 65px;
   }
@@ -1056,7 +1066,13 @@
     height: 36px;
   }
 
+  .section_02 .consulting_box .left_wrap > ul li::after{
+    width: 12px;
+    height: 12px;
+  }
+
   .section_02 .consulting_box .left_wrap > ul li p {
+    height: 20px;
     font-size: 8px;
     margin-top: 8px;
   }
@@ -1074,13 +1090,30 @@
   }
 
   .section_02 .made_it_wrap .text_wrap .view_all_wrap {
-    width: 65px;
+    width: 100px;
   }
 }
 
 @media (max-width: 400px) {
+  .section_02 .consulting_box .left_wrap .section_text{
+    margin-bottom: 20px;
+  }
   .section_02 .made_it_wrap .text_wrap h2 {
     font-size: 30px;
+  }
+  .section_02 .consulting_box .left_wrap ul li{
+    justify-content: flex-end;
+    height: 50px;
+  }
+
+  .section_02 .consulting_box .left_wrap ul li img{
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .section_02 .made_it_wrap .text_wrap .view_all_wrap {
+    width: 80px;
   }
 }
 
@@ -1096,12 +1129,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
+  margin-top: 80px;
 }
 
 .section_03 .content_03 {
   position: relative;
   border-left: 1px solid #000;
-  /* height: 100vh !important; */
+  height: 100%;
   /* overflow: hidden; */
 
   /* content: '';
@@ -1309,12 +1344,6 @@
 
 .section_03 .review_container .review_box:not(:last-child) {
   border-bottom: 1px solid #eee;
-}
-
-@media (max-width: 1800px) {
-  .section_03 .content_03 {
-    margin-top: 80px;
-  }
 }
 
 @media (max-width: 1600px) {
@@ -1876,6 +1905,8 @@
     margin-top: 90px;
 
     position: relative;
+
+    border-bottom: 1px solid #000;
   }
 
   .section_04 .content_04 .title_wrap {
@@ -2058,8 +2089,30 @@
   }
 }
 
-@media (max-width: 500px) {
 
+@media (max-width: 600px) {
+  .section_04 .content_04 {
+    margin: 0px 16px;
+  }
+
+  .section_04 .content_04::before{
+    height: calc(100% - 136px)
+  }
+
+  .section_04 .content_04 .title_wrap{
+    margin-top: 48px;
+  }
+
+  .section_04 .ppt_content .type_example_wrap span{
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section_04 .content_04::before{
+    left: 52px;
+  }
   .section_04 .title_wrap span {
     font-size: 42px;
   }
@@ -2069,11 +2122,11 @@
   }
 
   .section_04 .sub_title > img {
-    width: 30px;
+    width: 28px;
   }
 
   .section_04 .ppt_wrap {
-    margin-top: 36px;
+    margin-top: 24px;
   }
 
   .section_04 .ppt_content .description_wrap{
@@ -2099,11 +2152,11 @@
   }
 
   .section_04 .sub_title > img {
-    width: 28px;
+    width: 20px;
   }
 
   .section_04 .ppt_wrap {
-    margin-top: 32px;
+    margin-top: 12px;
   }
 
   .section_04 .ppt_content .description_wrap{
@@ -2117,19 +2170,37 @@
   .section_04 .ppt_content .description_wrap > span:last-child{
     font-size: 14px;
   }
+
+  .section_04 .ppt_content .type_example_wrap span{
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+
+
+  .section_04 .title_wrap img {
+    width: 28px;
+    height: 28px; 
+  }
+
 }
 
 @media (max-width: 350px) {
+  .section_04 .content_04::before{
+    left: 40px;
+  }
+
   .section_04 .title_wrap span {
     font-size: 28px;
   }
 
   .section_04 .sub_title > span {
     font-size: 16px;
+    padding: 12px;
   }
 
   .section_04 .ppt_wrap {
-    margin-top: 28px;
+    margin-top: 12px;
   }
 
   .section_04 .ppt_content .description_wrap{
@@ -2348,8 +2419,12 @@
     transition: all 2s;
   }
 
+  .section_05 .content_05 .accordion-trigger.active + .about_content{
+    display: flex  !important;
+  }
+
   .section_05 .content_05 .about_content {
-    display: flex;
+    display: none;
     flex-direction: column;
     margin-top: 24px;
   }
@@ -2407,7 +2482,15 @@
 
   .section_05 .sub_title .view_all_wrap {
     width: 100px;
+    margin-top: 0px;
     margin-bottom: 0px;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .section_05 .content_05{
+    margin: 0px 16px;
   }
 }
 
@@ -2479,6 +2562,7 @@
 }
 
 /* section 06 */
+
 .section_06 .content_06 {
   display: flex;
   align-items: center;
@@ -2695,6 +2779,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .section_06 .content_06 {
+    margin: 0px 16px;
+  }
+}
+
 @media (max-width: 500px) {
   .section_06 .sub_title .sub_title_wrap > span {
     font-size: 42px;
@@ -2889,12 +2979,26 @@
   padding-bottom: 140px;
 }
 
+.section_08 .fp-scroller, .section_08 .fp-scrollable{
+  overflow: unset;
+}
+
 .section_08 .content_08 {
   display: flex;
   flex-direction: column;
 
   margin-left: auto;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+.section_08 .content_08::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background: #000;
+    top: 0px;
+    left: -200px;
 }
 
 .section_08 .content_08 .top_wrap {
@@ -2907,16 +3011,6 @@
   justify-content: flex-start;
 
   border-bottom: 1px solid #000;
-}
-
-.section_08 .content_08 .top_wrap::before {
-  position: absolute;
-  content: "";
-  width: 100vw;
-  height: 1px;
-  left: -200px;
-  top: 20px;
-  background: #000;
 }
 
 .section_08 .content_08 .top_wrap .about_wrap,

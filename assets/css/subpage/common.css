@@ -71,6 +71,8 @@
         
         right: 20px;
         bottom: 100px;
+
+        z-index: 10;
     }
 
     .right-fixed button {

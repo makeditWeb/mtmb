@@ -299,14 +299,15 @@
         right: -36px;
     }
     to {
-        width: calc(100vw - 100% - 36px);
-        right: calc(-36px - (100vw - 100% - 36px));
+        width: calc(100vw - 100% - 36px - 120px);
+        right: calc(-36px - (100vw - 100% - 36px - 120px));
     }
 }
 
 .section_01 h1::after {
     animation: 10s expandWidth 0.5s ease-in-out forwards;
 }
+
 @keyframes scaleAnimation {
   0% {
     transform: scale(1);

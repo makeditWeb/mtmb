@@ -452,17 +452,18 @@ $(document).ready(function () {
   });
 
   $('.accordion-trigger').click(function () {
-    $(this).parent().find('.accordion-panel').slideToggle();
-    $(this).toggleClass('active');
+    // 모든 아코디언을 닫고 이미지 소스를 초기 상태로 변경
+    $('.accordion-panel').slideUp();
+    $('.accordion-trigger').removeClass('active');
+    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    // Change the image source based on the active state
-    if ($(this).hasClass('active')) {
+    // 클릭된 아코디언이 닫혀 있는 경우 열기
+    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+      $(this).parent().find('.accordion-panel').slideDown();
+      $(this).addClass('active');
       $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-    } else {
-      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
     }
   });
-
 });
 
 

@@ -804,11 +804,12 @@ textarea {
 /* 좌측 fullpage menu */
 
 #fp-nav {
-  margin-top: -360px !important;
+    top: 120px;
+    margin-top: 0px !important;
 }
 
-
-/* Maximum height */
+/* 
+Maximum height
 @media (max-height: 1080px) {
     #fp-nav {
         margin-top: -360px !important;
@@ -819,7 +820,7 @@ textarea {
     #fp-nav {
         margin-top: -280px !important;
     }
-}
+} */
 
 
 /* accordion */
@@ -827,7 +828,7 @@ textarea {
     display: none;
 }
 
-.accordion-panel .active {
+.accordion-panel.active {
     display: flex;
 }
 
