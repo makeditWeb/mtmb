@@ -418,7 +418,7 @@ $(window)
           spaceBetween: 0,
           freeMode: false,
           enteredSlides: true,
-          speed: 5000,
+          speed: 2000,
           autoplay: {
             delay: 1,
           },
