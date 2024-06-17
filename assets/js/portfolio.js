@@ -10,61 +10,81 @@ $(document).ready(function () {
     $item.css('animation-delay', `${delay}s`);
   });
   
+  let itemsToShowPC = 8;
+  let itemsToShowMobile = 4;
+  const itemsIncrementPC = 8;
+  const itemsIncrementMobile = 2;
 
-      let itemsToShow = 8;
-      const itemsIncrement = 8;
-      const portfolioList = $('.portfolio_list');
-      const totalItems = $('.portfolio_wrap').length;
+  const totalItemsPC = $('.pc .portfolio_wrap').length;
+  const totalItemsMobile = $('.mo .portfolio_wrap').length;
 
-      const sentinel = document.getElementById('sentinel');
+  const sentinelPC = document.getElementById('sentinelPC');
+  const sentinelMO = document.getElementById('sentinelMO');
 
-      // 처음 4개의 아이템을 표시
-      $('.portfolio_wrap:lt(' + itemsToShow + ')').css('display', 'flex');
+  // 처음 8개의 아이템을 표시
+  $('.pc .portfolio_wrap:lt(' + itemsToShowPC + ')').css('display', 'flex');
+  $('.mo .portfolio_wrap:lt(' + itemsToShowMobile + ')').css('display', 'flex');
 
-      // Intersection Observer 설정
-      const observerOptions = {
-        root: document.querySelector('#infinite-scroll-section .fp-scroller'),
-        rootMargin: '0px',
-        threshold: 1.0
-      };
+  // Intersection Observer 설정
+  const observerOptions = {
+    root: document.querySelector('#infinite-scroll-section .fp-scroller'),
+    rootMargin: '0px',
+    threshold: 1.0
+  };
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (itemsToShow < totalItems) {
+  const observerPC = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (itemsToShowPC < totalItemsPC) {
+          setTimeout(() => {
+            itemsToShowPC += itemsIncrementPC;
+            $('.pc .portfolio_wrap:lt(' + itemsToShowPC + ')').css('display', 'flex');
+            // 높이 재설정
+            $.fn.fullpage.reBuild();
+          }, 1000);
+        }
+      }
+    });
+  }, observerOptions);
 
-              setTimeout(()=> {
-                itemsToShow += itemsIncrement;
-                $('.portfolio_wrap:lt(' + itemsToShow + ')').css('display', 'flex');
-                // 높이 재설정
-                $.fn.fullpage.reBuild();
-              }, 1000)
-            }
-          }
-        });
-      }, observerOptions);
+  const observerMO = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (itemsToShowMobile < totalItemsMobile) {
+          setTimeout(() => {
+            itemsToShowMobile += itemsIncrementMobile;
+            $('.mo .portfolio_wrap:lt(' + itemsToShowMobile + ')').css('display', 'flex');
+            // 높이 재설정
+            $.fn.fullpage.reBuild();
+          }, 1000);
+        }
+      }
+    });
+  }, observerOptions);
 
-      // 마지막 아이템을 감시
-      observer.observe(sentinel);
+  // 각각의 마지막 아이템을 감시
+  observerPC.observe(sentinelPC);
+  observerMO.observe(sentinelMO);
 
 
-            var $portfolioContainer = $('.fp-scroller');
-            var $title = $('.title');
-            var lastScrollTop = 0;
 
-            function checkScroll() {
-                var transformMatrix = $portfolioContainer.css('transform').match(/matrix.*\((.+)\)/);
-                var scrollTop = transformMatrix ? parseFloat(transformMatrix[1].split(', ')[5]) : 0;
+  var $portfolioContainer = $('.fp-scroller');
+  var $title = $('.title');
+  var lastScrollTop = 0;
 
-                if (scrollTop >= 0) {
-                    $title.addClass('scrolled');
-                } else {
-                    $title.removeClass('scrolled');
-                }
+  function checkScroll() {
+      var transformMatrix = $portfolioContainer.css('transform').match(/matrix.*\((.+)\)/);
+      var scrollTop = transformMatrix ? parseFloat(transformMatrix[1].split(', ')[5]) : 0;
 
-                lastScrollTop = scrollTop;
-            }
+      if (scrollTop >= 0) {
+          $title.addClass('scrolled');
+      } else {
+          $title.removeClass('scrolled');
+      }
 
-            // setInterval(checkScroll, 100);
+      lastScrollTop = scrollTop;
+  }
+
+  // setInterval(checkScroll, 100);
 });
 
