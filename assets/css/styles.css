@@ -217,6 +217,8 @@
 }
 
 .section_01 .content-panel .img-wrap {
+  overflow: hidden;
+
   width: 140px;
   height: 110px;
   border-radius: 10px;
@@ -505,12 +507,17 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 200px;
-    min-height: calc(110px + 80px + 20px);
+    width: 100%;
+    height: auto;
+    /* min-height: calc(110px + 80px + 20px); */
   }
 
   .section_01 .content-panel .img-wrap {
-    width: 100%;
+      width: 100%;
+      height: auto;
+      min-height: max-content;
+
+      margin-bottom: 1rem
   }
 
   .section_01 .content-panel .right-wrap {
