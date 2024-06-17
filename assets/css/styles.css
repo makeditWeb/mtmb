@@ -2361,6 +2361,7 @@
   justify-content: flex-end;
 
   margin-top: 120px;
+  background: #fff;
 }
 
 .section_05 .content_05 .left_wrap .introduction_list > img {
@@ -2869,15 +2870,18 @@
 
 /* section 07 */
 .section_07 .content_07 {
-  width: 80%;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
 }
 
 .section_07 .content_07 .top_wrap {
+  width: 100%;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2885,6 +2889,7 @@
 
 .section_07 .content_07 .top_wrap > img {
   width: 50%;
+  transform: translateX(-10em)
 }
 
 .section_07 .content_07 .top_wrap .left_wrap {
@@ -2895,7 +2900,7 @@
   display: flex;
   flex-direction: column;
 
-  transform: translateX(40px);
+  transform: translateX(200px)
 }
 
 .section_07 .content_07 .top_wrap .left_wrap .title {
@@ -2979,16 +2984,28 @@
 }
 
 .section_07 .content_07 .education_list {
-  width: 100%;
+  width: 80%;
   display: flex;
   gap: 20px;
-  transform: translateX(40px);
   z-index: 1;
 }
 
 .section_07 .content_07 .education_list > img {
   width: calc((100% - 100px) / 3);
   align-self: flex-end;
+}
+
+@media (max-width: 1750px) {
+
+  .section_07 .content_07 .top_wrap > img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .section_07 .content_07 .top_wrap .left_wrap {
+    transform: translateX(100px)
+  }
 }
 
 @media (max-width: 1200px) {
@@ -6070,18 +6087,26 @@ section.container {
 }
 
 /* PC에서 공통적으로 사용하는 스타일들  */
-
+.content_04,
+.content_05,
+.content_06,
+.content_07
+{
+  position: relative;
+  height: 100%;
+} 
 /* PC PPT 색션  */
 .content_04::before {
-  position: absolute;
+  /* position: absolute;
   content: "";
   background: #000;
   width: 1px;
   height: 100%;
   top: 0;
-  left: 565px;
+  left: 565px; */
 }
 
+.content_04::before,
 .content_05::before,
 .content_06::before,
 .content_07::before {
@@ -6090,20 +6115,22 @@ section.container {
   background: #000;
   width: 1px;
   height: 100%;
-  left: 760px;
+  left: 565px;
+  /* left: 760px; */
 }
 
 @media (max-width: 1600px) {
   .content_04::before {
-    position: absolute;
+    /* position: absolute;
     content: "";
     background: #000;
     width: 1px;
     height: 100%;
     top: 0;
-    left: 450px;
+    left: 450px; */
   }
-
+  
+  .content_04::before,
   .content_05::before,
   .content_06::before,
   .content_07::before {
@@ -6112,12 +6139,13 @@ section.container {
     background: #000;
     width: 1px;
     height: 100%;
-    left: 650px;
+     left: 450px;
+    /* left: 650px; */
   }
 }
 
 @media (max-width: 1280px) {
-  .content_04::before {
+  /* .content_04::before {
     position: absolute;
     content: "";
     background: #000;
@@ -6125,8 +6153,9 @@ section.container {
     height: 100%;
     top: 0;
     left: 300px;
-  }
+  } */
 
+  .content_04::before,
   .content_05::before,
   .content_06::before,
   .content_07::before {
@@ -6135,7 +6164,8 @@ section.container {
     background: #000;
     width: 1px;
     height: 100%;
-    left: 500px;
+    left: 300px;
+    /* left: 500px; */
   }
 }
 
