@@ -268,7 +268,7 @@
     }
 
     100% {
-        transform: translateY(-20%);
+        transform: translateY(-3em);
         opacity: 1;
     }
 }
