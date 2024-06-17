@@ -586,6 +586,7 @@
 
   .section_01 .content-panel .right-wrap .description_wrap span:first-child{
     font-size: 14px;
+    min-width: max-content;
   }
 
   .section_01 .content-panel .right-wrap .description_wrap span:last-child{
