@@ -397,7 +397,7 @@
   .section_01 .sc_wrap .title_wrap .top_wrap .description_wrap {
     font-size: 24px;
     font-weight: 400;
-    transform: translateX(28px);
+    margin-left: 28px;
   }
 
   .section_01 .sc_wrap .title_wrap .top_wrap .description_wrap span:first-child {
@@ -425,7 +425,6 @@
     font-weight: 500;
     line-height: 100%;
     margin-left: 24px;
-    transform: translateX(28px);
     color: #fff;
   }
 
