@@ -202,7 +202,7 @@
 
   right: 20px;
   bottom: 20%;
-  transform: translateY(-30%);
+  transform: translateY(-3em);
 
   width: 300px;
   height: 135px;
@@ -381,7 +381,7 @@
 
   .section_01 .sc_wrap .title_wrap {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 70px;
     justify-content: center;
     transform: none;
   }
@@ -607,11 +607,28 @@
     font-size: 78px;
     transform: none;
     line-height: 70%;
+    margin-right: 10px;
   }
 
   .section_01 .sc_wrap .title_wrap .top_wrap > span{
     margin-left: 0px;
   }
+}
+
+@media (max-width: 350px) {
+  .section_01 .sc_wrap .title_wrap .top_wrap > span{
+    font-size: 3.5rem;
+    line-height: 80%;
+  }
+
+  .section_01 .sc_wrap .title_wrap > h1{
+    font-size: 5rem
+  }
+
+  .section_01 .sc_wrap .title_wrap > h2{
+    font-size: 4.5rem
+  }
+
 }
 
 /* section 02 */
