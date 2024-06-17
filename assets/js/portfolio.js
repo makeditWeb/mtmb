@@ -21,7 +21,7 @@ $(document).ready(function () {
   const sentinelPC = document.getElementById('sentinelPC');
   const sentinelMO = document.getElementById('sentinelMO');
 
-  // 처음 8개의 아이템을 표시
+  // 처음 아이템을 표시
   $('.pc .portfolio_wrap:lt(' + itemsToShowPC + ')').css('display', 'flex');
   $('.mo .portfolio_wrap:lt(' + itemsToShowMobile + ')').css('display', 'flex');
 
@@ -32,8 +32,7 @@ $(document).ready(function () {
     threshold: 1.0
   };
 
-  const observerPC = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+  const observerPC = new IntersectionObserver((entries, observer) => {    entries.forEach(entry => {
       if (entry.isIntersecting) {
         if (itemsToShowPC < totalItemsPC) {
           setTimeout(() => {
@@ -50,23 +49,38 @@ $(document).ready(function () {
   const observerMO = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        console.log(entry.isIntersecting)
         if (itemsToShowMobile < totalItemsMobile) {
           setTimeout(() => {
             itemsToShowMobile += itemsIncrementMobile;
             $('.mo .portfolio_wrap:lt(' + itemsToShowMobile + ')').css('display', 'flex');
-            // 높이 재설정
-            $.fn.fullpage.reBuild();
           }, 1000);
         }
       }
     });
-  }, observerOptions);
+  }, {
+    root: document.querySelector('#infinite-scroll-section'),
+    rootMargin: '0px',
+    threshold: 1.0
+  });
 
-  // 각각의 마지막 아이템을 감시
+// Throttle/ Debounce 함수 추가 (선택 사항)
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  };
+}
+
+window.addEventListener('scroll', throttle(() => {
+  observerPC.unobserve(sentinelPC);
+  observerMO.unobserve(sentinelMO);
   observerPC.observe(sentinelPC);
   observerMO.observe(sentinelMO);
-
-
+}, 200));
 
   var $portfolioContainer = $('.fp-scroller');
   var $title = $('.title');

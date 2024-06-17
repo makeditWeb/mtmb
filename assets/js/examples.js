@@ -153,12 +153,17 @@ $(window)
 
         // partnerSwiperOne
         var partnerSwiper = new Swiper(".partnerSwiper", {
-          slidesPerView: 4,
-          spaceBetween: 0, // 슬라이드 여백
-          loop: true, // 무한반복
+          spaceBetween: 0,
+          freeMode: false,
+          enteredSlides: true,
+          speed: 5000,
           autoplay: {
-            delay: 2000,
+            delay: 1,
           },
+          loop: true,
+          slidesPerView: 'auto',
+          allowTouchMove: false,
+          disableOnInteraction: true
         });
 
 
@@ -335,21 +340,21 @@ $(window)
 
 
 
-  // 100vh 값을 계산합니다.
-  const viewportHeight = $(window).height();
-  
-  // 스크롤 이벤트를 감지합니다.
-  $(window).on('scroll', function() {
-    const scrollPosition = $(window).scrollTop();
-    // 현재 스크롤 위치가 .mo .section_01의 위치를 지났는지 확인합니다.
-    if (scrollPosition >= viewportHeight) {
-      $('.menu_line').css({ 'background': '#000' });
-      $('.logo_text').css({ 'color': '#000' });
-    } else {
-      $('.menu_line').css({ 'background': '#fff' });
-      $('.logo_text').css({ 'color': '#fff' });
-    }
-  });
+        // 100vh 값을 계산합니다.
+        const viewportHeight = $(window).height();
+        
+        // 스크롤 이벤트를 감지합니다.
+        $(window).on('scroll', function() {
+          const scrollPosition = $(window).scrollTop();
+          // 현재 스크롤 위치가 .mo .section_01의 위치를 지났는지 확인합니다.
+          if (scrollPosition >= viewportHeight) {
+            $('.menu_line').css({ 'background': '#000' });
+            $('.logo_text').css({ 'color': '#000' });
+          } else {
+            $('.menu_line').css({ 'background': '#fff' });
+            $('.logo_text').css({ 'color': '#fff' });
+          }
+        });
 
         // 디바이스 크기가 992px 이하일 때
         var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
@@ -410,13 +415,17 @@ $(window)
 
         // partnerSwiper
         var partnerSwiper = new Swiper(".partnerSwiper", {
-          slidesPerView: 3,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
+          spaceBetween: 0,
+          freeMode: false,
+          enteredSlides: true,
+          speed: 5000,
           autoplay: {
-            delay: 2000,
+            delay: 1,
           },
+          loop: true,
+          slidesPerView: 'auto',
+          allowTouchMove: false,
+          disableOnInteraction: true
         });
 
         // ppSwiper

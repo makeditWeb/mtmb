@@ -1288,11 +1288,6 @@
   align-items: center;
 }
 
-.section_03 .partner_wrap .swiper-wrapper {
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-}
-
 .section_03 .review_wrap {
   width: 1130px;
 
