@@ -321,6 +321,7 @@ $(window)
 
         // section03 partner swiper
         var section03PartnerSwiper = new Swiper(".section03_partnerSwiper", {
+          loop: true,
           spaceBetween: 0,
           freeMode: false,
           enteredSlides: true,
@@ -328,7 +329,6 @@ $(window)
           autoplay: {
             delay: 1,
           },
-          loop: true,
           slidesPerView: 'auto',
           allowTouchMove: false,
           disableOnInteraction: true
@@ -491,6 +491,7 @@ $(document).ready(function () {
       $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
     }
   });
+  
 });
 
 
