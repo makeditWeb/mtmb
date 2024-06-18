@@ -1,17 +1,22 @@
 const titles = ["제안서", "강의자료", "소개서", "제안문서", "비즈니스 보고서"];
 const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
 
+$(document).ready(function () {
+  const debounce = (func, wait) => {
+    let timeout;
+    return () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(), wait);
+    };
+  };
 
-$(window)
-  .resize(function () {
-    $(document).ready(function () {
-      if (window.innerWidth > 992) {
-        // 다바이스 크기가 992px 이상일 때
-          // 좌측 메뉴 노출
-          $('#lnb').css({ 'display': 'block' });
+  const handleResize = () => {
+    const isLargeScreen = window.innerWidth > 992;
+    $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
 
-        // 풀페이지 옵션
-        $("#fullpage").fullpage({
+    if (isLargeScreen) {
+      //  fulllpage 설정
+      $("#fullpage").fullpage({
           anchors: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
           menu: "#header",
           verticalCentered: true, // 세로 중앙 정렬
@@ -81,11 +86,9 @@ $(window)
             //   $('#header').css({ 'border-bottom': 'none' });
             // }
           },
-        });
+      });
 
-
-
-        // listSwiper
+      // listSwiper
         var section01Swiper = new Swiper(".section01_listSwiper", {
           direction: 'vertical',
           centeredSlides: true,
@@ -333,28 +336,13 @@ $(window)
           allowTouchMove: false,
           disableOnInteraction: true
         });
-
-
-      } else {
-        $('#lnb').css({ 'display': 'none' });
-
-
-
-        // 100vh 값을 계산합니다.
-        const viewportHeight = $(window).height();
-        
-        // 스크롤 이벤트를 감지합니다.
-        $(window).on('scroll', function() {
-          const scrollPosition = $(window).scrollTop();
-          // 현재 스크롤 위치가 .mo .section_01의 위치를 지났는지 확인합니다.
-          if (scrollPosition >= viewportHeight) {
-            $('.menu_line').css({ 'background': '#000' });
-            $('.logo_text').css({ 'color': '#000' });
-          } else {
-            $('.menu_line').css({ 'background': '#fff' });
-            $('.logo_text').css({ 'color': '#fff' });
-          }
-        });
+    } else {
+      const viewportHeight = $(window).height();
+      $(window).on('scroll', function () {
+        const scrollPosition = $(window).scrollTop();
+        $('.menu_line').css('background', scrollPosition >= viewportHeight ? '#000' : '#fff');
+        $('.logo_text').css('color', scrollPosition >= viewportHeight ? '#000' : '#fff');
+      });
 
         // 디바이스 크기가 992px 이하일 때
         var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
@@ -468,23 +456,20 @@ $(window)
             swiper: product_01_01,
           },
         });
-      }
-    });
-  })
-  .resize();
+    }
+  };
 
-$(document).ready(function () {
+  $(window).resize(debounce(handleResize, 200)).resize();
+
   $(".sub_menu li").click(function () {
     $(this).toggleClass("active");
   });
 
   $('.accordion-trigger').click(function () {
-    // 모든 아코디언을 닫고 이미지 소스를 초기 상태로 변경
     $('.accordion-panel').slideUp();
     $('.accordion-trigger').removeClass('active');
     $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    // 클릭된 아코디언이 닫혀 있는 경우 열기
     if (!$(this).parent().find('.accordion-panel').is(':visible')) {
       $(this).parent().find('.accordion-panel').slideDown();
       $(this).addClass('active');
@@ -492,25 +477,26 @@ $(document).ready(function () {
     }
   });
   
+  // TODO
+  // marquee 최적화
+// const cloneMarqueeItems = (selector, times) => {
+//   $(selector).each(function() {
+//     const marqueeItemList = $(this).closest(".marquee-block").find(`${selector}-list`);
+//     if (marqueeItemList.length === 0) {
+//       for (let i = 0; i < times; i++) {
+//         const clone = $(this).clone();
+//         $(this).after(clone);
+//       }
+//     }
+//   });
+// };
+
+// cloneMarqueeItems('.partner_wrap .marquee-list-item', 5);
+// cloneMarqueeItems('.partner_box .marquee-list-item', 5);
+
+    const originalList = $('.marquee-item-list');
+    const clonedList = originalList.clone();
+    $('.marquee-block').append(clonedList);
+
+
 });
-
-
-// sub top fixed
-let topFixed = document.getElementById("top_fixed");
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topFixed.style.display = "block";
-  } else {
-    topFixed.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
