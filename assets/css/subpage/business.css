@@ -94,7 +94,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-
+    color: #000;
     width: 145px;
     height: auto;
 }
@@ -130,6 +130,7 @@
 
 .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text:hover span {
     font-weight: 700;
+    color: #000;
 }
 
 .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
