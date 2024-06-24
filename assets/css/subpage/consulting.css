@@ -673,7 +673,19 @@
   padding-bottom: 24px;
   margin-bottom: 30px;
 
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
+  position: relative;
+}
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::before,
+.consulting_container .review_container .left_wrap .top_wrap .title_wrap::before {
+  content: '';
+  position: absolute;
+  background: #000;
+  left: -24px;
+  bottom: 0px;
+  width: calc(100% + 24px);
+  height: 1px;
 }
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
