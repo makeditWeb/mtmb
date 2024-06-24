@@ -1238,6 +1238,25 @@
   margin-top: 20px;
   position: relative;
   cursor: pointer;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+.section_03 .all_service_wrap .service_list .service_wrap .service_text span {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
+.section_03 .all_service_wrap .service_list .service_wrap .service_text svg {
+  width: 12px;
+  height: 12px;
+  display: none;
+  margin-bottom: 8px;
 }
 
 .section_03 .all_service_wrap .service_list .service_wrap .service_text::after {
@@ -1262,10 +1281,8 @@
   font-weight: 700;
 }
 
-.section_03 .all_service_wrap .service_list .service_wrap .service_text span {
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 24px;
+.section_03 .all_service_wrap .service_list .service_wrap .service_text:hover svg {
+  display: block;
 }
 
 .section_03 .partner_container {
