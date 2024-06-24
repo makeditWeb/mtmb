@@ -1530,6 +1530,10 @@
     margin-top: 18px;
   }
 
+  .section_03 .service_list .service_wrap .service_text span > a {
+    color: #000;
+  }
+
   .section_03 .partner_box {
     margin-top: 24px;
     padding: 24px;
@@ -1634,7 +1638,7 @@
   }
 
   .section_03 .service_list .service_wrap .service_text span {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .section_03 .review_container {
@@ -1870,7 +1874,17 @@
   background-color: white;
 }
 
+
+.section_04 .content_04 .left_wrap .more_info > span > a {
+  color: #7b7b7b;
+}
+
 .section_04 .content_04 .left_wrap .more_info > span:hover {
+  color: #000;
+  font-weight: 700;
+}
+
+.section_04 .content_04 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
@@ -2025,6 +2039,10 @@
     font-family: SUIT-Regular;
     font-weight: 400;
     font-size: 22px;
+    color: #7b7b7b;
+  }
+
+  .section_04 .ppt_content .type_example_wrap span > a {
     color: #7b7b7b;
   }
 
@@ -2328,11 +2346,22 @@
   text-align: center;
   color: #7b7b7b;
   cursor: pointer;
+  z-index: 2;
+}
+
+.section_05 .content_05 .right_wrap .more_info > span > a {
+  color: #7b7b7b;
 }
 
 .section_05 .content_05 .right_wrap .more_info > span:hover {
   color: #000;
   font-weight: 700;
+}
+
+.section_05 .content_05 .right_wrap .more_info > span:hover > a {
+  color: #000;
+  font-weight: 700;
+
 }
 
 .section_05 .content_05 .right_wrap .more_info > span:not(:nth-child(3n + 0))::after {
@@ -2666,9 +2695,19 @@
   color: #7b7b7b;
   cursor: pointer;
   background-color: white;
+  z-index: 2;
+}
+
+.section_06 .content_06 .left_wrap .more_info > span > a {
+  color: #7b7b7b;
 }
 
 .section_06 .content_06 .left_wrap .more_info > span:hover {
+  color: #000;
+  font-weight: 700;
+}
+
+.section_06 .content_06 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
@@ -2965,9 +3004,19 @@
   color: #7b7b7b;
   cursor: pointer;
   background-color: white;
+  z-index: 2;
+}
+
+.section_07 .content_07 .top_wrap .left_wrap .more_info > span > a{
+  color: #7b7b7b;
 }
 
 .section_07 .content_07 .left_wrap .more_info > span:hover {
+  color: #000;
+  font-weight: 700;
+}
+
+.section_07 .content_07 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
