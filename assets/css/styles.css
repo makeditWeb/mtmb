@@ -74,7 +74,7 @@
   justify-content: center;
 
   font-family: SBAggroB;
-  font-weight: 700;
+  font-weight: 100;
   color: #fff;
   text-align: center;
 
@@ -109,8 +109,8 @@
 
 .section_01 h1 {
   color: #1ee8ce;
-  font-size: 254px;
-  font-weight: 700;
+  font-size: 260px;
+  font-weight: 100;
   text-align: center;
   text-shadow: 0px 4px 8px #212121;
   line-height: 100%;
@@ -125,10 +125,22 @@
   content: '';
 
   width: calc(100vw - 100% - 36px - 120px);
-  background: #343434;
-  height: 1px;
+  background: #fff;
+  height: 2px;
   top: 60px;
   right: calc(-36px - (100vw - 100% - 36px - 120px));
+}
+
+.section_01 h1::before {
+  position: absolute;
+  content: '';
+  width: calc(100vw - 100% - 36px - 120px);
+  background: #8e8e8e; 
+  opacity: 0.5;
+  height: 2px; 
+  top: 60px;
+  right: calc(-36px - (100vw - 100% - 36px - 120px));
+  z-index: 0; 
 }
 
 .section_01 h2 {
@@ -176,14 +188,14 @@
   flex-direction: column;
   justify-content: space-around;
   
-  border-left: 1px solid #343434;
+  border-left: 3px solid #343434;
 }
 
 .section_01 .sc_wrap .content {
   height: 100%;
-  padding: 20px;
+  padding: 14px;
 
-  border-top: 1px solid #343434;
+  border-top: 2px solid #343434;
 }
 
 .section_01 .sc_wrap .content:last-child {
@@ -191,8 +203,10 @@
 }
 
 .section_01 .sc_wrap .content span:first-child {
-  font-size: 12px;
+  font-size: 13px;
   color: #8b8b8b;
+  text-align: left;
+  display: block; 
 }
 
 
@@ -261,7 +275,7 @@
 
 .section_01 .content-panel .right-wrap .description_wrap span:last-child {
     font-family: SUIT-Regular;
-    font-size: 18px;
+    font-size: 13px;
     color: #bbbbbb;
     line-height: 100%;
 }
@@ -296,10 +310,11 @@
   margin-right: 50px;
 }
 
-.section_01 .scroll-controller .arrow_wrap svg{
-    cursor: pointer;
-    color: #8e8e8e;
-    margin: 25px 0; /* 25px 위, 아래로 각각 간격을 줘서 총 50px 간격을 만듦 */
+.section_01 .scroll-controller .arrow_wrap svg {
+  cursor: pointer;
+  color: #8e8e8e;
+  stroke-width: 5; /* SVG 요소의 경계두껍게  */
+  margin: 25px 0; /* 25px 위, 아래로 각각 간격을 줘서 총 50px 간격을 만듦 */
 }
 
 .section_01 .scroll-controller .arrow_wrap .line {
@@ -1240,24 +1255,19 @@
   cursor: pointer;
 
   width: 100%;
+
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
-}
-
-
-.section_03 .all_service_wrap .service_list .service_wrap .service_text span {
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 24px;
+  justify-content: space-between;
 }
 
 .section_03 .all_service_wrap .service_list .service_wrap .service_text svg {
+  display: none;
   width: 12px;
   height: 12px;
-  display: none;
   margin-bottom: 8px;
 }
+
 
 .section_03 .all_service_wrap .service_list .service_wrap .service_text::after {
   position: absolute;
@@ -1283,6 +1293,12 @@
 
 .section_03 .all_service_wrap .service_list .service_wrap .service_text:hover svg {
   display: block;
+}
+
+.section_03 .all_service_wrap .service_list .service_wrap .service_text span {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 24px;
 }
 
 .section_03 .partner_container {
@@ -1547,10 +1563,6 @@
     margin-top: 18px;
   }
 
-  .section_03 .service_list .service_wrap .service_text span > a {
-    color: #000;
-  }
-
   .section_03 .partner_box {
     margin-top: 24px;
     padding: 24px;
@@ -1655,7 +1667,7 @@
   }
 
   .section_03 .service_list .service_wrap .service_text span {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .section_03 .review_container {
@@ -1891,17 +1903,7 @@
   background-color: white;
 }
 
-
-.section_04 .content_04 .left_wrap .more_info > span > a {
-  color: #7b7b7b;
-}
-
 .section_04 .content_04 .left_wrap .more_info > span:hover {
-  color: #000;
-  font-weight: 700;
-}
-
-.section_04 .content_04 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
@@ -2056,10 +2058,6 @@
     font-family: SUIT-Regular;
     font-weight: 400;
     font-size: 22px;
-    color: #7b7b7b;
-  }
-
-  .section_04 .ppt_content .type_example_wrap span > a {
     color: #7b7b7b;
   }
 
@@ -2363,22 +2361,11 @@
   text-align: center;
   color: #7b7b7b;
   cursor: pointer;
-  z-index: 2;
-}
-
-.section_05 .content_05 .right_wrap .more_info > span > a {
-  color: #7b7b7b;
 }
 
 .section_05 .content_05 .right_wrap .more_info > span:hover {
   color: #000;
   font-weight: 700;
-}
-
-.section_05 .content_05 .right_wrap .more_info > span:hover > a {
-  color: #000;
-  font-weight: 700;
-
 }
 
 .section_05 .content_05 .right_wrap .more_info > span:not(:nth-child(3n + 0))::after {
@@ -2712,19 +2699,9 @@
   color: #7b7b7b;
   cursor: pointer;
   background-color: white;
-  z-index: 2;
-}
-
-.section_06 .content_06 .left_wrap .more_info > span > a {
-  color: #7b7b7b;
 }
 
 .section_06 .content_06 .left_wrap .more_info > span:hover {
-  color: #000;
-  font-weight: 700;
-}
-
-.section_06 .content_06 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
@@ -3021,19 +2998,9 @@
   color: #7b7b7b;
   cursor: pointer;
   background-color: white;
-  z-index: 2;
-}
-
-.section_07 .content_07 .top_wrap .left_wrap .more_info > span > a{
-  color: #7b7b7b;
 }
 
 .section_07 .content_07 .left_wrap .more_info > span:hover {
-  color: #000;
-  font-weight: 700;
-}
-
-.section_07 .content_07 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
