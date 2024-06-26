@@ -483,6 +483,10 @@
         position: relative;
     }
 
+    .business_container .content_wrap .ppt_container>.title_wrap::before {
+        content: none;
+    }
+
     .ppt_container::before {
         position: absolute;
         content: "";
