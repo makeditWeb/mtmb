@@ -94,3 +94,8 @@
 @media (max-width: 992px) {
 
 }
+
+
+#footer {
+   bottom: 0px;   
+}
