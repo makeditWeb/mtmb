@@ -839,8 +839,7 @@
   width: 1px;
   height: 95%;
 
-  border-left: 3px solid #000;
-  opacity: 0.2;
+  border-left: 1px solid #000;
 
   top: 50%;
   left: 0px;
@@ -855,9 +854,8 @@
   width: calc(100vw - 100px);
   height: 100%;
 
-  border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
-  opacity: 0.2;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 
   top: 0px;
   left: -150px;
@@ -1219,7 +1217,7 @@
   left: 0px;
   top: 12px;
   width: 1px;
-  height: calc(100% - 12px - 168px);
+  height: calc(100% - 12px - 170px);
   background: #000;
 }
 
@@ -1262,7 +1260,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 15px;
-  row-gap: 60px;
+  row-gap: 50px;
 }
 
 .section_03 .all_service_wrap .service_list .service_wrap {
@@ -1275,15 +1273,14 @@
   height: auto;
 }
 
-.section_03 .all_service_wrap .service_list .service_wrap img {
-  width: 36px;
-  height: 36px;
+.section_03 .all_service_wrap .service_list .service_wrap > img {
+  width: 30px;
+  height: 30px;
   margin-left: 12px;
   align-self: flex-start;
 }
 
 .section_03 .all_service_wrap .service_list .service_wrap .service_text {
-  margin-top: 20px;
   position: relative;
   cursor: pointer;
 
@@ -1301,11 +1298,12 @@
   padding-left: 6px;
 }
 
-.section_03 .all_service_wrap .service_list .service_wrap .service_text svg {
+.section_03 .all_service_wrap .service_list .service_wrap .service_text > img {
   display: none;
   width: 12px;
   height: 12px;
   margin-bottom: 8px;
+  object-fit: contain
 }
 
 
@@ -1338,7 +1336,7 @@
   font-weight: 700;
 }
 
-.section_03 .all_service_wrap .service_list .service_wrap .service_text:hover svg {
+.section_03 .all_service_wrap .service_list .service_wrap .service_text:hover > img {
   display: block;
 }
 
