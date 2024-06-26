@@ -804,6 +804,10 @@
   margin-bottom: 12px;
 }
 
+.section_02 .consulting_box .right_wrap>span:first-child > img {
+  margin-left: 12px;
+}
+
 .section_02 .consulting_box .right_wrap>span>span {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
