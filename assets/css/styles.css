@@ -3184,8 +3184,7 @@
 .section_08 .content_08 .top_wrap {
   position: relative;
   width: 1650px;
-  padding: 50px;
-  padding-top: 80px;
+  padding: 10px 50px;
 
   display: flex;
   justify-content: flex-start;
@@ -3204,7 +3203,6 @@
 .section_08 .content_08 .top_wrap .about_wrap,
 .section_08 .content_08 .top_wrap .notice_wrap {
   width: 50%;
-  height: 420px;
 
   display: flex;
   flex-direction: column;
@@ -3212,6 +3210,7 @@
   align-items: flex-start;
 
   position: relative;
+  margin-bottom: 18px;
 }
 
 .section_08 .content_08 .top_wrap .about_wrap::before,
@@ -3219,9 +3218,9 @@
   position: absolute;
   content: "";
   width: 1px;
-  height: calc(100% + 50px);
-  left: -50px;
-  top: -20px;
+  height: 100%;
+  left: -32px;
+  top: 0px;
   background: #000;
 }
 
@@ -3230,6 +3229,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  margin-top: 30px;
   margin-bottom: 100px;
 }
 
@@ -6353,3 +6353,4 @@ section.container {
     content: none;
   }
 }
+
