@@ -728,7 +728,7 @@
   width: 100%;
 }
 
-.section_02 .consulting_box .left_wrap>ul li {
+.section_02 .consulting_box .left_wrap>ul li:not(:nth-child(even)) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -742,23 +742,21 @@
   max-width: 100%;
 }
 
-.section_02 .consulting_box .left_wrap>ul li::after {
-  background: url(../img/main/right_arrow.png) no-repeat;
-  background-size: 50%;
-  background-position-x: center;
-  background-position-y: bottom;
-  content: "";
+.section_02 .consulting_box .left_wrap>ul li:not(:nth-child(odd)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 
-  display: inline-block;
+  width: 12px;
+  height:100%;
+}
 
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-
-  width: 20px;
-  height: 50%;
-
-  z-index: 1;
+.section_02 .consulting_box .left_wrap>ul li:not(:nth-child(odd)) > img {
+  width: 12px;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(5px)
 }
 
 .section_02 .consulting_box .left_wrap>ul li:last-child::after {
