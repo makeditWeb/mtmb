@@ -728,7 +728,7 @@
   width: 100%;
 }
 
-.section_02 .consulting_box .left_wrap>ul li:not(:nth-child(even)) {
+.section_02 .consulting_box .left_wrap>ul li:not(.arrow_between) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -742,7 +742,7 @@
   max-width: 100%;
 }
 
-.section_02 .consulting_box .left_wrap>ul li:not(:nth-child(odd)) {
+.section_02 .consulting_box .left_wrap>ul li.arrow_between {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -750,9 +750,11 @@
 
   width: 12px;
   height:100%;
+
+  margin-top: auto;
 }
 
-.section_02 .consulting_box .left_wrap>ul li:not(:nth-child(odd)) > img {
+.section_02 .consulting_box .left_wrap>ul li.arrow_between > img {
   width: 12px;
   height: auto;
   object-fit: contain;
@@ -1023,6 +1025,8 @@
 
     display: flex;
   }
+
+
 
   .section_02 .consulting_box .left_wrap ul li img {
     width: 52px;
