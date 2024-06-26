@@ -26,21 +26,23 @@
   bottom: unset;
 }
 
-.service_container {
-  width: 88%;
-  margin: 0 0 0 auto;
-}
+
 
 .service_container .container_wrap {
-  padding: 80px 50px;
   border-left: 1px solid #000;
+  margin-top: 10px;
+  width: 76%;
+  margin: 90px auto 100px;
+}
+
+.service_notice_wrap {
+  padding: 80px 10px 0;
 }
 
 .service_container .container_wrap .container {
   width: 100%;
   margin: 0;
   max-width: 100%;
-  padding: 50px 0 0;
 
 
 }
@@ -48,7 +50,7 @@
 .servce_notice_inner {
   display: flex;
   border-bottom: 1px solid #000;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 
 
@@ -64,7 +66,9 @@
   font-size: 48px;
   font-family: GmarketSansBold;
   font-weight: 700;
-  margin-right: 8px;
+  margin-right: 15px;
+  line-height: 0.6;
+  letter-spacing: -0.06em;
 }
 
 .service_container .container_wrap .container .title_wrap img {
@@ -82,7 +86,8 @@
 
 .service_container .notice_pagination {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 13px;
 }
 
 .service_container .notice_pagination .pagination_arrow li {
@@ -104,7 +109,7 @@
 
 .service_container .notice_pagination .pagination_number li {
   font-size: 16px;
-  font-family: 'SUIT', sans-serif;
+  font-family: 'SUIT-Regular';
   color: #646464;
 }
 
@@ -175,13 +180,11 @@
 
 .service_container .input_wrap {
   display: flex;
+  width: 65%;
 }
 
 .service_container .btn_search {
-  background: url(../img/icon/i_search.png) no-repeat;
-  background-size: cover;
   border: 0;
-  content: "";
   cursor: pointer;
   display: inline-block;
   height: 20px;
@@ -191,20 +194,28 @@
   width: 20px;
   right: 0;
   left: unset;
+  background:none;
 }
 
+.servce_qna_inner .cont_bot{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 0 0 14%;
+}
 .select_input_option.input_group.type2 select {
   background-position: right center;
   border-bottom: none;
 }
 
 .select_input_option {
-  width: 30%;
+  width: 50%;
   padding-right: 10px;
 }
 
 .input_search_wrap {
-  width: 70%;
+  width: 50%;
 }
 
 .input_search_wrap.input_group.type2 input {
@@ -228,6 +239,7 @@
 .servce_qna_inner {
   width: 100%;
   display: flex;
+  padding: 60px 10px 0;
 }
 
 
@@ -247,7 +259,7 @@
 }
 
 .input_write_button {
-  width: 50%;
+  width: 100%;
   margin: 0 0 30px auto;
 }
 
@@ -255,16 +267,17 @@
   margin-left: 12px;
 }
 
-.input_write_button {
-  width: 50%;
-  ;
-}
-
 
 @media screen and (max-width:768px) {
   .service_container .container_wrap {
     border-left: none;
     padding: 80px 30px;
+    width: 100%;
+    margin:0;
+  }
+  
+  .service_container .input_wrap{
+    width: 100%;
   }
 
   .service_container {
@@ -288,7 +301,12 @@
 
   .cont_right.notice_wrap {
     width: 100%;
+    margin-top: 20px;
   }
+
+  .service_notice_wrap {
+    padding: 80px 0;
+}
 
   .cont_right.notice_wrap table tbody tr {}
 
@@ -354,6 +372,30 @@
   }
 
   .notice_qna_wrapper {
-    padding-top: 80px;
+    padding-top: 40px;
+}
+
+.service_container .btn_search {
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  right: 0;
+  left: unset;
+  background: none;
+  padding: 0;
+}
+
+.service_container .container_wrap .container{
+  padding: 0;
+}
+
+.service_container .btn_search img{
+  width: 100%;
+  height: 100%;
 }
 }
