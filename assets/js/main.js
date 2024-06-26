@@ -1,4 +1,4 @@
-const titles = ["제안서", "강의자료", "소개서", "제안문서", "비즈니스 보고서"];
+const titles = ["제안서", "강의자료", "소개서", "제안문서", "비지니스 보고서"];
 const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
 
 $(document).ready(function () {

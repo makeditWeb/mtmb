@@ -692,13 +692,13 @@
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
 .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
-    content: '';
-    position: absolute;
-    width: calc(100% + 24px);
-    height: calc(100% + 24px);
-    background: #fff;
-    z-index: 1;
-    left: -24px;
+  content: '';
+  position: absolute;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  background: #fff;
+  z-index: 1;
+  left: -24px;
 }
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
@@ -742,12 +742,23 @@
 }
 
 .consulting_container .search_wrap select {
-  border: none;
+  width: 100%;
+
   margin-right: 8px;
   font-size: 16px;
   font-family: SUIT-Regular;
   font-weight: 500;
   margin-bottom: 12px;
+
+  border: none;
+
+  text-align: center;
+
+  
+  appearance: none;
+  background-image: url('../../img/icon/i_down.png');
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .consulting_container .search_wrap input[type=text] {
@@ -758,6 +769,7 @@
   border: none;
 
   background-color: white;
+
   background-image: url('../../img/icon/i_search.png');
   background-position: right;
   background-repeat: no-repeat;
