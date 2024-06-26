@@ -1260,7 +1260,7 @@
 .section_03 .all_service_wrap .service_list .service_wrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: #000;
   width: 145px;
