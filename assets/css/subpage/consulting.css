@@ -1186,6 +1186,15 @@
     margin: 18px 60px;
   }
 
+  .consulting_container .consulting_box .left_wrap>ul {
+    align-items: flex-end;
+  }
+
+
+  .consulting_container .consulting_box .left_wrap>ul li:nth-child(5){
+    width: 135px;
+  }
+
   .consulting_container .step_box .right_wrap .survey_form_container {
     width: 80%;
     margin: 0 auto;
@@ -1337,7 +1346,7 @@
   }
 
   .consulting_container .consulting_box .left_wrap>ul li {
-    height: 92px;
+    width: 92px;
   }
 
   .consulting_container .consulting_box .left_wrap>ul li img {
