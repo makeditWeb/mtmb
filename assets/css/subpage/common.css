@@ -66,33 +66,31 @@
 
 /* 우측 고정 리스트 */
 .right-fixed {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 10px;
+    
+    right: 20px;
+    bottom: 100px;
+
+    z-index: 10;
+}
+
+.right-fixed button {
+    width: 60px;
+    height: 60px;
+
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.right-fixed button img {
+    width: 100%;
 }
 
 /* 모바일에서만 노출 */
 @media (max-width: 992px) {
-    .right-fixed {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        gap: 10px;
-        
-        right: 20px;
-        bottom: 100px;
 
-        z-index: 10;
-    }
-
-    .right-fixed button {
-        width: 60px;
-        height: 60px;
-
-        outline: none;
-        border: none;
-        background: transparent;
-    }
-
-    .right-fixed button img {
-        width: 100%;
-    }
 }

@@ -597,7 +597,11 @@ textarea {
 
 .footer .col-4 {
     width: fit-content;
+    border-left: 1px solid #6b6b6b;
+    padding: 10px 40px;
 }
+
+.footer .col-4 p span{margin-left: 20px; }
 
 .footer .col-4 button {
     padding: 2px 16px;
@@ -620,6 +624,12 @@ textarea {
 
 .footer .copyright {
     margin-top: 18px;
+}
+
+.ft_wrap .col-2 {
+    flex: 0 0 auto;
+    width: 12%;
+    padding: 12px 0;
 }
 
 @media (max-width: 992px) {
