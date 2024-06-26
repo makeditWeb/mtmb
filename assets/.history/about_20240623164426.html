@@ -277,7 +277,9 @@
                     </div>
 
 
-                    <div id="mapPc"  class="location_content_container"></div>
+                    <div class='location_content_container'>
+                        <img class="pc" src="img/pc_map.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -332,14 +334,12 @@
 
 
                     <div class='location_content_container'>
-                        <div id="mapMobile"  class="location_content_container"></div>
+                        <img src="img/pc_map.png" alt="">
                         <div class="location_adress">
                             <p class="location_adress_Text">서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호</p>
                             <p>Tel : 02-3663-0332  /  Fax : 02-374-0335
                                <br> Email : mtmb@mtmbkorea.com</p>
                         </div>
-
-                        
                     </div>
                 </div>
             </div>
@@ -412,28 +412,7 @@
     <script src="lib/jquery.fullpage.min.js"></script>
     <script src="lib/swiper-bundle.min.js"></script>
     <script src="js/examples.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a6269d25dc28b80d66049940a4d12fc"></script>
 
-    <script>
-            function initializeMap() {
-        var containerId = (window.innerWidth >= 768) ? 'mapPc' : 'mapMobile';
-        var container = document.getElementById(containerId); // 조건에 따라 다른 ID로 지도 컨테이너 가져오기
-        var options = {
-            center: new kakao.maps.LatLng(37.5642277147695, 126.847971033372),
-            level: 3
-        };
-
-        var map = new kakao.maps.Map(container, options);
-
-        var markerPosition = new kakao.maps.LatLng(37.5642277147695, 126.847971033372); 
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        marker.setMap(map);
-    }
-
-    window.onload = initializeMap; // 페이지 로드 시 지도 초기화
-    </script>
 </body>
 
 </html>

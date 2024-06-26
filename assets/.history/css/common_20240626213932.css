@@ -496,7 +496,7 @@ textarea {
 .sub_menu li.active a {
     font-weight: 700;
     border-bottom: 3px solid #000;
-    padding-bottom: 4%;
+    padding-bottom: 5%;
 }
 
 .sub_menu li a {
@@ -514,7 +514,6 @@ textarea {
         position: relative;
         padding: 40px 0 16px;
         height: 75px;
-        box-sizing: border-box;
     }
 
     .sub_wrap .header_i img {

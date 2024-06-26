@@ -21,9 +21,8 @@
 /* 모바일 header style */
 @media (max-width: 992px) {
     .sub_wrap .header_wrap {
-        height: 75px;
+        height: 80px;
         border-bottom: none;
-
     }
 
     .header_i {

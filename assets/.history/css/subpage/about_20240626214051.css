@@ -6,7 +6,7 @@
     padding-top: 80px;
   
     /* footer height */
-    padding-bottom: 100px;
+    padding-bottom: 150px;
   }
   
   
@@ -22,9 +22,8 @@
     font-size: 48px;
     font-family: GmarketSansBold;
     font-weight: 700;
-    margin-right: 15px;
+    margin-right: 8px;
     line-height: 0.6;
-    letter-spacing: -0.06em;
   }
   
   .about_container .content_wrap .title_wrap img {
@@ -57,14 +56,12 @@
     color: #808080;
     letter-spacing: -0.04em;
     margin-top: 50px;
-    line-height: 30px;
   }
 
   .about_container .content_wrap .about_container_wrap .title_container .description span{
     font-family: SUIT-Medium;
     font-size: 20px;
     color: #000;
-    letter-spacing: -0.04em;
   }
 
   .about_right_flex{
@@ -93,7 +90,6 @@
   .about-bottom_text span{
     font-family: SUIT-Regular;
     padding-right: 20px;
-    font-weight: 400;
   }
 
   .about_right_flex{
@@ -117,7 +113,7 @@
 
   .location_container{
     width: 77%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     display: flex;
     justify-content: space-between;
     padding: 80px 50px 0;
@@ -133,13 +129,13 @@
 
   .location_content_container {
     width: 850px;
-    height: 500px;
+    height: auto;
 }
 
 .location_content_container img{
     width:100%;
     height: 100%;
-
+    object-fit: contain;
 }
 
 .location_adress p{
@@ -150,8 +146,7 @@
 .location_adress .location_adress_Text{
     font-family: SUIT-Medium;
     font-size: 16px;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width:768px) {
@@ -229,13 +224,10 @@
 
     .location_content_container{
         width: 100%;
-        height: 300px;
     }
 
     .location_content_container img{
         padding: 50px 0 30px;
-        width:100%;
-        height: 100%;
     }
 
     .location_adress .location_adress_Text{

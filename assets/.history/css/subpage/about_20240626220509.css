@@ -151,7 +151,6 @@
     font-family: SUIT-Medium;
     font-size: 16px;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.02rem;
 }
 
 @media screen and (max-width:768px) {
@@ -229,13 +228,10 @@
 
     .location_content_container{
         width: 100%;
-        height: 300px;
     }
 
     .location_content_container img{
         padding: 50px 0 30px;
-        width:100%;
-        height: 100%;
     }
 
     .location_adress .location_adress_Text{
