@@ -1944,16 +1944,20 @@
 .section_04 .content_04 .left_wrap .more_info > span {
   width: 100%;
   position: relative;
-  font-size: 16px;
-  font-weight: 400;
   padding: 20px 0px;
-  text-align: center;
-  color: #7b7b7b;
   cursor: pointer;
   background-color: white;
+  text-align: center;
 }
 
-.section_04 .content_04 .left_wrap .more_info > span:hover {
+.section_04 .content_04 .left_wrap .more_info > span > a {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #7b7b7b;
+}
+
+.section_04 .content_04 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
@@ -2415,19 +2419,22 @@
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-
 .section_05 .content_05 .right_wrap .more_info > span {
   width: 100%;
   position: relative;
-  font-size: 16px;
-  font-weight: 400;
   padding: 20px 0px;
   text-align: center;
-  color: #7b7b7b;
   cursor: pointer;
 }
 
-.section_05 .content_05 .right_wrap .more_info > span:hover {
+.section_05 .content_05 .right_wrap .more_info > span > a {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #7b7b7b;
+}
+
+.section_05 .content_05 .right_wrap .more_info > span:hover > a{
   color: #000;
   font-weight: 700;
 }
@@ -2759,16 +2766,21 @@
 .section_06 .content_06 .left_wrap .more_info > span {
   width: 100%;
   position: relative;
-  font-size: 16px;
-  font-weight: 400;
   padding: 20px 0px;
   text-align: center;
-  color: #7b7b7b;
   cursor: pointer;
   background-color: white;
 }
 
-.section_06 .content_06 .left_wrap .more_info > span:hover {
+.section_06 .content_06 .left_wrap .more_info > span > a{
+  
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #7b7b7b;
+}
+
+.section_06 .content_06 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
@@ -3066,16 +3078,22 @@
 .section_07 .content_07 .top_wrap .left_wrap .more_info > span {
   width: 100%;
   position: relative;
-  font-size: 16px;
-  font-weight: 400;
   padding: 20px 0px;
   text-align: center;
-  color: #7b7b7b;
   cursor: pointer;
   background-color: white;
 }
 
-.section_07 .content_07 .left_wrap .more_info > span:hover {
+.section_07 .content_07 .top_wrap .left_wrap .more_info > span > a {
+  
+  font-size: 16px;
+  font-weight: 400;
+  
+  text-align: center;
+  color: #7b7b7b;
+}
+
+.section_07 .content_07 .left_wrap .more_info > span:hover > a {
   color: #000;
   font-weight: 700;
 }
