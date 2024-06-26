@@ -920,10 +920,6 @@
     overflow: unset;
   }
 
-  .section_02 .consulting_box {
-    margin-top: 50px;
-  }
-
   .section_02 .consulting_box .left_wrap .section_text {
     width: 280px;
     margin-bottom: 30px
@@ -940,7 +936,7 @@
   .section_02 .made_it_wrap {
     height: 300px;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
 
   .section_02 .made_it_wrap .title_wrap h2 {
