@@ -12,7 +12,7 @@
   width: 0.5px;
   height: 100%;
   left: 225px;
-  top: 0px;
+  top: 2%;
 
   z-index: 1;
 }
@@ -178,12 +178,17 @@
   margin-bottom: 12px;
 }
 
-.consulting_container .consulting_box .right_wrap>span>span {
+.consulting_container .consulting_box .right_wrap>p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   margin-left: 12px;
 }
 
+.consulting_container .consulting_box .right_wrap>p img {
+  width: 12px;
+  height: auto;
+  margin-left: 10px;
+}
 .consulting_container .consulting_box .right_wrap>span:last-child {
   font-size: 80px;
   font-weight: 700;
@@ -312,7 +317,6 @@
 .consulting_container .step_box .right_wrap .step_control_container {
   width: 50%;
   margin: 0px auto;
-  margin-top: 20px;
 
   display: flex;
   justify-content: space-between;
