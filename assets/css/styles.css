@@ -95,9 +95,9 @@
 
 .section_01 .top_wrap .description_wrap>span:first-child {
   font-size: 20px;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.8);
   font-family: Pretendard;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .section_01 .top_wrap .description_wrap>span:last-child {
@@ -154,8 +154,7 @@
   text-align: center;
   z-index: 0;
   align-self: flex-end;
-  transform: translateX(135px);
-  margin-top: -3px;
+  transform: translateX(150px);
 }
 
 .section_01 h6 {
@@ -192,12 +191,12 @@
   flex-direction: column;
   justify-content: space-around;
 
-  border-left: 2px solid #343434;
+  border-left: 3px solid #343434;
 }
 
 .section_01 .sc_wrap .content {
   height: 100%;
-  padding: 14px 10px;
+  padding: 14px;
 
   border-top: 2px solid #343434;
 }
@@ -666,7 +665,7 @@
 
 .section_02 .content_02 {
   height: 100vh;
-  padding-top: 180px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -829,8 +828,8 @@
   padding: 50px;
   padding-right: 0px;
 
-  margin-right: 50px;
-  margin-bottom: 60px;
+  /* margin-right: 50px;
+  margin-bottom: 60px; */
 
   display: flex;
   align-items: center;
@@ -995,6 +994,8 @@
 @media only screen and (min-width: 992px) and (max-height: 920px) {
   .section_02 .content_02 {
     padding-top: 100px;
+    padding-right: 50px;
+        padding-bottom: 50px;
   }
 }
 
@@ -3217,7 +3218,7 @@
   align-items: flex-start;
 
   position: relative;
-  margin-bottom: 18px;
+  padding-bottom: 18px;
 }
 
 .section_08 .content_08 .top_wrap .about_wrap::before,
@@ -3236,8 +3237,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-top: 30px;
-  margin-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 100px;
 }
 
 .section_08 .content_08 .top_wrap .about_wrap .title>span,
@@ -3264,15 +3265,17 @@
   font-family: GmarketSansMedium;
   font-size: 20px;
   color: #a6a5a5;
-
+  letter-spacing: -0.04em;
   margin-bottom: 42px;
+  
 }
 
 .section_08 .content_08 .top_wrap .about_wrap .description_wrap .description_02 {
   font-family: SUIT-Medium;
   font-size: 16px;
   color: #333333;
-  line-height: 180%;
+  line-height: 29px;
+  letter-spacing: -0.04em;
 }
 
 .section_08 .content_08 .top_wrap .notice_wrap .notice_list {
@@ -3748,11 +3751,11 @@
 /* Maximum height */
 @media (max-height: 1080px) {
   #lnb .lnb_menu_01 {
-    top: 190px;
+    top: 138px;
   }
 
   #lnb .lnb_menu_02 {
-    bottom: 330px;
+    bottom: 300px;
   }
 }
 
