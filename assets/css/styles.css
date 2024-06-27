@@ -154,7 +154,8 @@
   text-align: center;
   z-index: 0;
   align-self: flex-end;
-  transform: translateX(150px);
+  transform: translateX(135px);
+  margin-top: -3px;
 }
 
 .section_01 h6 {

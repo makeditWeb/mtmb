@@ -168,7 +168,7 @@
     }
 
     100% {
-        transform: translateX(150px);
+        transform: translateX(135px);
         opacity: 1;
     }
 }
