@@ -195,9 +195,13 @@
 }
 
 .section_01 .sc_wrap .content {
-  height: 100%;
-  padding: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 
+  min-width: 120px;
+  height: 100%;
+  padding: 14px 10px;
   border-top: 2px solid #343434;
 }
 
@@ -212,13 +216,12 @@
   display: block;
 }
 
-
 .section_01 .content-panel {
   position: absolute;
   display: flex;
 
   right: 20px;
-  bottom: 20%;
+  bottom: 18%;
   transform: translateY(-3em);
 
   width: 300px;
@@ -399,6 +402,10 @@
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .section_01 h1::before, .section_01 h1::after {
+    content: none;
   }
 
   .section_01 .sc_wrap .title_wrap {

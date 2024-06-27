@@ -21,28 +21,23 @@
 }
 
 /* 메인색션 01 swiper */
-.section01_listMobileSwiper .swiper {
-    height: 100vh;
+
+.section01_listSwiper {
+    max-height: calc(100vh - 164px);
 }
+
+/* .section01_listSwiper .swiper-wrapper {
+  transform: translate3d(0px, 0px, 0px) !important;
+} */
 
 .section01_listMobileSwiper .swiper-slide {
     background: transparent;
 }
 
-.section_01 .sc_wrap .content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.section01_listSwiper .swiper {
-    height: 100vh;
-}
-
 .section01_listSwiper .swiper-slide {
     background: transparent;
-    width: 100% !important;
-    height: calc((100% - 160px) / 4) !important;
+    width: auto;
+    height: calc(((100vh - 160px) / 4) - 2px) !important;
 }
 
 /* listSwiper */
