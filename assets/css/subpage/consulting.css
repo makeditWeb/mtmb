@@ -98,7 +98,7 @@
   width: 100px;
 }
 
-.consulting_container .consulting_box .left_wrap>ul li:nth-child(5){
+.consulting_container .consulting_box .left_wrap>ul li:nth-child(5) {
   width: 215px;
 }
 
@@ -189,6 +189,7 @@
   height: auto;
   margin-left: 10px;
 }
+
 .consulting_container .consulting_box .right_wrap>span:last-child {
   font-size: 80px;
   font-weight: 700;
@@ -687,7 +688,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-bottom: 24px;
   margin-bottom: 30px;
 
@@ -717,6 +718,7 @@
   background: #fff;
   z-index: 1;
   left: -24px;
+  bottom: 0px;
 }
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
@@ -728,22 +730,26 @@
   z-index: 3;
 }
 
-.question td, .answer td,  .consulting_qa_container table td, .review_container table td {
+.question td,
+.answer td,
+.consulting_qa_container table td,
+.review_container table td {
   padding: 20px;
 }
 
-.question td:nth-child(2){
+.question td {
   font-size: 16px;
   color: #646464;
   font-family: 'SUIT-Regular';
 }
 
-.answer td:nth-child(2){
+.answer td:nth-child(2) {
   font-size: 16px;
   color: #000;
   font-family: 'SUIT';
   font-weight: 600;
 }
+
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
 .consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
   width: 37px;
@@ -760,7 +766,7 @@
 .consulting_container .consulting_qa_container table tr,
 .consulting_container .review_container table tr {
   /* 100% - left_wrap width - margin-right */
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #2a2a2a;
   /* height: 80px !important; */
 }
 
@@ -788,7 +794,7 @@
 
   text-align: center;
 
-  
+
   appearance: none;
   background-image: url('../../img/icon/i_down.png');
   background-repeat: no-repeat;
@@ -807,6 +813,7 @@
   background-image: url('../../img/icon/i_search.png');
   background-position: right;
   background-repeat: no-repeat;
+  background-size: 20%;
 
   font-size: 16px;
   font-family: SUIT-Regular;
@@ -1149,6 +1156,11 @@
 /********************** 모바일 Style **********************/
 
 @media (max-width: 992px) {
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after {
+    content: none;
+  }
+
   .consulting_container::before {
     content: none;
   }
@@ -1195,7 +1207,7 @@
   }
 
 
-  .consulting_container .consulting_box .left_wrap>ul li:nth-child(5){
+  .consulting_container .consulting_box .left_wrap>ul li:nth-child(5) {
     width: 135px;
   }
 
@@ -1289,6 +1301,31 @@
   .consulting_container .review_container table {
     max-width: none;
     font-size: 12px;
+  }
+
+  .consulting_container .consulting_qa_container table tr.question {
+    border: none;
+  }
+
+  .consulting_container .consulting_qa_container table tr.question td:not(:first-child) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .consulting_container .consulting_qa_container table tr.answer {
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .review_container table td:nth-child(3) {
+    min-width: fit-content;
+  }
+
+  .consulting_qa_container table tr td:last-child,
+  .review_container table tr td:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
 
   .consulting_container .consulting_qa_container .pagination_wrap,
@@ -1429,8 +1466,11 @@
     padding-bottom: 12px;
   }
 
-  .question td, .answer td,  .consulting_qa_container table td, .review_container table td {
-    padding: 16px;
+  .question td,
+  .answer td,
+  .consulting_qa_container table td,
+  .review_container table td {
+    padding: 12px;
   }
 
   .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
@@ -1446,9 +1486,26 @@
 }
 
 
+@media (max-width: 450px) {
+  .review_container table td:nth-child(2) {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 400px) {
-  .question td, .answer td,  .consulting_qa_container table td, .review_container table td {
-    padding: 12px;
+  .question td,
+  .answer td,
+  .consulting_qa_container table td,
+  .review_container table td {
+    padding: 10px;
+  }
+
+
+  .review_container table td:nth-child(2) {
+    max-width: 80px;
   }
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
@@ -1475,7 +1532,16 @@
 }
 
 @media (max-width: 350px) {
-  .question td, .answer td, .consulting_qa_container table td, .review_container table td {
+
+
+  .review_container table td:nth-child(2) {
+    min-width: 50px;
+  }
+
+  .question td,
+  .answer td,
+  .consulting_qa_container table td,
+  .review_container table td {
     padding: 8px;
   }
 
