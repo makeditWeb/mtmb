@@ -44,13 +44,13 @@
 }
 
 .consulting_container .consulting_box .left_wrap {
-  width: 72%;
+  width: 63%;
   height: 100%;
-  padding: 90px 90px 90px 180px;
+  padding: 100px 90px 150px 200px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
   border-radius: 0px 100px 100px 0px;
 
@@ -75,8 +75,9 @@
 } */
 
 .consulting_container .consulting_box .left_wrap .section_text {
-  width: 45%;
+  width: 326px;
   z-index: 1;
+  height: auto;
 }
 
 .consulting_container .consulting_box .left_wrap>ul {
@@ -113,6 +114,8 @@
   height: auto;
   position: absolute;
   bottom: -3px;
+  filter: invert(100%) sepia(0%) saturate(7430%) hue-rotate(352deg) brightness(118%) contrast(99%);
+  transform: none;
 }
 
 /* .consulting_container .consulting_box .left_wrap>ul li::after {
@@ -162,9 +165,8 @@
   align-items: center;
   color: #fff;
 
-  margin-left: 100px;
-  margin-bottom: 80px;
-  padding: 24px;
+  margin-left: 200px;
+  padding: 0 0 160px;
 }
 
 .consulting_container .consulting_box .right_wrap>span:first-child {
@@ -179,24 +181,29 @@
 }
 
 .consulting_container .consulting_box .right_wrap>p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   font-size: 18px;
   margin-left: 12px;
+  font-family: 'SUIT';
+	font-weight: 700;
+  letter-spacing: -0.02em;
+  display: flex;
+    align-items: center;
 }
 
 .consulting_container .consulting_box .right_wrap>p img {
-  width: 12px;
+  width: 8px;
   height: auto;
   margin-left: 10px;
 }
 
 .consulting_container .consulting_box .right_wrap>span:last-child {
   font-size: 80px;
-  font-weight: 700;
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   color: #02ead7;
   line-height: 100%;
-
+  letter-spacing: -0.08em;
   cursor: pointer;
 }
 
@@ -723,11 +730,13 @@
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
 .consulting_container .review_container .left_wrap .top_wrap .title_wrap span {
-  font-family: GmarketSansBold;
-  font-weight: 700;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 30px;
-  line-height: 1;
+  line-height: 0.6;
   z-index: 3;
+  letter-spacing: -0.06em;
+
 }
 
 .question td,
@@ -737,10 +746,20 @@
   padding: 20px;
 }
 
+.question td:first-child{
+  vertical-align: top;
+  font-family: 'SUIT';
+	font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.06em;
+}
+
 .question td {
   font-size: 16px;
   color: #646464;
-  font-family: 'SUIT-Regular';
+  font-family: 'SUIT';
+  font-weight: 500;
+  letter-spacing: -0.06em;
 }
 
 .answer td:nth-child(2) {
@@ -766,7 +785,7 @@
 .consulting_container .consulting_qa_container table tr,
 .consulting_container .review_container table tr {
   /* 100% - left_wrap width - margin-right */
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #e6e6e6;
   /* height: 80px !important; */
 }
 
@@ -782,43 +801,81 @@
 }
 
 .consulting_container .search_wrap select {
-  width: 100%;
-
-  margin-right: 8px;
+  width: 40%;
   font-size: 16px;
-  font-family: SUIT-Regular;
-  font-weight: 500;
-  margin-bottom: 12px;
-
+	font-family: 'SUIT';
+	font-weight: 500;
+  padding-bottom: 12px;
+  padding-left: 10px;
   border: none;
 
-  text-align: center;
+  text-align: left;
 
 
   appearance: none;
   background-image: url('../../img/icon/i_down.png');
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 82% 34%;
 }
 
 .consulting_container .search_wrap input[type=text] {
-  width: 100%;
+  width: 60%;
   padding-bottom: 12px;
-
   box-sizing: border-box;
   border: none;
-
   background-color: white;
-
-  background-image: url('../../img/icon/i_search.png');
-  background-position: right;
+  background-image: url(../../img/icon/i_search.png);
+  background-position: 87% 30%;
   background-repeat: no-repeat;
-  background-size: 20% 4px;
-
+  background-size: 15%;
   font-size: 16px;
-  font-family: SUIT-Regular;
-  font-weight: 500;
+	font-family: 'SUIT';
+	font-weight: 500;
 }
+
+.notice_pagination ul {
+  display: flex;
+}
+
+.notice_pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+}
+.notice_pagination .pagination_arrow li {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.notice_pagination .pagination_arrow li:first-child::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #626262;
+  width: 1px;
+
+}
+
+
+.notice_pagination .pagination_number li {
+  font-size: 16px;
+  font-family: 'SUIT-Regular';
+  color: #646464;
+}
+
+.notice_pagination .pagination_number li.total_page {
+  font-weight: 300;
+  padding-left: 5px;
+}
+
+.notice_pagination .pagination_number li.now_page {
+  font-weight: 600;
+  padding-right: 5px;
+}
+
 
 /* 페이지네이션 */
 .consulting_container .consulting_qa_container .pagination_wrap,
