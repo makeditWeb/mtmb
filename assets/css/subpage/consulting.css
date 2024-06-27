@@ -728,6 +728,10 @@
   z-index: 3;
 }
 
+.question td, .answer td,  .consulting_qa_container table td, .review_container table td {
+  padding: 20px;
+}
+
 .question td:nth-child(2){
   font-size: 16px;
   color: #646464;
@@ -1425,6 +1429,10 @@
     padding-bottom: 12px;
   }
 
+  .question td, .answer td,  .consulting_qa_container table td, .review_container table td {
+    padding: 16px;
+  }
+
   .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
   .consulting_container .review_container .left_wrap .top_wrap .title_wrap {
     padding-left: 12px;
@@ -1439,6 +1447,10 @@
 
 
 @media (max-width: 400px) {
+  .question td, .answer td,  .consulting_qa_container table td, .review_container table td {
+    padding: 12px;
+  }
+
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
     font-size: 14px;
   }
@@ -1457,13 +1469,16 @@
   }
 
   .consulting_container .portfolio_container {
-
     width: calc(100% - 32px);
     margin: 0px 16px;
   }
 }
 
 @media (max-width: 350px) {
+  .question td, .answer td, .consulting_qa_container table td, .review_container table td {
+    padding: 8px;
+  }
+
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
     font-size: 12px;
   }
