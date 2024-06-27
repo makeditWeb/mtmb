@@ -52,7 +52,8 @@
   }
   
   .about_container .content_wrap .about_container_wrap .title_container .description{
-    font-family: SUIT-Regular;
+    font-family: 'SUIT',sans-serif;
+    font-weight:300;
     font-size: 20px;
     color: #808080;
     letter-spacing: -0.04em;
@@ -61,10 +62,12 @@
   }
 
   .about_container .content_wrap .about_container_wrap .title_container .description span{
-    font-family: SUIT-Medium;
+    font-family: 'SUIT',sans-serif;
     font-size: 20px;
+    font-weight:500 ;
     color: #000;
     letter-spacing: -0.04em;
+    line-height: 30px;
   }
 
   .about_right_flex{
@@ -83,17 +86,17 @@
   }
 
   .about-bottom_text{
-    font-family: SUIT-Medium;
+    font-family: 'SUIT',sans-serif;
     font-size: 24px;
     letter-spacing: -0.04em;
     padding: 0 100px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .about-bottom_text span{
-    font-family: SUIT-Regular;
+    font-family: 'SUIT',sans-serif;
     padding-right: 20px;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .about_right_flex{
@@ -143,12 +146,15 @@
 }
 
 .location_adress p{
-    font-family: SUIT-Regular;
+  font-family: 'SUIT',sans-serif;
     font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
 }
 
 .location_adress .location_adress_Text{
-    font-family: SUIT-Medium;
+  font-family: 'SUIT',sans-serif;
+  font-weight: 500;
     font-size: 16px;
     margin-bottom: 0.5rem;
     letter-spacing: -0.02rem;
@@ -197,7 +203,7 @@
     }
 
     .about-bottom_text {
-        font-family: SUIT-Medium;
+      font-family: 'SUIT',sans-serif;
         font-size: 15px;
         letter-spacing: -0.04em;
         padding: 0;
@@ -253,7 +259,8 @@
 
 
     .about-bottom_text span {
-        font-family: SUIT-Regular;
+      font-family: 'SUIT',sans-serif;
+      font-weight: 400;
         padding-right: 12px;
         font-weight: 300;
     }
