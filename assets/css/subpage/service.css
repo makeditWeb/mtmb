@@ -36,14 +36,14 @@
 }
 
 .service_notice_wrap {
-  padding: 80px 10px 0;
+  padding: 80px 10px 0 40px;
 }
 
 .service_container .container_wrap .container {
   width: 100%;
   margin: 0;
   max-width: 100%;
-
+  padding: 0;
 
 }
 
@@ -67,17 +67,21 @@
   font-family: GmarketSansBold;
   font-weight: 700;
   margin-right: 15px;
-  line-height: 0.6;
+  line-height: 0.7;
   letter-spacing: -0.06em;
 }
 
 .service_container .container_wrap .container .title_wrap img {
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
 }
 
 .servce_notice_left {
   width: 30%;
+}
+
+.servce_notice_left .cont_left{
+  padding: 0;
 }
 
 .notice_pagination ul {
@@ -192,9 +196,14 @@
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
-  right: 0;
+  right: 6px;
   left: unset;
   background:none;
+}
+
+.service_container .btn_search img{
+  width: 100%;
+  height: 100%;
 }
 
 .servce_qna_inner .cont_bot{
@@ -209,17 +218,22 @@
   border-bottom: none;
 }
 
+.input_wrap.qna_input_wrapp{
+  padding: 50px  0 0;
+}
 .select_input_option {
-  width: 50%;
+  width: 40%;
   padding-right: 10px;
+
 }
 
 .input_search_wrap {
-  width: 50%;
+  width: 60%;
 }
 
 .input_search_wrap.input_group.type2 input {
   border-bottom: none;
+  padding: 0;
 }
 
 .qna_input_wrapp {
@@ -230,6 +244,7 @@
 .servce_qna_inner .cont_left {
   width: 30%;
   height: auto;
+  padding: 0;
 }
 
 .servce_qna_inner .cont_right {
@@ -239,7 +254,7 @@
 .servce_qna_inner {
   width: 100%;
   display: flex;
-  padding: 60px 10px 0;
+  padding: 60px 50px 0;
 }
 
 
