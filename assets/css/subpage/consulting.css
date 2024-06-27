@@ -238,7 +238,7 @@
 .consulting_container .step_box .survey_title {
   width: 100%;
 
-  font-family: SUIT;
+  font-family: 'SUIT';
   font-weight: 700;
   font-size: 30px;
 
@@ -277,7 +277,7 @@
 }
 
 .consulting_container .step_box .right_wrap .survey_container .survey_content_title {
-  font-family: SUIT;
+  font-family: 'SUIT';
   font-weight: 400;
   font-size: 16px;
 
@@ -302,7 +302,7 @@
   ;
   border-bottom: 1px solid #000;
 
-  font-family: SUIT;
+  font-family: 'SUIT';
   font-weight: 500;
   font-size: 16px;
 
@@ -314,7 +314,7 @@
   padding: 4px 0px;
   ;
 
-  font-family: SUIT;
+  font-family: 'SUIT';
   font-weight: 400;
   font-size: 16px;
 
@@ -653,7 +653,45 @@
 
 .consulting_container .step_box.step_05 .right_wrap .step_control_container {
   justify-content: center;
+  
 }
+
+.consulting_container .consulting_qa_container table tr{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(1){
+  width: 10%;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(2){
+  width: 65%;
+  text-align: left;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(3){
+  width: 15%;
+  text-align: center;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(4){
+  width: 10%;
+  text-align: center;
+}
+
+.consulting_qa_container table.request_table tr.answer_qna td:nth-child(1){
+  width: 65%;
+}
+.consulting_qa_container table.request_table tr.answer_qna td:nth-child(2){
+  width: 15%;
+  text-align: center;
+}
+
+.consulting_qa_container table.request_table tr.answer_qna td:nth-child(3){
+  width: 10%;
+}
+
 
 
 /********************** Partner Swiper Style **********************/
@@ -664,8 +702,7 @@
   margin-bottom: 80px;
 
   border-top: 1px solid #000;
-  padding: 24px;
-
+  padding: 40px 24px 0;
   display: flex;
   justify-content: flex-start;
 
@@ -739,12 +776,12 @@
 
 }
 
-.question td,
+/* .question td,
 .answer td,
 .consulting_qa_container table td,
 .review_container table td {
   padding: 20px;
-}
+} */
 
 .question td:first-child{
   vertical-align: top;
@@ -752,22 +789,81 @@
 	font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.06em;
+  padding: 20px 0 0;
 }
 
+.consulting_container .review_container table tr {
+  display: flex;
+  align-items: center;
+}
+
+.consulting_container .review_container table tr td:nth-child(1){
+  width:10% ;
+}
+
+.consulting_container .review_container table tr td:nth-child(2){
+  width:40% ;
+}
+
+
+.consulting_container .review_container table tr td:nth-child(3){
+  width: 15%;
+}
+
+.consulting_container .review_container table tr td:nth-child(4){
+  width: 20%;
+}
+.consulting_container .review_container table tr td:nth-child(5){
+  width: 15%;
+}
+
+.consulting_container .review_container table tr td {
+  vertical-align: middle;
+  padding: 10px 20px;
+  height: 40px;
+  color: #646464;
+  font-size: 16px;
+  letter-spacing: -0.06em;
+	font-family: 'SUIT';
+	font-weight: 500;
+}
+
+
+.review_container tr{height: 40px;}
+
+.review_container td{height: 40px;}
+
+.answer td:nth-child(1) span{
+  font-family: 'Pretendard';
+  font-weight: 400px;
+}
 .question td {
   font-size: 16px;
   color: #646464;
   font-family: 'SUIT';
   font-weight: 500;
   letter-spacing: -0.06em;
+  height: 40px;
 }
 
-.answer td:nth-child(2) {
-  font-size: 16px;
+.answer td:nth-child(1){
   color: #000;
   font-family: 'SUIT';
   font-weight: 600;
 }
+
+.consulting_container .consulting_qa_container table tr td{
+  padding: 10px 0;
+}
+.answer td {
+  font-size: 16px;
+  color: #646464;
+  font-family: 'SUIT';
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  height: 40px;
+}
+
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
 .consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
@@ -784,9 +880,7 @@
 
 .consulting_container .consulting_qa_container table tr,
 .consulting_container .review_container table tr {
-  /* 100% - left_wrap width - margin-right */
   border-bottom: 1px solid #e6e6e6;
-  /* height: 80px !important; */
 }
 
 /* 검색 영역 */
@@ -862,7 +956,8 @@
 
 .notice_pagination .pagination_number li {
   font-size: 16px;
-  font-family: 'SUIT-Regular';
+	font-family: 'SUIT';
+	font-weight: 500;
   color: #646464;
 }
 
@@ -984,7 +1079,8 @@
 }
 
 .consulting_container .portfolio_container .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 50px;
   margin-right: 8px;
   line-height: 100%;
