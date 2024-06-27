@@ -513,7 +513,7 @@ textarea {
     .sub_wrap .header_wrap {
         border-bottom: 0;
         position: relative;
-        padding: 40px 0 16px;
+        padding: 40px 0 16px!important;
         height: 75px;
         box-sizing: border-box;
     }

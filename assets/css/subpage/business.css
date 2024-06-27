@@ -5,17 +5,16 @@
 /********************** Section Style **********************/
 .business_container {
     /* header height */
-    padding-top: 80px;
+    padding-top: 90px;
 
     /* footer height */
     padding-bottom: 150px;
 }
 
 .business_container .content_wrap {
-    width: 80%;
+    width: 77%;
     margin: 0px auto;
     padding: 80px 0px;
-    padding-left: 20px;
     position: relative;
 }
 
