@@ -32,7 +32,6 @@
 /* 공통 스타일 */
 .business_container .content_wrap .title_wrap {
     width: 100%;
-    padding: 22px 0px;
 
     display: flex;
     justify-content: flex-start;
@@ -45,12 +44,12 @@
     font-weight: 700;
     margin-right: 8px;
     line-height: 0.6;
-    letter-spacing: -2px;
+    letter-spacing: -0.06em;
 }
 
 .business_container .content_wrap .title_wrap img {
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
 }
 
 .business_container .content_wrap .all_service_container {

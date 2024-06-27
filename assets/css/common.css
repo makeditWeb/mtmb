@@ -8,20 +8,22 @@
     font-style: normal;
 }
 
-@font-face {
-  font-family: 'GmarketSansBold';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
 
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'GmarketSans';
+	font-weight: 300;
+	src: url('../font/GmarketSansLight.woff2') format('woff2');
 }
-
+@font-face {
+	font-family: 'GmarketSans';
+	font-weight: 500;
+	src: url('../font/GmarketSansMedium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'GmarketSans';
+	font-weight: 700;
+	src: url('../font/GmarketSansBold.woff2') format('woff2');
+}
 
 @font-face {
     font-family: 'SBAggroB';
@@ -43,31 +45,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SUIT-Medium';
-    font-weight: 500;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.ttf') format("truetype");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
 @font-face {
@@ -115,52 +92,6 @@
 	font-weight: 900;
 	src: url('../font/SUIT-Heavy.woff2') format('woff2');
 }
-
-/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
-
-@font-face {
-    font-family: 'NanumSquare';
-    font-weight: 300;
-    src: url(../font/NanumSquareL.woff2);
-    src: local(''),
-        url(../font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
-        url(../font/NanumSquareL.woff2) format('woff2'),
-        url(../font/NanumSquareL.woff) format('woff'),
-        url(../font/NanumSquareL.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'NanumSquare';
-    font-weight: 400;
-    src: url(../font/NanumSquareR.woff2);
-    src: local(''),
-        url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
-        url(../font/NanumSquareR.woff2) format('woff2'),
-        url(../font/NanumSquareR.woff) format('woff'),
-        url(../font/NanumSquareR.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'NanumSquare';
-    font-weight: 700;
-    src: url(../font/NanumSquareB.woff2);
-    src: local(''),
-        url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
-        url(../font/NanumSquareB.woff2) format('woff2'),
-        url(../font/NanumSquareB.woff) format('woff'),
-        url(../font/NanumSquareB.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'NanumSquare';
-    font-weight: 800;
-    src: url(../font/NanumSquareEB.woff2);
-    src: local(''),
-        url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
-        url(../font/NanumSquareEB.woff2) format('woff2'),
-        url(../font/NanumSquareEB.woff) format('woff'),
-        url(../font/NanumSquareEB.ttf) format('truetype');
-} */
 
 * {
     box-sizing: border-box;
