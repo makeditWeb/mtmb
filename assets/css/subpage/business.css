@@ -34,7 +34,7 @@
 /* 공통 스타일 */
 .business_container .content_wrap .title_wrap {
     width: 100%;
-    padding: 8px 0px;
+    padding: 22px 0px;
 
     display: flex;
     justify-content: flex-start;
@@ -46,6 +46,8 @@
     font-family: GmarketSansBold;
     font-weight: 700;
     margin-right: 8px;
+    line-height: 0.6;
+    letter-spacing: -2px;
 }
 
 .business_container .content_wrap .title_wrap img {
@@ -357,11 +359,21 @@
     .section_03 .content_03 {
         margin-top: 80px;
     }
+
+
+    .business_container .content_wrap .all_service_container .service_list {
+        row-gap: 60px;
+    }
 }
 
 @media (max-width: 1600px) {
     .business_container .content_wrap .all_service_container .service_list {
         grid-template-columns: repeat(4, 1fr);
+        row-gap: 40px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span{
+        margin-top: 0px;
     }
     
     .business_container .content_wrap .ppt_content_container .ppt_index_container {
@@ -486,11 +498,22 @@
     .business_container .content_wrap .all_service_container .service_list .service_wrap {
         width: auto;
         padding: 12px;
-        height: 150px;
+        height: auto;
+        border-top: 1px solid #000;
     }
 
-    .business_container .content_wrap .all_service_container .service_list .service_wrap {
-        border-top: 1px solid #000;
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap > img {
+    margin-top: 20px;
+    }
+
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        margin: 0px;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text::before{
+        content: none;
     }
 
     .business_container .content_wrap .all_service_container .service_list .service_wrap:not(:nth-child(3n + 0)) {
@@ -522,7 +545,7 @@
         position: absolute;
         content: "";
         width: 1px;
-        height: calc(100% - 80px);
+        height: calc(100% - 90px);
         top: auto;
         bottom: 0px;
         left: 60px;
@@ -552,6 +575,7 @@
 
     .ppt_wrap .sub_title > span {
         font-family: GmarketSansBold;
+        letter-spacing: -1px;
         font-size: 40px;
         padding: 20px;
     }
@@ -570,7 +594,13 @@
         font-family: 'SUIT';
         font-weight: 700;
         font-size: 30px;
+    }
 
+    .business_container .content_wrap .ppt_container > .title_wrap {
+        border-bottom: 1px solid #444444;
+    }
+
+    .business_container .content_wrap .ppt_container .ppt_content > .title_wrap {
         border-bottom: 1px solid #cecece;
     }
 
@@ -589,7 +619,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .section_03 .service_list {
         width: calc(100% - 32px);
     }
@@ -611,11 +641,23 @@
     }
     
     .ppt_wrap .sub_title > span{
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .business_container .content_wrap .left_wrap .title_wrap{
         font-size: 24px;
+    }
+}
+
+@media (max-width: 580px) {
+    .ppt_wrap .sub_title > span{
+       font-size: 25px;   
+    }
+}
+
+@media (max-width: 530px) {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 16px;
     }
 }
 
@@ -650,6 +692,12 @@
     }
 }
 
+@media (max-width: 450px) {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 400px) {
     .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
         font-size: 14px;
@@ -660,7 +708,7 @@
     }
 
     .business_container .content_wrap .all_service_container .service_list .service_wrap {
-        padding: 18px;
+        padding: 12px;
     }
 
 
@@ -705,10 +753,6 @@
 }
 
 @media (max-width: 350px) {
-    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
-        font-size: 12px;
-    }
-
     .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
         font-size: 12px;
     }
