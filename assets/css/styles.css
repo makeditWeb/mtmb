@@ -3513,6 +3513,7 @@
 
 /* etc */
 #fp-nav.right {
+  display: none;
   right: 16px;
 }
 
