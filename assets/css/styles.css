@@ -95,9 +95,9 @@
 
 .section_01 .top_wrap .description_wrap>span:first-child {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
   font-family: Pretendard;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .section_01 .top_wrap .description_wrap>span:last-child {
@@ -191,12 +191,12 @@
   flex-direction: column;
   justify-content: space-around;
 
-  border-left: 3px solid #343434;
+  border-left: 2px solid #343434;
 }
 
 .section_01 .sc_wrap .content {
   height: 100%;
-  padding: 14px;
+  padding: 14px 10px;
 
   border-top: 2px solid #343434;
 }
