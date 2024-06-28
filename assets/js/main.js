@@ -39,6 +39,8 @@ $(document).ready(function () {
           var currentPage = index - 1;
         },
         afterLoad: function (anchorLink, index) {
+          handleSectionEntry(index);
+
           // console.log(index);
           if (index != "1") {
             $(".header_i img").fadeIn();
@@ -86,7 +88,27 @@ $(document).ready(function () {
           //   $('#header').css({ 'border-bottom': 'none' });
           // }
         },
+
       });
+
+
+    // Function to handle section entry
+    function handleSectionEntry(index) {
+        if (index === 6) { 
+            $('#footer').css('bottom', '78px')
+        }
+    }
+
+    // Function to handle initial load with hash
+    function handleInitialLoadWithHash() {
+        var hash = window.location.hash;
+        if (hash === '#7') {
+            $('#footer').css('bottom', '0px')
+        }
+    }
+
+    // Check hash on initial load
+    handleInitialLoadWithHash();
 
       // listSwiper
       var section01Swiper = new Swiper(".section01_listSwiper", {
