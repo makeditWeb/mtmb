@@ -6390,13 +6390,3 @@ section.container {
     content: none;
   }
 }
-
-#footer {
-  bottom: 78px;
-}
-
-@media (max-width: 992px) {
-  #footer {
-    bottom: 0px;
-  }
-}
