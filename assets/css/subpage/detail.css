@@ -52,8 +52,8 @@
 }
 
 .detail_content_descript p{
-    font-family: 'SUIT-Regular';
-    font-weight: 400;
+	font-family: 'SUIT';
+	font-weight: 400;
     font-size: 20px;
     letter-spacing: -0.04em;
     margin-bottom: 60px;
@@ -114,7 +114,7 @@
 
 
 .detail_portfolio_list .portfolio_title{
-    font-family: 'SUIT-Regular';
+	font-family: 'SUIT';
     font-weight: 400;
     font-size: 20px;
     margin-bottom: 20px;
@@ -133,7 +133,8 @@
 }
 
 .detail_nav p{
-    font-family: 'GmarketSansBold';
+	font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 22px;
     margin-right: 16px;
     letter-spacing: -0.06em;

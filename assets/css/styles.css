@@ -274,13 +274,15 @@
 }
 
 .section_01 .content-panel .right-wrap .description_wrap span:first-child {
-  font-family: SUIT-Regular;
+	font-family: 'SUIT';
+	font-weight: 400;
   font-size: 16px;
   color: #fff;
 }
 
 .section_01 .content-panel .right-wrap .description_wrap span:last-child {
-  font-family: SUIT-Regular;
+	font-family: 'SUIT';
+	font-weight: 400;
   font-size: 13px;
   color: #bbbbbb;
   line-height: 100%;
@@ -434,7 +436,8 @@
   }
 
   .section_01 .sc_wrap .title_wrap .top_wrap .description_wrap span:last-child {
-    font-family: GmarketSansBold;
+    font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 35px;
     color: #fff;
   }
@@ -823,8 +826,8 @@
 
 .section_02 .consulting_box .right_wrap>span:last-child {
   font-size: 80px;
-  font-weight: 700;
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   color: #02ead7;
   line-height: 100%;
 }
@@ -881,7 +884,8 @@
 }
 
 .section_02 .made_it_wrap .title_wrap h2 {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 50px;
   letter-spacing: -2px;
 }
@@ -1265,7 +1269,8 @@
 }
 
 .section_03 .all_service_wrap .title_wrap span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 48px;
   margin-right: 8px;
   letter-spacing: -1.5px;
@@ -1415,7 +1420,8 @@
 }
 
 .section_03 .review_wrap .title_wrap h2 {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 50px;
   margin-right: 8px;
   letter-spacing: -2px;
@@ -1582,7 +1588,8 @@
   }
 
   .section_03 .title_wrap span {
-    font-family: GmarketSansBold;
+    font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 48px;
     margin-right: 8px;
   }
@@ -1668,7 +1675,8 @@
   }
 
   .section_03 .review_container .title_wrap h2 {
-    font-family: GmarketSansBold;
+    font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 50px;
     margin-right: 8px;
   }
@@ -1856,7 +1864,8 @@
 }
 
 .section_04 .title_wrap span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 48px;
   line-height: 48px;
   margin-right: 8px;
@@ -1917,7 +1926,8 @@
 }
 
 .section_04 .content_04 .left_wrap .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 42px;
   margin-right: 50px;
   letter-spacing: -2px;
@@ -2076,7 +2086,8 @@
   }
 
   .section_04 .sub_title>span {
-    font-family: GmarketSansBold;
+    font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 40px;
     padding: 20px;
   }
@@ -2127,7 +2138,7 @@
 
 
   .section_04 .ppt_content .type_example_wrap span>a {
-    font-family: SUIT-Regular;
+    font-family: 'SUIT';
     font-weight: 400;
     font-size: 22px;
     color: #7b7b7b;
@@ -2406,7 +2417,8 @@
 }
 
 .section_05 .content_05 .right_wrap .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 42px;
   line-height: 48px;
   letter-spacing: -2.5px;
@@ -2532,7 +2544,8 @@
   }
 
   .section_05 .sub_title .sub_title_wrap>span {
-    font-family: GmarketSansBold;
+    font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 50px;
     margin-right: 12px;
   }
@@ -2547,9 +2560,9 @@
 
   .section_05 .sub_title .view_all_wrap {
     width: 120px;
-    font-family: SUIT-Regular;
+    font-family: 'SUIT';
+    font-weight: 400;
     font-size: 16px;
-    font-weight: 700;
 
     display: flex;
     justify-content: space-between;
@@ -2588,7 +2601,8 @@
   }
 
   .section_05 .content_05 .about_content .sub_description {
-    font-family: GmarketSansMedium;
+    font-family: 'GmarketSans';
+    font-weight: 500;
     font-weight: 500;
     font-size: 24px;
     line-height: 150%;
@@ -2598,8 +2612,8 @@
   }
 
   .section_05 .content_05 .about_content .detail_description {
-    font-family: SUIT-Regular;
-    font-weight: 600;
+    font-family: 'SUIT';
+    font-weight: 400;
     font-size: 22px;
     line-height: 120%;
     color: #000;
@@ -2615,7 +2629,8 @@
   }
 
   .section_05 .content_05 .notice_list li {
-    font-family: SUIT-Medium;
+    font-family: 'SUIT';
+    font-weight: 500;
     font-size: 22px;
     font-weight: 500;
     color: #000;
@@ -2749,7 +2764,8 @@
 }
 
 .section_06 .content_06 .left_wrap .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 42px;
   line-height: 48px;
   margin-right: 8px;
@@ -2875,7 +2891,8 @@
   }
 
   .section_06 .sub_title .sub_title_wrap>span {
-    font-family: GmarketSansBold;
+    font-family: 'GmarketSans';
+    font-weight: 700;
     font-size: 50px;
     margin-right: 12px;
   }
@@ -3049,7 +3066,8 @@
 }
 
 .section_07 .content_07 .top_wrap .left_wrap .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 42px;
   line-height: 100%;
   letter-spacing: -2px;
@@ -3250,7 +3268,8 @@
 
 .section_08 .content_08 .top_wrap .about_wrap .title>span,
 .section_08 .content_08 .top_wrap .notice_wrap .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 50px;
   margin-right: 8px;
   line-height: 100%;
@@ -3269,7 +3288,8 @@
 }
 
 .section_08 .content_08 .top_wrap .about_wrap .description_wrap .description_01 {
-  font-family: GmarketSansMedium;
+	font-family: 'GmarketSans';
+	font-weight: 500;
   font-size: 20px;
   color: #a6a5a5;
   letter-spacing: -0.04em;
@@ -3278,7 +3298,8 @@
 }
 
 .section_08 .content_08 .top_wrap .about_wrap .description_wrap .description_02 {
-  font-family: SUIT-Medium;
+	font-family: 'SUIT';
+	font-weight: 500;
   font-size: 16px;
   color: #333333;
   line-height: 29px;
@@ -3294,7 +3315,8 @@
 }
 
 .section_08 .content_08 .top_wrap .notice_wrap .notice_list .notice_box:not(:last-child) {
-  font-family: SUIT-Medium;
+	font-family: 'SUIT';
+	font-weight: 500;
   font-size: 16px;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -3359,7 +3381,8 @@
 }
 
 .section_08 .content_08 .portfolio_container .title>span {
-  font-family: GmarketSansBold;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   font-size: 50px;
   margin-right: 8px;
   line-height: 100%;

@@ -64,8 +64,8 @@
 
 .service_container .container_wrap .container .title_wrap h2 {
   font-size: 48px;
-  font-family: GmarketSansBold;
-  font-weight: 700;
+	font-family: 'GmarketSans';
+	font-weight: 700;
   margin-right: 15px;
   line-height: 0.7;
   letter-spacing: -0.06em;
@@ -113,7 +113,8 @@
 
 .service_container .notice_pagination .pagination_number li {
   font-size: 16px;
-  font-family: 'SUIT-Regular';
+	font-family: 'SUIT';
+	font-weight: 500;
   color: #646464;
 }
 
@@ -293,6 +294,7 @@
   
   .service_container .input_wrap{
     width: 100%;
+    padding: 15px 0;
   }
 
   .service_container {
@@ -320,7 +322,7 @@
   }
 
   .service_notice_wrap {
-    padding: 80px 0;
+    padding: 80px 0 40px;
 }
 
   .cont_right.notice_wrap table tbody tr {}
