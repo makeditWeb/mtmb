@@ -47,7 +47,6 @@ $(document).ready(function () {
   }
 });
 
-
 function linkHashEventForPc(index) {
   // 해당 인덱스의 요소 클릭 시뮬레이션
   var targetElement = $('.ppt_index_wrap').eq(index);
@@ -72,5 +71,4 @@ function linkHashEventForMobile(index) {
       scrollTop: targetElement.offset().top - 80
     }, 100); // 스크롤 애니메이션 시간 (밀리초)
   }
-
 }

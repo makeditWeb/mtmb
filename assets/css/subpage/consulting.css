@@ -803,6 +803,11 @@
 
 .consulting_container .review_container table tr td:nth-child(2){
   width:40% ;
+
+  /* ... 처리 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
@@ -1309,8 +1314,6 @@
 /********************** 모바일 Style **********************/
 
 @media (max-width: 992px) {
-
-
   .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after {
     content: none;
   }
@@ -1342,7 +1345,7 @@
       position: absolute;
       left: 42px;
       bottom: 0px;
-      height: calc(100% + 24px 80px);
+      height: calc(100% + 24px + 96px);
       width: 1px;
       background: #000;
   }
@@ -1705,6 +1708,10 @@
    .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after{
       left: 54px;
   }
+
+    .review_container .left_wrap .top_wrap .search_container button.review-button {
+      min-width: 150px;
+    }
 }
 
 
@@ -1771,11 +1778,13 @@
     width: calc(100% - 32px);
     margin: 0px 16px;
   }
+
+    .review_container .left_wrap .top_wrap .search_container button.review-button {
+      min-width: 100px;
+    }
 }
 
 @media (max-width: 350px) {
-
-
   .review_container table td:nth-child(2) {
     min-width: 50px;
   }

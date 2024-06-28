@@ -597,8 +597,12 @@
     }
 
     .ppt_content {
-        margin-left: 60px;
+        margin-left: 55px;
         padding: 16px;
+
+        position:relative;
+        background:#fff;
+        z-index: 2;
     }
 
     .ppt_content>img {
@@ -654,7 +658,7 @@
     }
 
     .ppt_wrap .sub_title>img {
-        width: 28px;
+        width: 40px;
     }
 
     .ppt_wrap .sub_title>span {
