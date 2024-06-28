@@ -548,6 +548,10 @@
         position: relative;
     }
 
+    .business_container .content_wrap .ppt_container > .title_wrap {
+        margin-top: 95px;
+    }
+
     .business_container .content_wrap .ppt_container>.title_wrap::before {
         content: none;
     }
@@ -556,7 +560,7 @@
         position: absolute;
         content: "";
         width: 1px;
-        height: calc(100% - 90px);
+        height: calc(100% - 56px);
         top: auto;
         bottom: 0px;
         left: 60px;
@@ -593,8 +597,12 @@
     }
 
     .ppt_content {
-        margin-left: 60px;
+        margin-left: 55px;
         padding: 16px;
+
+        position:relative;
+        background:#fff;
+        z-index: 2;
     }
 
     .ppt_content>img {
@@ -650,7 +658,7 @@
     }
 
     .ppt_wrap .sub_title>img {
-        width: 28px;
+        width: 40px;
     }
 
     .ppt_wrap .sub_title>span {
