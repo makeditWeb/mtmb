@@ -550,7 +550,8 @@ textarea {
 /* footer */
 
 .footer {
-    font-family: SUIT-Regular;
+    font-family: 'SUIT';
+    font-weight: 400;
 
     background-color: #000;
     position: fixed;
@@ -640,7 +641,6 @@ box-sizing: border-box;
         background: transparent;
         border: 1px solid #6b6b6b;
         box-sizing: border-box;
-
     }
 
     .footer_btn {
@@ -653,7 +653,66 @@ box-sizing: border-box;
         color: #6b6b6b;
     }
 
+    .footer .ft_wrap p b {
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .footer .ft_wrap p {
+        font-family: 'SUIT';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 125%;
+    }
+
+    .footer .ft_wrap .copyright_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer .ft_wrap .copyright_wrap button {
+        padding: 2px 16px;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #6b6b6b;
+        box-sizing: border-box;
+        margin-top: 18px;
+    }
+
+    .footer .ft_wrap .copyright_wrap button a{
+        color: #6b6b6b;
+    }
 }
+
+@media (max-width: 580px) {
+    .footer .ft_wrap p b {
+        font-size: 18px;
+    }
+    .footer .ft_wrap p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer .ft_wrap p b {
+        font-size: 16px;
+    }
+    .footer .ft_wrap p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer .ft_wrap p b {
+        font-size: 14px;
+    }
+    .footer .ft_wrap p {
+        font-size: 12px;
+    }
+}
+
 
 @media (min-width: 992px) {
     .footer {
