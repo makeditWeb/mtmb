@@ -415,7 +415,15 @@
     margin-top: 70px;
     justify-content: center;
     transform: none;
+    padding: 0 20px;
+    height: 100%;
   }
+
+  .section_01 .content-panel .right-wrap img {
+    width: 25px;
+    align-self: flex-end;
+}
+
 
   .section_01 .sc_wrap .title_wrap .top_wrap {
     width: 100%;
@@ -473,7 +481,7 @@
 
   .section_01 .sc_wrap .content_01 {
     position: relative;
-
+    padding-bottom: 26px;
     width: 100%;
 
     display: flex;
