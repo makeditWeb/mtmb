@@ -270,6 +270,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding-right: 20px;
+
 }
 
 .survey_container_wrapper{
@@ -1323,6 +1324,7 @@
 
   .consulting_container .step_box.step_02 .form_container {
     padding: 16px 0px;
+    width: 100%;
   }
 
   .consulting_container .step_box.step_02 .form_container .form_title {
@@ -1420,6 +1422,9 @@
       background: #000;
   }
 
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap, .consulting_container .review_container .left_wrap .top_wrap{
+    padding: 0 30px;
+  }
 
   /* Consulting Wrap */
   .consulting_container .consulting_box {
@@ -1475,21 +1480,27 @@
   }
 
   .consulting_container .step_box .right_wrap .survey_container {
-    width: 80%;
+    width:100%;
     margin: 0 auto;
     margin-bottom: 20px;
+    background-color: #fff;
+    max-height: 200px;
+    padding-right: 0;
+    padding: 10px 20px;
+    overflow-y: auto;
   }
 
-  .consulting_container .step_box .right_wrap .survey_container {
-    max-height: 200px;
-    overflow-y: auto;
-    padding: 12px;
-  }
 
   .consulting_container .step_box .right_wrap .step_control_container {
     width: 100%;
+    justify-content: space-around;
   }
 
+  .survey_container_wrapper{
+    width: 100%;
+    padding: 8px 0;
+    background: #000;
+  }
   .consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
     grid-template-columns: repeat(2, 1fr)
   }
@@ -1537,7 +1548,7 @@
     align-self: flex-start;
   }
   .consulting_container .search_wrap input[type=text]{
-    background-size: unset;
+    background-size: 16%;
   }
 
   .consulting_container .consulting_content_container {
@@ -1545,10 +1556,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding: 0 30px 40px;
     margin-top: 20px;
   }
-
+  
+  .consulting_container{
+    padding-bottom: 0;
+  }
   .consulting_container .consulting_qa_container table,
   .consulting_container .review_container table {
     max-width: none;
@@ -1621,10 +1635,17 @@
   .consulting_container .consulting_qa_container table tr td:nth-child(3) {
     width: 25%;
     text-align: center;
+    padding: 0;
+    height: 100%;
 }
 
   .consulting_container .consulting_qa_container table tr.answer {
     border-bottom: 1px solid #2a2a2a;
+    height: 42px;
+  }
+
+  .consulting_container .consulting_qa_container table tr.answer:last-child{
+    border-bottom: none;
   }
 
   .review_container table td:nth-child(3) {
@@ -1685,6 +1706,7 @@
   /* 파트너사 100% */
   .consulting_container .partner_container .partner_wrap {
     width: 100%;
+    padding: 20px 0;
   }
 
   /* 포트폴리오 */
@@ -1721,9 +1743,16 @@
 
 @media (max-width: 650px) {
 
+  .consulting_container .consulting_box .right_wrap>p{
+    font-size: 18px;
+  }
   .consulting_container .consulting_box .right_wrap {
     margin: 0;
-    padding: 72px 0 50px;
+    padding: 30px 30px 35px;
+  }
+
+  .consulting_container .consulting_box .right_wrap>span:last-child{
+    font-size: 45px;
   }
 
   .consulting_container .consulting_box .left_wrap {
@@ -1764,8 +1793,20 @@
 
 
   .consulting_container .portfolio_container {
-    width: calc(100% - 64px);
-    margin: 0px 32px;
+    width: 100%;
+    padding: 50px 30px 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .consulting_container .portfolio_container::after{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    content: '';
+    background: #000;
+    width: 86%;
+    height: 1px;
   }
 
   .consulting_container .portfolio_container .title span {
@@ -1775,7 +1816,7 @@
   .consulting_container .portfolio_container .title>img {
     width: 34px;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0;
     align-self: flex-end;
   }
 }
@@ -1812,7 +1853,7 @@
 
   .consulting_container .portfolio_container .title>img {
     width: 30px;
-    padding-bottom: 12px;
+    padding-bottom: 0;
   }
 
   .question td,
@@ -1826,11 +1867,17 @@
   .consulting_container .review_container .left_wrap .top_wrap .title_wrap {
     padding-left: 12px;
     padding-bottom: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
   }
 
+  .consulting_container .consulting_box .left_wrap>ul li.arrow_between img{
+    width: 7px;
+    height: auto;
+    position: absolute;
+    bottom: 1px;
+  }
   .consulting_container .search_wrap input[type=text] {
-    padding-bottom: 12px;
+    padding-bottom: 6px;
   }
 
 
@@ -1874,6 +1921,17 @@
 
   .review_container .left_wrap .top_wrap .search_container button.review-button {
     min-width: 100px;
+    width: 35%;
+  }
+
+  .consulting_container .search_wrap select{
+    font-size: 14px;
+    background-position: 100% 24%;
+    padding-bottom: 6px;
+  }
+
+  .consulting_container .review_container table tr:last-child{
+    border-bottom: none;
   }
 }
 
@@ -1909,8 +1967,8 @@
   }
 
   .consulting_container .portfolio_container {
-    width: calc(100% - 32px);
-    margin: 0px 16px;
+    width: 100%;
+    padding: 0 30px;
   }
 
     .review_container .left_wrap .top_wrap .search_container button.review-button {

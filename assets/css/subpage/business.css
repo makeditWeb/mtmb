@@ -460,6 +460,7 @@
 
     .business_container .content_wrap .service_step_container li:nth-child(even) img {
         width: 10px;
+        height: auto;
     }
 }
 
@@ -488,10 +489,12 @@
         flex-direction: column;
         margin-left: 0px;
         margin: 0px auto;
+        padding: 0;
     }
 
     .business_container .content_wrap .all_service_container .title_container {
         margin-bottom: 30px;
+        width: 100%;
     }
 
     .business_container .content_wrap .all_service_container .service_list {
@@ -534,7 +537,18 @@
     }
 
     .business_container .content_wrap .all_service_container .service_list .service_wrap:not(:nth-child(3n + 0)) {
-        border-right: 1px solid #000;
+        position: relative;
+    }
+
+    .business_container .content_wrap .all_service_container .service_list .service_wrap:not(:nth-child(3n + 0))::after{
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 93%;
+        background: #000;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
     }
 
     .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text::after {
@@ -563,6 +577,28 @@
         content: none;
     }
 
+    .arrow_tab_img {
+        border-right: 1px solid #000;
+    }
+
+    .arrow_tab_img {
+        border-right: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 11px;
+    }
+
+    .arrow_tab_img img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .business_container .content_wrap .left_wrap .description{
+        margin-top: 16px;
+        line-height: 25px;
+    }
+/* 
     .ppt_container::before {
         position: absolute;
         content: "";
@@ -573,7 +609,7 @@
         left: 60px;
         background: #000;
         z-index: 1;
-    }
+    } */
 
     .ppt_wrap {
         width: 100%;
@@ -583,7 +619,7 @@
 
     .ppt_wrap .sub_title {
         display: grid;
-        grid-template-columns: 50px auto;
+        grid-template-columns: 43px auto;
         border-bottom: 1px solid #000;
 
         padding-top: 50px;
@@ -604,7 +640,7 @@
     }
 
     .ppt_content {
-        margin-left: 55px;
+        border-bottom: 1px solid #000;
         padding: 16px;
 
         position:relative;
@@ -615,6 +651,7 @@
     .ppt_content>img {
         width: 100%;
         margin-top: 50px;
+        padding-left: 30px;
     }
 
     .business_container .content_wrap .title_wrap {
@@ -637,13 +674,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        padding: 32px 0px;
+        padding: 16px 0px 16px 55px;
         border-bottom: 1px solid #cecece;
     }
 
     .business_container .content_wrap .left_wrap .strength_wrap li {
         width: 100%;
+        margin-bottom: 10px;
     }
 }
 
@@ -657,7 +694,7 @@
     }
 
     .business_container .content_wrap .all_service_container .service_list .service_wrap {
-        padding: 20px;
+        padding: 15px 8px;
     }
 
     .ppt_wrap .sub_title {
@@ -673,7 +710,13 @@
     }
 
     .business_container .content_wrap .left_wrap .title_wrap {
-        font-size: 24px;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .business_container .content_wrap .left_wrap{
+        margin-right: 0;
+        padding-left: 30px;
     }
 }
 
@@ -691,12 +734,12 @@
 
 @media (max-width: 500px) {
     .business_container .content_wrap .title_wrap h2 {
-        font-size: 42px;
+        font-size: 30px;
     }
 
     .business_container .content_wrap .title_wrap img {
-        width: 37px;
-        height: 37px;
+        width: 23px;
+        height: 23px;
     }
 
     .business_container .content_wrap .all_service_container .title_container .description {
@@ -713,6 +756,7 @@
 
     .ppt_wrap .sub_title>span {
         font-size: 20px;
+        padding: 30px 10px 10px;
     }
 
     .business_container .content_wrap {

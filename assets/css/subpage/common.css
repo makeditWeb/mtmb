@@ -92,7 +92,9 @@
 
 /* 모바일에서만 노출 */
 @media (max-width: 992px) {
-
+    .right-fixed {
+        right:40px
+    }
 }
 
 
