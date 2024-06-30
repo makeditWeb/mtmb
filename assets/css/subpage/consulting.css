@@ -719,8 +719,7 @@
 }
 
 .consulting_container .consulting_qa_container table tr{
-  display: flex;
-  justify-content: flex-end;
+  width: 100%;
 }
 
 .consulting_container .consulting_qa_container table tr td:nth-child(1){
@@ -885,7 +884,7 @@
 
 
 .consulting_container .review_container table tr td:nth-child(3){
-  width: 11%;
+  width: 12%;
 }
 
 .consulting_container .review_container table tr td:nth-child(4){
