@@ -726,6 +726,11 @@
   width: 10%;
 }
 
+.consulting_container .consulting_qa_container table tr.question td:first-child {
+  vertical-align: middle;
+  text-align: center;
+}
+
 .consulting_container .consulting_qa_container table tr td:nth-child(2){
   width: 65%;
   text-align: left;
@@ -1632,7 +1637,7 @@
   }
 
   .consulting_container .consulting_qa_container table tr td:nth-child(3) {
-    width: 25%;
+    width: 65%;
     text-align: center;
     padding: 0;
     height: 100%;
