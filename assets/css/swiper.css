@@ -329,6 +329,13 @@ Marquee animation
     }
 }
 
+@media (max-width: 992px) {
+    .marquee-block {
+        display: flex;
+        animation: marquee 5s linear infinite;
+    }
+}
+
 @media (min-width: 992px) {
 
     .cont_partner,

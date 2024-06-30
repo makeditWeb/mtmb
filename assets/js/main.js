@@ -1,4 +1,4 @@
-const titles = ["제안서", "강의자료", "소개서", "제안문서", "비지니스 보고서"];
+const titles = ["제안서", "강의자료", "소개서", "제안문서", `비지니스\n보고서`];
 const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
 
 $(document).ready(function () {
@@ -124,7 +124,9 @@ $(document).ready(function () {
         observeParents: true,
         on: {
           activeIndexChange: function () {
+            console.log('activeIndexChange')
             const realIndex = this.realIndex;
+            // pc
             $('.content-panel .right-wrap .description_wrap span:first-child').text(titles[realIndex]);
             $('.content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
           },
@@ -377,6 +379,19 @@ $(document).ready(function () {
         const scrollPosition = $(window).scrollTop();
         $('.menu_line').css('background', scrollPosition >= viewportHeight ? '#000' : '#fff');
         $('.logo_text').css('color', scrollPosition >= viewportHeight ? '#000' : '#fff');
+
+
+          const footer = $('.footer');
+          const section06 = $('.mo .section_06');
+
+          const windowBottom = $(this).scrollTop() + $(this).height();
+          const section06Top = section06.offset().top;
+
+          if (windowBottom >= section06Top) {
+              footer.css('position', 'fixed').css('bottom', 0);
+          } else {
+              footer.css('position', 'relative');
+          }
       });
 
       // 디바이스 크기가 992px 이하일 때
@@ -392,8 +407,10 @@ $(document).ready(function () {
         on: {
           activeIndexChange: function () {
             const realIndex = this.realIndex;
-            $('.section_01 .content-panel .right-wrap .description_wrap span:first-child').text(titles[realIndex]);
-            $('.section_01 .content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
+            
+            // mobile
+            $('.content-panel .bottom-wrap .title_arrow_wrap > span').html(titles[realIndex].replace(/\n/g, '<br/>'));
+            $('.content-panel .bottom-wrap > span').text(descriptions[realIndex]);
           }
         }
       });
@@ -512,7 +529,7 @@ $(document).ready(function () {
     }
   });
 
-  const originalList = $('.marquee-item-list');
-  const clonedList = originalList.clone();
-  $('.marquee-block').append(clonedList);
+  // const originalList = $('.marquee-item-list');
+  // const clonedList = originalList.clone();
+  // $('.marquee-block').append(clonedList);
 });
