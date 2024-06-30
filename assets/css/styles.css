@@ -2170,20 +2170,21 @@
   }
 
   .section_04 .ppt_content .img_wrap {
-    width: calc(100% - 60px);
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     padding-top: 30px;
     padding-left: 30px;
-    margin-left: 60px;
-    ;
+    /* margin-left: 38px; */
+    border-bottom: 1px solid #000;
+    padding-bottom: 27px;
   }
 
   .section_04 .ppt_content .img_wrap::before {
     position: absolute;
     content: "";
-    left: 0px;
+    left: 38px;
     top: 0px;
     width: 1px;
     height: 100%;
@@ -2200,7 +2201,7 @@
 
     position: relative;
     cursor: pointer;
-
+    padding-left: 26px;
     margin-top: 0px;
     margin-bottom: 24px;
   }
@@ -2212,7 +2213,7 @@
   .section_04 .ppt_content .img_wrap .view_all_wrap:hover::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 89%;
     height: 4px;
     border-radius: 8px;
     background: #000;
@@ -2223,6 +2224,7 @@
 
   .section_04 .ppt_content .img_wrap>img {
     width: 100%;
+    padding-left: 20px;
   }
 }
 
@@ -2252,7 +2254,7 @@
   }
 
   .section_04 .ppt_content .description_wrap {
-    padding: 40px 0px 50px 80px;
+    padding: 40px 0px 50px 50px;
   }
 }
 
@@ -2261,6 +2263,7 @@
   .section_04 .content_04 {
     margin: 0px 16px;
     padding: 0 14px;
+    border-bottom: none;
   }
 
   .section_04 .content_04::before {
@@ -2278,6 +2281,9 @@
   .section_04 .ppt_content .type_example_wrap span>a {
     font-size: 18px;
   }
+
+
+
 }
 
 @media (max-width: 500px) {
@@ -2291,6 +2297,7 @@
 
   .section_04 .sub_title>span {
     font-size: 20px;
+    padding: 20px 0 10px;
   }
 
   .section_04 .sub_title>img {
@@ -2302,15 +2309,15 @@
   }
 
   .section_04 .ppt_content .description_wrap {
-    padding: 24px 0px 24px 80px;
+    padding: 24px 0px 24px 50px;
   }
 
   .section_04 .ppt_content .description_wrap>span:first-child {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .section_04 .ppt_content .description_wrap>span:last-child {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -2560,7 +2567,7 @@
     align-items: flex-end;
 
     border-bottom: 1px solid #000;
-    padding: 20px;
+    padding: 40px 20px 20px;
   }
 
   .section_05 .sub_title .sub_title_wrap {
@@ -2574,7 +2581,7 @@
     font-weight: 700;
     font-family: 'GmarketSans';
     font-weight: 700;
-    font-size: 50px;
+    font-size: 26px;
     margin-right: 12px;
   }
 
@@ -2622,6 +2629,7 @@
 
   .section_05 .content_05 .accordion-trigger.active+.about_content {
     display: flex !important;
+    padding: 0 16px;
   }
 
   .section_05 .content_05 .about_content {
@@ -2679,7 +2687,7 @@
   }
 
   .section_05 .sub_title .sub_title_wrap>span {
-    font-size: 46px;
+    font-size: 26px;
   }
 
   .section_05 .content_05 .about_content .detail_description {
@@ -2702,7 +2710,8 @@
 
 @media (max-width: 500px) {
   .section_05 .sub_title .sub_title_wrap>span {
-    font-size: 42px;
+    font-size: 26px;
+    line-height: 0.7;
   }
 
   .section_05 .content_05 .about_content .sub_description {
@@ -2714,8 +2723,9 @@
   }
 
   .section_05 .sub_title .sub_title_wrap>img {
-    width: 30px;
-    padding-bottom: 12px;
+    width: 26px;
+    height: 26px;
+    padding-bottom: 0;
   }
 
   .section_05 .content_05 .notice_list li {
@@ -2933,10 +2943,10 @@
   }
 
   .section_06 .sub_title .sub_title_wrap>img {
-    width: 34px;
-    height: auto;
+    width: 26px;
+    height: 26px;
 
-    padding-bottom: 20px;
+    padding-bottom: 0;
     align-self: flex-end;
   }
 
@@ -3000,12 +3010,14 @@
 
 @media (max-width: 500px) {
   .section_06 .sub_title .sub_title_wrap>span {
-    font-size: 42px;
+    font-size: 26px;
+    line-height: 0.7;
   }
 
   .section_06 .sub_title .sub_title_wrap>img {
-    width: 30px;
-    padding-bottom: 12px;
+    width: 26px;
+    height: 26px;
+    padding-bottom:0;
   }
 
   .section_06 .content_06 .portfolio_list .portfolio_wrap>span {
