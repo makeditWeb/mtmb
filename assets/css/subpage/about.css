@@ -48,7 +48,7 @@
     align-items: flex-start;
     padding: 80px 50px;
     border-left: 1px solid #000;
-    width: 88.5%;
+    width: 88.6%;
     margin: 10px 0 0 auto;
   }
   
@@ -151,6 +151,7 @@
     font-size: 16px;
     font-weight: 400;
     letter-spacing: -0.02em;
+    color: #000;
 }
 
 .location_adress .location_adress_Text{
