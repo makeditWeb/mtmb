@@ -12,14 +12,16 @@
   width: 0.5px;
   height: 100%;
   left: 219px;
-  top: 1.8%;
+  top: 1.75%;
 
   z-index: 1;
 }
 
+
+
 .consulting_container {
   /* header height */
-  padding-top: 80px;
+  padding-top: 75px;
 
   /* footer height */
   padding-bottom: 150px;
@@ -182,17 +184,17 @@
 
 .consulting_container .consulting_box .right_wrap>p {
   color: #fff;
-  font-size: 18px;
-  margin-left: 12px;
+  font-size: 30px;
+  letter-spacing: -0.02em;
   font-family: 'SUIT';
 	font-weight: 700;
-  letter-spacing: -0.02em;
   display: flex;
     align-items: center;
+    margin-bottom: 12px;
 }
 
 .consulting_container .consulting_box .right_wrap>p img {
-  width: 8px;
+  width: 10px;
   height: auto;
   margin-left: 10px;
 }
@@ -230,7 +232,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
+  padding: 0;
   width: 100%;
   margin: 40px 120px 40px 40px;
 }
@@ -245,7 +247,6 @@
   border-bottom: 1px solid #7f7f7f;
 
   padding: 20px 0px;
-  margin-bottom: 18px;
 }
 
 .consulting_container .step_box .right_wrap .survey_form_container {
@@ -262,18 +263,20 @@
 }
 
 .consulting_container .step_box .right_wrap .survey_container {
-  width: 40%;
-  height: 100%;
-
-  padding: 30px;
   overflow-y: auto;
-
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-right: 20px;
+}
 
-  background: #fff;
+.survey_container_wrapper{
+  padding: 30px 12px 30px 30px;
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
 }
 
 .consulting_container .step_box .right_wrap .survey_container .survey_content_title {
@@ -282,7 +285,7 @@
   font-size: 16px;
 
   color: #646464;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .consulting_container .step_box .right_wrap .survey_container .survey_wrap {
@@ -303,7 +306,7 @@
   border-bottom: 1px solid #000;
 
   font-family: 'SUIT';
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 
   color: #000000;
@@ -315,7 +318,7 @@
   ;
 
   font-family: 'SUIT';
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 
   color: #000000;
@@ -325,7 +328,7 @@
 .consulting_container .step_box .right_wrap .step_control_container {
   width: 50%;
   margin: 0px auto;
-
+  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -333,13 +336,32 @@
 
 .consulting_container .step_box .right_wrap .step_control_container .prev,
 .consulting_container .step_box .right_wrap .step_control_container .next {
-  border-bottom: 2px solid #02ead7;
-
+  position: relative;
+  cursor: pointer;
   font-family: SUIT;
   font-weight: 500;
   font-size: 16px;
+  padding-bottom: 10px;
+}
 
-  cursor: pointer;
+
+.consulting_container .step_box .right_wrap .step_control_container .prev span{
+  margin-left: 30px;
+}
+.consulting_container .step_box .right_wrap .step_control_container .next span{
+  margin-right: 30px;
+}
+
+.consulting_container .step_box .right_wrap .step_control_container .prev::after,
+.consulting_container .step_box .right_wrap .step_control_container .next::after {
+  background-color:  #02ead7;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  border-radius: 50px;
 }
 
 
@@ -356,7 +378,7 @@
   font-size: 16px;
   color: #b3b3b3;
 
-  margin-left: 8px;
+
   cursor: pointer;
 }
 
@@ -368,7 +390,7 @@
 .consulting_container .step_box .check_wrap input+label {
   width: 20px;
   height: 20px;
-
+  margin-right: 8px;
   background-repeat: no-repeat;
   /* 반복 방지 */
   background-image: url('../../img/uncheck.png');
@@ -381,13 +403,13 @@
 
 /* on */
 .consulting_container .step_box .check_wrap input:checked+label {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 22px;
   background-repeat: no-repeat;
   /* 반복 방지 */
   background-image: url('../../img/check.png');
   /*on 이미지*/
-
+  margin-right: 0;
   color: #ffffff;
   cursor: pointer;
 }
@@ -428,7 +450,7 @@
 
 /* step2 style */
 .consulting_container .step_box.step_02 .form_container {
-  padding: 20px 0px;
+  padding: 20px 0px 0;
   border-bottom: 1px solid #808080;
 }
 
@@ -437,6 +459,41 @@
   font-weight: 500;
   font-size: 24px;
   color: #fff;
+}
+
+.survey_scroller {
+  height: calc(100% - 135px);
+  overflow-y: auto;
+  width: 100%;
+  padding-right: 30px;
+}
+
+
+.survey_scroller::-webkit-scrollbar {
+  width: 4px;
+}
+.survey_scroller::-webkit-scrollbar-track {
+  background-color: #4e4e4e;
+}
+.survey_scroller::-webkit-scrollbar-thumb { 
+  background-color: #fff;
+}
+.survey_scroller::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+.survey_container::-webkit-scrollbar {
+  width: 4px;
+}
+.survey_container::-webkit-scrollbar-track {
+  background-color: #000;
+}
+.survey_container::-webkit-scrollbar-thumb { 
+  background-color: #d3d3d3;
+}
+.survey_container::-webkit-scrollbar-button {
+  display: none;
 }
 
 .consulting_container .step_box.step_02 .form_container .form_wrap {
@@ -479,6 +536,10 @@
   border-bottom: 1px solid #616161;
 }
 
+.consulting_container .step_box.step_03 .input_wrap.first_input_wrap{
+  padding:35px 12px 12px;
+}
+
 .consulting_container .step_box.step_03 .input_wrap label {
   min-width: 80px;
 
@@ -506,7 +567,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  padding-top:30px ;
   margin-bottom: 30px;
 }
 
@@ -697,17 +758,25 @@
 /********************** Partner Swiper Style **********************/
 .consulting_container .consulting_qa_container,
 .consulting_container .review_container {
-  width: calc(100% - 200px);
+  width: 87%;
   margin-left: 200px;
   margin-bottom: 80px;
-
   border-top: 1px solid #000;
-  padding: 40px 24px 0;
   display: flex;
   justify-content: flex-start;
 
 }
 
+.review_table tbody{
+  padding-top: 35px;
+  display: table-cell;
+  padding-right: 200px;
+}
+.request_table tbody{
+  padding-top: 35px;
+  display: table-cell;
+  padding-right: 200px;
+}
 .consulting_container .consulting_qa_container .left_wrap,
 .consulting_container .review_container .left_wrap {
   width: 20%;
@@ -725,6 +794,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-left: 22px;
+  padding-top: 24px;
 }
 
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
@@ -795,14 +866,15 @@
 .consulting_container .review_container table tr {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .consulting_container .review_container table tr td:nth-child(1){
-  width:10% ;
+  width:6% ;
 }
 
 .consulting_container .review_container table tr td:nth-child(2){
-  width:40% ;
+  width:60% ;
 
   /* ... 처리 */
     overflow: hidden;
@@ -812,14 +884,14 @@
 
 
 .consulting_container .review_container table tr td:nth-child(3){
-  width: 15%;
+  width: 11%;
 }
 
 .consulting_container .review_container table tr td:nth-child(4){
-  width: 20%;
+  width: 19%;
 }
 .consulting_container .review_container table tr td:nth-child(5){
-  width: 15%;
+  width: 8%;
 }
 
 .consulting_container .review_container table tr td {
@@ -877,16 +949,14 @@
 
 .consulting_container .consulting_qa_container table,
 .consulting_container .review_container table {
-  width: 50%;
-
-  /* 100% - left_wrap width - margin-right */
-  max-width: calc(100% - 20% - 160px)
+  width: 80%;
+  padding-right: 200px;
 }
 
-.consulting_container .consulting_qa_container table tr,
+/* .consulting_container .consulting_qa_container table tr,
 .consulting_container .review_container table tr {
   border-bottom: 1px solid #e6e6e6;
-}
+} */
 
 /* 검색 영역 */
 .consulting_container .search_wrap {
@@ -914,7 +984,7 @@
   appearance: none;
   background-image: url('../../img/icon/i_down.png');
   background-repeat: no-repeat;
-  background-position: 82% 34%;
+  background-position: 100% 34%;
 }
 
 .consulting_container .search_wrap input[type=text] {
@@ -1032,7 +1102,7 @@
   z-index: 3;
   position: relative;
   width: 100%;
-  padding: 16px 0px;
+  padding: 40px 0px;
 
   display: flex;
   justify-content: space-between;

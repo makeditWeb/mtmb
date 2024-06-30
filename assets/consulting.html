@@ -400,7 +400,7 @@
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -408,18 +408,20 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
 
-                        <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
+                        <div class="survey_container_wrapper">
+                            <div class='survey_container'>
+                                <span class='survey_content_title'>문의 내용</span>
+                                <div class='survey_wrap'>
+                                    <span class='title'>상담신청</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>사업계획서</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -435,77 +437,80 @@
                         <div class='survey_form_container'>
                             <span class='survey_title'>세부 사항</span>
 
-                            <div class='form_container'>
-                                <span class='form_title'>상담 신청</span>
-                                <div class='form_wrap'>
-                                    <span class='form_sub_title'>상담유형</span>
-
-                                    <div class='form_checkbox_container'>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='phone_consult_check' /><label></label>
-                                            <label for='phone_consult_check'>전화상담</label>
+                            <div class="survey_scroller">
+                                <div class='form_container'>
+                                    <span class='form_title'>상담 신청</span>
+                                    <div class='form_wrap'>
+                                        <span class='form_sub_title'>상담유형</span>
+    
+                                        <div class='form_checkbox_container'>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='phone_consult_check' /><label></label>
+                                                <label for='phone_consult_check'>전화상담</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='email_consult_check' /><label></label>
+                                                <label for='email_consult_check'>이메일 상담</label>
+                                            </div>
                                         </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='email_consult_check' /><label></label>
-                                            <label for='email_consult_check'>이메일 상담</label>
+                                    </div>
+                                </div>
+    
+                                <div class='form_container'>
+                                    <span class='form_title'>사업계획서</span>
+    
+                                    <div class='form_wrap'>
+                                        <span class='form_sub_title'>전체페이지</span>
+    
+                                        <div class='form_checkbox_container'>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='page_check_01' /><label></label>
+                                                <label for='page_check_01'>10~20P</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='page_check_02' /><label></label>
+                                                <label for='page_check_02'>~30P</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='page_check_03' /><label></label>
+                                                <label for='page_check_03'>~40P</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='page_check_04' /><label></label>
+                                                <label for='page_check_04'>40P 이상</label>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class='form_wrap'>
+                                        <span class='form_sub_title'>작업일정</span>
+    
+                                        <div class='form_checkbox_container'>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='schedule_check_01' /><label></label>
+                                                <label for='schedule_check_01'>3~4일</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='schedule_check_02' /><label></label>
+                                                <label for='schedule_check_02'>~4~5일</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='schedule_check_03' /><label></label>
+                                                <label for='schedule_check_03'>1주일 이상</label>
+                                            </div>
+                                            <div class='check_wrap'>
+                                                <input type='checkbox' id='schedule_check_04' /><label></label>
+                                                <label for='schedule_check_04'>긴급(2일이내)</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class='form_container'>
-                                <span class='form_title'>사업계획서</span>
-
-                                <div class='form_wrap'>
-                                    <span class='form_sub_title'>전체페이지</span>
-
-                                    <div class='form_checkbox_container'>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='page_check_01' /><label></label>
-                                            <label for='page_check_01'>10~20P</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='page_check_02' /><label></label>
-                                            <label for='page_check_02'>~30P</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='page_check_03' /><label></label>
-                                            <label for='page_check_03'>~40P</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='page_check_04' /><label></label>
-                                            <label for='page_check_04'>40P 이상</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class='form_wrap'>
-                                    <span class='form_sub_title'>작업일정</span>
-
-                                    <div class='form_checkbox_container'>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='schedule_check_01' /><label></label>
-                                            <label for='schedule_check_01'>3~4일</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='schedule_check_02' /><label></label>
-                                            <label for='schedule_check_02'>~4~5일</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='schedule_check_03' /><label></label>
-                                            <label for='schedule_check_03'>1주일 이상</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='schedule_check_04' /><label></label>
-                                            <label for='schedule_check_04'>긴급(2일이내)</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -513,20 +518,22 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
 
-                        <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                        <div class="survey_container_wrapper">
+                            <div class='survey_container'>
+                                <span class='survey_content_title'>문의 내용</span>
+                                <div class='survey_wrap'>
+                                    <span class='title'>상담신청</span>
+                                    <span class='content'>이메일 상담</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>사업계획서</span>
+                                    <span class='content'>~30P<br />긴급(2일이내)</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -542,30 +549,31 @@
                         <div class='survey_form_container'>
                             <span class='survey_title'>고객 정보</span>
 
-                            <div class='input_wrap'>
-                                <label for='company_name'>업체명</label>
-                                <input type='text' name='company_name' id='company_name' />
+                            <div class="survey_scroller">
+                                <div class='input_wrap first_input_wrap'>
+                                    <label for='company_name'>업체명</label>
+                                    <input type='text' name='company_name' id='company_name' />
+                                </div>
+                                <div class='input_wrap'>
+                                    <label for='company_name'>담당자</label>
+                                    <input type='text' name='name' id='name' />
+                                </div>
+                                <div class='input_wrap'>
+                                    <label for='company_name'>대표번호</label>
+                                    <input type='text' name='company_phone' id='company_phone' />
+                                </div>
+                                <div class='input_wrap'>
+                                    <label for='company_name'>휴대전화</label>
+                                    <input type='text' name='phone' id='phone' />
+                                </div>
+                                <div class='input_wrap'>
+                                    <label for='company_name'>이메일</label>
+                                    <input type='email' name='email' id='email' />
+                                </div>
                             </div>
-                            <div class='input_wrap'>
-                                <label for='company_name'>담당자</label>
-                                <input type='text' name='name' id='name' />
-                            </div>
-                            <div class='input_wrap'>
-                                <label for='company_name'>대표번호</label>
-                                <input type='text' name='company_phone' id='company_phone' />
-                            </div>
-                            <div class='input_wrap'>
-                                <label for='company_name'>휴대전화</label>
-                                <input type='text' name='phone' id='phone' />
-                            </div>
-                            <div class='input_wrap'>
-                                <label for='company_name'>이메일</label>
-                                <input type='email' name='email' id='email' />
-                            </div>
-
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -573,30 +581,33 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
+
                         </div>
 
-                        <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
+                        <div class="survey_container_wrapper">
+                            <div class='survey_container'>
+                                <span class='survey_content_title'>문의 내용</span>
+                                <div class='survey_wrap'>
+                                    <span class='title'>상담신청</span>
+                                    <span class='content'>이메일 상담</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>사업계획서</span>
+                                    <span class='content'>~30P<br />긴급(2일이내)</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>고객정보</span>
+                                    <span class='content'>
+                                        엠티엠비코리<br />
+                                        홍길동<br />
+                                        010-1234-1234<br />
+                                        010-1234-1234<br />
+                                        abc@gmail.com<br />
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -612,30 +623,32 @@
                         <div class='survey_form_container'>
                             <span class='survey_title'>추가 정보</span>
 
-                            <div class='detail_input_wrap'>
-                                <span>세부 내용을 작성하시면 더욱 상세한 견적을 받으실 수 있습니다</span>
-                                <textarea cols="30" rows="5"></textarea>
-                            </div>
-
-                            <div class='password_input_wrap'>
-                                <input type='password' placeholder='패스워드를 입력해 주세요' />
-                            </div>
-
-                            <div class='file_input_container'>
-                                <div class='file_input_wrap'>
-                                    <input type='file' />
+                            <div class="survey_scroller">
+                                <div class='detail_input_wrap'>
+                                    <span>세부 내용을 작성하시면 더욱 상세한 견적을 받으실 수 있습니다</span>
+                                    <textarea cols="30" rows="5"></textarea>
                                 </div>
-                                <div class='file_input_wrap'>
-                                    <input type='file' />
+
+                                <div class='password_input_wrap'>
+                                    <input type='password' placeholder='패스워드를 입력해 주세요' />
                                 </div>
-                                <div class='file_input_wrap'>
-                                    <input type='file' />
+
+                                <div class='file_input_container'>
+                                    <div class='file_input_wrap'>
+                                        <input type='file' />
+                                    </div>
+                                    <div class='file_input_wrap'>
+                                        <input type='file' />
+                                    </div>
+                                    <div class='file_input_wrap'>
+                                        <input type='file' />
+                                    </div>
                                 </div>
                             </div>
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -643,40 +656,43 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
 
-                        <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>추가정보</span>
-                                <span class='content'>
-                                    엠티엠비코리아<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                </span>
+                        <div class="survey_container_wrapper">
+                            <div class='survey_container'>
+                                <span class='survey_content_title'>문의 내용</span>
+                                <div class='survey_wrap'>
+                                    <span class='title'>상담신청</span>
+                                    <span class='content'>이메일 상담</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>사업계획서</span>
+                                    <span class='content'>~30P<br />긴급(2일이내)</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>고객정보</span>
+                                    <span class='content'>
+                                        엠티엠비코리<br />
+                                        홍길동<br />
+                                        010-1234-1234<br />
+                                        010-1234-1234<br />
+                                        abc@gmail.com<br />
+                                    </span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>추가정보</span>
+                                    <span class='content'>
+                                        엠티엠비코리아<br />
+                                        홍길동<br />
+                                        010-1234-1234<br />
+                                    </span>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -712,33 +728,35 @@
                             </div>
                         </div>
 
-                        <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>추가정보</span>
-                                <span class='content'>
-                                    엠티엠비코리아<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                </span>
+                        <div class="survey_container_wrapper">
+                            <div class='survey_container'>
+                                <span class='survey_content_title'>문의 내용</span>
+                                <div class='survey_wrap'>
+                                    <span class='title'>상담신청</span>
+                                    <span class='content'>이메일 상담</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>사업계획서</span>
+                                    <span class='content'>~30P<br />긴급(2일이내)</span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>고객정보</span>
+                                    <span class='content'>
+                                        엠티엠비코리<br />
+                                        홍길동<br />
+                                        010-1234-1234<br />
+                                        010-1234-1234<br />
+                                        abc@gmail.com<br />
+                                    </span>
+                                </div>
+                                <div class='survey_wrap'>
+                                    <span class='title'>추가정보</span>
+                                    <span class='content'>
+                                        엠티엠비코리아<br />
+                                        홍길동<br />
+                                        010-1234-1234<br />
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -784,52 +802,51 @@
                         <tbody>
                             <tr>
                                 <td class="ta_center" rowspan="2">20</td>
-                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
+                                <td>'㈜제스엔지니어링'님의 견적문의가 접수되었습니다.</td>
                                 <td>홍길동</td>
                                 <td>2023.04.04</td>
                             </tr>
                             <tr class="answer_qna">
-                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                <td>↳ 상담 완료되었습니다.</td>
                                 <td>MTMBPPT</td>
                                 <td>답변완료</td>
                             </tr>
                             <tr>
-                                <td class="ta_center" rowspan="2">20</td>
-                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
-                                <td>홍길동</td>
-                                <td>2023.04.04</td>
+                                <td class="ta_center" rowspan="2">19</td>
+                                <td>'㈜써치택코리아'님의 견적문의가 접수되었습니다.</td>
+                                <td>김기영</td>
+                                <td>2023.03.24</td>
                             </tr>
                             <tr class="answer_qna">
-                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                <td>↳ 상담 완료되었습니다.</td>
                                 <td>MTMBPPT</td>
                                 <td>답변완료</td>
                             </tr>
                             <tr>
-                                <td class="ta_center" rowspan="2">20</td>
-                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
-                                <td>홍길동</td>
+                                <td class="ta_center" rowspan="2">18</td>
+                                <td>'㈜엔에스티'님의 견적문의가 접수되었습니다.</td>
+                                <td>이철수</td>
                                 <td>2023.04.04</td>
                             </tr>
                             <tr class="answer_qna">
-                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                <td>↳ 상담 완료되었습니다.</td>
                                 <td>MTMBPPT</td>
                                 <td>답변완료</td>
                             </tr>
                             <tr>
-                                <td class="ta_center" rowspan="2">20</td>
-                                <td>패키지 상품 구성을 변경할 수 있나요?</td>
-                                <td>홍길동</td>
-                                <td>2023.04.04</td>
+                                <td class="ta_center" rowspan="2">17</td>
+                                <td>'코메스인베스트먼트'님의 견적문의가 접수되었습니다.</td>
+                                <td>김영희</td>
+                                <td>2023.03.24</td>
                             </tr>
                             <tr class="answer_qna">
-                                <td>↳ 문의하신 내용에 답변드립니다.</td>
+                                <td>↳ 상담 완료되었습니다.</td>
                                 <td>MTMBPPT</td>
                                 <td>답변완료</td>
                             </tr>
-    
-    
                         </tbody>
                     </table>
+                    
 
                 </div>
 
@@ -869,7 +886,7 @@
                         </div>
                     </div>
 
-                    <table>
+                    <table class="review_table">
                         <tr>
                             <td>20</td>
                             <td>미니 배너 너무 잘 사용하고 있습니다.</td>
@@ -1303,7 +1320,7 @@
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -1311,7 +1328,7 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
@@ -1408,7 +1425,7 @@
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -1416,7 +1433,7 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
@@ -1468,7 +1485,7 @@
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -1476,7 +1493,7 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
@@ -1538,7 +1555,7 @@
 
                             <div class='step_control_container'>
                                 <div class='prev'>
-                                    <img src='img/icon/i_left.png' />
+                                    <img src="img/icon/arrow_left.png">
                                     <span>이전</span>
                                 </div>
 
@@ -1546,7 +1563,7 @@
 
                                 <div class='next'>
                                     <span>다음</span>
-                                    <img src='img/icon/i_right.png' />
+                                    <img src="img/icon/arrow_right.png">
                                 </div>
                             </div>
                         </div>
