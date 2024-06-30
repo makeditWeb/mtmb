@@ -486,12 +486,13 @@ textarea {
 }
 
 @media (min-width: 992px) {
-    .sub_wrap .header {
-        border-bottom: 1px solid #000;
+    html, body {
+        width: 100vw;
+        overflow-x: hidden;
     }
 
     .sub_wrap .header_wrap {
-        border-bottom: 0;
+        border-bottom: 1px solid #000;
         position: relative;
         padding: 40px 0 16px!important;
         height: 75px;
