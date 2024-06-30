@@ -552,6 +552,10 @@
         margin-top: 45px;
     }
 
+    .business_container .content_wrap .ppt_container > .title_wrap {
+        margin-top: 95px;
+    }
+
     .business_container .content_wrap .ppt_container>.title_wrap::before {
         content: none;
     }
@@ -560,7 +564,7 @@
         position: absolute;
         content: "";
         width: 1px;
-        height: 87%;
+        height: calc(100% - 56px);
         top: auto;
         bottom: 0;
         left: 60px;
