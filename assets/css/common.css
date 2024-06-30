@@ -571,7 +571,7 @@ textarea {
 }
 
 .footer p {
-    color: #fff;
+    color: #6b6b6b;
     font-size: 12px;
     font-weight: 400;
     margin: 0 0 8px 0;
@@ -629,8 +629,30 @@ box-sizing: border-box;
     }
 
     .ft_wrap {
-        width: calc(100% - 64px)
+        width: 100%;
+        padding: 16px 30px;
     }
+
+    .footer_btn button{
+        padding: 2px 16px;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #6b6b6b;
+        box-sizing: border-box;
+
+    }
+
+    .footer_btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer_btn button a{
+        color: #6b6b6b;
+    }
+
 }
 
 @media (min-width: 992px) {

@@ -176,7 +176,7 @@
 
     .about_container .content_wrap .about_container_wrap .title_container .description{
         font-size: 15px;
-        padding-top: 45px;
+        padding-top: 20px;
         margin-top: 0;
         word-break: keep-all;
         line-height: 22px;
@@ -184,16 +184,18 @@
 
     .about_container .content_wrap .about_container_wrap .title_container .description span{
         font-size: 15px;
+        line-height: 23px;
     }
 
     .about_container .content_wrap .title_wrap h2{
-        font-size: 42px;
+        font-size: 30px;
+        margin-right: 10px;
     }
 
 
     .about_container .content_wrap .title_wrap img{
-        width: 40px;
-        height: 40px;
+        width: 23px;
+        height: 23px;
     }
 
     .about_container .content_wrap .title_wrap {
