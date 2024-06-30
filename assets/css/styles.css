@@ -241,7 +241,7 @@
 
   width: 140px;
   height: 110px;
-  border-radius: 10px;
+  border-radius: 4px;
   background: #cecece;
 
   display: flex;
@@ -412,7 +412,7 @@
 
   .section_01 .sc_wrap .title_wrap {
     width: 100%;
-    margin-top: 70px;
+    margin-top: 7em auto;
     justify-content: center;
     transform: none;
     padding: 0 20px;
@@ -544,8 +544,11 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 100%;
+    width: 8em;
     height: auto;
+    aspect-ratio: 9 / 11;
+
+    margin-bottom: 2em;
     /* min-height: calc(110px + 80px + 20px); */
   }
 
@@ -2131,7 +2134,7 @@
   .section_04 .ppt_content .description_wrap {
     display: flex;
     flex-direction: column;
-    padding: 40px 0px 50px 60px;
+    padding: 40px 0px 50px 74px;
 
     border-bottom: 1px solid #000;
   }
@@ -2255,7 +2258,7 @@
   }
 
   .section_04 .ppt_content .description_wrap {
-    padding: 40px 0px 50px 50px;
+    padding: 40px 0px 50px 70px;
   }
 }
 
@@ -2340,7 +2343,7 @@
   }
 
   .section_04 .ppt_content .description_wrap {
-    padding: 20px 0px 20px 72px
+    padding: 20px 0px 20px 52px
   }
 
   .section_04 .ppt_content .description_wrap>span:first-child {
@@ -2372,9 +2375,13 @@
   .section_04 .content_04::before {
     left: 40px;
   }
-
+  
   .section_04 .title_wrap span {
     font-size: 28px;
+  }
+
+  .section_04 .sub_title{
+    grid-template-columns: 30px auto;
   }
 
   .section_04 .sub_title>span {
@@ -2387,7 +2394,7 @@
   }
 
   .section_04 .ppt_content .description_wrap {
-    padding: 20px 0px 20px 72px
+    padding: 20px 0px 20px 42px
   }
 
   .section_04 .ppt_content .description_wrap>span:first-child {
