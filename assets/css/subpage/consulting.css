@@ -950,6 +950,8 @@
 .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
 .consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
   width: 37px;
+  height: auto;
+  object-fit: contain;
 }
 
 .consulting_container .consulting_qa_container table,
@@ -1398,6 +1400,12 @@
     content: none;
   }
 
+
+  .consulting_container .portfolio_container {
+    padding-top: 80px;
+    position: relative;
+  }
+
   .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
   .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
     content: none;
@@ -1454,7 +1462,6 @@
     align-self: center;
     justify-content: center;
   }
-
 
   /* step 01 ~ step 05 공통 스타일 */
 
@@ -1648,10 +1655,6 @@
     height: 42px;
   }
 
-  .consulting_container .consulting_qa_container table tr.answer:last-child{
-    border-bottom: none;
-  }
-
   .review_container table td:nth-child(3) {
     min-width: fit-content;
   }
@@ -1799,6 +1802,7 @@
   .consulting_container .portfolio_container {
     width: 100%;
     padding: 50px 30px 0;
+    padding-top: 80px;
     box-sizing: border-box;
     position: relative;
   }
@@ -1973,6 +1977,7 @@
   .consulting_container .portfolio_container {
     width: 100%;
     padding: 0 30px;
+    padding-top: 80px;
   }
 
     .review_container .left_wrap .top_wrap .search_container button.review-button {
