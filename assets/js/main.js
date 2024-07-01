@@ -379,20 +379,30 @@ $(document).ready(function () {
         const scrollPosition = $(window).scrollTop();
         $('.menu_line').css('background', scrollPosition >= viewportHeight ? '#000' : '#fff');
         $('.logo_text').css('color', scrollPosition >= viewportHeight ? '#000' : '#fff');
-
-
-          const footer = $('.footer');
-          const section06 = $('.mo .section_06');
-
-          const windowBottom = $(this).scrollTop() + $(this).height();
-          const section06Top = section06.offset().top;
-
-          if (windowBottom >= section06Top) {
-              footer.css('position', 'fixed').css('bottom', 0);
-          } else {
-              footer.css('position', 'relative');
-          }
       });
+
+
+        // Intersection Observer 설정
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('section06 is in view');
+                    $('.footer').css('position', 'fixed').css('bottom', 0);
+                } else {
+                    $('.footer').css('position', 'relative');
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        const section06 = document.querySelector('.mo .section_06');
+        observer.observe(section06);
 
       // 디바이스 크기가 992px 이하일 때
       var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
