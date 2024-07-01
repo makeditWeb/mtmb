@@ -91,24 +91,23 @@ $(document).ready(function () {
 
       });
 
-
-    // Function to handle section entry
-    function handleSectionEntry(index) {
-        if (index === 6) { 
-            $('#footer').css('bottom', '78px')
+      // Function to handle section entry
+      function handleSectionEntry(index) {
+        if (index === 6) {
+          $('#footer').css('bottom', '78px')
         }
-    }
+      }
 
-    // Function to handle initial load with hash
-    function handleInitialLoadWithHash() {
+      // Function to handle initial load with hash
+      function handleInitialLoadWithHash() {
         var hash = window.location.hash;
         if (hash === '#7') {
-            $('#footer').css('bottom', '0px')
+          $('#footer').css('bottom', '0px')
         }
-    }
+      }
 
-    // Check hash on initial load
-    handleInitialLoadWithHash();
+      // Check hash on initial load
+      handleInitialLoadWithHash();
 
       // listSwiper
       var section01Swiper = new Swiper(".section01_listSwiper", {
@@ -136,8 +135,8 @@ $(document).ready(function () {
       section01Swiper.update();
 
       setTimeout(() => {
-            section01Swiper.autoplay.stop();
-      }, 500  )
+        section01Swiper.autoplay.stop();
+      }, 500)
 
       $('#section_01_list_swiper_up').on('click', function () {
         section01Swiper.slidePrev();
@@ -381,29 +380,6 @@ $(document).ready(function () {
         $('.logo_text').css('color', scrollPosition >= viewportHeight ? '#000' : '#fff');
       });
 
-
-        // Intersection Observer 설정
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
-        };
-
-        const observerCallback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log('section06 is in view');
-                    $('.footer').css('position', 'fixed').css('bottom', 0);
-                } else {
-                    $('.footer').css('position', 'relative');
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        const section06 = document.querySelector('.mo .section_06');
-        observer.observe(section06);
-
       // 디바이스 크기가 992px 이하일 때
       var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
         slidesPerView: 4,
@@ -417,7 +393,7 @@ $(document).ready(function () {
         on: {
           activeIndexChange: function () {
             const realIndex = this.realIndex;
-            
+
             // mobile
             $('.content-panel .bottom-wrap .title_arrow_wrap > span').html(titles[realIndex].replace(/\n/g, '<br/>'));
             $('.content-panel .bottom-wrap > span').text(descriptions[realIndex]);
@@ -518,6 +494,60 @@ $(document).ready(function () {
           swiper: product_01_01,
         },
       });
+
+
+
+
+      // Intersection Observer 설정
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
+      };
+
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log('intersecting')
+            if ($('.mo .content_06 .about_wrap .accordion-trigger').hasClass('active')) {
+              console.log('open!!')
+              $('.footer').css('position', 'fixed').css('bottom', 0);
+            } else {
+              console.log('closed!!')
+              $('.footer').css('position', 'relative');
+            }
+          } else {
+            $('.footer').css('position', 'relative');
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      const section06 = document.querySelector('.mo .section_06');
+      observer.observe(section06);
+
+    $('.accordion-trigger').click(function () {
+        // Slide up all panels and reset triggers
+        $('.accordion-panel').slideUp();
+        $('.accordion-trigger').removeClass('active');
+        $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+
+        // Get the panel related to the clicked trigger
+        var panel = $(this).parent().find('.accordion-panel');
+
+        // If the panel is not visible, slide it down and set the trigger to active
+        if (!panel.is(':visible')) {
+            panel.slideDown(function() {
+                panel.css('display', panel.data('originalDisplay'));
+            });
+            $(this).addClass('active');
+            $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+        }
+
+        // 강제로 IntersectionObserver 콜백 실행
+        observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
+    });
+
     }
   };
 
@@ -527,17 +557,48 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  $('.accordion-trigger').click(function () {
-    $('.accordion-panel').slideUp();
-    $('.accordion-trigger').removeClass('active');
-    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
-      $(this).parent().find('.accordion-panel').slideDown();
-      $(this).addClass('active');
-      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-    }
-  });
+    $('.accordion-panel').each(function() {
+        var originalDisplay = $(this).css('display');
+        $(this).data('originalDisplay', originalDisplay);
+        $(this).hide();  // Ensure all panels are hidden initially
+    });
+  
+  
+
+    $('.accordion-trigger').click(function () {
+        // Slide up all panels and reset triggers
+        $('.accordion-panel').slideUp();
+        $('.accordion-trigger').removeClass('active');
+        $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+
+        // Get the panel related to the clicked trigger
+        var panel = $(this).parent().find('.accordion-panel');
+
+        // If the panel is not visible, slide it down and set the trigger to active
+        if (!panel.is(':visible')) {
+            panel.slideDown(function() {
+                panel.css('display', panel.data('originalDisplay'));
+            });
+            $(this).addClass('active');
+            $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+        }
+
+        // 강제로 IntersectionObserver 콜백 실행
+        // observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
+    });
+
+  // $('.accordion-trigger').click(function () {
+  //   $('.accordion-panel').slideUp();
+  //   $('.accordion-trigger').removeClass('active');
+  //   $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+
+  //   if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+  //     $(this).parent().find('.accordion-panel').slideDown();
+  //     $(this).addClass('active');
+  //     $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+  //   }
+  // });
 
   // const originalList = $('.marquee-item-list');
   // const clonedList = originalList.clone();
