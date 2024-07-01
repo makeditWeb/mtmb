@@ -97,6 +97,41 @@
     }
 }
 
+/* 모바일 right icon */
+@media (max-width: 600px) {
+    .right-fixed {
+        right: 30px
+    }
+
+    .right-fixed button{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 500px) {
+    .right-fixed {
+        right: 24px
+    }
+
+    .right-fixed button{
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 400px) {
+    .right-fixed {
+        right: 16px
+    }
+
+    .right-fixed button{
+        width: 28px;
+        height: 28px;
+    }
+}
 
 #footer {
    bottom: 0px;   
