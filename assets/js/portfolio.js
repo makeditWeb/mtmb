@@ -49,7 +49,6 @@ $(document).ready(function () {
   const observerMO = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        console.log(entry.isIntersecting)
         if (itemsToShowMobile < totalItemsMobile) {
           setTimeout(() => {
             itemsToShowMobile += itemsIncrementMobile;
