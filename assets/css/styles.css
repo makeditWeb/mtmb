@@ -102,19 +102,24 @@
 }
 
 .section_01 .top_wrap .description_wrap>span:last-child {
+  font-family: 'GmarketSans';
+  font-weight: 700;
   font-size: 30px;
 }
 
 .section_01 .top_wrap>span {
   font-size: 155px;
   line-height: 25%;
+
+  font-family: SBAggroM;
+  font-weight: 500;
 }
 
 .section_01 h1 {
-  color: #1ee8ce;
+  color: #02ead7;
   font-family: SBAggroM;
   font-size: 260px;
-  font-weight: 100;
+  font-weight: 800;
   text-align: center;
   text-shadow: 0px 4px 8px #212121;
   line-height: 100%;
@@ -258,6 +263,7 @@
   width: calc(100% - 140px);
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 
   margin-left: 12px;
 }
@@ -1011,7 +1017,7 @@
 
 .section_02 .made_it_wrap .view_all_wrap:hover::after {
   bottom: -10px;
-  background: #1ee8ce;
+  background: #02ead7;
 }
 
 @media (max-width: 1600px) {
@@ -1557,7 +1563,7 @@
 }
 
 .section_03 .review_wrap .view_all_wrap:hover::after {
-  background: #1ee8ce;
+  background: #02ead7;
 }
 
 .section_03 .review_wrap .review_list {
@@ -2024,7 +2030,7 @@
 }
 
 .view_all_wrap:hover::after {
-  background: #1ee8ce;
+  background: #02ead7;
 }
 
 .section_04 .content_04 .left_wrap .title {

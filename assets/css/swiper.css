@@ -23,7 +23,8 @@
 /* 메인색션 01 swiper */
 
 .section01_listSwiper {
-    max-height: calc(100vh - 164px);
+    /* max-height: calc(100vh - 164px); */
+    max-height: 940px;
 }
 
 /* .section01_listSwiper .swiper-wrapper {
@@ -37,7 +38,8 @@
 .section01_listSwiper .swiper-slide {
     background: transparent;
     width: auto;
-    height: calc(((100vh - 160px) / 4) - 2px) !important;
+    /* height: calc(((100vh - 160px) / 4) - 2px) !important; */
+    height: calc(940px / 4) !important;
 }
 
 /* listSwiper */
