@@ -133,18 +133,23 @@
 .content_wrap .consulting_box .left_wrap>ul li:nth-child(1) img {
     animation: sec7Icon1 infinite 8s;
 }
+
 .content_wrap .consulting_box .left_wrap>ul li:nth-child(3) img {
     animation: sec7Icon2 infinite 8s;
 }
+
 .content_wrap .consulting_box .left_wrap>ul li:nth-child(5) img {
     animation: sec7Icon3 infinite 8s;
 }
+
 .content_wrap .consulting_box .left_wrap>ul li:nth-child(7) img {
     animation: sec7Icon4 infinite 8s;
 }
+
 .content_wrap .consulting_box .left_wrap>ul li:nth-child(9) img {
     animation: sec7Icon5 infinite 8s;
 }
+
 .content_wrap .consulting_box .left_wrap>ul li:nth-child(11) img {
     animation: sec7Icon6 infinite 8s;
 }
@@ -185,7 +190,7 @@
     }
 }
 
-.section_01.active .top_wrap span{
+.section_01.active .top_wrap span {
     animation: value_fade_left 1s;
 }
 
@@ -248,7 +253,7 @@
     }
 }
 
-.mo .section_01 .top_wrap span{
+.mo .section_01 .top_wrap span {
     animation: value_fade_left_mo 1s;
 }
 
@@ -273,8 +278,8 @@
     }
 }
 
-.pc .section_01 .content-panel{
-  animation: panel_fade_top 1s;
+.pc .section_01 .content-panel {
+    animation: panel_fade_top 1s;
 }
 
 @keyframes line_01 {
@@ -351,7 +356,7 @@
 }
 
 .section_01 .scroll_img {
-    animation:0.5s linear 0s infinite alternate none running motion;
+    animation: 0.5s linear 0s infinite alternate none running motion;
 
 }
 
@@ -361,6 +366,7 @@
         width: 0px;
         right: -36px;
     }
+
     to {
         width: calc(100vw - 100% - 36px - 120px);
         right: calc(-36px - (100vw - 100% - 36px - 120px));
@@ -372,33 +378,35 @@
 }
 
 @keyframes scaleAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.section_03 .service_list .service_wrap > img {
-  animation: scaleAnimation 2s ease-in-out;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
+.section_03 .service_list .service_wrap>img {
+    animation: scaleAnimation 2s ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
-.business_container .content_wrap .all_service_container .service_list .service_wrap > img {
-  animation: scaleAnimation 2s ease-in-out;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
+.business_container .content_wrap .all_service_container .service_list .service_wrap>img {
+    animation: scaleAnimation 2s ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
-.business_container .step_wrap > img {
-  animation: scaleAnimation 2s ease-in-out;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
+.business_container .step_wrap>img {
+    animation: scaleAnimation 2s ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
 @keyframes fade_in {
@@ -414,6 +422,80 @@
 .content-panel .right-wrap .description_wrap span:first-child,
 .content-panel .right-wrap .description_wrap span:last-child {
     animation: fade_in 1s ease-in-out forwards;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+
+
+@media (min-height: 850px) {
+    @keyframes line-motion {
+        0% {
+            height: 0px;
+        }
+
+        100% {
+            height: 10em;
+        }
+    }
+}
+
+@media (max-height: 850px) {
+    @keyframes line-motion {
+        0% {
+            height: 0px;
+        }
+
+        100% {
+            height: 6em;
+        }
+    }
+
+
+  .content-divider {
+    top: -15em !important;
+  }
+}
+
+
+@media (max-height: 750px) {
+    @keyframes line-motion {
+        0% {
+            height: 0px;
+        }
+
+        100% {
+            height: 4em;
+        }
+    }
+
+
+  .content-divider {
+    top: -12em !important;
+  }
+}
+
+@media (max-height: 650px) {
+    @keyframes line-motion {
+        0% {
+            height: 0px;
+        }
+
+        100% {
+            height: 2em;
+        }
+    }
+
+
+  .content-divider {
+    top: -10em !important;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+    .content-divider {
+        animation: line-motion 2s ease-in-out forwards;
+    }
 }
