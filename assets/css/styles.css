@@ -1102,7 +1102,7 @@
     padding-left: 5%;
   }
 
-  .section_02 .consulting_box .left_wrap ul li {
+  .section_02 .consulting_box .left_wrap ul li:not(.arrow_between) {
     width: 80px;
     height: 100px;
 
@@ -1199,6 +1199,7 @@
     font-size: 50px;
   }
 
+  
   .section_02 .consulting_box .left_wrap {
     justify-content: space-between;
   }
@@ -1207,8 +1208,13 @@
     margin-bottom: 0px;
   }
 
-  .section_02 .consulting_box .left_wrap ul li {
+  .section_02 .consulting_box .left_wrap ul li:not(.arrow_between) {
     height: 65px;
+  }
+
+  .section_02 .consulting_box .left_wrap>ul li.arrow_between > img {
+    width: 8px;
+    height: auto;
   }
 
   .section_02 .consulting_box .left_wrap ul li img {
@@ -1259,7 +1265,7 @@
     font-size: 30px;
   }
 
-  .section_02 .consulting_box .left_wrap ul li {
+  .section_02 .consulting_box .left_wrap ul li:not(.arrow_between) {
     justify-content: flex-end;
     height: 50px;
   }
