@@ -75,6 +75,7 @@
 
   font-family: SBAggroB;
   font-weight: 100;
+  
   color: #fff;
   text-align: center;
 
@@ -417,6 +418,12 @@
     transform: none;
     padding: 0 20px;
     height: 100%;
+    background: #000;
+  }
+
+
+  .section_01 .sc_wrap .title_wrap h2 {
+    background: #000;
   }
 
   .section_01 .sc_wrap .title_wrap::before {
