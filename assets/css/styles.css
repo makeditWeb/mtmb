@@ -621,6 +621,7 @@
   }
 
   .content-divider {
+      
       position: absolute;
       top: -17em;
       background: #626262;
