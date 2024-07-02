@@ -1953,16 +1953,20 @@
   background: #fff;
 }
 
+.section_04 .fp-tableCell {
+  vertical-align: top;
+}
+
 .section_04 {
   background: url(../img/main/content_04.webp);
   background-repeat: no-repeat;
-  background-size: 65%;
+  background-size: 70%;
   background-position: bottom right;
 }
 
 .section_04 .content_04 {
   position: relative;
-  height: calc(100% - 160px);
+  height: calc(100% - 130px);
 
   display: flex;
   align-items: center;
@@ -1978,7 +1982,7 @@
   height: fit-content;
 
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 35px;
   padding: 25px 50px;
 
   display: flex;
@@ -2020,6 +2024,10 @@
   margin-top: 50px;
 
   padding-bottom: 5px;
+}
+
+.view_all_wrap span {
+  color: #000;
 }
 
 .view_all_wrap:hover {
