@@ -79,7 +79,7 @@
   color: #fff;
   text-align: center;
 
-  transform: translateX(-200px);
+  transform: translateX(-100px);
 }
 
 .section_01 .top_wrap {
@@ -113,6 +113,7 @@
 
   font-family: SBAggroM;
   font-weight: 500;
+  letter-spacing: -12px;
 }
 
 .section_01 h1 {
