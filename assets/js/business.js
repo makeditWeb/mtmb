@@ -49,13 +49,14 @@ $(document).ready(function () {
 
 function linkHashEventForPc(index) {
   // 해당 인덱스의 요소 클릭 시뮬레이션
+  const scrollTargetElement = $('.ppt_container');
   var targetElement = $('.ppt_index_wrap').eq(index);
   if (targetElement.length) {
     targetElement.click();
 
     // 클릭 후 해당 요소로 스크롤
     $('html, body').animate({
-      scrollTop: targetElement.offset().top + 180
+      scrollTop: scrollTargetElement.offset().top  - 120
     }, 100); // 스크롤 애니메이션 시간 (밀리초)
   }
 }
