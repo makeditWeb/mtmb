@@ -1414,7 +1414,6 @@
   cursor: pointer;
 
   width: 100%;
-  max-width: 120px;
   padding-bottom: 4px;
 
   display: flex;
@@ -1442,7 +1441,7 @@
   bottom: -4px;
   content: "";
 
-  width: 120px;
+  width: 100%;
   height: 1px;
   background: #888888;
   border-radius: 8px;
@@ -1971,7 +1970,7 @@
   height: fit-content;
 
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 40px;
   padding: 25px 50px;
 
   display: flex;
@@ -2624,14 +2623,14 @@
 
 
 .section_05 .content_05 .left_wrap {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   z-index: 1;
 }
 
 .section_05 .content_05 .left_wrap .introduction_list {
-  width: 65%;
+  width: 80%;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
@@ -3461,7 +3460,7 @@
 }
 
 .section_08 .content_08 .top_wrap .notice_wrap .notice_list .notice_box {
-  padding-bottom: 8px;
+  padding: 8px;
 }
 
 .section_08 .content_08 .top_wrap .notice_wrap .notice_list .notice_box:not(:last-child) {
@@ -3484,8 +3483,8 @@
   cursor: pointer;
 }
 
-.section_08 .content_08 .top_wrap .about_wrap .view_all_wrap>span,
-.section_08 .content_08 .top_wrap .notice_wrap .view_all_wrap>span {
+.section_08 .content_08 .top_wrap .about_wrap .view_all_wrap span,
+.section_08 .content_08 .top_wrap .notice_wrap .view_all_wrap span {
   font-size: 16px;
   color: #333333;
 }
@@ -3500,12 +3499,10 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: 6px;
   border-radius: 8px;
-  background: #000;
   bottom: -2px;
-
-  transition: all 2s;
+  background: #02ead7;
 }
 
 .section_08 .content_08 .portfolio_container {
