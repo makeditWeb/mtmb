@@ -1282,6 +1282,10 @@
     width: 100px;
     margin-top: 20px;
   }
+
+  .view_all_wrap::after {
+    height: 4px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -2038,7 +2042,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 7px;
+  height: 4px;
   border-radius: 8px;
   background: #000;
   bottom: -2px;
@@ -2321,10 +2325,13 @@
     font-weight: 700;
   }
 
+  .section_04 .ppt_content .img_wrap .view_all_wrap::after {
+    width: 89%;
+  }
+
   .section_04 .ppt_content .img_wrap .view_all_wrap:hover::after {
     content: "";
     position: absolute;
-    width: 89%;
     height: 4px;
     border-radius: 8px;
     background: #000;
