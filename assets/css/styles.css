@@ -628,12 +628,12 @@
   }
 
   .content-divider {
-      
-      position: absolute;
-      top: -17em;
-      background: #626262;
-      width: 1px;
-      height: 0px;
+
+    position: absolute;
+    top: -17em;
+    background: #626262;
+    width: 1px;
+    height: 0px;
   }
 
   .section_01 .content-panel .img-wrap {
@@ -1601,17 +1601,18 @@
 }
 
 @media (max-width: 1750px) {
-  .section_03 .all_service_wrap{
+  .section_03 .all_service_wrap {
     width: 1400px;
   }
 
-  .section_03 .review_wrap{
+  .section_03 .review_wrap {
     width: calc(1400px - 50px - 400px);
     margin-left: 460px;
   }
 }
 
 @media (max-width: 1600px) {
+
   .section_03 .fp-scroller,
   .section_03 .fp-scrollable {
     overflow: unset;
@@ -3535,6 +3536,7 @@
 }
 
 .section_08 .content_08 .portfolio_container {
+  position: relative;
   height: 100%;
   margin-top: 100px;
 }
@@ -3575,6 +3577,7 @@
 }
 
 .section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap {
+  position: relative;
   height: 320px;
   padding: 30px 36px;
 
@@ -3583,14 +3586,25 @@
   align-items: flex-start;
 
   background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #c6c6c6;
+
+  cursor: pointer;
 }
 
-.section_08 .content_08 .portfolio_container {
-  position: relative;
+.section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 80%) 0% 0% / contain, url('../img/main/introduce_02.png') 0px 0px no-repeat black;
 }
 
-.section_08 .content_08 .portfolio_container .sticky_title {
+
+.section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap:not(:nth-child(4n))::before {
+  content: '';
   position: absolute;
+  width: calc(100% - 1px);
+  top: 20px;
+  left: 0px;
+  height: calc(100% - 40px);
+  border-right: 1px solid #fff;
+  z-index: 1;
 }
 
 .section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap>img {
