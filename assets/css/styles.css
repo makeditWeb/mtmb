@@ -1006,7 +1006,7 @@
   height: 5px;
   border-radius: 8px;
   background: #000;
-  bottom: -10px;
+  bottom: -2px;
   z-index: -1;
   transition: all 0.3s;
 }
@@ -1362,15 +1362,15 @@
 .section_03 .all_service_wrap {
   position: relative;
 
-  padding: 50px;
+  width: 1500px;
+  padding: 50px 0px 50px 50px;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .section_03 .all_service_wrap .title_wrap {
   height: fit-content;
-  margin-right: 96px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1495,11 +1495,10 @@
 }
 
 .section_03 .review_wrap {
-  width: 1130px;
+  width: calc(1500px - 50px - 500px);
 
   margin-top: 12px;
-  margin-left: auto;
-  margin-right: 120px;
+  margin-left: 550px;
 
   padding-top: 38px;
   padding-left: 50px;
@@ -1547,6 +1546,10 @@
   cursor: pointer;
 }
 
+.section_03 .review_wrap .view_all_wrap span {
+  color: #000;
+}
+
 .section_03 .review_wrap .view_all_wrap::after {
   content: "";
   position: absolute;
@@ -1583,18 +1586,29 @@
 }
 
 .section_03 .review_wrap .review_box>span:last-child {
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1750px) {
+  .section_03 .all_service_wrap{
+    width: 1400px;
+  }
 
+  .section_03 .review_wrap{
+    width: calc(1400px - 50px - 400px);
+    margin-left: 460px;
+  }
+}
+
+@media (max-width: 1600px) {
   .section_03 .fp-scroller,
   .section_03 .fp-scrollable {
     overflow: unset;
   }
 
   .section_03 .all_service_wrap {
+    width: 1300px;
     padding: 40px;
   }
 
@@ -1603,7 +1617,7 @@
   }
 
   .section_03 .all_service_wrap .service_list .service_wrap {
-    width: 100px;
+    width: 120px;
   }
 
   .section_03 .all_service_wrap .service_list .service_wrap .service_text::after {
@@ -1611,8 +1625,7 @@
   }
 
   .section_03 .review_wrap {
-    width: 1000px;
-    margin-right: 80px;
+    width: calc(1200px - 50px - 330px);
     margin-top: 38px;
   }
 
@@ -1641,11 +1654,6 @@
 @media (max-width: 1500px) {
   .section_03 .all_service_wrap .title_wrap span {
     font-size: 38px;
-  }
-
-  .section_03 .review_wrap {
-    width: 900px;
-    margin-right: 80px;
   }
 
   .section_03 .review_wrap .title_wrap h2 {
