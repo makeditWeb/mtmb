@@ -939,3 +939,76 @@ Maximum height
 .iScrollVerticalScrollbar, .iScrollLoneScrollbar {
     display: none !important;
 }
+
+/* 우측 고정 리스트 */
+.right-fixed {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    gap: 10px;
+    
+    right: 20px;
+    bottom: 10%;
+
+    z-index: 10;
+}
+
+.right-fixed button {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.right-fixed button img {
+    width: 100%;
+}
+
+/* 모바일에서만 노출 */
+@media (max-width: 992px) {
+    .right-fixed {
+        right:40px
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 600px) {
+    .right-fixed {
+        right: 30px
+    }
+
+    .right-fixed button{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 500px) {
+    .right-fixed {
+        right: 24px
+    }
+
+    .right-fixed button{
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 400px) {
+    .right-fixed {
+        right: 16px
+    }
+
+    .right-fixed button{
+        width: 28px;
+        height: 28px;
+    }
+}
+
+#footer {
+   bottom: 0px;   
+}
