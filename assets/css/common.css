@@ -942,7 +942,6 @@ Maximum height
 
 /* 우측 고정 리스트 */
 .right-fixed {
-    display: flex !important;
     flex-direction: column;
     position: fixed;
     gap: 10px;
@@ -969,6 +968,8 @@ Maximum height
 /* 모바일에서만 노출 */
 @media (max-width: 992px) {
     .right-fixed {
+        position: fixed !important;
+        display: flex !important;
         right:40px
     }
 }
