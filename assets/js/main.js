@@ -585,7 +585,7 @@ $(document).ready(function () {
     }
   });
 
-  // const originalList = $('.marquee-item-list');
-  // const clonedList = originalList.clone();
-  // $('.marquee-block').append(clonedList);
+  const originalList = $('.marquee-item-list');
+  const clonedList = originalList.clone();
+  $('.marquee-block').append(clonedList);
 });
