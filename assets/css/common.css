@@ -931,6 +931,10 @@ Maximum height
     display: none;
 }
 
+.accordion-trigger.active + .accordion-panel {
+    display: flex;
+}
+
 .accordion-panel.active {
     display: flex;
 }
