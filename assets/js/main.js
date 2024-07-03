@@ -114,9 +114,10 @@ $(document).ready(function () {
         direction: 'vertical',
         centeredSlides: true,
         slidesPerView: 'auto',
+        spaceBetween: 0,
         loop: true,
         autoplay: {
-          delay: 100,
+          delay: 1,
           disableOnInteraction: false
         },
         autoHeight: true,
@@ -136,7 +137,7 @@ $(document).ready(function () {
 
       setTimeout(() => {
         section01Swiper.autoplay.stop();
-      }, 500)
+      }, 100)
 
       $('#section_01_list_swiper_up').on('click', function () {
         section01Swiper.slidePrev();
@@ -149,13 +150,12 @@ $(document).ready(function () {
       // 10초 후에 autoplay 시작
       setTimeout(function () {
         section01Swiper.params.autoplay = {
-          delay: 2000,
+          delay: 5000,
           disableOnInteraction: false
         };
 
         section01Swiper.autoplay.start();
-        section01Swiper.update();
-      }, 10000); // 10000ms = 10초
+      }, 5000); 
 
       // listSwiper
       var listSwiper = new Swiper(".section01_listSwiper", {
