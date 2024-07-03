@@ -4,6 +4,7 @@
 /********************** Business Header Style **********************/
 .sub_wrap .header {
     background: #fff;
+    padding: 0 50px;
 }
 
 .sub_wrap .header .header_wrap .logo_text {

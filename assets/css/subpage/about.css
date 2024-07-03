@@ -113,9 +113,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 45vw;
-    height: auto;
-    object-fit: contain;
+    width: 1050px;
+    aspect-ratio: 1.8 / 1;
   }
 
 
