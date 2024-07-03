@@ -1,4 +1,4 @@
-const titles = ["제안서", "강의자료", "소개서", "제안문서", `비지니스\n보고서`];
+const titles = ["제안서", "강의자료", "소개서", "제안서", `비지니스\n보고서`];
 const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
 
 $(document).ready(function () {
@@ -525,29 +525,6 @@ $(document).ready(function () {
       const observer = new IntersectionObserver(observerCallback, observerOptions);
       const section06 = document.querySelector('.mo .section_06');
       observer.observe(section06);
-
-    $('.accordion-trigger').click(function () {
-        // Slide up all panels and reset triggers
-        $('.accordion-panel').slideUp();
-        $('.accordion-trigger').removeClass('active');
-        $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
-
-        // Get the panel related to the clicked trigger
-        var panel = $(this).parent().find('.accordion-panel');
-
-        // If the panel is not visible, slide it down and set the trigger to active
-        if (!panel.is(':visible')) {
-            panel.slideDown(function() {
-                panel.css('display', panel.data('originalDisplay'));
-            });
-            $(this).addClass('active');
-            $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-        }
-
-        // 강제로 IntersectionObserver 콜백 실행
-        observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
-    });
-
     }
   };
 
@@ -558,47 +535,47 @@ $(document).ready(function () {
   });
 
 
-    $('.accordion-panel').each(function() {
-        var originalDisplay = $(this).css('display');
-        $(this).data('originalDisplay', originalDisplay);
-        $(this).hide();  // Ensure all panels are hidden initially
-    });
+    // $('.accordion-panel').each(function() {
+    //     var originalDisplay = $(this).css('display');
+    //     $(this).data('originalDisplay', originalDisplay);
+    //     $(this).hide();  // Ensure all panels are hidden initially
+    // });
   
   
 
-    $('.accordion-trigger').click(function () {
-        // Slide up all panels and reset triggers
-        $('.accordion-panel').slideUp();
-        $('.accordion-trigger').removeClass('active');
-        $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+    // $('.accordion-trigger').click(function () {
+    //     // Slide up all panels and reset triggers
+    //     $('.accordion-panel').slideUp();
+    //     $('.accordion-trigger').removeClass('active');
+    //     $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-        // Get the panel related to the clicked trigger
-        var panel = $(this).parent().find('.accordion-panel');
+    //     // Get the panel related to the clicked trigger
+    //     var panel = $(this).parent().find('.accordion-panel');
 
-        // If the panel is not visible, slide it down and set the trigger to active
-        if (!panel.is(':visible')) {
-            panel.slideDown(function() {
-                panel.css('display', panel.data('originalDisplay'));
-            });
-            $(this).addClass('active');
-            $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-        }
+    //     // If the panel is not visible, slide it down and set the trigger to active
+    //     if (!panel.is(':visible')) {
+    //         panel.slideDown(function() {
+    //             panel.css('display', panel.data('originalDisplay'));
+    //         });
+    //         $(this).addClass('active');
+    //         $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+    //     }
 
-        // 강제로 IntersectionObserver 콜백 실행
-        // observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
-    });
+    //     // 강제로 IntersectionObserver 콜백 실행
+    //     // observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
+    // });
 
-  // $('.accordion-trigger').click(function () {
-  //   $('.accordion-panel').slideUp();
-  //   $('.accordion-trigger').removeClass('active');
-  //   $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+  $('.accordion-trigger').click(function () {
+    $('.accordion-panel').slideUp();
+    $('.accordion-trigger').removeClass('active');
+    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-  //   if (!$(this).parent().find('.accordion-panel').is(':visible')) {
-  //     $(this).parent().find('.accordion-panel').slideDown();
-  //     $(this).addClass('active');
-  //     $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-  //   }
-  // });
+    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+      $(this).parent().find('.accordion-panel').slideDown();
+      $(this).addClass('active');
+      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+    }
+  });
 
   // const originalList = $('.marquee-item-list');
   // const clonedList = originalList.clone();
