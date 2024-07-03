@@ -375,6 +375,9 @@
 
 .section_01 h1::after {
     animation: 10s expandWidth 0.5s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 5.1s;
 }
 
 @keyframes scaleAnimation {
