@@ -913,7 +913,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  color: #fff;
+  color: transparent;
 
   margin-left: 100px;
   padding: 24px;
@@ -926,6 +926,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
+  color: #fff;
 }
 
 .section_02 .consulting_box .right_wrap>span:first-child>img {
