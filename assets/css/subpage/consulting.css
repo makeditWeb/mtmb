@@ -371,6 +371,7 @@
   min-width: fit-content;
   cursor: pointer;
   align-items: center;
+  padding: 10px 0;
 }
 
 .consulting_container .step_box .check_wrap label:last-child {
@@ -444,7 +445,7 @@
 
 .consulting_container .step_box.step_01 .check_container {
   width: 100%;
-
+  padding: 16px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -467,6 +468,7 @@
   overflow-y: auto;
   width: 100%;
   padding-right: 30px;
+  margin-top: 12px;
 }
 
 
@@ -709,7 +711,7 @@
   background: #fff;
 
   width: 100px;
-  height: 1px;
+  height: 2px;
   margin-bottom: 30px;
 }
 
