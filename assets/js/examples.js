@@ -16,23 +16,6 @@ $(document).ready(function () {
 
     if (isLargeScreen) {
         // listSwiper
-        var listSwiper = new Swiper(".section01_listSwiper", {
-          slidesPerView: 9,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 4000,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-
-
-        // listSwiper
         var listSwiper = new Swiper(".listSwiper", {
           slidesPerView: 9,
           spaceBetween: 0, // 슬라이드 여백
@@ -233,33 +216,6 @@ $(document).ready(function () {
     } else {
       const viewportHeight = $(window).height();
         // 디바이스 크기가 992px 이하일 때
-        var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
-          slidesPerView: 4,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          touchRatio: 0,
-          autoplay: {
-            delay: 3000,
-          },
-          on: {
-            activeIndexChange: function () {
-              const realIndex = this.realIndex;
-              $('.section_01 .content-panel .right-wrap .description_wrap span:first-child').text(titles[realIndex]);
-              $('.section_01 .content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
-            }
-          }
-        });
-
-        $('#section_01_list_swiper_left').on('click', function() {
-          section01MobileSwiper.slidePrev();
-        });
-
-        $('#section_01_list_swiper_right').on('click', function() {
-          section01MobileSwiper.slideNext();
-        });
-
-        // 디바이스 크기가 992px 이하일 때
         // weMadeItSwiper
         var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
           slidesPerView: 2,
@@ -353,22 +309,20 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  $('.accordion-trigger').click(function () {
-    $('.accordion-panel').slideUp();
-    $('.accordion-trigger').removeClass('active');
-    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+  // $('.accordion-trigger').click(function () {
+  //   $('.accordion-panel').slideUp();
+  //   $('.accordion-trigger').removeClass('active');
+  //   $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
-      $(this).parent().find('.accordion-panel').slideDown();
-      $(this).addClass('active');
-      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-    }
-  });
+  //   if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+  //     $(this).parent().find('.accordion-panel').slideDown();
+  //     $(this).addClass('active');
+  //     $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+  //   }
+  // });
   
 
     const originalList = $('.marquee-item-list');
     const clonedList = originalList.clone();
     $('.marquee-block').append(clonedList);
-
-
 });
