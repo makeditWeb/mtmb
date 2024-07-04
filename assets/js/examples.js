@@ -309,18 +309,17 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // $('.accordion-trigger').click(function () {
-  //   $('.accordion-panel').slideUp();
-  //   $('.accordion-trigger').removeClass('active');
-  //   $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+  $('.accordion-trigger').click(function () {
+    $('.accordion-panel').slideUp();
+    $('.accordion-trigger').removeClass('active');
+    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-  //   if (!$(this).parent().find('.accordion-panel').is(':visible')) {
-  //     $(this).parent().find('.accordion-panel').slideDown();
-  //     $(this).addClass('active');
-  //     $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-  //   }
-  // });
-  
+    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+      $(this).parent().find('.accordion-panel').slideDown();
+      $(this).addClass('active');
+      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+    }
+  });
 
     const originalList = $('.marquee-item-list');
     const clonedList = originalList.clone();
