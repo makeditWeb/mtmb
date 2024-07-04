@@ -99,12 +99,14 @@
   color: rgba(255, 255, 255, 0.8);
   font-family: Pretendard;
   font-weight: 500;
+  letter-spacing: -0.06em;
 }
 
 .section_01 .top_wrap .description_wrap>span:last-child {
   font-family: 'GmarketSans';
   font-weight: 700;
   font-size: 30px;
+  letter-spacing: -0.04em;
 }
 
 .section_01 .top_wrap>span {
@@ -113,7 +115,7 @@
 
   font-family: SBAggroM;
   font-weight: 500;
-  letter-spacing: -12px;
+  letter-spacing: -0.08em;
 }
 
 .section_01 h1 {
@@ -126,8 +128,8 @@
   line-height: 100%;
   z-index: 1;
   align-self: flex-start;
-
   position: relative;
+  letter-spacing: -0.04em;
 }
 
 .section_01 h1::after {
@@ -162,6 +164,7 @@
   z-index: 0;
   align-self: flex-end;
   transform: translateX(150px);
+  letter-spacing: -0.08em;
 }
 
 .section_01 h6 {
