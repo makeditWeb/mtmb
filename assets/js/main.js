@@ -162,21 +162,20 @@ $(document).ready(function () {
       // Check hash on initial load
       handleInitialLoadWithHash();
 
-
       // listSwiper
       var section01Swiper = new Swiper(".section01_listSwiper", {
         direction: 'vertical',
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
+        slidesPerView: 4,
+        spaceBetween: 'auto',
+        mousewheel: true,
+        grabCursor: true,
         loop: true,
         autoplay: {
-          delay: 1,
-          disableOnInteraction: false
+          delay: 500,
+          disableOnInteraction: false,
         },
-        autoHeight: true,
-        observeParents: true,
         on: {
+
           slideChange: function () {
             const realIndex = this.realIndex;
             const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
@@ -192,7 +191,7 @@ $(document).ready(function () {
 
       setTimeout(() => {
         section01Swiper.autoplay.stop();
-      }, 100)
+      }, 500)
 
       $('#section_01_list_swiper_up').on('click', function () {
         section01Swiper.slidePrev();

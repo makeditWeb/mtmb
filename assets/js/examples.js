@@ -16,23 +16,6 @@ $(document).ready(function () {
 
     if (isLargeScreen) {
         // listSwiper
-        var listSwiper = new Swiper(".section01_listSwiper", {
-          slidesPerView: 9,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 4000,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-
-
-        // listSwiper
         var listSwiper = new Swiper(".listSwiper", {
           slidesPerView: 9,
           spaceBetween: 0, // 슬라이드 여백

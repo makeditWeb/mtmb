@@ -215,7 +215,8 @@
   min-width: 120px;
   /* height: 100%; */
   padding: 14px 10px;
-  border-top: 2px solid #343434;
+  border-top: 1px solid #343434;
+  border-bottom: 1px solid #343434;
 }
 
 .section_01 .sc_wrap .content:last-child {
