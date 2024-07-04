@@ -74,7 +74,7 @@
   justify-content: center;
 
   font-family: SBAggroB;
-  font-weight: 100;
+  font-weight: normal;
 
   color: #fff;
   text-align: center;
@@ -163,7 +163,6 @@
   text-align: center;
   z-index: 0;
   align-self: flex-end;
-  transform: translateX(150px);
   letter-spacing: -0.08em;
 }
 
@@ -236,7 +235,7 @@
 
   right: 20px;
   bottom: 18%;
-  transform: translateY(-3em);
+  transform: translateY(-3.6em);
 
   width: 300px;
   height: 135px;
@@ -6553,6 +6552,7 @@ section.container {
 .view_all_wrap_link,
 .view_all_wrap_link:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .section_02 .view_all_wrap_link {

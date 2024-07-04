@@ -168,12 +168,12 @@
 
 @keyframes result_fade_left {
     0% {
-        transform: translateX(20px);
+        transform: translateX(-120px);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(135px);
+        transform: translateX(0px);
         opacity: 1;
     }
 }
