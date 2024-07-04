@@ -318,7 +318,7 @@ Marquee animation
 
 .marquee-block {
     display: flex;
-    animation: marquee 20s linear infinite;
+    animation: marquee 32s linear infinite;
 }
 
 .marquee-item-list {
@@ -335,7 +335,8 @@ Marquee animation
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
+        /* transform: translateX(calc(-100% - (30px *  8))); */
     }
 }
 
