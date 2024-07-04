@@ -1136,11 +1136,10 @@
   /* 80px (좌측 여백) + 150px (좌측 메뉴 width) */
   width: 100%;
   margin: 0 auto;
-  margin-top: 50px;
+  padding-top: 50px;
   margin-left: auto;
 
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+
 
   background: #fff;
 }
@@ -1821,6 +1820,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   .consulting_container .partner_container .partner_wrap {
     width: 100%;
     padding: 20px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
   }
 
   /* 포트폴리오 */
