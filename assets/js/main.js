@@ -658,7 +658,7 @@ $(document).ready(function () {
     $("#modal-portfolio-view-title").text('포트폴리오');
     $("#modal-portfolio-view-img").empty();
     div_tags = $("<div/>", {
-      class: 'col-3'
+      class: 'w50per'
     });
     img_tags = $("<img/>", {
       class: 'w100per mb-2',
