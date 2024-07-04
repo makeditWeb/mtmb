@@ -3714,7 +3714,9 @@
 }
 
 .section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap:hover {
-  background: url('../img/main/introduce_02.png');
+  background: url('../img/main/portfolio/portfolio_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 80%) 0% 0% / contain, url('../img/main/introduce_02.png') 0px 0px no-repeat black; */
 }
 
