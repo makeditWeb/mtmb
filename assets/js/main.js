@@ -1,6 +1,59 @@
 const titles = ["제안서", "강의자료", "소개서", "제안서", `비지니스\n보고서`];
 const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
 
+const mainRollingData = [
+  {
+    title: '소개서',
+    description: 'Introduction',
+    src: 'img/main/contentImage/introduction-1.png'
+  },
+  {
+    title: '제안서',
+    description: 'Proposal document',
+    src: 'img/main/contentImage/proposal-report-1.png'
+  },
+  {
+    title: '보고서',
+    description: 'Business report',
+    src: 'img/main/contentImage/business-report-1.png'
+  },
+  {
+    title: '교육자료',
+    description: 'Educational meterials',
+    src: 'img/main/contentImage/education-1.png'
+  },
+  {
+    title: '강의자료',
+    description: 'Lecture meterials',
+    src: 'img/main/contentImage/education-2.png'
+  },
+  {
+    title: '소개서',
+    description: 'Introduction',
+    src: 'img/main/contentImage/introduction-2.png'
+  },
+  {
+    title: '제안서',
+    description: 'Proposal document',
+    src: 'img/main/contentImage/proposal-report-2.png'
+  },
+  {
+    title: '보고서',
+    description: 'Business report',
+    src: 'img/main/contentImage/business-report-2.png'
+  },
+  {
+    title: '교육자료',
+    description: 'Educational meterials',
+    src: 'img/main/contentImage/education-1.png'
+  },
+  {
+    title: '강의자료',
+    description: 'Lecture meterials',
+    src: 'img/main/contentImage/education-2.png'
+  },
+]
+
 $(document).ready(function () {
   const debounce = (func, wait) => {
     let timeout;
@@ -109,6 +162,7 @@ $(document).ready(function () {
       // Check hash on initial load
       handleInitialLoadWithHash();
 
+
       // listSwiper
       var section01Swiper = new Swiper(".section01_listSwiper", {
         direction: 'vertical',
@@ -123,12 +177,13 @@ $(document).ready(function () {
         autoHeight: true,
         observeParents: true,
         on: {
-          activeIndexChange: function () {
-            console.log('activeIndexChange')
+          slideChange: function () {
             const realIndex = this.realIndex;
-            // pc
-            $('.content-panel .right-wrap .description_wrap span:first-child').text(titles[realIndex]);
-            $('.content-panel .right-wrap .description_wrap span:last-child').text(descriptions[realIndex]);
+            const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+
+            $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
+            $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
+            $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
           },
         }
       });
@@ -393,10 +448,12 @@ $(document).ready(function () {
         on: {
           activeIndexChange: function () {
             const realIndex = this.realIndex;
+            const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
 
             // mobile
-            $('.content-panel .bottom-wrap .title_arrow_wrap > span').html(titles[realIndex].replace(/\n/g, '<br/>'));
-            $('.content-panel .bottom-wrap > span').text(descriptions[realIndex]);
+            $('.content-panel .bottom-wrap .title_arrow_wrap > span').html(mainRollingData[rollingIndex].title.replace(/\n/g, '<br/>'));
+            $('.content-panel .bottom-wrap > span').text(mainRollingData[rollingIndex].description);
+            $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
           }
         }
       });
@@ -590,26 +647,26 @@ $(document).ready(function () {
   $('.marquee-block').append(clonedList);
 
 
-$(".portfolio_wrap").on("click", function () {
-  portfolioView();
-});
+  $(".portfolio_wrap").on("click", function () {
+    portfolioView();
+  });
 
-function portfolioView() {
-  console.log('portfolio open');
-  
-  $("#modal-portfolio-view").modal('show');
-  $("#modal-portfolio-view-title").text('포트폴리오');
-  $("#modal-portfolio-view-img").empty();
-  div_tags = $("<div/>", {
-    class: 'col-3'
-  });
-  img_tags = $("<img/>", {
-    class: 'w100per mb-2',
-    src: 'img/main/portfolio/portfolio_1.png'
-  });
-  div_tags.append(img_tags);
-  $("#modal-portfolio-view-img").append(div_tags);
-}
+  function portfolioView() {
+    console.log('portfolio open');
+
+    $("#modal-portfolio-view").modal('show');
+    $("#modal-portfolio-view-title").text('포트폴리오');
+    $("#modal-portfolio-view-img").empty();
+    div_tags = $("<div/>", {
+      class: 'col-3'
+    });
+    img_tags = $("<img/>", {
+      class: 'w100per mb-2',
+      src: 'img/main/portfolio/portfolio_1.png'
+    });
+    div_tags.append(img_tags);
+    $("#modal-portfolio-view-img").append(div_tags);
+  }
 });
 
 
