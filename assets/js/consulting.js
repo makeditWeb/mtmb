@@ -86,7 +86,21 @@ $(document).ready(function () {
   $('.step_04 .step_control_container .next').on('click', function() {
       goToStep('.step_04', '.step_05');
   });
+});
 
+window.addEventListener("load", function() {
+  var hash = location.hash;
+  if (hash !== "") {
+    var target = document.querySelector(hash);
+    if (target) {
+      var headerHeight = document.querySelector("header").offsetHeight;
+      var targetPosition = target.getBoundingClientRect().top;
+      window.scrollTo({
+        top: targetPosition + window.pageYOffset - headerHeight - 100,
+        behavior: "auto"
+      });
+    }
+  }
 });
 
 
