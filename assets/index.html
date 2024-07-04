@@ -19,8 +19,18 @@
     <meta name="Description" content="">
 
     <link rel="icon" href="" type="image/x-icon" sizes="16x16">
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+      <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
     <link rel="stylesheet" href="css/styles.css">
 
     <title></title>
@@ -1894,8 +1904,27 @@
         <!-- e:right_fixed -->
     </div>
 
+    <!-- 포트폴리오 모달 -->
+    <div class="modal fade write-modal view-modal" id="modal-portfolio-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="reviewModalLabel">포트폴리오</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal_review">
+                        <h5 id="modal-portfolio-view-title"></h5>
+                    </div>
+                    <div class="modal_review_text row" id="modal-portfolio-view-img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="lib/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="lib/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript" src="lib/vendors/scrolloverflow.min.js"></script>

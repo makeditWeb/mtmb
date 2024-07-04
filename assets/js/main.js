@@ -155,7 +155,7 @@ $(document).ready(function () {
         };
 
         section01Swiper.autoplay.start();
-      }, 5000); 
+      }, 5000);
 
       // listSwiper
       var listSwiper = new Swiper(".section01_listSwiper", {
@@ -535,42 +535,42 @@ $(document).ready(function () {
   });
 
 
-    // $('.accordion-panel').each(function() {
-    //     var originalDisplay = $(this).css('display');
-    //     $(this).data('originalDisplay', originalDisplay);
-    //     $(this).hide();  // Ensure all panels are hidden initially
-    // });
-  
-  
+  // $('.accordion-panel').each(function() {
+  //     var originalDisplay = $(this).css('display');
+  //     $(this).data('originalDisplay', originalDisplay);
+  //     $(this).hide();  // Ensure all panels are hidden initially
+  // });
 
-    // $('.accordion-trigger').click(function () {
-    //     // Slide up all panels and reset triggers
-    //     $('.accordion-panel').slideUp();
-    //     $('.accordion-trigger').removeClass('active');
-    //     $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    //     // Get the panel related to the clicked trigger
-    //     var panel = $(this).parent().find('.accordion-panel');
 
-    //     // If the panel is not visible, slide it down and set the trigger to active
-    //     if (!panel.is(':visible')) {
-    //         panel.slideDown(function() {
-    //             panel.css('display', panel.data('originalDisplay'));
-    //         });
-    //         $(this).addClass('active');
-    //         $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-    //     }
+  // $('.accordion-trigger').click(function () {
+  //     // Slide up all panels and reset triggers
+  //     $('.accordion-panel').slideUp();
+  //     $('.accordion-trigger').removeClass('active');
+  //     $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    //     // 강제로 IntersectionObserver 콜백 실행
-    //     // observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
-    // });
+  //     // Get the panel related to the clicked trigger
+  //     var panel = $(this).parent().find('.accordion-panel');
 
-      // 처음에 첫 번째 .ppt_wrap의 .accordion-panel을 열어두기
+  //     // If the panel is not visible, slide it down and set the trigger to active
+  //     if (!panel.is(':visible')) {
+  //         panel.slideDown(function() {
+  //             panel.css('display', panel.data('originalDisplay'));
+  //         });
+  //         $(this).addClass('active');
+  //         $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+  //     }
+
+  //     // 강제로 IntersectionObserver 콜백 실행
+  //     // observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
+  // });
+
+  // 처음에 첫 번째 .ppt_wrap의 .accordion-panel을 열어두기
   $('.ppt_wrap:first .accordion-panel').show();
   $('.ppt_wrap:first .accordion-trigger').addClass('active');
   $('.ppt_wrap:first .accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
 
-  
+
   $('.accordion-trigger').click(function () {
     // 모든 패널을 닫고, 모든 트리거에서 active 클래스를 제거
     $('.accordion-panel').slideUp();
@@ -588,4 +588,29 @@ $(document).ready(function () {
   const originalList = $('.marquee-item-list');
   const clonedList = originalList.clone();
   $('.marquee-block').append(clonedList);
+
+
+$(".portfolio_wrap").on("click", function () {
+  portfolioView();
 });
+
+function portfolioView() {
+  console.log('portfolio open');
+  
+  $("#modal-portfolio-view").modal('show');
+  $("#modal-portfolio-view-title").text('포트폴리오');
+  $("#modal-portfolio-view-img").empty();
+  div_tags = $("<div/>", {
+    class: 'col-3'
+  });
+  img_tags = $("<img/>", {
+    class: 'w100per mb-2',
+    src: 'img/main/portfolio/portfolio_1.png'
+  });
+  div_tags.append(img_tags);
+  $("#modal-portfolio-view-img").append(div_tags);
+}
+});
+
+
+// portfolio click event
