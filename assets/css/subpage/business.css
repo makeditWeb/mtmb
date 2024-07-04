@@ -436,8 +436,14 @@
         width: 320px;
     }
 
+    .business_container .content_wrap .left_wrap .strength_wrap li img{
+        width: 20px;
+        height: auto;
+        margin-right: 9px;
+    }
+
     .business_container .content_wrap .left_wrap .strength_wrap li span {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .business_container .content_wrap .left_wrap .strength_wrap {
@@ -499,6 +505,7 @@
 
     .business_container .content_wrap .all_service_container .service_list {
         width: 100%;
+        border-bottom: 1px solid #000;
 
         display: grid;
         grid-template-columns: repeat(3, calc(100% / 3));
@@ -522,7 +529,7 @@
     .business_container .content_wrap .all_service_container .service_list .service_wrap>img {
         margin-top: 20px;
         width: auto;
-        height: 35px;
+        height: 25px;
         object-fit: contain;
     }
 
@@ -570,7 +577,7 @@
     }
 
     .business_container .content_wrap .ppt_container > .title_wrap {
-        margin-top: 95px;
+        margin-top: 55px;
     }
 
     .business_container .content_wrap .ppt_container>.title_wrap::before {
@@ -597,6 +604,7 @@
     .business_container .content_wrap .left_wrap .description{
         margin-top: 16px;
         line-height: 25px;
+        font-size: 13px;
     }
 /* 
     .ppt_container::before {
@@ -650,10 +658,13 @@
 
     .ppt_content>img {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 25px;
         padding-left: 30px;
     }
 
+    .business_container .content_wrap .service_step_container{
+        margin-top: 35px;
+    }
     .business_container .content_wrap .title_wrap {
         font-family: 'SUIT';
         font-weight: 700;
@@ -674,7 +685,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 16px 0px 16px 55px;
+        padding: 16px 0px 16px 35px;
         border-bottom: 1px solid #cecece;
     }
 
@@ -710,7 +721,7 @@
     }
 
     .business_container .content_wrap .left_wrap .title_wrap {
-        font-size: 20px;
+        font-size: 18px;
         padding-bottom: 10px;
     }
 
@@ -727,6 +738,10 @@
 }
 
 @media (max-width: 530px) {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text{
+        margin-top: 10px;
+    }
+
     .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
         font-size: 16px;
     }
@@ -734,7 +749,7 @@
 
 @media (max-width: 500px) {
     .business_container .content_wrap .title_wrap h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .business_container .content_wrap .title_wrap img {
@@ -787,12 +802,12 @@
 
 
     .business_container .content_wrap .title_wrap h2 {
-        font-size: 38px;
+        font-size: 28px;
     }
 
     .business_container .content_wrap .title_wrap img {
-        width: 32px;
-        height: 32px;
+        width: 23px;
+        height: 23px;
     }
 
     .business_container .content_wrap .all_service_container .title_container .description {
@@ -806,7 +821,7 @@
 
 
     .ppt_wrap .sub_title {
-        padding-top: 20px;
+        padding-top: 0;
     }
 
     .ppt_wrap .sub_title>img {
@@ -814,11 +829,11 @@
     }
 
     .ppt_wrap .sub_title>span {
-        font-size: 18px;
+        font-size: 21px;
     }
 
     .business_container .content_wrap .left_wrap .title_wrap {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .business_container .content_wrap .service_step_container:last-child {

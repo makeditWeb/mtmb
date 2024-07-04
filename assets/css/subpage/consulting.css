@@ -965,7 +965,6 @@
 .question td {
   font-size: 16px;
   color: #646464;
-  font-family: 'SUIT';
   font-weight: 500;
   letter-spacing: -0.06em;
   height: 40px;
@@ -973,7 +972,6 @@
 
 .answer td:nth-child(1){
   color: #000;
-  font-family: 'SUIT';
   font-weight: 600;
 }
 
@@ -983,7 +981,7 @@
 .answer td {
   font-size: 16px;
   color: #646464;
-  font-family: 'SUIT';
+  font-family: 'Pretendard', sans-serif;
   font-weight: 400;
   letter-spacing: -0.06em;
   height: 40px;
@@ -1286,7 +1284,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
 .consulting_container .portfolio_container {
   position: relative;
-  padding: 30px;
   box-sizing: border-box;
 }
 
@@ -1425,9 +1422,10 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
 
   .consulting_container .step_box .survey_title {
-    font-size: 24px;
-    padding: 16px 0px;
-    margin-bottom: 16px;
+    font-size: 16px;
+    padding: 0px;
+    margin-bottom:0;
+    border-bottom: none;
   }
 
   .consulting_container .step_box.step_02 .form_container {
@@ -1637,7 +1635,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   .consulting_container .consulting_qa_container,
   .consulting_container .review_container {
     border-top: none;
-    margin-top: 80px
+    margin-top: 40px
   }
 
   .consulting_container .consulting_qa_container .left_wrap,
@@ -1690,18 +1688,18 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
 
   .consulting_container .consulting_qa_container table tr.question td{
-    height: 45px;
+    height: 49px;
     padding: 0;
   }
 
   .consulting_content_container .question td span {
-    font-size: 16px;
+    font-size: 12px;
     color: #646464;
     letter-spacing: -0.06em;
 }
 
 .consulting_content_container .answer td:nth-child(2){
-  font-size: 16px;
+  font-size: 12px;
   color: #000;
   letter-spacing: -0.06em;
   font-family: 'SUIT';
@@ -1745,12 +1743,17 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
     width: 65%;
   }
 
-  .consulting_container .consulting_qa_container table tr td:nth-child(3) {
+  .consulting_container .consulting_qa_container table tr td{
+    font-size: 12px;
+  }
+
+ .consulting_container .consulting_qa_container table tr td:nth-child(3) {
     width: 65%;
     text-align: center;
     padding: 0;
-    height: 100%;
 }
+
+.consulting_container .consulting_qa_container table tr.answer:last-child{border-bottom: none;}
 
   .consulting_container .consulting_qa_container table tr.answer {
     border-bottom: 1px solid #2a2a2a;
@@ -1787,22 +1790,24 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
     min-width: 200px;
     background: #000;
 
-    padding: 8px 0px;
+    padding: 4px 0px;
   }
 
   .review_container .left_wrap .top_wrap .search_container button.review-button span {
     color: #fefefe;
     font-family: 'SUIT', sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 12px;
 
-    margin-right: 18px;
+    margin-right: 10px;
   }
 
-
+  .review_container .left_wrap .top_wrap .search_container button.review-button img{
+    width: 8px;
+  }
 
   .review_container tr {
-    height: 60px;
+    height: 50px;
     padding: 10px 0;
 }
 
@@ -1825,15 +1830,35 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    height: calc(80vw / 2);
-    padding: 30px 36px;
+    background: #f5f5f5;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+  }
 
-    background: rgba(0, 0, 0, 0.8);
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+    height: 90%;
+    width: 1px;
+    background: #d1d1d1;
+    transform: translate(0,-50%);
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom:0;
+    height: 1px;
+    width: 90%;
+    background: #d1d1d1;
+    transform: translate(-50%,0);
   }
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap.service_wrap:not(:nth-child(-n + 4)) {
@@ -1842,6 +1867,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>img {
     align-self: flex-start;
+    width: 100%;
+    height: 100%;
   }
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
@@ -1866,12 +1893,31 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
   .consulting_container .consulting_box .left_wrap {
     padding: 32px;
+    border-radius: 0px 50px 50px 0px;
   }
 
   .consulting_container .consulting_box .left_wrap .section_text {
     width: 72%;
     margin-bottom: 72px;
   }
+
+  .survey_eng {
+    width: 148px;
+    height: auto;
+}
+
+.survey_top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  gap: 20px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
+.survey_eng img {
+  width: 100%;
+}
 
   .consulting_container .consulting_box .left_wrap>ul li {
     width: 92px;
@@ -1889,6 +1935,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
   .consulting_container .step_box .right_wrap .survey_form_container {
     width: 95%;
+    margin-bottom: 20px;
   }
 
 
@@ -1954,7 +2001,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 24px 30px
+    padding: 0;
   }
 
   .consulting_container .portfolio_container .title span {
@@ -2022,11 +2069,13 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
 
   .consulting_container .review_container table tr td{
-    padding: 10px 0;
+    padding: 5px 0;
+    height: auto;
+    font-size: 14px;
   }
 
   .consulting_qa_container table tr td:last-child, .review_container table tr td:last-child{
-    height: 65px;
+    height: 33px;
   }
 
   .review_container .left_wrap .top_wrap .search_container button.review-button {
@@ -2064,8 +2113,10 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 20px 28px
+    padding: 13px;
   }
+
+  
 
   .consulting_container .portfolio_container .title span {
     font-size: 32px;

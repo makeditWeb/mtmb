@@ -167,14 +167,14 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 80px 30px 50px;
+        padding: 80px 30px 30px;
         border-left: none;
         width: 100%;
         margin: 0;
     }
 
     .about_container .content_wrap .about_container_wrap .title_container .description{
-        font-size: 15px;
+        font-size: 14px;
         padding-top: 20px;
         margin-top: 0;
         word-break: keep-all;
@@ -182,12 +182,12 @@
     }
 
     .about_container .content_wrap .about_container_wrap .title_container .description span{
-        font-size: 15px;
-        line-height: 23px;
+      font-size: 14px;
+      line-height: 18px;
     }
 
     .about_container .content_wrap .title_wrap h2{
-        font-size: 30px;
+        font-size: 28px;
         margin-right: 10px;
     }
 

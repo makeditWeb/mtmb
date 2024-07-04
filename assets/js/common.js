@@ -242,3 +242,5 @@ const replaceRemoveBr = function (text) {
 const replaceToCr = function (text) {
   return text.replace(/<br\s*\/?>/gi, "\n");
 };
+
+

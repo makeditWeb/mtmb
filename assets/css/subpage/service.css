@@ -185,6 +185,10 @@
 
 .notice_table tr td:nth-child(2) {
   width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 .notice_table tr td:nth-child(3) {
@@ -320,12 +324,12 @@
   }
 
   .service_container .container_wrap .container .title_wrap h2 {
-    font-size: 38px;
+    font-size: 28px;
   }
 
   .service_container .container_wrap .container .title_wrap img {
-    width: 32px;
-    height: 32px;
+    width: 23px;
+    height: 23px;
   }
 
   .cont_right.notice_wrap {
@@ -340,8 +344,9 @@
   .cont_right.notice_wrap table tbody tr {}
 
   .service_container .notice_pagination {
-    margin-top: 50px;
+    margin-top: 25px;
     justify-content: center;
+    width: 100%;
   }
 
   .pagination_arrow img {}
@@ -378,6 +383,23 @@
     width: 40%;
     margin: 0;
   }
+  
+  .request_table tr td{font-weight: 400;}
+  .request_table tr.answer_list td{color: #000; font-weight: 500;     padding: 6px 0;}
+
+  .qna-btn{
+    height: 26px;
+    font-size: 12px;
+  }
+  .request_table{margin: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .qna-btn img {
+    margin-left: 12px;
+    width: 10px;
+}
 
   .service_container .container_wrap .container .title_wrap{
     border-bottom: 1px solid #444444;
@@ -388,12 +410,17 @@
     width: 10%;
   }
 
+
   .request_table tr.quset_list td:nth-child(2){
-    width: 70%;
+    width: 65%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
   }
 
   .request_table tr.quset_list td:nth-child(3){
-    width: 10%;
+    width: 15%;
   }
 
   .request_table tr.quset_list td:nth-child(4){
@@ -401,7 +428,7 @@
   }
 
   .notice_qna_wrapper {
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .service_container .btn_search {

@@ -235,7 +235,7 @@
     .right_header_mo{
         display: flex;
         gap: 10px;
-        padding: 80px 16px 20px;
+        padding: 50px 16px 20px;
         border-left: 1px solid #000;
     }
     .left_header_mo {
@@ -248,19 +248,21 @@
         align-items: flex-end;
     }
     .detail_header h3{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .detail_header img{
-        width: 25px;
+        width: 18px;
     }
 
     .detail_content_descript h5{
-        font-size: 18px;
+        font-size: 15px;
+        margin-bottom: 10px;
     }
 
     .detail_content_descript p{
-        font-size: 15px;
+        font-size: 12px;
+        margin-bottom: 30px;
     }
 
     .detail_portfolio{

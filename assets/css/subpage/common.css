@@ -27,6 +27,7 @@
         padding: 0 30px;
     }
 
+    .sub_wrap .header{padding: 0;}
     .sub_wrap .menu_wrap{padding: 0;}
 
     .header>.menu_wrap{
@@ -94,7 +95,8 @@
 /* 모바일에서만 노출 */
 @media (max-width: 992px) {
     .right-fixed {
-        right:40px
+        right:24px;
+        bottom: 10%;
     }
 }
 

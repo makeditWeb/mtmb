@@ -684,6 +684,8 @@ box-sizing: border-box;
     .footer .ft_wrap .copyright_wrap button a{
         color: #6b6b6b;
     }
+
+    .sub_menu li a{font-size: 14px;}
 }
 
 @media (max-width: 580px) {
@@ -974,7 +976,7 @@ Maximum height
     .right-fixed {
         position: fixed !important;
         display: flex !important;
-        right:40px
+        right:24px;
     }
 }
 
