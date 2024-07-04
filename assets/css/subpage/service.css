@@ -32,11 +32,11 @@
   border-left: 1px solid #000;
   margin-top: 10px;
   width: 86%;
-  margin: 85px 50px 100px auto;
+  margin: 85px 50px 120px auto;
 }
 
 .service_notice_wrap {
-  padding: 80px 0 0 40px;
+  padding: 90px 0 0 40px;
 }
 
 .service_container .container_wrap .container {
@@ -50,7 +50,7 @@
 .servce_notice_inner {
   display: flex;
   border-bottom: 1px solid #000;
-  padding-bottom: 60px;
+  padding-bottom: 75px;
   padding-right: 12rem;
 }
 
@@ -91,13 +91,16 @@
 
 .service_container .notice_pagination {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 13px;
-  width: 100%;
+  width: 80%;
 }
 
 .cont_bot {
-  width: 65%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0 14%;
 }
 
 .service_container .notice_pagination .pagination_arrow li {
@@ -270,7 +273,7 @@
   border: none;
   box-shadow: none;
   height: 35px;
-  width: 60%;
+  width: 80%;
   padding: 0 1.5rem;
   display: flex;
   align-items: center;

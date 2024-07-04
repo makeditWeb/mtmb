@@ -758,12 +758,31 @@
   width: 10%;
 }
 
-
+.input_write_button {
+  width: 100%;
+  margin: 0 0 30px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.review_container .qna-btn {
+  border: none;
+  box-shadow: none;
+  height: 35px;
+  width: 64%;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fefefe;
+  font-size: 14px;
+  font-family: 'SUIT', sans-serif;
+}
 
 /********************** Partner Swiper Style **********************/
 .consulting_container .consulting_qa_container,
 .consulting_container .review_container {
-  width: 87%;
+  width: 86%;
   margin-left: 200px;
   margin-bottom: 80px;
   border-top: 1px solid #000;
@@ -772,19 +791,41 @@
 
 }
 
-.review_table tbody{
+.review_container .cont_bot {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 0 0 14%;
+}
+
+.qna-btn img {
+  margin-left: 12px;
+}
+
+.request_table_wrapper{
+  width: 75%;
+  padding-right: 200px;
+  padding-top: 40px;
+}
+
+.request_table_wrapper table{
+  width: 100%;
+}
+
+/* .review_table tbody{
   padding-top: 35px;
   display: table-cell;
   padding-right: 200px;
-}
-.request_table tbody{
+} */
+/* .request_table tbody{
   padding-top: 35px;
   display: table-cell;
   padding-right: 200px;
-}
+} */
 .consulting_container .consulting_qa_container .left_wrap,
 .consulting_container .review_container .left_wrap {
-  width: 20%;
+  width: 25%;
   height: 360px;
 
   display: flex;
@@ -954,11 +995,11 @@
   object-fit: contain;
 }
 
-.consulting_container .consulting_qa_container table,
+/* .consulting_container .consulting_qa_container table,
 .consulting_container .review_container table {
   width: 80%;
   padding-right: 200px;
-}
+} */
 
 /* .consulting_container .consulting_qa_container table tr,
 .consulting_container .review_container table tr {
@@ -1174,18 +1215,77 @@
 }
 
 .consulting_container .portfolio_container .portfolio_list .portfolio_wrap {
-  height: 320px;
-  padding: 30px 36px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: relative;
+}
 
+.hover_overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+}
+
+.hover_overlay::after{
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 100%;
+  height: 1px;
+}
+
+.hover_overlay::before{
+  right: 0;
+  top: 50%;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 1px;
+  height: 95%;
+  transform: translateY(-50%);
+}
+
+
+li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
+  display: none;
+}
+
+.hover_top {
+  text-align: right;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
-  background: rgba(0, 0, 0, 0.8);
+  align-items: flex-end;
+  gap: 20px;
 }
+
+.hover_top span{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: #fff;
+  font-family: 'SUIT';
+	font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.portfolio_wrap:hover .hover_overlay {
+  opacity: 0;
+}
+
 
 .consulting_container .portfolio_container {
   position: relative;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .consulting_container .portfolio_container .sticky_title {
