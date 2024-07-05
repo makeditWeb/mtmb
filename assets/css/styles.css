@@ -1802,7 +1802,7 @@ s  }
     margin-top: 18px;
   }
 
-  .section_03 .service_list .service_wrap .service_text span>a {
+  .section_03 .service_list .service_wrap .service_text span {
     font-size: 22px;
     font-weight: 500;
     color: #000;
@@ -1909,7 +1909,7 @@ s  }
     margin-top: 4px;
   }
 
-  .section_03 .service_list .service_wrap .service_text span>a {
+  .section_03 .service_list .service_wrap .service_text span {
     font-size: 12px;
   }
 
@@ -1959,7 +1959,7 @@ s  }
     height: 26px;
   }
 
-  .section_03 .service_list .service_wrap .service_text span>a {
+  .section_03 .service_list .service_wrap .service_text span {
     font-size: 12px;
   }
 
@@ -1968,7 +1968,7 @@ s  }
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 365px) {
   .section_03 .title_wrap img {
     width: 22px;
     height: 22px;
@@ -1978,7 +1978,7 @@ s  }
     font-size: 22px;
   }
 
-  .section_03 .service_list .service_wrap .service_text span>a {
+  .section_03 .service_list .service_wrap .service_text span {
     font-size: 12px;
   }
 
@@ -2003,6 +2003,9 @@ s  }
     width: 22px;
     height: 22px;
   }
+}
+
+@media (max-width: 340px) {
 }
 
 /* section 04 */
