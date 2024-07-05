@@ -97,12 +97,11 @@
     left: 50%;
 }
 
-.detail_img_wrapper .detail_img_absoulte img {
+.detail_img_absoulte img {
     width: 400px;
     height: 230px;
     object-fit: cover;
 }
-
 
 .detail_portfolio{
     border-top: 1px solid #000;
