@@ -205,14 +205,14 @@
         bottom: 24%;
         left: unset;
         right: 10px;
-        box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.21)
+        /* box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.21) */
     }
 
     .detail_img_wrapper .detail_img_right img {
         width: 50%;
         height: auto;
         object-fit: cover;
-        box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.21);
+        /* box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.21); */
     }
 
     .detail_img_absoulte img{
