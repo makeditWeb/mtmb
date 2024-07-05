@@ -1136,12 +1136,11 @@
 
 .consulting_container .partner_container {
   /* 80px (좌측 여백) + 150px (좌측 메뉴 width) */
+  position: relative;
   width: 100%;
   margin: 0 auto;
   padding-top: 50px;
   margin-left: auto;
-
-
 
   background: #fff;
 }
@@ -1150,12 +1149,15 @@
   background: #fff;
   z-index: 3;
   position: relative;
-  width: 100%;
+  width: max-content;
   padding: 40px 0px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 
