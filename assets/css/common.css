@@ -572,10 +572,14 @@ textarea {
 }
 
 .footer p {
-    color: #6b6b6b;
+    color: #a3a3a3;
     font-size: 12px;
     font-weight: 400;
     margin: 0 0 8px 0;
+}
+
+.footer p b{
+    color: #fff;
 }
 
 .footer .col-4 {
@@ -586,7 +590,9 @@ textarea {
     height: 100%;
 }
 
-.footer .col-4 p span{margin-left: 20px; }
+.footer .col-4 p span{
+    margin-left: 20px;
+ }
 
 .footer .col-4 button {
     padding: 2px 16px;
@@ -595,18 +601,20 @@ textarea {
     align-items: center;
     background: transparent;
     border: 1px solid #6b6b6b;
-box-sizing: border-box;
+    box-sizing: border-box;
     margin-top: 18px;
 }
 
 .footer .col-4 button a {
     font-size: 14px;
-    color: #6b6b6b;
+    color: #a3a3a3;
 }
 
 .footer .col-4 p{
     font-size: 14px;
-    color: #6b6b6b;
+    letter-spacing: -0.04em;
+    line-height: 20px;
+    color: #a3a3a3;
 }
 
 .footer .copyright {
