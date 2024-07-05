@@ -227,7 +227,11 @@
   align-items: flex-end;
   margin: 0 0 0 14%;
 }
+
 .select_input_option.input_group.type2 select {
+  appearance: none;
+  background-color: #fff;
+
   background-position: right center;
   border-bottom: none;
 }
