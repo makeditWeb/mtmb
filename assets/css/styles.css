@@ -2760,6 +2760,10 @@ s  }
   .section_05 .content_05 {
     margin: 0px 30px;
   }
+
+  .section_05 .content_05 .notice_list li {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -2782,9 +2786,16 @@ s  }
   }
 
   .section_05 .content_05 .notice_list li {
+    padding: 8px;
     font-size: 18px;
   }
+}
 
+@media (max-width: 450px) {
+  .section_05 .content_05 .notice_list li {
+    padding: 6px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -2797,7 +2808,8 @@ s  }
   }
 
   .section_05 .content_05 .notice_list li {
-    font-size: 16px;
+    padding: 4px;
+    font-size: 14px;
   }
 }
 
