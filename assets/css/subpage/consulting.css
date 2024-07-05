@@ -1030,6 +1030,8 @@
 
 
   appearance: none;
+  
+  background-color: #fff;
   background-image: url('../../img/icon/i_down.png');
   background-repeat: no-repeat;
   background-position: 100% 34%;
