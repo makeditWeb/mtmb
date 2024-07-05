@@ -93,8 +93,12 @@
 
 .detail_img_absoulte{
     position: absolute;
-    bottom: 10%;
-    left: 50%;
+    /* bottom: 10%;
+    left: 50%; */
+
+    bottom: 50px;
+    right: 300px;
+
 }
 
 .detail_img_absoulte img {
