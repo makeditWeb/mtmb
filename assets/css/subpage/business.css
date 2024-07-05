@@ -110,6 +110,7 @@
     height: 30px;
     margin-left: 12px;
     align-self: flex-start;
+    object-fit: contain;
 }
 
 .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text {
