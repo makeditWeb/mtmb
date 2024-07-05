@@ -1,6 +1,6 @@
-@import url(../../lib/swiper-bundle.min.css);
-@import url(../swiper.css);
 @import url(./common.css);
+@import url(../swiper.css);
+@import url(../../lib/swiper-bundle.min.css);
 
 /********************** Section Style **********************/
 .business_container {
@@ -882,4 +882,8 @@
         width: 24px;
         height: 24px;
     }
+}
+
+.accordion-trigger.active + .accordion-panel {
+    display: block !important;
 }
