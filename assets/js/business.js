@@ -26,6 +26,14 @@ $(document).ready(function () {
     $item.css('animation-delay', `${delay}s`);
   });
 
+
+  // 처음에 첫 번째 .ppt_wrap의 .accordion-panel을 열어두기
+  $('.ppt_wrap:first .accordion-panel').show();
+  $('.ppt_wrap:first .accordion-trigger').addClass('active');
+  $('.ppt_wrap:first .accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+
+
+  
   $('.ppt_index_wrap').click(function () {
     var index = $(this).index();
     $('.ppt_content').removeClass('active').eq(index).addClass('active');
