@@ -1167,14 +1167,16 @@ s  }
     /* .consulting_box height - .left_wrap height */
     /* 550px - 325px */
     height: 225px;
-
     padding: 0px;
-
     margin-left: 65px;
   }
 
   .section_02 .consulting_box .right_wrap>span:first-child {
     font-size: 30px;
+  }
+
+  .section_02 .consulting_box .right_wrap>span:first-child > svg {
+    margin-left: 8px;
   }
 
   .section_02 .made_it_wrap {
@@ -1348,7 +1350,7 @@ s  }
   display: flex;
   flex-direction: column;
 
-  margin-top: calc(80px + 30px);
+  margin-top: 80px
 }
 
 .section_03 .content_03 {
@@ -1495,8 +1497,9 @@ s  }
 }
 
 .section_03 .all_service_wrap .service_list .service_wrap .service_text span {
+  font-family: 'SUIT';
+  font-weight: 300;
   font-size: 15px;
-  font-weight: 500;
   margin-top: 12px;
 }
 
@@ -1794,11 +1797,6 @@ s  }
     align-items: center;
   }
 
-  .section_03 .review_container .title_wrap img {
-    height: auto;
-    object-fit: contain;
-  }
-
   .section_03 .review_container .title_wrap h2 {
     font-family: 'GmarketSans';
     font-weight: 700;
@@ -1849,7 +1847,6 @@ s  }
     margin-top: 42px;
   }
   
-
   .section_03 .title_wrap {
     margin: 0px;
     margin-bottom: 8px;
@@ -1887,7 +1884,12 @@ s  }
   }
 
   .section_03 .service_list .service_wrap {
-    padding: 15px 10px;
+    padding: 14px 10px;
+  }
+
+  .section_03 .service_list .service_wrap img{
+    width: 28px;
+    height: 28px;
   }
 
   .section_03 .partner_box{
@@ -1905,20 +1907,21 @@ s  }
     font-size: 32px;
   }
 
-  .section_03 .review_container .title_wrap img {
-    width: 32px;
-  }
-
   .section_03 .review_container .title_wrap h2 {
     font-size: 32px;
   }
 
-  .section_03 .service_list .service_wrap .service_text span>a {
-    font-size: 12px;
-  }
-
   .section_03 .service_list .service_wrap {
     padding: 12px;
+  }
+
+  .section_03 .service_list .service_wrap img{
+    width: 26px;
+    height: 26px;
+  }
+
+  .section_03 .service_list .service_wrap .service_text span>a {
+    font-size: 12px;
   }
 
   .section_03 .partner_box{
@@ -1928,24 +1931,20 @@ s  }
 
 @media (max-width: 350px) {
   .section_03 .title_wrap img {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
   }
 
   .section_03 .title_wrap span {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .section_03 .service_list .service_wrap .service_text span>a {
     font-size: 12px;
   }
 
-  .section_03 .review_container .title_wrap img {
-    width: 28px;
-  }
-
   .section_03 .review_container .title_wrap h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .section_03 .review_container .review_box .review_title {
@@ -1959,6 +1958,11 @@ s  }
 
   .section_03 .partner_box{
     padding: 8px;
+  }
+
+  .section_03 .service_list .service_wrap img {
+    width: 22px;
+    height: 22px;
   }
 }
 
