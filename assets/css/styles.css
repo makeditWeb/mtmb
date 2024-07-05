@@ -1421,6 +1421,8 @@ s  }
 
   display: flex;
   justify-content: space-between;
+
+  height: 40%;
 }
 
 .section_03 .all_service_wrap .title_wrap {
@@ -1532,6 +1534,8 @@ s  }
 .section_03 .partner_container {
   /* 80px (좌측 여백) + 150px (좌측 메뉴 width) */
   width: calc(100% - 50px);
+  height: 10%;
+
   margin: 0 auto;
   margin-top: 30px;
   margin-left: 16px;
@@ -1551,6 +1555,7 @@ s  }
 
 .section_03 .review_wrap {
   width: calc(1500px - 50px - 500px);
+  height: 30%;
 
   margin-top: 12px;
   margin-left: 550px;
