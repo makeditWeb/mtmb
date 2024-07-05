@@ -89,7 +89,6 @@
     width: 400px;
     height: 230px;
     object-fit: cover;
-    box-shadow: 7px 7px 6px 0px rgba(0,0,0,0.21);
 }
 
 .detail_img_absoulte{
@@ -102,7 +101,6 @@
     width: 400px;
     height: 230px;
     object-fit: cover;
-    box-shadow: 7px 7px 6px 0px rgba(0,0,0,0.21);
 }
 
 
