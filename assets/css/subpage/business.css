@@ -355,6 +355,10 @@
 }
 
 /* 스탭 이미지 */
+.business_container .content_wrap .service_step_container img {
+    object-fit: contain;
+}
+
 .business_container .content_wrap .service_step_container li:nth-child(odd) img {
     width: 42px;
     height: 42px;
