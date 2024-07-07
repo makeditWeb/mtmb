@@ -55,8 +55,7 @@
 .business_container .content_wrap .all_service_container {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: space-between;
     margin-bottom: 100px;
     padding-left: 50px;
     padding-right: 150px;
@@ -68,7 +67,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-right: 60px;
-    width: 28%;
+    width: 25%;
 }
 
 .business_container .content_wrap .all_service_container .title_container .description {
@@ -93,6 +92,8 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: 15px;
     row-gap: 50px;
+    width: 60%;
+
 }
 
 .business_container .content_wrap .all_service_container .service_list .service_wrap {
@@ -101,7 +102,7 @@
     align-items: flex-start;
     justify-content: center;
     color: #000;
-    width: 145px;
+    /* width: 145px; */
     height: auto;
 }
 
@@ -198,7 +199,8 @@
 .business_container .content_wrap .ppt_content_container {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    padding-right: 150px;
+    justify-content: space-between;
 }
 
 .business_container .content_wrap .ppt_content_container .ppt_index_container {

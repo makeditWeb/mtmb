@@ -918,7 +918,7 @@
 }
 
 .consulting_container .review_container table tr td:nth-child(1){
-  width:6% ;
+  width:10% ;
 }
 
 .consulting_container .review_container table tr td:nth-child(2){
@@ -936,10 +936,10 @@
 }
 
 .consulting_container .review_container table tr td:nth-child(4){
-  width: 19%;
+  width: 15%;
 }
 .consulting_container .review_container table tr td:nth-child(5){
-  width: 8%;
+  width: 10%;
 }
 
 .consulting_container .review_container table tr td {
