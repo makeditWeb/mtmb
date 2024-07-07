@@ -3922,7 +3922,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   animation: fadeInRight 2s;
   position: absolute;
   /* top: 200px; */
-  top: 20%;
+  /* top: 20%; */
+  top: 16.5vh;
 }
 
 #lnb .lnb_menu_01 ul {
@@ -3949,7 +3950,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   position: absolute;
   transition-delay: 2s;
   /* bottom: 300px; */
-  bottom: 33%;
+  /* bottom: 33%; */
+  bottom: 32vh;
 }
 
 #lnb .lnb_menu_02 ul {
