@@ -1,6 +1,3 @@
-const titles = ["제안서", "강의자료", "소개서", "제안서", `비지니스\n보고서`];
-const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
-
 const mainRollingData = [
   {
     title: '소개서',

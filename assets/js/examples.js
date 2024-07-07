@@ -324,4 +324,26 @@ $(document).ready(function () {
     const originalList = $('.marquee-item-list');
     const clonedList = originalList.clone();
     $('.marquee-block').append(clonedList);
+
+    // Intersection Observer 설정
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
+    };
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          $('.right-fixed').css('bottom', '240px')
+        } else {
+          $('.right-fixed').css('bottom', '10%')
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const footerElement = document.querySelectorAll('.footer');
+    console.log('footerElement', footerElement)
+    observer.observe(footerElement[1]);
 });
