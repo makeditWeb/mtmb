@@ -432,6 +432,7 @@ $(document).ready(function () {
         const scrollPosition = $(window).scrollTop();
         $('.menu_line').css('background', scrollPosition >= viewportHeight ? '#000' : '#fff');
         $('.logo_text').css('color', scrollPosition >= viewportHeight ? '#000' : '#fff');
+        $('.fp-nav').css('display', scrollPosition >= viewportHeight ? 'block' : 'none')
       });
 
       // 디바이스 크기가 992px 이하일 때
@@ -550,37 +551,6 @@ $(document).ready(function () {
           swiper: product_01_01,
         },
       });
-
-
-
-
-      // Intersection Observer 설정
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
-      };
-
-      const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            console.log('intersecting')
-            if ($('.mo .content_06 .about_wrap .accordion-trigger').hasClass('active')) {
-              console.log('open!!')
-              $('.footer').css('position', 'fixed').css('bottom', 0);
-            } else {
-              console.log('closed!!')
-              $('.footer').css('position', 'relative');
-            }
-          } else {
-            $('.footer').css('position', 'relative');
-          }
-        });
-      };
-
-      const observer = new IntersectionObserver(observerCallback, observerOptions);
-      const section06 = document.querySelector('.mo .section_06');
-      observer.observe(section06);
     }
   };
 
@@ -589,6 +559,35 @@ $(document).ready(function () {
   $(".sub_menu li").click(function () {
     $(this).toggleClass("active");
   });
+
+
+      // // Intersection Observer 설정
+      // const observerOptions = {
+      //   root: null,
+      //   rootMargin: '0px',
+      //   threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
+      // };
+
+      // const observerCallback = (entries, observer) => {
+      //   entries.forEach(entry => {
+      //     if (entry.isIntersecting) {
+      //       console.log('intersecting')
+      //       if ($('.mo .content_06 .about_wrap .accordion-trigger').hasClass('active')) {
+      //         console.log('open!!')
+      //         $('.footer').css('position', 'fixed').css('bottom', 0);
+      //       } else {
+      //         console.log('closed!!')
+      //         $('.footer').css('position', 'relative');
+      //       }
+      //     } else {
+      //       $('.footer').css('position', 'relative');
+      //     }
+      //   });
+      // };
+
+      // const observer = new IntersectionObserver(observerCallback, observerOptions);
+      // const section06 = document.querySelector('.mo .section_06');
+      // observer.observe(section06);
 
 
   // $('.accordion-panel').each(function() {
@@ -641,6 +640,7 @@ $(document).ready(function () {
     }
   });
 
+  // 프트폴리오 팝업 노출 코드
   $(".portfolio_wrap").on("click", function () {
     portfolioView();
   });

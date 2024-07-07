@@ -139,7 +139,8 @@
   width: calc(100vw - 100% - 36px - 120px);
   background: #fff;
   height: 2px;
-  top: 60px;
+  /* top: 60px; */
+    top: 3.9rem;
   right: calc(-36px - (100vw - 100% - 36px - 120px));
 }
 
@@ -150,7 +151,8 @@
   background: #8e8e8e;
   opacity: 0.5;
   height: 2px;
-  top: 60px;
+  /* top: 60px; */
+  top: 3.9rem;
   right: calc(-36px - (100vw - 100% - 36px - 120px));
   z-index: 0;
 }
@@ -193,8 +195,7 @@
   background: #000;
   position: relative;
   right: 0px;
-
-  width: 120px;
+  width: 10em;
   height: calc(100vh - 160px);
 
 
@@ -345,6 +346,34 @@
   width: 24px;
   height: 1px;
   background-color: #8e8e8e;
+}
+
+@media (min-width: 3000px) {
+  .section_01 .top_wrap>span {
+    font-size: 15rem;
+    line-height: 100%;
+  }
+
+  .section_01 .top_wrap .description_wrap>span:first-child{
+    font-size: 2rem;
+  }
+
+  .section_01 .top_wrap .description_wrap>span:last-child{
+    font-size: 3rem;
+  }
+
+  .section_01 h1 {
+    font-size: 26rem;
+  }
+  .section_01 h2 {
+    font-size: 20rem;
+    line-height: 100%;
+  }
+
+  .section_01 h1::before, 
+  .section_01 h1::after { 
+    top: 5.5rem;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -3598,8 +3627,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
 .section_08 .content_08 .portfolio_container .portfolio_list .portfolio_wrap {
   position: relative;
-
-  height: 320px;
   padding: 30px 36px;
 
   display: none;
@@ -6593,19 +6620,6 @@ section.container {
 
 .section_08 {
   position: relative;
-}
-
-
-.pc #footer {
-    position: absolute;
-    bottom: -140px;
-    left: -200px;
-}
-
-@media (max-width: 992px) {
-  #footer {
-    bottom: 0px;
-  }
 }
 
 /* 전체보기 / 상세보기 공통 스타일 적용  */

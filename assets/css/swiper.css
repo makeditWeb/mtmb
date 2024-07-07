@@ -23,7 +23,9 @@
 /* 메인색션 01 swiper */
 
 .section01_listSwiper {
-    max-height: calc(100vh - 164px);
+    height: calc(100vh - 164px);
+  border-top: 1px solid #343434;
+  border-bottom: 1px solid #343434;
     /* max-height: 940px; */
 }
 
