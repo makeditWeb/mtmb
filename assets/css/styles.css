@@ -3921,7 +3921,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 #lnb .lnb_menu_01 {
   animation: fadeInRight 2s;
   position: absolute;
-  top: 200px;
+  /* top: 200px; */
+  top: 20%;
 }
 
 #lnb .lnb_menu_01 ul {
@@ -3945,9 +3946,10 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
 #lnb .lnb_menu_02 {
   animation: fadeInRight 2s;
-  bottom: 300px;
   position: absolute;
   transition-delay: 2s;
+  /* bottom: 300px; */
+  bottom: 33%;
 }
 
 #lnb .lnb_menu_02 ul {
@@ -4014,6 +4016,16 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 }
 
 /* Maximum height */
+/* @media (max-height: 1200px) {
+  #lnb .lnb_menu_01 {
+    top: 185px;
+  }
+
+  #lnb .lnb_menu_02 {
+    bottom: 300px;
+  }
+}
+
 @media (max-height: 1080px) {
   #lnb .lnb_menu_01 {
     top: 185px;
@@ -4052,7 +4064,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   #lnb .lnb_menu_02 {
     bottom: 180px;
   }
-}
+} */
 
 /* **************************************** *
  * Consulting
