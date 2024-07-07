@@ -931,10 +931,10 @@ s  }
 }
 
 .section_02 .consulting_box .left_wrap>ul {
+  width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: space-between;
-  max-width: 600px;
-  width: 100%;
 }
 
 .section_02 .consulting_box .left_wrap>ul li:not(.arrow_between) {
@@ -947,7 +947,6 @@ s  }
   text-align: center;
 
   height: 84px;
-  max-width: 100%;
 }
 
 .section_02 .consulting_box .left_wrap>ul li.arrow_between {
@@ -1326,7 +1325,7 @@ s  }
   }
 
   .section_02 .consulting_box .left_wrap ul li:not(.arrow_between) {
-    height: 65px;
+    height: 80px;
   }
 
   .section_02 .consulting_box .left_wrap>ul li.arrow_between>img {
@@ -1335,8 +1334,8 @@ s  }
   }
 
   .section_02 .consulting_box .left_wrap ul li img {
-    width: 36px;
-    height: 36px;
+    width: 52px;
+    height: 52px;
   }
 
   .section_02 .consulting_box .left_wrap>ul li::after {
@@ -1383,12 +1382,17 @@ s  }
 
   .section_02 .consulting_box .left_wrap ul li:not(.arrow_between) {
     justify-content: flex-end;
-    height: 50px;
+    height: 68px;
+  }
+
+  .section_02 .consulting_box .left_wrap>ul li.arrow_between{
+    margin-left: 6px;
+    margin-right: 6px;
   }
 
   .section_02 .consulting_box .left_wrap ul li img {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 }
 
