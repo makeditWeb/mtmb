@@ -392,12 +392,12 @@
 .consulting_container .step_box .check_wrap input+label {
   width: 20px;
   height: 20px;
+
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #b3b3b3;
+
   margin-right: 8px;
-  background-repeat: no-repeat;
-  /* 반복 방지 */
-  background-image: url('../../img/uncheck.png');
-  /*off 이미지*/
-  background-size: contain;
 
   color: #b3b3b3;
   cursor: pointer;
@@ -405,15 +405,35 @@
 
 /* on */
 .consulting_container .step_box .check_wrap input:checked+label {
-  width: 28px;
-  height: 22px;
-  background-repeat: no-repeat;
-  /* 반복 방지 */
-  background-image: url('../../img/check.png');
-  /*on 이미지*/
-  margin-right: 0;
-  color: #ffffff;
-  cursor: pointer;
+  position: relative;
+  cursor: pointer; 
+}
+
+input[type=checkbox]:checked+label:before{
+    background: #000;
+    border: solid #0ff9db;
+    border-width: 0px 3px 3px 0px;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -5px;
+    top: -8px;
+    content: '';
+}
+
+input[type=checkbox]+label:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg); /* Adjusted to form a checkmark */
+  z-index: 2;
 }
 
 /* step1 style */
@@ -1385,16 +1405,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
     margin: 28px 60px 28px 28px
   }
 
-  .consulting_container .step_box .check_wrap input+label {
-    width: 18px;
-    height: 18px;
-  }
-
-  .consulting_container .step_box .check_wrap input:checked+label {
-    width: 18px;
-    height: 18px;
-  }
-
   .consulting_container .step_box .check_wrap label:last-child {
     font-size: 16px;
   }
@@ -1452,16 +1462,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   .consulting_container .step_box .right_wrap {
     padding: 8px;
     margin: 28px 52px 28px 28px
-  }
-
-  .consulting_container .step_box .check_wrap input+label {
-    width: 14px;
-    height: 14px;
-  }
-
-  .consulting_container .step_box .check_wrap input:checked+label {
-    width: 14px;
-    height: 14px;
   }
 
   .consulting_container .step_box .check_wrap label:last-child {
@@ -1617,12 +1617,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   }
   .consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
     grid-template-columns: repeat(2, 1fr)
-  }
-
-
-  .consulting_container .step_box .check_wrap input+label {
-    width: 10px;
-    height: 10px;
   }
 
   /* QA + Review */
@@ -1880,6 +1874,12 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
     font-size: 20px;
     color: #fff;
   }
+
+  input[type=checkbox]:checked+label:before {
+    /* width: 80%;
+    height: 100%; 
+    right: -5px; */
+  }
 }
 
 @media (max-width: 650px) {
@@ -2096,6 +2096,12 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
   .consulting_container .review_container table tr:last-child{
     border-bottom: none;
+  }
+
+  .consulting_container .step_box .check_wrap input+label{
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
   }
 }
 
