@@ -321,9 +321,9 @@ $(document).ready(function () {
     }
   });
 
-    const originalList = $('.marquee-item-list');
-    const clonedList = originalList.clone();
-    $('.marquee-block').append(clonedList);
+    // const originalList = $('.marquee-item-list');
+    // const clonedList = originalList.clone();
+    // $('.marquee-block').append(clonedList);
 
     // Intersection Observer 설정
     const observerOptions = {
@@ -344,6 +344,15 @@ $(document).ready(function () {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     const footerElement = document.querySelectorAll('.footer');
-    console.log('footerElement', footerElement)
     observer.observe(footerElement[1]);
+
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+  const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for(let i=0; i<marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
 });
