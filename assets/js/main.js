@@ -159,7 +159,9 @@ $(document).ready(function () {
       // Check hash on initial load
       handleInitialLoadWithHash();
 
-      const autoPlayDelay = 1500
+      const autoPlayDelay = 150
+      const progressBar = $('.swiper-hero-progress');
+
       // listSwiper
       var section01Swiper = new Swiper(".section01_listSwiper", {
         init: true,
@@ -174,7 +176,6 @@ $(document).ready(function () {
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
         roundLengths: true,
-
         autoplay: {
           delay: autoPlayDelay,
           disableOnInteraction: false
@@ -187,47 +188,12 @@ $(document).ready(function () {
             $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
             $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
             $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
-
-            let progress = $('.swiper-hero-progress');
-
-        if (!progress.parent().is('.stopped')) {
-          console.log('11')
-          progress.css('width', '0');
-          if (this.activeIndex == 0) {
-            initProgressBar();
+          },
+          autoplayTimeLeft(s, time, progress) {
+            progressBar.css('width', ((1 - progress) * 100) + '%')
           }
         }
-
-        if (progress.parent().is('.stopped')) {
-          console.log('22', widthParts)
-          progress.animate({
-            'width': Math.round(widthParts * (this.activeIndex + 1)) + '%'
-          }, this.params.speed, 'linear');
-        }
-          },
-        }
       });
-
-
-      let slidersCount = section01Swiper.params.loop ? section01Swiper.slides.length - 2 : section01Swiper.slides.length;
-      let widthParts = 100 / slidersCount;
-
-      function initProgressBar() {
-        let calcProgress = (slidersCount - 1) * (autoPlayDelay + section01Swiper.params.speed);
-        calcProgress += autoPlayDelay;
-        $('.swiper-hero-progress').animate({
-          width: '100%'
-        }, calcProgress, 'linear');
-      }
-
-      initProgressBar();
-
-      section01Swiper.on('touchMove', function () {
-        $('.swiper-progress-bar .progress').stop().parent().addClass('stopped');
-      });
-
-
-
 
       $('#section_01_list_swiper_up').on('click', function () {
         section01Swiper.slidePrev();
