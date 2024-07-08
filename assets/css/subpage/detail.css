@@ -160,16 +160,6 @@
     width: 20px;
 }
 
-.detail_nav::after{
-    content: '';
-    position: absolute;
-    bottom: -9px;
-    left: 0;
-    width: 60%;
-    height: 3px;
-    background: #000;
-}
-
 .detail_nav:focus,
 .detail_nav:active,
 .detail_nav:visited {
