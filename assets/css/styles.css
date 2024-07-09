@@ -1400,8 +1400,12 @@ s  }
     font-size: 26px;
   }
 
-  .section_03 .review_container {
-    padding: 0 30px;
+  .section_03 .title_wrap, .section_03 .review_container {
+    padding: 0px 30px;
+  }
+
+  .section_03 .service_list {
+    margin: 0px 30px;
   }
 
 }
@@ -1975,7 +1979,7 @@ s  }
   }
 
   .section_03 .service_list {
-    width: 100%;
+    width: calc(100% - 60px);
   }
 
   .section_03 .service_list .service_wrap .service_text{
