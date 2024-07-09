@@ -939,11 +939,12 @@ input[type=checkbox]+label:before {
 
 .consulting_container .review_container table tr td:nth-child(1){
   width:10% ;
+  text-align: center;
 }
 
 .consulting_container .review_container table tr td:nth-child(2){
   width:60% ;
-
+  padding: 10px 0;
   /* ... 처리 */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -957,9 +958,11 @@ input[type=checkbox]+label:before {
 
 .consulting_container .review_container table tr td:nth-child(4){
   width: 15%;
+  text-align: center;
 }
 .consulting_container .review_container table tr td:nth-child(5){
   width: 10%;
+  text-align: center;
 }
 
 .consulting_container .review_container table tr td {
