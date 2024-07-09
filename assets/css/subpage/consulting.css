@@ -786,6 +786,7 @@ input[type=checkbox]:before {
 .consulting_container .consulting_qa_container table tr.question td:first-child {
   vertical-align: middle;
   text-align: center;
+  border-bottom: 1px solid #a2a2a2;
 }
 
 .consulting_container .consulting_qa_container table tr td:nth-child(2) {
@@ -989,7 +990,6 @@ input[type=checkbox]:before {
   white-space: nowrap;
 }
 
-
 .consulting_container .review_container table tr td:nth-child(3) {
   width: 12%;
 }
@@ -1014,7 +1014,6 @@ input[type=checkbox]:before {
   font-family: 'SUIT';
   font-weight: 500;
 }
-
 
 .review_container tr {
   height: 40px;
@@ -1063,16 +1062,6 @@ input[type=checkbox]:before {
   object-fit: contain;
 }
 
-/* .consulting_container .consulting_qa_container table,
-.consulting_container .review_container table {
-  width: 80%;
-  padding-right: 200px;
-} */
-
-/* .consulting_container .consulting_qa_container table tr,
-.consulting_container .review_container table tr {
-  border-bottom: 1px solid #e6e6e6;
-} */
 
 /* 검색 영역 */
 .consulting_container .search_wrap {
@@ -1821,10 +1810,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     margin-right: 18px;
   }
 
-  .consulting_container .consulting_qa_container table tr.question td:not(:first-child) {
-    /* border-bottom: 1px solid #e6e6e6; */
-  }
-
   .consulting_container .consulting_qa_container table tr td:nth-child(2) {
     width: 65%;
   }
@@ -1839,12 +1824,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     padding: 0;
   }
 
-  .consulting_container .consulting_qa_container table tr.answer:last-child {
-    border-bottom: none;
-  }
-
   .consulting_container .consulting_qa_container table tr.answer {
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid #a2a2a2;
     height: 42px;
   }
 
@@ -2267,12 +2248,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   .consulting_container .review_container table tr:last-child {
     border-bottom: none;
   }
-
-  /* .consulting_container .step_box .check_wrap input+label{
-    width: 10px;
-    height: 10px;
-    margin-right: 4px;
-  } */
 }
 
 @media (max-width: 400px) {
