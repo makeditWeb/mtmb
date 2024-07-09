@@ -2,312 +2,413 @@ const titles = ["제안서", "강의자료", "소개서", "제안서", "비지�
 const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
 
 $(document).ready(function () {
-  const debounce = (func, wait) => {
-    let timeout;
-    return () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(), wait);
-    };
-  };
 
   const handleResize = () => {
     const isLargeScreen = window.innerWidth > 992;
     $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
 
     if (isLargeScreen) {
-        // listSwiper
-        var listSwiper = new Swiper(".listSwiper", {
-          slidesPerView: 9,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 4000,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
+      const progressBar = $('.swiper-hero-progress');
 
-        // partnerSwiperOne
-        var partnerSwiper = new Swiper(".partnerSwiper", {
-          spaceBetween: 0,
-          freeMode: false,
-          enteredSlides: true,
-          speed: 5000,
-          autoplay: {
-            delay: 1,
+      // listSwiper
+      var section01Swiper = new Swiper(".section01_listSwiper", {
+        effect: 'slide',
+        direction: 'vertical',
+        slidesPerView: 4,
+        slidesPerView: 'auto',
+        spaceBetween: 'auto',
+        mousewheel: true,
+        grabCursor: true,
+        watchOverflow: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        roundLengths: true,
+        loop: true,
+        speed: 1000,
+        observer: true,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        autoplay: {
+          delay: 500,
+          disableOnInteraction: false
+        },
+        on: {
+          slideChange: function () {
+            const realIndex = this.realIndex;
+            const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+
+            if(mainRollingData[rollingIndex]) {
+              $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
+              $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
+              $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+            }
           },
-          loop: true,
-          slidesPerView: 'auto',
-          allowTouchMove: false,
-          disableOnInteraction: true
-        });
+          autoplayTimeLeft(s, time, progress) {
+            // progressLine.style.setProperty("--progress", 1 - progress)
+            progressBar.css('width', ((1 - progress)) + '%')
+            // progressBar.css('width', ((1 - progress) * 100) + '%')
+          }
+        }
+      });
+
+      $('#section_01_list_swiper_up').on('click', function () {
+        section01Swiper.slidePrev();
+      });
+
+      $('#section_01_list_swiper_down').on('click', function () {
+        section01Swiper.slideNext();
+      });
+
+      // // listSwiper
+      // var listSwiper = new Swiper(".section01_listSwiper", {
+      //   slidesPerView: 9,
+      //   spaceBetween: 0, // 슬라이드 여백
+      //   centeredSlides: true, // 슬라이드 중앙정렬
+      //   centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
+      //   loop: true, // 무한반복
+      //   autoplay: {
+      //     delay: 4000,
+      //   },
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      // });
 
 
-        // partnerSwiperOne + Two 연동제어
-        // partnerSwiperOne.controller.control = partnerSwiperTwo;
-        // partnerSwiperTwo.controller.control = partnerSwiperOne;
+      // listSwiper
+      var listSwiper = new Swiper(".listSwiper", {
+        slidesPerView: 9,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 4000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
-        // ppSwiper
-        var portfolioSwiper = new Swiper(".portfolioSwiper", {
-          slidesPerView: 3,
-          spaceBetween: 0, // 슬라이드 여백
-          loop: true, // 무한반복
-          // touchRatio: 0,//드래그 금지
-          autoplay: {
-            delay: 2500,
-          },
-        });
+      // partnerSwiperOne
+      var partnerSwiper = new Swiper(".partnerSwiper", {
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 5000,
+        autoplay: {
+          delay: 1,
+        },
+        loop: true,
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
+      });
 
-        // serviceIcon01
-        var serviceIcon01 = new Swiper(".serviceIcon01", {
-          slidesPerView: 5,
-          spaceBetween: 16, // 슬라이드 여백
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-          },
-          navigation: false,
-        });
 
-        // serviceIcon02
-        var serviceIcon02 = new Swiper(".serviceIcon02", {
-          slidesPerView: 4,
-          spaceBetween: 16, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 3000,
-          },
-          navigation: false,
-        });
+      // partnerSwiperOne + Two 연동제어
+      // partnerSwiperOne.controller.control = partnerSwiperTwo;
+      // partnerSwiperTwo.controller.control = partnerSwiperOne;
 
-        // workImg06
-        var workImg06 = new Swiper(".workImg06", {
-          slidesPerView: 1,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          effect: "fade",
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 2000,
-          },
-          navigation: false,
-        });
+      // ppSwiper
+      var portfolioSwiper = new Swiper(".portfolioSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 0, // 슬라이드 여백
+        loop: true, // 무한반복
+        // touchRatio: 0,//드래그 금지
+        autoplay: {
+          delay: 2500,
+        },
+      });
 
-        // workImg07
-        var workImg07 = new Swiper(".workImg07", {
-          slidesPerView: 1,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          effect: "fade",
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 2000,
-          },
-          navigation: false,
-        });
+      // serviceIcon01
+      var serviceIcon01 = new Swiper(".serviceIcon01", {
+        slidesPerView: 5,
+        spaceBetween: 16, // 슬라이드 여백
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+        navigation: false,
+      });
 
-        // workImg10
-        var workImg10 = new Swiper(".workImg10", {
-          slidesPerView: 1,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          effect: "fade",
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 2000,
-          },
-          navigation: false,
-        });
+      // serviceIcon02
+      var serviceIcon02 = new Swiper(".serviceIcon02", {
+        slidesPerView: 4,
+        spaceBetween: 16, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: false,
+      });
 
-        // workImg14
-        var workImg14 = new Swiper(".workImg14", {
-          slidesPerView: 1,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          effect: "fade",
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 4000,
-            // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
-          },
-          navigation: false,
-        });
+      // workImg06
+      var workImg06 = new Swiper(".workImg06", {
+        slidesPerView: 1,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        effect: "fade",
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 2000,
+        },
+        navigation: false,
+      });
 
-        // consulting_partnerSubSwiper
-        var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
-          slidesPerView: 4,
-          spaceBetween: 16, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 3000,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
+      // workImg07
+      var workImg07 = new Swiper(".workImg07", {
+        slidesPerView: 1,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        effect: "fade",
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 2000,
+        },
+        navigation: false,
+      });
 
-        // 상세페이지 Swiper
-        // 명함
-        var product_01_01 = new Swiper(".product_01_01", {
-          slidesPerView: 3,
-          grid: {
-            rows: 3,
-          },
-          spaceBetween: 20,
-        });
+      // workImg10
+      var workImg10 = new Swiper(".workImg10", {
+        slidesPerView: 1,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        effect: "fade",
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 2000,
+        },
+        navigation: false,
+      });
 
-        var product_01_02 = new Swiper(".product_01_02", {
-          spaceBetween: 10,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          thumbs: {
-            swiper: product_01_01,
-          },
-        });
+      // workImg14
+      var workImg14 = new Swiper(".workImg14", {
+        slidesPerView: 1,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        effect: "fade",
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 4000,
+          // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
+        },
+        navigation: false,
+      });
 
-        // weMadeItSwiper
-        var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
-          slidesPerView: 4,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          touchRatio: 0,
-          autoplay: {
-            delay: 3000,
-          },
-        });
+      // consulting_partnerSubSwiper
+      var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 16, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
-        // weMadeItSwiper
-        var introducationSwiper = new Swiper(".introducationSwiper", {
-          slidesPerView: 4,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          touchRatio: 0,
-          autoplay: {
-            delay: 2000,
-          },
-        });
+      // 상세페이지 Swiper
+      // 명함
+      var product_01_01 = new Swiper(".product_01_01", {
+        slidesPerView: 3,
+        grid: {
+          rows: 3,
+        },
+        spaceBetween: 20,
+      });
 
-        // section03 partner swiper
-        var section03PartnerSwiper = new Swiper(".section03_partnerSwiper", {
-          loop: true,
-          spaceBetween: 0,
-          freeMode: false,
-          enteredSlides: true,
-          speed: 5000,
-          autoplay: {
-            delay: 1,
-          },
-          slidesPerView: 'auto',
-          allowTouchMove: false,
-          disableOnInteraction: true
-        });
+      var product_01_02 = new Swiper(".product_01_02", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: product_01_01,
+        },
+      });
+
+      // weMadeItSwiper
+      var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 3000,
+        },
+      });
+
+      // weMadeItSwiper
+      var introducationSwiper = new Swiper(".introducationSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 2000,
+        },
+      });
+
+      // section03 partner swiper
+      var section03PartnerSwiper = new Swiper(".section03_partnerSwiper", {
+        loop: true,
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 5000,
+        autoplay: {
+          delay: 1,
+        },
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
+      });
     } else {
-      const viewportHeight = $(window).height();
-        // 디바이스 크기가 992px 이하일 때
-        // weMadeItSwiper
-        var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
-          slidesPerView: 2,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          touchRatio: 0,
-          autoplay: {
-            delay: 3000,
-          },
-        });
 
-        // listSwiper
-        var listSwiper = new Swiper(".listSwiper", {
-          slidesPerView: 3,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: true, // 슬라이드 중앙정렬
-          // initialSlide: 1, //초기 슬라이드 색인 번호
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 2000,
-            // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
+       // 디바이스 크기가 992px 이하일 때
+      // var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
+      //   slidesPerView: 4,
+      //   spaceBetween: 0, // 슬라이드 여백
+      //   centeredSlides: false, // 슬라이드 중앙정렬
+      //   loop: true, // 무한반복
+      //   touchRatio: 0,
+      //   slidesOffsetBefore: 20,
+      //   slidesOffsetAfter: 20,
+      //   autoplay: {
+      //     delay: 3000,
+      //   },
+      //   on: {
+      //     activeIndexChange: function () {
+      //       const realIndex = this.realIndex;
+      //       const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
 
-        // partnerSwiper
-        var partnerSwiper = new Swiper(".partnerSwiper", {
-          spaceBetween: 0,
-          freeMode: false,
-          enteredSlides: true,
-          speed: 2000,
-          autoplay: {
-            delay: 1,
-          },
-          loop: true,
-          slidesPerView: 'auto',
-          allowTouchMove: false,
-          disableOnInteraction: true
-        });
+      //       // mobile
+      //       $('.content-panel .bottom-wrap .title_arrow_wrap > span').html(mainRollingData[rollingIndex].title.replace(/\n/g, '<br/>'));
+      //       $('.content-panel .bottom-wrap > span').text(mainRollingData[rollingIndex].description);
+      //       $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+      //     }
+      //   }
+      // });
+      // 디바이스 크기가 992px 이하일 때
+      // weMadeItSwiper
+      var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 3000,
+        },
+      });
 
-        // ppSwiper
-        var portfolioSwiper = new Swiper(".portfolioSwiper", {
-          slidesPerView: 2,
-          spaceBetween: 0, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 3000,
-          },
-        });
+      // listSwiper
+      var listSwiper = new Swiper(".listSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: true, // 슬라이드 중앙정렬
+        // initialSlide: 1, //초기 슬라이드 색인 번호
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 2000,
+          // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
-        // consulting_partnerSubSwiper
-        var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
-          slidesPerView: 3,
-          spaceBetween: 8, // 슬라이드 여백
-          centeredSlides: false, // 슬라이드 중앙정렬
-          loop: true, // 무한반복
-          autoplay: {
-            delay: 3000,
-          },
-        });
+      // partnerSwiper
+      var partnerSwiper = new Swiper(".partnerSwiper", {
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 2000,
+        autoplay: {
+          delay: 1,
+        },
+        loop: true,
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
+      });
 
-        // 상세페이지 Swiper
-        // 명함
-        var product_01_01 = new Swiper(".product_01_01", {
-          spaceBetween: 10,
-          slidesPerView: 2,
-          freeMode: true,
-          watchSlidesProgress: true,
-        });
-        var product_01_02 = new Swiper(".product_01_02", {
-          spaceBetween: 10,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          thumbs: {
-            swiper: product_01_01,
-          },
-        });
+      // ppSwiper
+      var portfolioSwiper = new Swiper(".portfolioSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 3000,
+        },
+      });
+
+      // consulting_partnerSubSwiper
+      var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 8, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 3000,
+        },
+      });
+
+      // 상세페이지 Swiper
+      // 명함
+      var product_01_01 = new Swiper(".product_01_01", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+
+      var product_01_02 = new Swiper(".product_01_02", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: product_01_01,
+        },
+      });
     }
   };
 
-  $(window).resize(debounce(handleResize, 200)).resize();
+  handleResize();
 
-  // $(".sub_menu li").click(function () {
-  //   $(this).toggleClass("active");
-  // });
+  var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  $('#section_01_list_swiper_left').on('click', function () {
+    section01MobileSwiper.slidePrev();
+  });
+
+  $('#section_01_list_swiper_right').on('click', function () {
+    section01MobileSwiper.slideNext();
+  });
+
 
   $('.accordion-trigger').click(function () {
     $('.accordion-panel').slideUp();
