@@ -159,25 +159,28 @@ $(document).ready(function () {
       // Check hash on initial load
       handleInitialLoadWithHash();
 
-      const autoPlayDelay = 150
       const progressBar = $('.swiper-hero-progress');
 
       // listSwiper
       var section01Swiper = new Swiper(".section01_listSwiper", {
-        init: true,
-        effect: 'slide',
+        // init: true,
+        // effect: 'slide',
         direction: 'vertical',
-        slidesPerView: 4,
-        spaceBetween: 'auto',
-        mousewheel: true,
-        grabCursor: true,
-        loop: false,
-        watchOverflow: true,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        roundLengths: true,
+        // slidesPerView: 4,
+        // slidesPerView: 'auto',
+        // spaceBetween: 'auto',
+        // mousewheel: true,
+        // grabCursor: true,
+        // watchOverflow: true,
+        // watchSlidesProgress: true,
+        // watchSlidesVisibility: true,
+        // roundLengths: true,
+        loop: true,
+
+        // speed: 1000,
+        // observer: true,
         autoplay: {
-          delay: autoPlayDelay,
+          delay: 500,
           disableOnInteraction: false
         },
         on: {
@@ -185,12 +188,16 @@ $(document).ready(function () {
             const realIndex = this.realIndex;
             const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
 
-            $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
-            $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
-            $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+            if(mainRollingData[rollingIndex]) {
+              $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
+              $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
+              $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+            }
           },
           autoplayTimeLeft(s, time, progress) {
-            progressBar.css('width', ((1 - progress) * 100) + '%')
+            // progressLine.style.setProperty("--progress", 1 - progress)
+            progressBar.css('width', ((1 - progress)) + '%')
+            // progressBar.css('width', ((1 - progress) * 100) + '%')
           }
         }
       });
@@ -203,21 +210,21 @@ $(document).ready(function () {
         section01Swiper.slideNext();
       });
 
-      // listSwiper
-      var listSwiper = new Swiper(".section01_listSwiper", {
-        slidesPerView: 9,
-        spaceBetween: 0, // 슬라이드 여백
-        centeredSlides: true, // 슬라이드 중앙정렬
-        centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
-        loop: true, // 무한반복
-        autoplay: {
-          delay: 4000,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+      // // listSwiper
+      // var listSwiper = new Swiper(".section01_listSwiper", {
+      //   slidesPerView: 9,
+      //   spaceBetween: 0, // 슬라이드 여백
+      //   centeredSlides: true, // 슬라이드 중앙정렬
+      //   centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
+      //   loop: true, // 무한반복
+      //   autoplay: {
+      //     delay: 4000,
+      //   },
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      // });
 
 
       // listSwiper
