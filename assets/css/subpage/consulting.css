@@ -1092,6 +1092,8 @@ input[type=checkbox]:before {
   background-image: url('../../img/icon/i_down.png');
   background-repeat: no-repeat;
   background-position: 100% 34%;
+
+  color: #000;
 }
 
 .consulting_container .search_wrap input[type=text] {
