@@ -8,56 +8,56 @@ $(document).ready(function () {
     $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
 
     if (isLargeScreen) {
-      const progressBar = $('.swiper-hero-progress');
+      // const progressBar = $('.swiper-hero-progress');
 
-      // listSwiper
-      var section01Swiper = new Swiper(".section01_listSwiper", {
-        effect: 'slide',
-        direction: 'vertical',
-        slidesPerView: 4,
-        slidesPerView: 'auto',
-        spaceBetween: 'auto',
-        mousewheel: true,
-        grabCursor: true,
-        watchOverflow: true,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        roundLengths: true,
-        loop: true,
-        speed: 1000,
-        observer: true,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 20,
-        autoplay: {
-          delay: 500,
-          disableOnInteraction: false
-        },
-        on: {
-          slideChange: function () {
-            const realIndex = this.realIndex;
-            const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+      // // listSwiper
+      // var section01Swiper = new Swiper(".section01_listSwiper", {
+      //   effect: 'slide',
+      //   direction: 'vertical',
+      //   slidesPerView: 4,
+      //   slidesPerView: 'auto',
+      //   spaceBetween: 'auto',
+      //   mousewheel: true,
+      //   grabCursor: true,
+      //   watchOverflow: true,
+      //   watchSlidesProgress: true,
+      //   watchSlidesVisibility: true,
+      //   roundLengths: true,
+      //   loop: true,
+      //   speed: 1000,
+      //   observer: true,
+      //   slidesOffsetBefore: 20,
+      //   slidesOffsetAfter: 20,
+      //   autoplay: {
+      //     delay: 500,
+      //     disableOnInteraction: false
+      //   },
+      //   on: {
+      //     slideChange: function () {
+      //       const realIndex = this.realIndex;
+      //       const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
 
-            if (mainRollingData[rollingIndex]) {
-              $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
-              $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
-              $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
-            }
-          },
-          autoplayTimeLeft(s, time, progress) {
-            // progressLine.style.setProperty("--progress", 1 - progress)
-            progressBar.css('width', ((1 - progress)) + '%')
-            // progressBar.css('width', ((1 - progress) * 100) + '%')
-          }
-        }
-      });
+      //       if (mainRollingData[rollingIndex]) {
+      //         $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
+      //         $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
+      //         $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+      //       }
+      //     },
+      //     autoplayTimeLeft(s, time, progress) {
+      //       // progressLine.style.setProperty("--progress", 1 - progress)
+      //       progressBar.css('width', ((1 - progress)) + '%')
+      //       // progressBar.css('width', ((1 - progress) * 100) + '%')
+      //     }
+      //   }
+      // });
 
-      $('#section_01_list_swiper_up').on('click', function () {
-        section01Swiper.slidePrev();
-      });
+      // $('#section_01_list_swiper_up').on('click', function () {
+      //   section01Swiper.slidePrev();
+      // });
 
-      $('#section_01_list_swiper_down').on('click', function () {
-        section01Swiper.slideNext();
-      });
+      // $('#section_01_list_swiper_down').on('click', function () {
+      //   section01Swiper.slideNext();
+      // });
 
       // // listSwiper
       // var listSwiper = new Swiper(".section01_listSwiper", {
@@ -406,6 +406,61 @@ $(document).ready(function () {
       }
     });
   }
+
+
+      const progressBar = $('.swiper-hero-progress');
+
+      // listSwiper
+      var section01Swiper = new Swiper(".section01_listSwiper", {
+        slidesPerView: 4,
+        slidePerGroup: 2, 
+        loopAdditionalSlides: 4,
+        spaceBetween: 0,
+        grabCursor: true,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+        effect: 'slide',
+        direction: 'vertical',
+        grabCursor: true,
+        watchOverflow: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        roundLengths: true,
+        observer: true,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false
+        },
+        on: {
+          slideChange: function () {
+            const realIndex = this.realIndex;
+            const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+
+            if (mainRollingData[rollingIndex]) {
+              $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
+              $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
+              $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+            }
+          },
+          autoplayTimeLeft(s, time, progress) {
+            // progressLine.style.setProperty("--progress", 1 - progress)
+            progressBar.css('width', ((1 - progress)) + '%')
+            // progressBar.css('width', ((1 - progress) * 100) + '%')
+          }
+        }
+      });
+
+      $('#section_01_list_swiper_up').on('click', function () {
+        section01Swiper.slidePrev();
+      });
+
+      $('#section_01_list_swiper_down').on('click', function () {
+        section01Swiper.slideNext();
+      });
 
   var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
     slidesPerView: 4,
