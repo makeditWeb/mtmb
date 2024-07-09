@@ -37,7 +37,7 @@ $(document).ready(function () {
             const realIndex = this.realIndex;
             const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
 
-            if(mainRollingData[rollingIndex]) {
+            if (mainRollingData[rollingIndex]) {
               $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
               $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
               $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
@@ -276,7 +276,7 @@ $(document).ready(function () {
       });
     } else {
 
-       // 디바이스 크기가 992px 이하일 때
+      // 디바이스 크기가 992px 이하일 때
       // var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
       //   slidesPerView: 4,
       //   spaceBetween: 0, // 슬라이드 여백
@@ -391,14 +391,52 @@ $(document).ready(function () {
 
   handleResize();
 
+  // 맨 마지막 slide는 스타일이 적용되어있지 않는 현상 수정을 위한 코드
+  function applySlideStyles() {
+    $('.section01_listMobileSwiper .swiper-slide').each(function () {
+      const borderStyle = '1px solid #626262';
+      try {
+        $(this).css({
+          'border-left': borderStyle,
+          'border-right': borderStyle,
+          'border-top': borderStyle,
+        });
+      } catch(err) {
+
+      }
+    });
+  }
+
   var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
     slidesPerView: 4,
+    slidePerGroup: 2, 
+    loopAdditionalSlides: 4,
     spaceBetween: 0,
+    grabCursor: true,
+    speed: 500,
     loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+    on: {
+      slideChange: function () {
+        applySlideStyles();
+
+        const realIndex = this.realIndex;
+        const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+
+        if (mainRollingData && mainRollingData[rollingIndex]) {
+          $('.mo .content-panel .bottom-wrap .title_arrow_wrap span').text(mainRollingData[rollingIndex].title);
+          $('.mo .content-panel .bottom-wrap > span').text(mainRollingData[rollingIndex].description);
+          $('.mo .section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+        }
+      },
+    }
   });
 
   $('#section_01_list_swiper_left').on('click', function () {
@@ -422,59 +460,59 @@ $(document).ready(function () {
     }
   });
 
-    // const originalList = $('.marquee-item-list');
-    // const clonedList = originalList.clone();
-    // $('.marquee-block').append(clonedList);
+  // const originalList = $('.marquee-item-list');
+  // const clonedList = originalList.clone();
+  // $('.marquee-block').append(clonedList);
 
-    // Intersection Observer 설정
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
-    };
+  // Intersection Observer 설정
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
+  };
 
-    const observerCallback = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          $('.right-fixed').css('bottom', '240px')
-        } else {
-          $('.right-fixed').css('bottom', '10%')
-        }
-      });
-    };
-
-    const isLargeScreen = window.innerWidth > 992;
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const footerElement = document.querySelectorAll('.footer');
-    observer.observe(footerElement[1]);
-    
-    const marqueeSetPc = () => {
-      const root = document.documentElement;
-      const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-      const marqueeContent = document.querySelector(".pc ul.marquee-content");
-
-      root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-      for(let i=0; i<marqueeElementsDisplayed; i++) {
-        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        $('.right-fixed').css('bottom', '240px')
+      } else {
+        $('.right-fixed').css('bottom', '10%')
       }
+    });
+  };
+
+  const isLargeScreen = window.innerWidth > 992;
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  const footerElement = document.querySelectorAll('.footer');
+  observer.observe(footerElement[1]);
+
+  const marqueeSetPc = () => {
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector(".pc ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
+  }
 
-    const marqueeSetMobile = () => {
-      const root = document.documentElement;
-      const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-      const marqueeContent = document.querySelector(".mo ul.marquee-content");
+  const marqueeSetMobile = () => {
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector(".mo ul.marquee-content");
 
-      root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-      for(let i=0; i<marqueeElementsDisplayed; i++) {
-        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-      }
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
+  }
 
-    if(isLargeScreen) {
-      marqueeSetPc();
-    } else {
-      marqueeSetMobile();
-    }
+  if (isLargeScreen) {
+    marqueeSetPc();
+  } else {
+    marqueeSetMobile();
+  }
 });
