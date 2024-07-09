@@ -823,6 +823,7 @@ input[type=checkbox]+label:before {
 
 .qna-btn img {
   margin-left: 12px;
+  width: 9px;
 }
 
 .request_table_wrapper{
@@ -1326,6 +1327,16 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   color: #fff;
 }
 
+.next img {
+  width: 15px;
+  height: auto;
+}
+
+.prev img {
+  width: 15px;
+  height: auto;
+}
+
 /********************** 반응형 Style **********************/
 /* 1920 * 1080 */
 /* 1600 * 900 */
@@ -1773,6 +1784,13 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
     gap: 0;
   }
 
+  .arrow_wrap span{
+    width: 12px;
+    height: auto;
+}
+.arrow_wrap img {
+    width: 100%;
+}
   .review_container .left_wrap .top_wrap .search_container {
     width: 100%;
     display: flex;
@@ -1797,7 +1815,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
     color: #fefefe;
     font-family: 'SUIT', sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 3vw;
 
     margin-right: 10px;
   }

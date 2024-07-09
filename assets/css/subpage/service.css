@@ -220,6 +220,16 @@
   height: 100%;
 }
 
+.next img {
+  width: 15px;
+  height: auto;
+}
+
+.prev img {
+  width: 15px;
+  height: auto;
+}
+
 .servce_qna_inner .cont_bot{
   width: 50%;
   display: flex;
@@ -301,6 +311,7 @@
 
 .qna-btn img {
   margin-left: 12px;
+  width: 9px;
 }
 
 
@@ -353,11 +364,23 @@
     width: 100%;
   }
 
-  .pagination_arrow img {}
+  .pagination_arrow img {
+
+    width: 12px;
+    height: auto;
+  }
 
   .cont_header {
     padding: 0;
   }
+
+  .arrow_wrap span{
+    width: 12px;
+    height: auto;
+}
+.arrow_wrap img {
+    width: 100%;
+}
 
   .cont_body {}
 
