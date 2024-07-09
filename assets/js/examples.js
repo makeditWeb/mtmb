@@ -305,9 +305,9 @@ $(document).ready(function () {
 
   $(window).resize(debounce(handleResize, 200)).resize();
 
-  $(".sub_menu li").click(function () {
-    $(this).toggleClass("active");
-  });
+  // $(".sub_menu li").click(function () {
+  //   $(this).toggleClass("active");
+  // });
 
   $('.accordion-trigger').click(function () {
     $('.accordion-panel').slideUp();
