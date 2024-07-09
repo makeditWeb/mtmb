@@ -3953,7 +3953,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
 
 /* left menu */
 #lnb {
-  z-inde: 1;
+  z-index: 1;
 
   display: none;
   height: 100vh;
