@@ -81,6 +81,13 @@ $(document).ready(function () {
         onLeave: function (anchorLink, index, direction) {
           var pages = $(".section").length;
           var currentPage = index - 1;
+            if(anchorLink === 2&& index ===1 ) {
+              $("#fp-nav").hide();
+              $('#lnb').hide();
+            } else {
+              $("#fp-nav").show();
+              $('#lnb').show();
+            }
         },
         afterLoad: function (anchorLink, index) {
           handleSectionEntry(index);
@@ -95,23 +102,12 @@ $(document).ready(function () {
           }
 
           if (index === 1) {
-            // 첫 번째 섹션에 도달했을 때 네비게이션 바 숨기기
-            $("#fp-nav").hide();
-
             // 첫 번째 색션일 경우 상단 로고 색상 흰 색으로 
             $('.menu_line').css({ 'background': '#fff' });
             $('.logo_text').css({ 'color': '#fff' });
-
-            // 좌측 메뉴 노출
-            $('#lnb').css({ 'display': 'none' });
           } else {
-            $("#fp-nav").show();
-
             $('.menu_line').css({ 'background': '#000' });
             $('.logo_text').css({ 'color': '#000' });
-
-            // 좌측 메뉴 노출
-            $('#lnb').css({ 'display': 'block' });
           }
 
           if (index === 2) {
