@@ -626,19 +626,19 @@ $(document).ready(function () {
   $('.ppt_wrap:first .accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
 
 
-  $('.accordion-trigger').click(function () {
-    // 모든 패널을 닫고, 모든 트리거에서 active 클래스를 제거
-    $('.accordion-panel').slideUp();
-    $('.accordion-trigger').removeClass('active');
-    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
+  // $('.accordion-trigger').click(function () {
+  //   // 모든 패널을 닫고, 모든 트리거에서 active 클래스를 제거
+  //   $('.accordion-panel').slideUp();
+  //   $('.accordion-trigger').removeClass('active');
+  //   $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
 
-    // 클릭된 트리거에 대해 패널 열기/닫기 처리
-    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
-      $(this).parent().find('.accordion-panel').slideDown();
-      $(this).addClass('active');
-      $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-    }
-  });
+  //   // 클릭된 트리거에 대해 패널 열기/닫기 처리
+  //   if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+  //     $(this).parent().find('.accordion-panel').slideDown();
+  //     $(this).addClass('active');
+  //     $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
+  //   }
+  // });
 
   // 프트폴리오 팝업 노출 코드
   $(".portfolio_wrap").on("click", function () {

@@ -79,7 +79,7 @@ function linkHashEventForMobile(index) {
 
     // 클릭 후 해당 요소로 스크롤
     $('html, body').animate({
-      scrollTop: targetElement.offset().top - 80
+      scrollTop: targetElement.offset().top
     }, 100); // 스크롤 애니메이션 시간 (밀리초)
   }
 }
