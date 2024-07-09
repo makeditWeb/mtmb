@@ -706,7 +706,5 @@ Marquee animation
 }
 
 .section01_listMobileSwiper .swiper-slide {
-  width: calc((100vw - 40px) / 4); /* 화면 너비의 25%로 설정하여 4개가 꽉 차게 */
-  box-sizing: border-box;
-  border: 1px solid #ccc; /* 원하는 border 스타일 추가 */
+  width: calc((100vw - 38px) / 4); 
 }
