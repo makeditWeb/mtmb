@@ -432,7 +432,7 @@ $(document).ready(function () {
         roundLengths: true,
         observer: true,
         autoplay: {
-          delay: 1000,
+          delay: 3000,
           disableOnInteraction: false
         },
         on: {
@@ -448,8 +448,8 @@ $(document).ready(function () {
           },
           autoplayTimeLeft(s, time, progress) {
             // progressLine.style.setProperty("--progress", 1 - progress)
-            progressBar.css('width', ((1 - progress)) + '%')
-            // progressBar.css('width', ((1 - progress) * 100) + '%')
+            // progressBar.css('width', ((1 - progress)) + '%')
+            progressBar.css('width', ((1 - progress) * 100) + '%')
           }
         }
       });
