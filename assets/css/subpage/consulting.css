@@ -1666,12 +1666,13 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   }
 
   .survey_container_wrapper {
-    width: 90%;
+    width: calc(100% - 12px);
     max-height: 200px;
-    overflow-y: auto;
+    overflow-y: scroll;
 
     margin: 8px;
     padding: 0px 8px;
+    padding-right: 12px;
 
     background: none;
   }
@@ -1694,6 +1695,11 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   .consulting_container .step_box .right_wrap .step_control_container {
     width: 100%;
     justify-content: space-around;
+  }
+
+  .consulting_container .step_box.step_02 .form_container {
+    width: calc(100% - 12px);
+    margin-right: 12px;
   }
 
   .consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
@@ -2004,7 +2010,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     height: 33vh;
     width: max-content;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     width: 100%;
   }
 
