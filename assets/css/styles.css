@@ -134,7 +134,7 @@
 
 .swiper-hero-progress-wrap {
     position: absolute;
-    top: 42.5vh;
+    top: 50%;
     left: -42vw;
 
     width: 42vw;
@@ -228,7 +228,7 @@
   position: relative;
   right: 0px;
   width: 10em;
-  height: calc(100vh - 160px);
+  /* height: calc(100vh - 160px); */
 
 
   margin: 80px 0px;
@@ -236,7 +236,7 @@
   flex-direction: column;
   justify-content: space-around;
 
-  border-left: 3px solid #343434;
+  border-left: 2px solid #343434;
 }
 
 .section_01 .sc_wrap .content_01 a {
