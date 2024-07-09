@@ -52,6 +52,8 @@ const mainRollingData = [
 ]
 
 $(document).ready(function () {
+
+  // fullPage + swiper 설정
   const handleResize = () => {
     const isLargeScreen = window.innerWidth > 992;
     $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
@@ -545,13 +547,14 @@ $(document).ready(function () {
     }
   };
 
+  handleResize();
+
+
   $(".sub_menu li").click(function () {
     $(this).toggleClass("active");
   });
 
 
-  // fullPage + Swiper 추가
-  handleResize();
 
   // 처음에 첫 번째 .ppt_wrap의 .accordion-panel을 열어두기
   $('.ppt_wrap:first .accordion-panel').show();
@@ -559,7 +562,7 @@ $(document).ready(function () {
   $('.ppt_wrap:first .accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
 
 
-  // 포트폴리오 클릭 이벤트 추가
+  // 프트폴리오 클릭 이벤트 정의
   $(".portfolio_wrap").on("click", function () {
     portfolioView();
   });
