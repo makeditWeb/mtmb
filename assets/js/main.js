@@ -52,14 +52,6 @@ const mainRollingData = [
 ]
 
 $(document).ready(function () {
-  const debounce = (func, wait) => {
-    let timeout;
-    return () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(), wait);
-    };
-  };
-
   const handleResize = () => {
     const isLargeScreen = window.innerWidth > 992;
     $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
@@ -553,72 +545,13 @@ $(document).ready(function () {
     }
   };
 
-  $(window).resize(debounce(handleResize, 200)).resize();
-
   $(".sub_menu li").click(function () {
     $(this).toggleClass("active");
   });
 
 
-
-  // // Intersection Observer 설정
-  // const observerOptions = {
-  //   root: null,
-  //   rootMargin: '0px',
-  //   threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
-  // };
-
-  // const observerCallback = (entries, observer) => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       console.log('intersecting')
-  //       if ($('.mo .content_06 .about_wrap .accordion-trigger').hasClass('active')) {
-  //         console.log('open!!')
-  //         $('.footer').css('position', 'fixed').css('bottom', 0);
-  //       } else {
-  //         console.log('closed!!')
-  //         $('.footer').css('position', 'relative');
-  //       }
-  //     } else {
-  //       $('.footer').css('position', 'relative');
-  //     }
-  //   });
-  // };
-
-  // const observer = new IntersectionObserver(observerCallback, observerOptions);
-  // const section06 = document.querySelector('.mo .section_06');
-  // observer.observe(section06);
-
-
-  // $('.accordion-panel').each(function() {
-  //     var originalDisplay = $(this).css('display');
-  //     $(this).data('originalDisplay', originalDisplay);
-  //     $(this).hide();  // Ensure all panels are hidden initially
-  // });
-
-
-
-  // $('.accordion-trigger').click(function () {
-  //     // Slide up all panels and reset triggers
-  //     $('.accordion-panel').slideUp();
-  //     $('.accordion-trigger').removeClass('active');
-  //     $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
-
-  //     // Get the panel related to the clicked trigger
-  //     var panel = $(this).parent().find('.accordion-panel');
-
-  //     // If the panel is not visible, slide it down and set the trigger to active
-  //     if (!panel.is(':visible')) {
-  //         panel.slideDown(function() {
-  //             panel.css('display', panel.data('originalDisplay'));
-  //         });
-  //         $(this).addClass('active');
-  //         $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-  //     }
-
-  //     // 강제로 IntersectionObserver 콜백 실행
-  //     // observerCallback([{ isIntersecting: $(section06).is(':visible') }], observer);
-  // });
+  // fullPage + Swiper 추가
+  handleResize();
 
   // 처음에 첫 번째 .ppt_wrap의 .accordion-panel을 열어두기
   $('.ppt_wrap:first .accordion-panel').show();
@@ -626,28 +559,13 @@ $(document).ready(function () {
   $('.ppt_wrap:first .accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
 
 
-  // $('.accordion-trigger').click(function () {
-  //   // 모든 패널을 닫고, 모든 트리거에서 active 클래스를 제거
-  //   $('.accordion-panel').slideUp();
-  //   $('.accordion-trigger').removeClass('active');
-  //   $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/text/title_arrow.png');
-
-  //   // 클릭된 트리거에 대해 패널 열기/닫기 처리
-  //   if (!$(this).parent().find('.accordion-panel').is(':visible')) {
-  //     $(this).parent().find('.accordion-panel').slideDown();
-  //     $(this).addClass('active');
-  //     $(this).find('.accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-  //   }
-  // });
-
-  // 프트폴리오 팝업 노출 코드
+  // 포트폴리오 클릭 이벤트 추가
   $(".portfolio_wrap").on("click", function () {
     portfolioView();
   });
 
+  // 프트폴리오 팝업 노출 함수
   function portfolioView() {
-    console.log('portfolio open');
-
     $("#modal-portfolio-view").modal('show');
     $("#modal-portfolio-view-title").text('포트폴리오');
     $("#modal-portfolio-view-img").empty();

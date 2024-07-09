@@ -236,7 +236,7 @@
   flex-direction: column;
   justify-content: space-around;
 
-  border-left: 3px solid #343434;
+  border-left: 2px solid #343434;
 }
 
 .section_01 .sc_wrap .content_01 a {
@@ -924,7 +924,6 @@ s  }
   display: flex;
   justify-content: flex-start;
   width: 92%;
-  height: 30vh;
 
   background: #000;
   border-radius: 0px 100px 100px 0px;
