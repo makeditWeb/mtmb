@@ -73,13 +73,21 @@ function linkHashEventForMobile(index) {
   // 해당 인덱스의 요소 클릭 시뮬레이션
   var targetElement = $('.mo .accordion-trigger').eq(index);
   if (targetElement.length) {
-    if(index !== 0) {
-      targetElement.click();
-    }
+    if (index !== 0) {
+      targetElement.click()
 
-    // 클릭 후 해당 요소로 스크롤
-    $('html, body').animate({
-      scrollTop: targetElement.offset().top
-    }, 100); // 스크롤 애니메이션 시간 (밀리초)
+      setTimeout(() => {
+        // 클릭 후 아코디언이 열리면 스크롤
+        $('html, body').animate({
+          scrollTop: targetElement.offset().top - 100
+        }, 100);
+      }, 500)
+    } else {
+      // 첫 번째 요소는 클릭 후 바로 스크롤
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top - 100
+      }, 100); 
+    }
   }
 }
+
