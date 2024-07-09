@@ -1654,27 +1654,46 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   }
 
   .consulting_container .step_box .right_wrap .survey_container {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     /* margin: 0 auto; */
+
     margin-bottom: 20px;
     background-color: #fff;
-    max-height: 200px;
     padding-right: 0;
     padding: 10px 20px;
-    overflow-y: auto;
     height: 100%;
   }
 
+  .survey_container_wrapper {
+    width: 90%;
+    max-height: 200px;
+    overflow-y: auto;
+
+    margin: 8px;
+    padding: 0px 8px;
+
+    background: none;
+  }
+  
+  .consulting_container .step_box .right_wrap .survey_container_wrapper::-webkit-scrollbar,
+  .consulting_container .step_box .right_wrap .mo_consult_scroll::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .consulting_container .step_box .right_wrap .survey_container_wrapper::-webkit-scrollbar-track,
+  .consulting_container .step_box .right_wrap .mo_consult_scroll::-webkit-scrollbar-track {
+    background-color: #4e4e4e;
+  }
+
+  .consulting_container .step_box .right_wrap .survey_container_wrapper::-webkit-scrollbar-thumb,
+  .consulting_container .step_box .right_wrap .mo_consult_scroll::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+  }
 
   .consulting_container .step_box .right_wrap .step_control_container {
     width: 100%;
     justify-content: space-around;
-  }
-
-  .survey_container_wrapper {
-    width: 100%;
-    padding: 8px 0;
-    background: none;
   }
 
   .consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
@@ -1955,6 +1974,13 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     height: 100%; 
     right: -5px; */
   }
+
+
+  input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    margin-right: .3rem
+  }
 }
 
 @media (max-width: 650px) {
@@ -1976,6 +2002,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   .mo_consult_scroll {
     margin: 8px 0;
     height: 33vh;
+    width: max-content;
+    overflow-x: hidden;
     overflow-y: auto;
     width: 100%;
   }
@@ -2131,6 +2159,10 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 12px;
   }
 
+  .consulting_container .step_box.step_01 .check_container{
+    padding: 12px 4px 12px 0;
+  }
+
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
     font-size: 16px;
   }
@@ -2246,7 +2278,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     padding: 10px;
   }
 
-
   .review_container table td:nth-child(2) {
     /* max-width: 80px; */
   }
@@ -2279,6 +2310,15 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
 
   .review_container .left_wrap .top_wrap .search_container button.review-button {
     min-width: 100px;
+  }
+
+  input[type=checkbox]{
+    width: 10px;
+    height: 10px;
+  }
+  input[type=checkbox]:checked:before {
+    width: 8px;
+    height: 10px;
   }
 }
 
