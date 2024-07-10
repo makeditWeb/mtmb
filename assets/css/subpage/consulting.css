@@ -154,6 +154,7 @@
   color: #fff;
   font-size: 15px;
   text-align: center;
+  word-break: keep-all;
   z-index: 1;
   margin-top: 15px;
 }
@@ -2143,7 +2144,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   }
 
   .consulting_container .consulting_box .left_wrap>ul li p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .consulting_container .step_box.step_01 .check_container{
