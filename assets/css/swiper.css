@@ -696,7 +696,7 @@ Marquee animation
   html { font-size: 12px; }
   :root {
     --marquee-elements-displayed: 3;
-    --marquee-animation-duration: calc(var(--marquee-elements) * 1s);
+    --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
   }
   .marquee:before, .marquee:after { width: 5rem; }
 }
