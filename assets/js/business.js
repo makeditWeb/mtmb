@@ -6,33 +6,10 @@ function getQueryParam(param) {
 }
 
 $(document).ready(function () {
-  // service_wrap 요소들을 선택
-  const serviceWraps = $('.service_wrap');
-  const stepWraps = $('.step_wrap');
-
-  const pptlist = $('.sub_title');
-
-  // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
-  serviceWraps.each(function (index) {
-    const $item = $(this).find('img');
-    const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
-    $item.css('animation-delay', `${delay}s`);
-  });
-
-  // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
-  stepWraps.each(function (index) {
-    const $item = $(this).find('img');
-    const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
-    $item.css('animation-delay', `${delay}s`);
-  });
-
-
   // 처음에 첫 번째 .ppt_wrap의 .accordion-panel을 열어두기
   $('.ppt_wrap:first .accordion-panel').show();
   $('.ppt_wrap:first .accordion-trigger').addClass('active');
   $('.ppt_wrap:first .accordion-trigger .accordion-trigger-arrow-img').attr('src', 'img/main/mobile/arrow_bottom.png');
-
-
   
   $('.ppt_index_wrap').click(function () {
     var index = $(this).index();
@@ -53,7 +30,56 @@ $(document).ready(function () {
       linkHashEventForMobile(clickIndex);
     }
   }
+
+  if (window.innerWidth > 992) {
+    settingServiceStepWrapAnimationPC();
+  } else {
+    settingServiceStepWrapAnimationMobile();
+  }
 });
+
+function settingServiceStepWrapAnimationPC() {
+  // service_wrap 요소들을 선택
+  const serviceWraps = $('.pc .service_wrap');
+  const stepWraps = $('.pc .step_wrap');
+
+  // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
+  serviceWraps.each(function (index) {
+    const $item = $(this).find('img');
+    const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
+    $item.css('animation-delay', `${delay}s`);
+  });
+
+  // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
+  stepWraps.each(function (index) {
+    const $item = $(this).find('img');
+    const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
+    $item.css('animation-delay', `${delay}s`);
+  });
+}
+
+
+function settingServiceStepWrapAnimationMobile() {
+  // service_wrap 요소들을 선택
+  const serviceWraps = $('.mo .service_wrap');
+  const stepWraps = $('.mo .step_wrap');
+
+  console.log(serviceWraps, stepWraps)
+
+  // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
+  serviceWraps.each(function (index) {
+    const $item = $(this).find('img');
+    const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
+    $item.css('animation-delay', `${delay}s`);
+  });
+
+  // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
+  stepWraps.each(function (index) {
+    const $item = $(this).find('img');
+    const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
+    $item.css('animation-delay', `${delay}s`);
+  });
+}
 
 function linkHashEventForPc(index) {
   // 해당 인덱스의 요소 클릭 시뮬레이션
