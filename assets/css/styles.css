@@ -1813,9 +1813,17 @@ s  }
     width: calc(90% - 350px)
   }
 
+  .section_03 .all_service_wrap .title_wrap{
+    width: 35%;
+  }
+
   .section_03 .all_service_wrap .title_wrap span,
   .section_03 .review_wrap .title_wrap h2 {
     font-size: 100px;
+  }
+
+  .section_03 .all_service_wrap .title_wrap > img {
+    width: 6%;
   }
 
   .section_03 .all_service_wrap .service_list{
@@ -1843,6 +1851,14 @@ s  }
 
   .section_03 .all_service_wrap .service_list .service_wrap .service_text:hover::after {
     width: calc(100% - 120px)
+  }
+
+  .section_03 .review_wrap .title_wrap{
+    width: 20%;
+  }
+
+  .section_03 .review_wrap .title_wrap > img{
+    width: 50%;
   }
 
   .section_03 .review_wrap .review_box{
@@ -3283,6 +3299,11 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   opacity: 0;
 }
 
+@media (min-width: 3000px) {
+  .hover_top span {
+    font-size: 32px;
+  }
+}
 
 @media (max-width: 1600px) {
   .section_06 .content_06 .left_wrap {
