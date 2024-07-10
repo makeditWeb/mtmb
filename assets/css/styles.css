@@ -140,7 +140,7 @@
 
 .swiper-hero-progress-wrap {
   position: absolute;
-  top: 50%;
+  top: 49.8%;
   left: -42vw;
 
   width: 42vw;
@@ -6901,7 +6901,7 @@ section.container {
   .section_05 .content_05 .right_wrap,
   .section_06 .content_06 .left_wrap,
   .section_07 .content_07 .top_wrap .left_wrap {
-    width: 30%;
+    width: 25vw;
   }
 
   .section_04 .content_04 .left_wrap .title>span,
