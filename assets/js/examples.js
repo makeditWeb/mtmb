@@ -392,79 +392,90 @@ $(document).ready(function () {
   handleResize();
 
   // 맨 마지막 slide는 스타일이 적용되어있지 않는 현상 수정을 위한 코드
-  function applySlideStyles() {
-    $('.section01_listMobileSwiper .swiper-slide').each(function () {
-      const borderStyle = '1px solid #626262';
-      try {
-        $(this).css({
-          'border-left': borderStyle,
-          'border-right': borderStyle,
-          'border-top': borderStyle,
-        });
-      } catch(err) {
+function applySlideStyles(swiper) {
+  const slides = swiper.slides;
+  const borderStyle = '1px solid #626262';
 
-      }
-    });
+  for (let i = 0; i < slides.length; i++) {
+    const slide = slides[i];
+
+    // Remove all borders first
+    slide.style.border = 'none';
+
+    // Apply top and bottom borders to all slides
+    slide.style.borderTop = borderStyle;
+    slide.style.borderLeft = borderStyle;
+
+    if ((swiper.activeIndex + 1) % 4 === 0) {
+      slide.style.borderRight = borderStyle;
+    } else {
+      slide.style.borderRight = 'none';
+    }
   }
 
+  // Ensure that the first slide has a left border and the last slide has a right border
+  slides[0].style.borderLeft = borderStyle;
+  slides[slides.length - 1].style.borderRight = borderStyle;
+}
 
-      const progressBar = $('.swiper-hero-progress');
 
-      // listSwiper
-      var section01Swiper = new Swiper(".section01_listSwiper", {
-        slidesPerView: 4,
-        slidePerGroup: 2, 
-        loopAdditionalSlides: 4,
-        spaceBetween: 0,
-        grabCursor: true,
-        speed: 500,
-        loop: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: false,
-        },
-        effect: 'slide',
-        direction: 'vertical',
-        grabCursor: true,
-        watchOverflow: true,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        roundLengths: true,
-        observer: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false
-        },
-        on: {
-          slideChange: function () {
-            const realIndex = this.realIndex;
-            const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+  const progressBar = $('.swiper-hero-progress');
 
-            if (mainRollingData[rollingIndex]) {
-              $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
-              $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
-              $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
-            }
-          },
-          autoplayTimeLeft(s, time, progress) {
-            // progressLine.style.setProperty("--progress", 1 - progress)
-            // progressBar.css('width', ((1 - progress)) + '%')
-            progressBar.css('width', ((1 - progress) * 100) + '%')
-          }
+  // listSwiper
+  var section01Swiper = new Swiper(".section01_listSwiper", {
+    slidesPerView: 4,
+    slidePerGroup: 2, 
+    loopAdditionalSlides: 4,
+    spaceBetween: 0,
+    grabCursor: true,
+    speed: 500,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    effect: 'slide',
+    direction: 'vertical',
+    grabCursor: true,
+    watchOverflow: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    roundLengths: true,
+    observer: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    on: {
+      slideChange: function () {
+        const realIndex = this.realIndex;
+        const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+
+        if (mainRollingData[rollingIndex]) {
+          $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
+          $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
+          $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
         }
-      });
+      },
+      autoplayTimeLeft(s, time, progress) {
+        // progressLine.style.setProperty("--progress", 1 - progress)
+        // progressBar.css('width', ((1 - progress)) + '%')
+        progressBar.css('width', ((1 - progress) * 100) + '%')
+      }
+    }
+  });
 
-      $('#section_01_list_swiper_up').on('click', function () {
-        section01Swiper.slidePrev();
-      });
+  $('#section_01_list_swiper_up').on('click', function () {
+    section01Swiper.slidePrev();
+  });
 
-      $('#section_01_list_swiper_down').on('click', function () {
-        section01Swiper.slideNext();
-      });
+  $('#section_01_list_swiper_down').on('click', function () {
+    section01Swiper.slideNext();
+  });
 
   var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
     slidesPerView: 4,
-    slidePerGroup: 2, 
+    slidePerGroup: 1, 
     loopAdditionalSlides: 4,
     spaceBetween: 0,
     grabCursor: true,
@@ -480,7 +491,7 @@ $(document).ready(function () {
     },
     on: {
       slideChange: function () {
-        applySlideStyles();
+        applySlideStyles(this);
 
         const realIndex = this.realIndex;
         const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
