@@ -335,7 +335,7 @@
   }
 
   .notice_table tr td {
-    font-size: 14px;
+    font-size: 12px;
     padding: 0;
   }
 
@@ -357,7 +357,10 @@
     padding: 80px 0 40px;
 }
 
-  .cont_right.notice_wrap table tbody tr {}
+  .cont_right.notice_wrap table tbody tr {
+    padding: 4px;
+    height: 40px;
+  }
 
   .service_container .notice_pagination {
     margin-top: 25px;

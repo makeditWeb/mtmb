@@ -982,7 +982,7 @@ input[type=checkbox]:before {
 
 .consulting_container .review_container table tr td:nth-child(2) {
   width: 60%;
-  padding: 10px 0;
+  padding: 0px;
   /* ... 처리 */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2193,7 +2193,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     padding-bottom: 6px;
   }
 
-
   .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
   .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
     left: 54px;
@@ -2201,6 +2200,12 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
 
   .review_container .left_wrap .top_wrap .search_container button.review-button {
     min-width: 150px;
+  }
+
+
+  .review_container tr {
+    height: 40px;
+    padding: 4px 0;
   }
 }
 
