@@ -292,6 +292,7 @@
   box-shadow: none;
   height: 35px;
   width: 80%;
+  min-width: max-content;
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
