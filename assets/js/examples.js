@@ -418,8 +418,8 @@ function applySlideStyles(swiper) {
   slides[slides.length - 1].style.borderRight = borderStyle;
 }
 
-
   const progressBar = $('.swiper-hero-progress');
+  const mobileProgressBar = $('.content-divider');
 
   // listSwiper
   var section01Swiper = new Swiper(".section01_listSwiper", {
@@ -502,6 +502,10 @@ function applySlideStyles(swiper) {
           $('.mo .section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
         }
       },
+      autoplayTimeLeft(s, time, progress) {
+        mobileProgressBar.css('height',  ((1 - progress) * 100) + '%')
+
+      }
     }
   });
 

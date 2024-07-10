@@ -479,7 +479,7 @@
         animation-iteration-count: 1;
     }
 
-
+/* 
 
     @media (min-height: 850px) {
         @keyframes line-motion {
@@ -554,4 +554,4 @@
         .content-divider {
             animation: line-motion 2s ease-in-out forwards;
         }
-    }
+    } */

@@ -766,13 +766,30 @@
     /* min-height: calc(110px + 80px + 20px); */
   }
 
-  .content-divider {
+  .content-divider-wrap {
+    position: relative;
+    top: -7em;
+    margin: 0 auto;
+    background: transparent;
+    width: 1px;
+    height: 7em;
+  }
 
+  .content-divider {
     position: absolute;
-    top: -17em;
+    top: 0px;
+    left: 0px;
     background: #626262;
     width: 1px;
+  }
+
+  .content-divider::before {
+    /* content: '';
+    position: absolute;
+    width: 1px;
     height: 0px;
+    top: 0px;
+    background-color: #626262; */
   }
 
   .section_01 .content-panel .img-wrap {
