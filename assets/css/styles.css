@@ -3854,6 +3854,57 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before{
   color: #fff;
 }
 
+@media (min-width: 3000px) {
+  .section_08 .content_08 .top_wrap, 
+  .section_08 .content_08 .portfolio_container{
+    width: calc(100% - 350px);
+    height: calc(100% - 100px);
+    padding: 50px;
+  }
+
+  .section_08 .content_08 .top_wrap .about_wrap, 
+  .section_08 .content_08 .top_wrap .notice_wrap {
+    height: 40vh;
+  }
+  .section_08 .content_08 .top_wrap .about_wrap .title,
+  .section_08 .content_08 .top_wrap .notice_wrap .title,
+  .section_08 .content_08 .portfolio_container .title {
+    width: 100%;
+  }
+
+  .section_08 .content_08 .top_wrap .about_wrap .title>span, .section_08 .content_08 .top_wrap .notice_wrap .title>span,
+  .section_08 .content_08 .portfolio_container .title>span {
+    font-size: 100px;
+  }
+  .section_08 .content_08 .top_wrap .about_wrap .title>img, .section_08 .content_08 .top_wrap .notice_wrap .title>img{
+    width: 5%;
+  }
+
+  .section_08 .content_08 .portfolio_container .title>img {
+    width: 3%;
+  }
+
+  .section_08 .content_08 .top_wrap .notice_wrap .notice_list .notice_box,
+  .section_08 .content_08 .top_wrap .notice_wrap .notice_list .notice_box:not(:last-child) {
+    padding: 24px;
+    font-size: 42px;
+  }
+
+  .section_08 .content_08 .top_wrap .about_wrap .description_wrap .description_01 {
+    font-size: 54px;
+    line-height: 100%;
+  }
+
+  .section_08 .content_08 .top_wrap .about_wrap .description_wrap .description_02{
+    font-size: 40px;
+    line-height: 105%;
+  }
+
+  .section_08 .content_08 .portfolio_container .portfolio_list{
+   grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
 @media (max-width: 1600px) {
   .section_08 .content_08 .top_wrap {
     width: 100%;
