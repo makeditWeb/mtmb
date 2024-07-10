@@ -6848,6 +6848,21 @@ section.container {
   margin-top: 50px;
 }
 
+@media (min-width: 3000px) {
+  .view_all_wrap {
+    width: 200px;
+  }
+
+  .view_all_wrap>span{
+    font-size: 30px;
+  }
+
+  .view_all_wrap > img {
+    width: 10%;
+    height: auto;
+  }
+}
+
 
 @media (max-width: 992px) {
   .view_all_wrap {
