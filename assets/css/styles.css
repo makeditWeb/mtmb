@@ -1801,6 +1801,53 @@ s  }
   text-align: center;
 }
 
+@media (min-width: 3000px) {
+  .section_03 .all_service_wrap {
+    width: calc(100% - 350px)
+  }
+
+  .section_03 .review_wrap{
+    width: calc(90% - 350px)
+  }
+
+  .section_03 .all_service_wrap .title_wrap span,
+  .section_03 .review_wrap .title_wrap h2 {
+    font-size: 100px;
+  }
+
+  .section_03 .all_service_wrap .service_list{
+    width: 65%;
+  }
+
+  .section_03 .all_service_wrap .service_list .service_wrap {
+    width: 100%;
+  }
+
+  .section_03 .all_service_wrap .service_list .service_wrap>img{
+    width: 25%;
+    height: auto;
+  }
+
+  .section_03 .all_service_wrap .service_list .service_wrap .service_text span{
+    font-size: 32px;
+    margin-top: 24px;
+  }
+
+  .section_03 .all_service_wrap .service_list .service_wrap .service_text:hover>img{
+    width: 6%;
+    height: auto;
+  }
+
+  .section_03 .all_service_wrap .service_list .service_wrap .service_text:hover::after {
+    width: calc(100% - 120px)
+  }
+
+  .section_03 .review_wrap .review_box{
+    padding: 24px;
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 1750px) {
   .section_03 .all_service_wrap {
     width: 1400px;
