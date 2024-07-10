@@ -264,21 +264,6 @@
         }
     }
 
-    /* 화면 너비가 400px 이하일 때의 애니메이션 */
-    @media (max-width: 400px) {
-        @keyframes result_fade_left_mo {
-            0% {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0px);
-                opacity: 1;
-            }
-        }
-    }
-
     @keyframes cost_fade_right_mo {
         0% {
             transform: translateX(100px);
@@ -291,16 +276,43 @@
         }
     }
 
+    /* 화면 너비가 400px 이하일 때의 애니메이션 */
+    @media (max-width: 400px) {
+        @keyframes result_fade_left_mo {
+            0% {
+                transform: translate(100px, -5px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(24px, -5px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes cost_fade_right_mo {
+            0% {
+                transform: translate(50px, 0px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+
     .mo .section_01 .top_wrap span {
-        animation: value_fade_left_mo 1s;
+        animation: value_fade_left_mo 1s forwards;
     }
 
     .mo .section_01 h1 {
-        animation: cost_fade_right_mo 2s;
+        animation: cost_fade_right_mo 2s forwards;
     }
 
     .mo .section_01 h2 {
-        animation: result_fade_left_mo 2s;
+        animation: result_fade_left_mo 2s forwards;
     }
 
 
