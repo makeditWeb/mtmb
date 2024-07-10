@@ -1555,3 +1555,124 @@ button.btn-skyblue:hover {
 
 .w100per {width:100% !important;}
 .w50per {width:50% !important;}
+
+
+
+
+/* **************************************** *
+ * LNB (Left Menu)
+ * **************************************** */
+
+#lnb {
+  z-index: 1;
+
+  display: none;
+  height: 100vh;
+
+  position: fixed;
+  left: 50px;
+  top: 0px;
+}
+
+#lnb .lnb_menu_01 {
+  animation: fadeInRight 2s;
+  position: absolute;
+  top: 15.8vh;
+}
+
+#lnb .lnb_menu_01 ul {
+  width: 100px;
+}
+
+#lnb .lnb_menu_01 ul li {
+  align-items: center;
+  display: flex;
+  margin: 0 0 8px 0;
+}
+
+#lnb .lnb_menu_01 ul li:last-child {
+  margin: 0;
+}
+
+#lnb .lnb_menu_01 ul li a {
+  color: #000;
+  font-size: 16px;
+}
+
+#lnb .lnb_menu_02 {
+  animation: fadeInRight 2s;
+  position: absolute;
+  transition-delay: 2s;
+  bottom: 32vh;
+}
+
+#lnb .lnb_menu_02 ul {
+  width: 100px;
+}
+
+#lnb .lnb_menu_02 ul li {
+  align-items: center;
+  display: flex;
+  margin: 0 0 8px 0;
+}
+
+#lnb .lnb_menu_02 ul li:last-child {
+  margin: 0;
+}
+
+#lnb .lnb_menu_02 ul li.active::before {
+  background: #fff;
+}
+
+#lnb .lnb_menu_02 ul li a {
+  color: #000;
+  font-size: 16px;
+  transition: 2s;
+}
+
+#lnb .lnb_menu_01 ul li a.all-ppt {
+  font-weight: bold;
+}
+
+#lnb .lnb_menu_02 ul li.active a {
+  color: #fff;
+}
+
+
+@media (max-width: 992px) {
+  #lnb {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #lnb {
+    display: block;
+  }
+}
+
+@media (min-width: 1800px) {
+  #lnb {
+    width: 150px;
+    left: 50px;
+  }
+}
+
+
+@media (min-width: 3000px) {
+  #lnb {
+    width: 300px;
+    left: 50px;
+  }
+
+  #lnb .lnb_menu_01 ul,
+  #lnb .lnb_menu_02 ul{
+    width: 100%;
+  }
+
+    #lnb .lnb_menu_01 ul li a,
+    #lnb .lnb_menu_02 ul li a {
+        color: #000;
+        font-size: 32px;
+    }
+}
