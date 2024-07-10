@@ -395,7 +395,7 @@ $(document).ready(function () {
 function applySlideStyles(swiper) {
   const slides = swiper.slides;
   const borderStyle = '1px solid #626262';
-
+  
   for (let i = 0; i < slides.length; i++) {
     const slide = slides[i];
 
@@ -406,7 +406,7 @@ function applySlideStyles(swiper) {
     slide.style.borderTop = borderStyle;
     slide.style.borderLeft = borderStyle;
 
-    if ((swiper.activeIndex + 1) % 4 === 0) {
+    if (i === swiper.activeIndex + 3) {
       slide.style.borderRight = borderStyle;
     } else {
       slide.style.borderRight = 'none';
