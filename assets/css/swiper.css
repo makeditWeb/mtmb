@@ -695,8 +695,8 @@ Marquee animation
 @media (max-width: 600px) {
   html { font-size: 12px; }
   :root {
-    --marquee-elements-displayed: 12;
-    --marquee-animation-duration: calc(var(--marquee-elements) * 0.8s);
+    --marquee-elements-displayed: 3;
+    --marquee-animation-duration: calc(var(--marquee-elements) * 1s);
   }
   .marquee:before, .marquee:after { width: 5rem; }
 }

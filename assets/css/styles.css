@@ -2098,10 +2098,6 @@ s  }
     padding: 0px;
   }
 
-  .section_03 .partner_box .marquee-item {
-    width: calc(100vw / 4);
-  }
-
   .section_03 .partner_box .marquee-item > img {
     width: 100%;
   }
