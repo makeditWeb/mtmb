@@ -307,6 +307,9 @@
 
   display: flex;
   align-items: center;
+
+  padding-top: 8px;
+  padding-right: 8px;
 }
 
 .section_01 .content-panel .img-wrap img {
@@ -2799,7 +2802,6 @@ s  }
 }
 
 .section_05 .content_05 .right_wrap .title {
-  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: normal;
@@ -6780,3 +6782,4 @@ section.container {
     object-fit: contain;
   }
 }
+
