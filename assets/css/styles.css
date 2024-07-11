@@ -2331,7 +2331,7 @@
 
 .section_04 .content_04 .left_wrap {
   min-width: 400px;
-  width: max-content;width: 400px;
+  width: max-content;
   height: 500px;
 
   display: flex;
@@ -3600,7 +3600,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
 }
 
 .section_07 .content_07 .top_wrap .left_wrap .sub_title {
-  max-width: 400px;
+  max-width: fit-content;
   display: flex;
   align-items: center;
   gap: 20px;
