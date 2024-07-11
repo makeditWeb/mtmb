@@ -1,5 +1,7 @@
-const titles = ["제안서", "강의자료", "소개서", "제안서", "비지니스 보고서"];
-const descriptions = ["Proposal document", "Lecture materials", "Introduction", "Proposal document", "Business report"];
+const contentPanelPC = $('.pc .content-panel');
+const contentPanelMobile = $('.mo .content-panel');
+
+const ROLLING_CONTENT_LENGTH = 10;
 
 $(document).ready(function () {
 
@@ -8,74 +10,6 @@ $(document).ready(function () {
     $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
 
     if (isLargeScreen) {
-      // const progressBar = $('.swiper-hero-progress');
-
-      // // listSwiper
-      // var section01Swiper = new Swiper(".section01_listSwiper", {
-      //   effect: 'slide',
-      //   direction: 'vertical',
-      //   slidesPerView: 4,
-      //   slidesPerView: 'auto',
-      //   spaceBetween: 'auto',
-      //   mousewheel: true,
-      //   grabCursor: true,
-      //   watchOverflow: true,
-      //   watchSlidesProgress: true,
-      //   watchSlidesVisibility: true,
-      //   roundLengths: true,
-      //   loop: true,
-      //   speed: 1000,
-      //   observer: true,
-      //   slidesOffsetBefore: 20,
-      //   slidesOffsetAfter: 20,
-      //   autoplay: {
-      //     delay: 500,
-      //     disableOnInteraction: false
-      //   },
-      //   on: {
-      //     slideChange: function () {
-      //       const realIndex = this.realIndex;
-      //       const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
-
-      //       if (mainRollingData[rollingIndex]) {
-      //         $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
-      //         $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
-      //         $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
-      //       }
-      //     },
-      //     autoplayTimeLeft(s, time, progress) {
-      //       // progressLine.style.setProperty("--progress", 1 - progress)
-      //       progressBar.css('width', ((1 - progress)) + '%')
-      //       // progressBar.css('width', ((1 - progress) * 100) + '%')
-      //     }
-      //   }
-      // });
-
-      // $('#section_01_list_swiper_up').on('click', function () {
-      //   section01Swiper.slidePrev();
-      // });
-
-      // $('#section_01_list_swiper_down').on('click', function () {
-      //   section01Swiper.slideNext();
-      // });
-
-      // // listSwiper
-      // var listSwiper = new Swiper(".section01_listSwiper", {
-      //   slidesPerView: 9,
-      //   spaceBetween: 0, // 슬라이드 여백
-      //   centeredSlides: true, // 슬라이드 중앙정렬
-      //   centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
-      //   loop: true, // 무한반복
-      //   autoplay: {
-      //     delay: 4000,
-      //   },
-      //   navigation: {
-      //     nextEl: ".swiper-button-next",
-      //     prevEl: ".swiper-button-prev",
-      //   },
-      // });
-
-
       // listSwiper
       var listSwiper = new Swiper(".listSwiper", {
         slidesPerView: 9,
@@ -275,31 +209,6 @@ $(document).ready(function () {
         disableOnInteraction: true
       });
     } else {
-
-      // 디바이스 크기가 992px 이하일 때
-      // var section01MobileSwiper = new Swiper(".section01_listMobileSwiper", {
-      //   slidesPerView: 4,
-      //   spaceBetween: 0, // 슬라이드 여백
-      //   centeredSlides: false, // 슬라이드 중앙정렬
-      //   loop: true, // 무한반복
-      //   touchRatio: 0,
-      //   slidesOffsetBefore: 20,
-      //   slidesOffsetAfter: 20,
-      //   autoplay: {
-      //     delay: 3000,
-      //   },
-      //   on: {
-      //     activeIndexChange: function () {
-      //       const realIndex = this.realIndex;
-      //       const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
-
-      //       // mobile
-      //       $('.content-panel .bottom-wrap .title_arrow_wrap > span').html(mainRollingData[rollingIndex].title.replace(/\n/g, '<br/>'));
-      //       $('.content-panel .bottom-wrap > span').text(mainRollingData[rollingIndex].description);
-      //       $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
-      //     }
-      //   }
-      // });
       // 디바이스 크기가 992px 이하일 때
       // weMadeItSwiper
       var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
@@ -392,31 +301,31 @@ $(document).ready(function () {
   handleResize();
 
   // 맨 마지막 slide는 스타일이 적용되어있지 않는 현상 수정을 위한 코드
-function applySlideStyles(swiper) {
-  const slides = swiper.slides;
-  const borderStyle = '1px solid #626262';
-  
-  for (let i = 0; i < slides.length; i++) {
-    const slide = slides[i];
+  function applySlideStyles(swiper) {
+    const slides = swiper.slides;
+    const borderStyle = '1px solid #626262';
 
-    // Remove all borders first
-    slide.style.border = 'none';
+    for (let i = 0; i < slides.length; i++) {
+      const slide = slides[i];
 
-    // Apply top and bottom borders to all slides
-    slide.style.borderTop = borderStyle;
-    slide.style.borderLeft = borderStyle;
+      // Remove all borders first
+      slide.style.border = 'none';
 
-    if (i === swiper.activeIndex + 3) {
-      slide.style.borderRight = borderStyle;
-    } else {
-      slide.style.borderRight = 'none';
+      // Apply top and bottom borders to all slides
+      slide.style.borderTop = borderStyle;
+      slide.style.borderLeft = borderStyle;
+
+      if (i === swiper.activeIndex + 3) {
+        slide.style.borderRight = borderStyle;
+      } else {
+        slide.style.borderRight = 'none';
+      }
     }
-  }
 
-  // Ensure that the first slide has a left border and the last slide has a right border
-  slides[0].style.borderLeft = borderStyle;
-  slides[slides.length - 1].style.borderRight = borderStyle;
-}
+    // Ensure that the first slide has a left border and the last slide has a right border
+    slides[0].style.borderLeft = borderStyle;
+    slides[slides.length - 1].style.borderRight = borderStyle;
+  }
 
   const progressBar = $('.swiper-hero-progress');
   const mobileProgressBar = $('.content-divider');
@@ -424,7 +333,7 @@ function applySlideStyles(swiper) {
   // listSwiper
   var section01Swiper = new Swiper(".section01_listSwiper", {
     slidesPerView: 4,
-    slidePerGroup: 2, 
+    slidePerGroup: 2,
     loopAdditionalSlides: 4,
     spaceBetween: 0,
     grabCursor: true,
@@ -449,12 +358,14 @@ function applySlideStyles(swiper) {
     on: {
       slideChange: function () {
         const realIndex = this.realIndex;
-        const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+        const rollingIndex = realIndex >= ROLLING_CONTENT_LENGTH ? realIndex % ROLLING_CONTENT_LENGTH : realIndex
 
-        if (mainRollingData[rollingIndex]) {
-          $('.content-panel .right-wrap .description_wrap span:first-child').text(mainRollingData[rollingIndex].title);
-          $('.content-panel .right-wrap .description_wrap span:last-child').text(mainRollingData[rollingIndex].description);
-          $('.section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+        for (let i = 0; i < ROLLING_CONTENT_LENGTH; i++) {
+          if (i === rollingIndex) {
+            $(contentPanelPC[i]).addClass('active')
+          } else {
+            $(contentPanelPC[i]).removeClass('active');
+          }
         }
       },
       autoplayTimeLeft(s, time, progress) {
@@ -475,7 +386,7 @@ function applySlideStyles(swiper) {
 
   var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
     slidesPerView: 4,
-    slidePerGroup: 1, 
+    slidePerGroup: 1,
     loopAdditionalSlides: 4,
     spaceBetween: 0,
     grabCursor: true,
@@ -494,16 +405,18 @@ function applySlideStyles(swiper) {
         applySlideStyles(this);
 
         const realIndex = this.realIndex;
-        const rollingIndex = realIndex >= mainRollingData.length ? realIndex % mainRollingData.length : realIndex
+        const rollingIndex = realIndex >= ROLLING_CONTENT_LENGTH ? realIndex % ROLLING_CONTENT_LENGTH : realIndex
 
-        if (mainRollingData && mainRollingData[rollingIndex]) {
-          $('.mo .content-panel .bottom-wrap .title_arrow_wrap span').text(mainRollingData[rollingIndex].title);
-          $('.mo .content-panel .bottom-wrap > span').text(mainRollingData[rollingIndex].description);
-          $('.mo .section_01 .content-panel .img-wrap img').attr("src", mainRollingData[rollingIndex].src);
+        for (let i = 0; i < ROLLING_CONTENT_LENGTH; i++) {
+          if (i === rollingIndex) {
+            $(contentPanelMobile[i]).addClass('active')
+          } else {
+            $(contentPanelMobile[i]).removeClass('active');
+          }
         }
       },
       autoplayTimeLeft(s, time, progress) {
-        mobileProgressBar.css('height',  ((1 - progress) * 100) + '%')
+        mobileProgressBar.css('height', ((1 - progress) * 100) + '%')
 
       }
     }
@@ -573,12 +486,12 @@ function applySlideStyles(swiper) {
     const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
     const marqueeContent = document.querySelector(".mo ul.marquee-content");
 
-    if(marqueeContent && marqueeContent.children && marqueeContent.children.length) {
+    if (marqueeContent && marqueeContent.children && marqueeContent.children.length) {
       root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-    for (let i = 0; i < marqueeElementsDisplayed; i++) {
-      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-    }
+      for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+      }
     }
   }
 

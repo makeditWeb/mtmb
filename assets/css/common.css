@@ -914,6 +914,10 @@ textarea {
     }
 }
 
+#footer {
+   bottom: 0px;   
+}
+
 /* 좌측 fullpage menu */
 
 #fp-nav {
@@ -1022,10 +1026,6 @@ Maximum height
         width: 28px;
         height: 28px;
     }
-}
-
-#footer {
-   bottom: 0px;   
 }
 
 /********************** Modal Style **********************/

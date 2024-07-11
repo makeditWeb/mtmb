@@ -323,13 +323,13 @@
         }
 
         100% {
-            transform: translateY(-3em);
+            transform: translateY(-3.6em);
             opacity: 1;
         }
     }
 
     .pc .section_01 .content-panel {
-        animation: panel_fade_top 1s;
+        animation: panel_fade_top 1s forwards;
     }
 
     @keyframes line_01 {
