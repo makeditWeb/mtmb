@@ -2376,11 +2376,13 @@
 .section_04 .content_04 .left_wrap .sub_title>span:first-child {
   font-size: 30px;
   font-weight: 700;
+  min-width: fit-content;
 }
 
 .section_04 .content_04 .left_wrap .sub_title>span:last-child {
   font-size: 16px;
   font-weight: 500;
+  min-width: fit-content;
 }
 
 .section_04 .content_04 .left_wrap .more_info {
@@ -2876,11 +2878,13 @@
 .section_05 .content_05 .right_wrap .sub_title>span:first-child {
   font-size: 30px;
   font-weight: 700;
+  min-width: fit-content;
 }
 
 .section_05 .content_05 .right_wrap .sub_title>span:last-child {
   font-size: 16px;
   font-weight: 500;
+  min-width: fit-content;
 }
 
 .section_05 .content_05 .right_wrap .more_info {
@@ -3199,11 +3203,13 @@
 .section_06 .content_06 .left_wrap .sub_title>span:first-child {
   font-size: 30px;
   font-weight: 700;
+  min-width: fit-content;
 }
 
 .section_06 .content_06 .left_wrap .sub_title>span:last-child {
   font-size: 16px;
   font-weight: 500;
+  min-width: fit-content;
 }
 
 .section_06 .content_06 .left_wrap .more_info {
