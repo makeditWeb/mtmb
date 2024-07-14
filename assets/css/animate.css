@@ -254,12 +254,12 @@
 
     @keyframes result_fade_left_mo {
         0% {
-            transform: translateX(100px);
+            transform: translate(100px, -40px);
             opacity: 0;
         }
 
         100% {
-            transform: translateX(0px);
+            transform: translate(-14px, -40px);
             opacity: 1;
         }
     }
@@ -276,8 +276,18 @@
         }
     }
 
-    /* 화면 너비가 400px 이하일 때의 애니메이션 */
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
+        @keyframes value_fade_left_mo {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
         @keyframes result_fade_left_mo {
             0% {
                 transform: translate(100px, -5px);
@@ -285,7 +295,7 @@
             }
 
             100% {
-                transform: translate(24px, -5px);
+                transform: translate(-10px, -8px);
                 opacity: 1;
             }
         }
@@ -302,6 +312,45 @@
             }
         }
     }
+
+    @media (max-width: 380px) {
+        @keyframes value_fade_left_mo {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes result_fade_left_mo {
+            0% {
+                transform: translate(100px, -5px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(8px, -5px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes cost_fade_right_mo {
+            0% {
+                transform: translate(50px, 0px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(15px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+    
+    
 
     .mo .section_01 .top_wrap span {
         animation: value_fade_left_mo 1s forwards;
