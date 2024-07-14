@@ -684,7 +684,7 @@ Marquee animation
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   html { font-size: 12px; }
   :root {
     --marquee-elements-displayed: 5;

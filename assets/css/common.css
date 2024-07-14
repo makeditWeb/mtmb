@@ -1676,3 +1676,10 @@ button.btn-skyblue:hover {
         font-size: 32px;
     }
 } */
+
+@media (max-width: 990px) {
+    .mo section {
+        overflow-x: hidden;
+    }
+    
+}
