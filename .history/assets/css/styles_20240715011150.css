@@ -2957,7 +2957,7 @@
     align-items: flex-end;
 
     border-bottom: 1px solid #000;
-    padding: 30px 0px 20px;
+    padding: 65px 0px 20px;
   }
 
   .section_05 .sub_title .sub_title_wrap {
@@ -6884,7 +6884,7 @@ section.container {
   }
 
   .view_all_wrap>span {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
