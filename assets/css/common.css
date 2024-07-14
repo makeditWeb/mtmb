@@ -1659,7 +1659,7 @@ button.btn-skyblue:hover {
 }
 
 
-@media (min-width: 3000px) {
+/* @media (min-width: 3000px) {
   #lnb {
     width: 300px;
     left: 50px;
@@ -1675,4 +1675,4 @@ button.btn-skyblue:hover {
         color: #000;
         font-size: 32px;
     }
-}
+} */

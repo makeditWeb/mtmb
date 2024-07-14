@@ -190,7 +190,7 @@
     }
 }
 
-@media (min-width: 3840px) {
+/* @media (min-width: 3840px) {
     @keyframes value_fade_left {
         0% {
             transform: translateX(-200px);
@@ -226,7 +226,7 @@
             opacity: 1;
         }
     }
-}
+} */
 
     .section_01.active .top_wrap span {
         animation: value_fade_left 1s forwards;
