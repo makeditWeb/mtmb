@@ -12,7 +12,7 @@
   width: 0.5px;
   height: 100%;
   left: 219px;
-  top: 0;
+  top: 0px;
 
   z-index: 1;
 }
@@ -30,10 +30,11 @@
   position: relative;
   z-index: 2;
 
-  display: flex;
   justify-content: flex-start;
   width: 85%;
   height: 650px;
+
+  display: flex;
 
   background: #000;
   border-radius: 0px 100px 100px 0px;
@@ -209,6 +210,8 @@
 }
 
 /********************** Consulting Box Step 1-5 Style **********************/
+/* TODO */
+/* DB 연동 시 주석처리 */
 .consulting_container .step_box {
   display: none;
 }
@@ -269,7 +272,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding-right: 20px;
-
+  
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .survey_container_wrapper {
@@ -296,32 +301,49 @@
   align-items: flex-start;
   justify-content: flex-start;
 
+  margin-bottom: 18px;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group {
+  width: 100%;
+  color: #000;
+
   margin-bottom: 20px;
 }
 
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group .title,
 .consulting_container .step_box .right_wrap .survey_container .survey_wrap .title {
+  display: flex;
+
   width: 100%;
   padding: 4px 0px;
-  ;
   border-bottom: 1px solid #000;
-
-  font-family: 'SUIT';
-  font-weight: 600;
-  font-size: 16px;
-
-  color: #000000;
-}
-
-.consulting_container .step_box .right_wrap .survey_container .survey_wrap .content {
-  width: 100%;
-  padding: 4px 0px;
-  ;
 
   font-family: 'SUIT';
   font-weight: 500;
   font-size: 16px;
 
   color: #000000;
+
+  margin-bottom: 8px;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group p:first-child,
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .content {
+  width: 100%;
+  padding: 4px 0px;
+
+  font-family: 'SUIT';
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #000000;
+  line-height: 100%;;
+
+
+
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 /* 상담신청  > 이전/다음 페이지네이션 */
@@ -416,7 +438,8 @@
 }
 
 
-input[type=checkbox] {
+input[type=checkbox],
+input[type=radio] {
   position: relative;
   border: 2px solid #b3b3b3;
   border-radius: 2px;
@@ -433,11 +456,13 @@ input[type=checkbox] {
   opacity: 1;
 }
 
-input[type=checkbox]:checked {
+input[type=checkbox]:checked,
+input[type=radio]:checked {
   background-color: #000;
 }
 
-input[type=checkbox]:checked:before {
+input[type=checkbox]:checked:before,
+input[type=radio]:checked:before {
   border: solid #0ff9db;
   border-width: 0 3px 3px 0;
   margin: -1px -1px 0 -1px;
@@ -450,7 +475,8 @@ input[type=checkbox]:checked:before {
   cursor: pointer;
 }
 
-input[type=checkbox]:before {
+input[type=checkbox]:before,
+input[type=radio]:before {
   content: '';
   position: absolute;
   right: -4px;
@@ -542,11 +568,11 @@ input[type=checkbox]:before {
 }
 
 .survey_container::-webkit-scrollbar-track {
-  background-color: #000;
+  background-color: #d3d3d3;
 }
 
 .survey_container::-webkit-scrollbar-thumb {
-  background-color: #d3d3d3;
+  background-color: #000;
 }
 
 .survey_container::-webkit-scrollbar-button {
@@ -771,7 +797,6 @@ input[type=checkbox]:before {
 
 .consulting_container .step_box.step_05 .right_wrap .step_control_container {
   justify-content: center;
-
 }
 
 .consulting_container .consulting_qa_container table tr {
@@ -1012,6 +1037,8 @@ input[type=checkbox]:before {
   letter-spacing: -0.06em;
   font-family: 'SUIT';
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .review_container tr {
@@ -1101,7 +1128,7 @@ input[type=checkbox]:before {
   box-sizing: border-box;
   border: none;
   background-color: white;
-  background-image: url(../../img/icon/i_search.png);
+  background-image: url('../../img/icon/i_search.png');
   background-position: 87% 30%;
   background-repeat: no-repeat;
   background-size: 15%;
@@ -1180,10 +1207,12 @@ input[type=checkbox]:before {
 .consulting_container .review_container .pagination_wrap .arrow_wrap::before {
   position: absolute;
   content: '';
-  height: 100%;
   width: 1px;
   background: #626262;
+  height: 60%;
   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
 }
 
 
@@ -1272,6 +1301,7 @@ input[type=checkbox]:before {
 }
 
 .consulting_container .portfolio_container .portfolio_list {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -1280,6 +1310,15 @@ input[type=checkbox]:before {
   aspect-ratio: 1 / 1;
   width: 100%;
   position: relative;
+}
+
+ .portfolio_wrap .portfolio_img_inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio_wrap>img {
+  align-self: flex-end;
 }
 
 .hover_overlay {
@@ -1738,11 +1777,13 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   }
 
   .consulting_container .consulting_content_container {
-    width: 100%;
+    width: calc(100% - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 30px 40px;
+    padding: 0 0 40px;
+    
+    margin: 0 30px;
     margin-top: 20px;
   }
 
@@ -2052,6 +2093,11 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     margin-bottom: 72px;
   }
 
+  .arrow_wrap span {
+    width: 8px;
+    height: auto;
+  }
+
   .survey_eng {
     width: 148px;
     height: auto;
@@ -2093,11 +2139,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
     font-size: 18px;
   }
-
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 28px 32px
-  }
-
 
   .consulting_container .portfolio_container {
     width: 100%;
@@ -2153,10 +2194,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
 
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
     font-size: 16px;
-  }
-
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 0;
   }
 
   .consulting_container .portfolio_container .title span {
@@ -2274,12 +2311,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 14px;
   }
 
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 13px;
-  }
-
-
-
   .consulting_container .portfolio_container .title span {
     font-size: 32px;
   }
@@ -2325,10 +2356,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 12px;
   }
 
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 16px 20px
-  }
-
   .consulting_container .portfolio_container .title span {
     font-size: 28px;
   }
@@ -2369,4 +2396,8 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     --marquee-height: 4vh;
     --marquee-elements-displayed: 3;
   }
+}
+
+.consulting_container .input_group {
+  color: #000 !important;
 }
